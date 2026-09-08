@@ -1,0 +1,941 @@
+Practical Networking Troubleshooting Guide
+L1 / L2 / L3 • Switching • Routing • Multicast • Transport • Day-to-Day NOC Scenarios
+The best way to make all of this click is to stop treating BGP, ARP, STP, trunks, PIM, OSPF, EtherChannel, etc. as separate things to memorize. They are different pieces of the same forwarding path.
+I’d organize your troubleshooting mentally like this:
+Power/physical → Ethernet switching → IP/ARP → routing → application/service
+That maps roughly to L1 → L2 → L3 → service.
+This guide uses Cisco-style commands because that matches most of the environment discussed. Exact syntax varies somewhat by IOS/IOS-XE/NX-OS/IOS-XR.
+1. The master troubleshooting model
+Suppose you get: STTN router down, NYL user has no connectivity, or Te0/0/0/7.2006 down. Don’t immediately think “BGP.” Ask: How far through the path can traffic get?
+User
+ |
+AP
+ |
+Access Switch
+ |
+Trunk / EtherChannel
+ |
+Distribution/Core
+ |
+LAN interface/SVI
+ |
+Router
+ |
+WAN interface
+ |
+Carrier handoff / Ciena / NID
+ |
+Carrier network
+ |
+Remote PE/router
+ |
+BGP/OSPF/etc.
+ |
+Destination
+Each command answers a question about one part of this path.
+2. L1 — Is there actually a physical connection?
+Layer 1 doesn’t care about IP addresses, VLANs, BGP, ARP or routing. It cares about power, cable/fiber, optics, signal, interface/link state, speed/duplex, and physical errors.
+show interfaces status
+show interfaces Gi1/0/10
+show interfaces Te0/0/0/7
+show controllers
+show inventory
+show logging
+For fiber platforms you may also use commands for transceiver/optical levels.
+3. Understanding up/up, down/down, up/down
+This is extremely useful.
+GigabitEthernet0/0/0 is up, line protocol is up
+up/up: physical connection exists and the protocol is operational. Generally good.
+down/down: think L1 first — cable, carrier handoff, NID/Ciena, optic, remote equipment, shutdown on the other side, or physical circuit failure.
+Gi0/0/0 is administratively down
+Administratively down/down means someone or the configuration shut it with shutdown. Usually not a carrier outage.
+up/down means physical carrier is detected, but the protocol is not functioning correctly. Investigate encapsulation, keepalives, serial/controller problems, PPP/HDLC, remote configuration, or another protocol-specific issue. This distinction becomes especially important with serial/T1 tickets.
+4. The interface command you should know extremely well
+show interfaces Gi0/0/0
+Don’t just look at up, line protocol is up. Look through the counters.
+5 minute input rate 2000000 bits/sec
+5 minute output rate 8000000 bits/sec
+
+100000 packets input
+20 input errors
+20 CRC
+20 frame
+
+200000 packets output
+0 output errors
+What are you trying to prove? CRC errors mean frames arrived but failed their checksum. Think bad cable, dirty/damaged fiber, optic, carrier handoff, electrical interference, NID/ONT, or another physical-layer issue.
+clear counters Gi0/1
+If you clear counters and then see CRC values rise quickly — 0, 15, 42, 98 — you have strong evidence of an active physical problem, not merely historical errors.
+5. Input errors vs CRC vs drops
+Don’t treat all interface counters as equivalent.
+CRC / frame errors: usually a physical-quality concern.
+Input errors: a broader receive-side counter that can include several problems.
+Output drops: a different story.
+0 CRC
+0 input errors
+250000 output drops
+
+5 minute output rate 48 Mbps
+On a 50-Mbps circuit, that points more toward congestion, queue exhaustion, or utilization than bad fiber. This is the conceptual difference between bandwidth tickets and CRC/circuit tickets.
+6. Your uptime/BGP method is good — but don’t make it absolute
+show version
+show ip bgp summary
+If router uptime is 47 days but the BGP neighbor has been up only 37 minutes, the router did not reboot; the BGP session re-established 37 minutes ago.
+show logging | include BGP
+show logging | include Gi0/0/0
+Gi0/0/0 changed state to down
+Gi0/0/0 changed state to up
+%BGP-5-ADJCHANGE: neighbor ... Down
+%BGP-5-ADJCHANGE: neighbor ... Up
+The sequence matters: WAN down → BGP down → WAN up → BGP up. That is strong evidence BGP failed because underlying connectivity failed, not that BGP itself caused the outage.
+7. Matching router uptime and BGP uptime doesn’t prove power
+Router uptime: 3 hours 17 minutes
+BGP uptime:    3 hours 15 minutes
+That strongly suggests the router restarted and BGP formed shortly afterward. Possible reasons include site power loss, manual reboot, hardware crash, reload after maintenance, software failure, or power-supply issues.
+show version
+show logging
+show environment
+A safer initial conclusion is: “Router appears to have reloaded approximately 3 hours ago; BGP re-established shortly afterward.” Then power verification can establish the cause.
+8. L2 — where switches, VLANs, trunks, STP and EtherChannel live
+Imagine the router is fine, WAN is fine, and BGP is fine, but NYL users on floor 3 cannot connect. WAN troubleshooting becomes a waste of time. You are probably in L2/LAN territory.
+Important concepts: MAC addresses, VLANs, access ports, trunks, STP, PortFast, EtherChannel, port-channel, and LACP.
+9. Access port
+interface Gi1/0/15
+ switchport mode access
+ switchport access vlan 300
+ spanning-tree portfast
+PC
+ |
+Gi1/0/15
+ |
+VLAN 300
+The PC generally does not need to know VLAN 300 exists. The switch associates its traffic with VLAN 300.
+show interfaces Gi1/0/15 switchport
+show vlan brief
+show interfaces status
+show mac address-table interface Gi1/0/15
+10. What show vlan brief proves
+show vlan brief
+VLAN Name             Status
+1    default          active
+100  USERS            active
+200  VOICE            active
+300  WIFI             active
+You are answering: Does this VLAN exist locally and is it active? If VLAN 300 should be used but does not appear, that is immediately suspicious. But this does not prove end-to-end VLAN connectivity. One command rarely proves everything.
+11. Trunk ports
+A trunk is how multiple VLANs cross one physical or logical link.
+VLAN100 ---- cable
+VLAN200 ---- cable
+VLAN300 ---- cable
+Without a trunk, you would conceptually need separate links. Instead:
+Switch A
+   |
+   | VLAN 100
+   | VLAN 200
+   | VLAN 300
+   |
+ trunk
+   |
+Switch B
+interface Gi1/0/48
+ switchport mode trunk
+ switchport trunk allowed vlan 100,200,300
+show interfaces trunk
+Port      Mode   Encapsulation Status
+Gi1/0/48  on     802.1q        trunking
+
+Vlans allowed on trunk
+100,200,300
+12. Classic trunk troubleshooting scenario
+NYL users in VLAN 300 suddenly lose connectivity. The switch itself is reachable and the uplink is up.
+show interfaces trunk
+Vlans allowed on trunk
+100,200
+VLAN 300 is missing.
+PC -> access port VLAN300
+                  |
+                  X
+             uplink trunk
+The physical link can be perfectly healthy while users remain down. L1 is working; L2 is broken.
+13. MAC address table
+This is one of your best LAN troubleshooting tools.
+show mac address-table
+show mac address-table interface Gi1/0/15
+300   aaaa.bbbb.cccc   DYNAMIC   Gi1/0/15
+That tells you the switch learned that MAC address from Gi1/0/15 in VLAN 300. It is evidence frames from the device are reaching the switch.
+show interfaces Gi1/0/15
+show interfaces Gi1/0/15 switchport
+show mac address-table interface Gi1/0/15
+Physical link?
+     ↓
+Correct VLAN?
+     ↓
+Learning MAC?
+     ↓
+Then move toward ARP/IP.
+14. ARP — extremely important for your work
+ARP answers: What MAC address owns this IPv4 address on my directly connected network?
+interface Gi0/0/1
+ ip address 10.50.1.1 255.255.255.0
+If a user is 10.50.1.25, the router needs a destination MAC to send the Ethernet frame.
+Who has 10.50.1.25?
+10.50.1.25 is at aaaa.bbbb.cccc
+
+10.50.1.25 -> aaaa.bbbb.cccc
+show ip arp
+show ip arp 10.50.1.25
+15. ARP + MAC table together is powerful
+show ip arp 10.50.1.25
+10.50.1.25    aaaa.bbbb.cccc
+show mac address-table address aaaa.bbbb.cccc
+300  aaaa.bbbb.cccc  DYNAMIC  Gi1/0/22
+IP
+10.50.1.25
+   ↓ ARP
+MAC
+aaaa.bbbb.cccc
+   ↓ MAC table
+Switch port
+Gi1/0/22
+You just traced IP → MAC → switch port. This is one of the most useful L2/L3 correlations you can make.
+16. When ARP is useful
+ping 10.50.1.1
+!!!!!
+
+ping 10.50.1.25
+.....
+show ip arp 10.50.1.25
+No ARP entry can point toward endpoint disconnected, wrong VLAN, switch path problem, wrong IP/subnet, or broken L2 path.
+If an ARP entry exists, L2 reachability has progressed much farther. Maybe the endpoint firewall blocks ICMP, there is an endpoint/application issue, or there is a return-path problem. ARP helps narrow the fault domain.
+17. STP — why it exists
+Ethernet switches need redundancy, but redundant Layer-2 paths can create loops.
+SW1 -------- SW2
+ |            |
+ |            |
+ +---- SW3 ---+
+A broadcast such as an ARP request could circulate repeatedly. STP exists to create a loop-free logical topology while retaining redundant physical links.
+18. What STP actually does
+STP elects a root bridge and determines which links should forward and which redundant paths should be blocked/discarding.
+show spanning-tree
+show spanning-tree vlan 300
+You will see roles such as Root, Designated, and Alternate, and states such as Forwarding and Blocking/Discarding depending on the STP version/platform.
+Do not immediately think blocked = broken. A blocked/discarding redundant port can be exactly what STP is supposed to do.
+19. STP troubleshooting
+show spanning-tree vlan 300
+show spanning-tree interface Gi1/0/48 detail
+show logging | include SPANTREE
+Look for topology changes, root bridge changes, ports moving states, unexpected blocked paths, inconsistent ports, BPDU Guard, and loop-related events.
+A key question: Did STP cause the outage, or did STP react to another link going down? Sequence matters.
+20. PortFast
+For an endpoint such as PC ---- Gi1/0/10, there normally is not another switch creating a loop.
+spanning-tree portfast
+PortFast lets an edge port enter forwarding quickly.
+interface Gi1/0/10
+ switchport mode access
+ spanning-tree portfast
+Use it for edge/end-device ports according to the network design. Do not blindly put PortFast on switch-to-switch links.
+21. BPDU Guard
+BPDU Guard goes naturally with PortFast. If a user plugs an unexpected switch into a PortFast edge port, BPDUs can arrive where they should not.
+BPDU Guard can protect the network by err-disabling the port.
+%SPANTREE-2-BLOCK_BPDUGUARD
+show interfaces status err-disabled
+show logging | include BPDU
+This is why an access port can be physically connected yet unusable.
+22. EtherChannel and Port-channel
+Suppose two switches need more bandwidth and redundancy. Multiple physical links can be bundled into one logical interface.
+Gi1/0/47 \
+          \
+           Po1 ===== SW2
+          /
+Gi1/0/48 /
+The logical interface is Port-channel1. The physical members could be Gi1/0/47 and Gi1/0/48.
+23. Why EtherChannel?
+Three major benefits:
+Bandwidth — multiple links contribute capacity.
+Redundancy — one member can fail while the port-channel remains operational.
+STP simplicity — STP sees the logical port-channel rather than several independent parallel links.
+24. LACP
+EtherChannel can use LACP. Typical modes are active and passive; at least one side generally needs to be active.
+interface range Gi1/0/47-48
+ channel-group 1 mode active
+interface Port-channel1
+ switchport mode trunk
+show etherchannel summary
+Group  Port-channel  Protocol  Ports
+1      Po1(SU)       LACP      Gi1/0/47(P) Gi1/0/48(P)
+The letters matter. P typically indicates the member is bundled properly. If one member is suspended or not bundled, investigate.
+25. EtherChannel failure scenario
+Ticket: Po1 down.
+show etherchannel summary
+show interfaces Po1
+show interfaces Gi1/0/47
+show interfaces Gi1/0/48
+show logging
+If Gi1/0/47 is down, Gi1/0/48 is up, and Po1 remains up, you have degraded redundancy but not necessarily complete outage.
+If both physical members are down and Po1 is down, the entire logical uplink is gone. This distinction matters when assessing customer impact.
+26. L3 — now IP routing begins
+At Layer 3, routers answer: Where should this packet go?
+show ip route
+C 10.10.10.0/24 is directly connected
+L 10.10.10.1/32 is directly connected
+O 10.20.0.0/16 via 10.1.1.2
+B 172.16.0.0/16 via 10.2.2.2
+S 0.0.0.0/0 via 192.0.2.1
+C = connected
+L = local
+O = OSPF
+B = BGP
+S = static
+Those route codes tell you where the routes came from.
+27. Routing table vs BGP table
+show ip bgp
+This asks: What routes does BGP know?
+show ip route
+This asks: What routes did the router actually install for forwarding? A route can exist in BGP without becoming the route used by the router. Routing-protocol knowledge is not the same thing as the forwarding decision.
+28. OSPF
+OSPF is an IGP — Interior Gateway Protocol. Think: How do routers inside one routing domain learn the internal topology?
+R1 ----- R2 ----- R3
+OSPF routers establish neighbor relationships, exchange link-state information, build a topology database, and calculate best paths using SPF.
+show ip ospf neighbor
+show ip ospf interface
+show ip route ospf
+show ip ospf database
+29. OSPF neighbor states
+DOWN
+INIT
+2-WAY
+EXSTART
+EXCHANGE
+LOADING
+FULL
+For a normal established adjacency, you are generally looking for FULL.
+Neighbor ID     State       Address
+10.1.1.2        FULL/DR     192.168.1.2
+If stuck in EXSTART or EXCHANGE, think about things such as MTU mismatch. If no neighbor exists at all, investigate interface down, IP/subnet mismatch, OSPF not enabled correctly, area mismatch, authentication, ACL/network issue, or hello/dead timer mismatch. Exact diagnosis depends on topology.
+30. BGP
+BGP has a different purpose. Think: Exchange routes between routing domains or policy boundaries.
+In your environment you often care less about Internet-scale theory and more about whether the WAN BGP neighbor is established, whether it flapped, whether you are receiving routes, and whether you are advertising what you should.
+show ip bgp summary
+Neighbor       State/PfxRcd
+10.1.1.1       247
+If established, that final column generally shows the number of prefixes rather than the word Established. Idle, Active, or Connect are unhealthy states that require investigation.
+31. Don’t troubleshoot BGP before proving reachability
+If the BGP neighbor is 10.1.1.1, first ask: Can I reach 10.1.1.1?
+show interfaces <WAN>
+show ip interface brief
+show ip route 10.1.1.1
+ping 10.1.1.1
+ping 10.1.1.1 source <WAN-IP>
+L1
+ ↓
+L2/transport
+ ↓
+IP reachability
+ ↓
+TCP/179
+ ↓
+BGP
+If the underlying IP path does not work, staring at BGP configuration is not your first priority.
+32. BGP troubleshooting ladder
+1. Router reachable?
+2. Router uptime?
+3. WAN interface up?
+4. WAN interface errors?
+5. Neighbor IP reachable?
+6. Correct route to neighbor?
+7. Logs show interface flap?
+8. Logs show BGP reason?
+9. Configuration correct?
+10. Carrier/remote peer issue?
+show version
+show ip interface brief
+show interfaces <WAN>
+show ip route <neighbor>
+ping <neighbor> source <source>
+show ip bgp summary
+show logging | include BGP
+show logging | include <WAN>
+show running-config | section router bgp
+That is much more systematic than starting with show run | sec bgp.
+33. OSPF and BGP can coexist
+               BGP
+Customer R1 -------- Provider
+    |
+    | OSPF
+    |
+Internal R2
+    |
+Internal R3
+OSPF may provide internal reachability while BGP provides WAN/external routes. Neither makes the other redundant.
+OSPF + BGP
+EIGRP + BGP
+static + BGP
+connected + BGP
+The exact combination depends on network design.
+34. PIM — don’t think of it as another BGP
+PIM is for multicast routing.
+Unicast:
+Source ----> one destination
+
+Multicast:
+              Receiver A
+             /
+Source ---- Router ---- Receiver B
+             \
+              Receiver C
+Rather than sending separate streams across every part of the network, multicast can replicate traffic where necessary. PIM helps routers build multicast distribution paths.
+show ip pim neighbor
+You are asking: Which directly connected multicast routers am I forming PIM relationships with?
+35. Why PIM can be on core routers but not necessarily edge routers
+If multicast is required only across certain parts of the infrastructure, those interfaces participate in PIM. An edge router that only needs ordinary unicast WAN routing might use BGP but have no reason to participate in PIM.
+A core router carrying multicast may have both BGP/IGP and PIM.
+BGP/OSPF determine unicast reachability. PIM uses that underlying reachability to construct multicast paths. They are related, but they are not doing the same job.
+36. PIM troubleshooting
+show ip pim neighbor
+show ip pim interface
+show ip mroute
+show ip igmp groups
+IGMP = hosts tell the network which multicast groups they want
+PIM = routers figure out how multicast moves between routers
+mroute = multicast forwarding state
+If a PIM neighbor disappears, check the PIM neighbor table and then the underlying interface and logs. Ask whether PIM broke independently or whether its interface/path flapped. Use the same troubleshooting philosophy as BGP.
+37. Subinterfaces — your Te0/0/0/7.2006 type alerts
+Te0/0/0/7 is physical. Te0/0/0/7.2006 is a logical subinterface.
+interface TenGigabitEthernet0/0/0/7.2006
+ encapsulation dot1q 2006
+ ip address ...
+Physical Te0/0/0/7
+        |
+        +-- .100
+        +-- .200
+        +-- .2006
+One physical interface can carry multiple logical L3 connections using VLAN tags. If .2006 alerts, do not automatically assume the physical Te0/0/0/7 failed. Check both.
+38. Why a subinterface may disappear
+If an alert references Te0/0/0/7.2006 but show ip interface brief no longer shows it, possibilities include planned configuration change, service removal, migration, stale monitoring, or intentional decommissioning.
+This is where the operational process matters: Is there a VTM/change associated with it? If yes, the alert may simply be an expected consequence of a planned change.
+39. Gi, Te, Se, Po — learn to read the ticket before touching anything
+Gi = Gigabit Ethernet. It could be LAN, WAN handoff, switch access port, or switch uplink. You need topology/context.
+Te = Ten-Gigabit Ethernet. Often higher-capacity uplinks/core connections, but do not assume solely from interface type.
+Se = Serial. In your environment this can point you toward T1, controller, channel, carrier transport, framing, and clocking.
+Po = Port-channel. Then ask which physical interfaces are members.
+show etherchannel summary
+40. Serial/T1 troubleshooting
+Serial/T1 troubleshooting differs from normal Ethernet. For something like Serial0/1/0:1 you may need to investigate both the serial interface and its controller.
+show interfaces serial 0/1/0:1
+show controllers
+show controllers t1
+show logging
+Look for loss of signal, loss of frame, alarms, slips, framing errors, line-code violations, controller state, and carrier state.
+41. Controller down vs serial interface down
+Carrier T1
+   |
+Physical T1 controller
+   |
+Channel/time slot
+   |
+Serial interface
+   |
+IP/routing
+If the controller itself is down, the serial interface above it cannot function.
+Controller down
+       ↓
+Serial down
+       ↓
+BGP/OSPF/etc down
+If you are troubleshooting only BGP at that point, you are several layers too high.
+42. SONET — what that means
+“Sonnet” here is SONET — Synchronous Optical Networking, an older carrier optical transport technology.
+Your router
+    |
+interface
+    |
+carrier access
+    |
+SONET transport
+    |
+carrier network
+It is not BGP and it is not Ethernet switching. It is part of the transport infrastructure carrying service underneath the routed connection.
+SONET-related alarms can involve loss of signal, loss of frame, path alarms, section/line alarms, and transport failure. When you see a SONET/controller problem, move downward and ask whether the carrier transport underneath the IP service is failing.
+43. Transport vs CPE — the question you deal with constantly
+One of the most important skills in your job is determining whether the fault is customer/CPE, carrier/transport, or configuration/change.
+Customer/CPE?
+     or
+Carrier/transport?
+     or
+Configuration/change?
+Think in evidence rather than assumptions.
+44. Strong CPE/power indicators
+Examples include router unreachable, OOB unreachable, multiple local devices down, router recently rebooted, uptime aligning with outage/restoration, or the site confirming power loss.
+Site power
+   ↓
+Router down
+Switch down
+APs down
+Carrier investigation is not necessarily the first move.
+45. Strong transport indicators
+Router uptime: 73 days
+WAN interface: down
+LAN: up
+router reachable through OOB
+carrier handoff alarmed
+BGP down exactly when WAN dropped
+Router alive
+     |
+LAN alive
+     |
+WAN X
+     |
+Carrier
+That strongly points toward transport.
+Another strong example is router alive, WAN up, and CRC errors rapidly incrementing. This could still involve CPE cabling/optic, so isolate the demarcation, but you have established an active physical-path problem.
+46. Ciena/NID/OOB can dramatically change the diagnosis
+If the router is unreachable but a managed carrier/NID/OOB device remains alive, something upstream still has power/connectivity. This does not automatically prove the carrier circuit is healthy, but it narrows the possibilities.
+What is reachable?
+What isn’t?
+Where is the boundary between those two?
+That is fault isolation.
+47. Your Tennessee workflow
+Because STTN is primarily router/WAN responsibility for your team, your scope is simpler.
+Reachability
+OOB
+Power
+Router uptime
+WAN interface
+Controller
+Transport
+BGP/routing
+Logs
+Known NERS
+Known VTM/change
+You generally do not need to spend 30 minutes investigating an access switch or AP when LAN is outside your responsibility. That boundary matters operationally.
+48. NERS vs VTM — conceptual distinction
+Treat these as operational workflow references rather than networking protocols.
+NERS: a reference associated with an outage/event means there is already a broader network/event record tracking the condition. Correlate the ticket to that known event instead of treating every downstream symptom as an unrelated failure.
+VTM: change-related. If you discover an interface removed, routing modified, or service migrated and it appears intentional, ask whether it was associated with an approved change. If a change is required rather than repair, the LCM/SM workflow comes into play for creating the VTM.
+The networking skill is recognizing fault vs intentional configuration change.
+49. NCR — understand where they fit in the OSI troubleshooting process
+The NCR technician is essentially remote physical hands. You remain the network engineer.
+Does the device have power?
+What LEDs are showing?
+Is the cable connected?
+Which port?
+Can you reseat it?
+Can you replace a cable?
+Can you console into it?
+Can you move the console connection?
+Can you read the model/serial?
+Then you use the console session for show version, show ip interface brief, show run, show interfaces, show logging, and configuration work. The CE is not deciding the VLAN architecture or changing BGP independently; you use the CE to extend your hands to the physical site.
+50. When console access is valuable
+If a router is unreachable, you do not yet know whether it is dead, boot-looping, in ROMMON, has a bad config, has interfaces down, has routing broken, or only has the management path broken.
+If NCR arrives, the power LED is green, and console shows:
+rommon 1 >
+that is a huge difference. The router is powered but failed to boot normally. Console access converts a vague “router down” symptom into a much more precise device/boot-state finding.
+51. Wi-Fi troubleshooting should follow the same layered method
+If an NYL user says Wi-Fi keeps disconnecting, do not start by rebooting the AP.
+Client
+ ↓
+Association
+ ↓
+Authentication
+ ↓
+VLAN
+ ↓
+DHCP
+ ↓
+Gateway
+ ↓
+Routing/WAN
+Ask: Can the client see the SSID? Can it associate? Did authentication succeed? Did it receive an IP? Is it in the correct subnet? Is the gateway correct? Can it ping the gateway? Can it reach outside? Is only one client affected, one AP, one floor, or the whole site?
+That fault-domain thinking is more valuable than memorizing one WLC command.
+52. DHCP fits between L2 and usable L3 connectivity
+169.254.x.x
+If a user connects to Wi-Fi but gets an APIPA address, it is a major clue. The client associated sufficiently to attempt networking but did not obtain a normal DHCP lease.
+DHCP
+VLAN
+trunk
+relay/helper
+scope
+switch path
+Investigate those before BGP. A healthy WAN does not help a client that never received an IP.
+53. VRF — another concept from your daily work
+A VRF is essentially a separate routing table.
+Router
+ |
++-- VRF CUSTOMER_A
+|     routing table A
+|
++-- VRF MIS_INTERNET
+|     routing table B
+|
++-- VRF OIR
+      routing table C
+The same physical router can maintain logically separated routing domains.
+ping vrf MIS_INTERNET <gateway> source <LAN-interface>
+You are telling the router to test connectivity using this routing table and originate the traffic from this source. A normal ping could test the wrong routing context and mislead you.
+54. Why source pings matter
+ping 8.8.8.8
+A successful generic ping does not necessarily prove customer traffic works. The router might source that ping from an interface with completely different routing.
+ping <destination> source <customer-LAN-interface>
+ping vrf <VRF> <destination> source <source>
+This tests a path closer to what customer traffic experiences. You are not merely proving the router has connectivity; you are trying to prove that customer routing context has connectivity.
+55. show ip interface brief — your first snapshot
+show ip interface brief
+This quickly answers what interfaces exist, what IPs they have, and whether they are up/up, down/down, or administratively down.
+Interface       IP-Address      Status     Protocol
+Gi0/0/0         192.0.2.2       up         up
+Gi0/0/1         10.20.1.1       up         up
+Gi0/0/2         unassigned      down       down
+You immediately see WAN up, LAN up, and an unused interface down. Do not treat every down/down as a problem. Context matters.
+56. show run interface
+show running-config interface Gi0/0/0
+Once an interface looks suspicious, this asks: What is this interface supposed to be doing?
+Look for description, IP address, VRF, encapsulation, shutdown/no shutdown, speed, duplex, channel-group, switchport mode, allowed VLANs, PIM, and OSPF-related configuration.
+description *** VERIZON WAN ***
+
+description *** CUSTOMER LAN ***
+The description can immediately tell you which direction you are troubleshooting.
+57. Logs — don’t just grep; reconstruct the timeline
+show logging | include BGP
+show logging | include <interface>
+10:13:02 Gi0/0/0 down
+10:13:02 line protocol down
+10:13:03 BGP neighbor down
+10:17:45 Gi0/0/0 up
+10:17:47 line protocol up
+10:18:03 BGP neighbor up
+Physical/WAN event
+      ↓
+IP connectivity lost
+      ↓
+BGP adjacency lost
+      ↓
+physical service restored
+      ↓
+BGP automatically re-established
+That is much stronger than writing “BGP flapped.” The BGP flap was a symptom.
+58. Another log pattern
+No interface flap
+BGP neighbor Down - Hold Timer Expired
+BGP neighbor Up
+This is different. The WAN may have remained physically up while packets stopped reaching the peer. Possible areas include packet loss, carrier impairment, congestion, remote peer, or control-plane issues. Interface error/utilization counters become especially important.
+59. Router-down ticket — your practical workflow
+ROUTER DOWN
+
+Can I ping it?
+     |
+     NO
+     ↓
+OOB/device around it reachable?
+     |
+Check known outage/change
+     |
+Power verification
+     |
+NCR if physical access needed
+     |
+Console
+If the router becomes reachable:
+show version
+show ip interface brief
+show interfaces <WAN>
+show ip bgp summary
+show logging
+Power/reload?
+Transport?
+Routing?
+Change?
+CPE hardware?
+60. WAN/interface-down ticket
+Example: Gi0/0/0 down.
+show ip interface brief
+show interfaces Gi0/0/0
+show run interface Gi0/0/0
+show logging | include Gi0/0/0
+Ask: Admin down? Physical down? Errors? Recent flap? Description says carrier? Neighbor protocol affected? Known change?
+If carrier-facing, use show ip bgp summary and appropriate source ping to the peer as applicable.
+61. Switch-down ticket
+Your thought process should change.
+SWITCH DOWN
+Ask: Ping? Does upstream see its uplink? MAC/ARP? Power? Other switches at site affected? Stack? Uplink? Port-channel? STP?
+show interfaces status
+show interfaces <uplink>
+show etherchannel summary
+show spanning-tree
+show logging
+If the upstream port is down/down and the remote switch is unreachable, you are moving toward switch power, cabling, optic, or hardware. That is where NCR may become appropriate.
+62. AP-down ticket
+An AP depends on more than just Wi-Fi.
+AP
+ |
+Ethernet
+ |
+PoE
+ |
+Switch
+ |
+VLAN
+ |
+IP/DHCP
+ |
+WLC/controller/cloud
+AP down can actually mean AP hardware, switch port, PoE, VLAN, DHCP, uplink, or controller reachability.
+show interfaces status
+show interfaces <AP-port>
+show power inline
+show mac address-table interface <AP-port>
+show logging
+Before replacing an AP, prove whether it is even receiving power and Ethernet connectivity.
+63. Switch stack problems
+show switch
+show switch stack-ports
+A ticket saying “switch down” might actually mean the stack is reachable but one member is missing. That is not the same as an entire stack being unreachable. Determine the actual failure domain.
+64. CDP/LLDP — something important you didn’t mention
+show cdp neighbors
+show cdp neighbors detail
+show lldp neighbors
+show lldp neighbors detail
+These answer: What network device is physically/logically connected to this port?
+SW1 Gi1/0/48
+        |
+        ?
+
+Device ID: SW2
+Local Interface: Gi1/0/48
+Port ID: Gi1/0/48
+This is invaluable when documentation is incomplete.
+65. Route tracing
+traceroute <destination>
+A ping tells you destination reachable/not reachable. Traceroute helps answer: How far does traffic get?
+1 10.1.1.1
+2 172.16.1.1
+3 *
+4 *
+This gives a possible boundary. It is not absolute proof hop 3 is broken because devices can suppress traceroute responses, but it is useful evidence.
+66. ACLs — another missing piece
+You can have interface up, ARP good, routing good, and BGP good, yet traffic still fails because of filtering.
+ip access-group
+access-list
+Routing says:
+"send packet this way"
+
+ACL says:
+"you’re not allowed."
+Those are separate decisions.
+67. Default gateway concept
+IP:      10.10.10.25
+Mask:    255.255.255.0
+Gateway: 10.10.10.1
+For destination 10.10.10.50 on the same subnet, the PC ARPs directly for .50. For destination 8.8.8.8 on a different subnet, the PC ARPs for gateway 10.10.10.1 and sends the frame there.
+If the gateway is unreachable, off-subnet communication dies even if the PC and switch are otherwise functioning. This is where ARP, VLAN, and routing concepts meet.
+68. A complete NYL user connectivity example
+Customer says: One workstation cannot reach the network. Do not start at Verizon. Work upward.
+Step 1 — physical
+show interfaces Gi1/0/22
+Is it up/up?
+Step 2 — VLAN
+show interfaces Gi1/0/22 switchport
+Correct access VLAN?
+Step 3 — MAC
+show mac address-table interface Gi1/0/22
+Is the client MAC learned?
+Step 4 — ARP
+show ip arp <client-IP>
+Does IP resolve to MAC?
+Step 5 — gateway: can client reach gateway?
+Step 6 — routing
+show ip route <destination>
+Step 7 — upstream: test with appropriate source/VRF.
+Notice how much evidence you gathered before touching BGP.
+69. A complete Tennessee router-down example
+Alert: STTN router unreachable.
+Check 1: Ping router. Fails.
+Check 2: Check OOB/associated equipment.
+Check 3: Check known NERS/VTM. No known event.
+Check 4: Power verification. Site says power exists — but “building has power” is not identical to the router being powered and operational.
+Check 5: NCR if appropriate. CE arrives, router power LED is on, and console is available.
+show version
+show ip interface brief
+show interfaces <WAN>
+show controllers
+show ip bgp summary
+show logging
+Suppose router uptime is 43 days, Serial0/1/0:1 is down/down, T1 controller is down, and BGP is down.
+Controller/transport
+      ↓
+Serial interface
+      ↓
+IP connectivity
+      ↓
+BGP
+That is a transport investigation, not “BGP troubleshooting.”
+70. Another Tennessee example — BGP down but interface up
+Router uptime: 82 days
+
+Gi0/0/0:
+up/up
+
+BGP:
+Active
+ping <peer> source Gi0/0/0
+If that fails, check ARP, route to peer, interface counters, and logs.
+show arp
+show ip route <peer>
+show interfaces Gi0/0/0
+show logging
+Suppose the interface is up/up with 0 CRC and 0 errors, but the peer is unreachable. Carrier transport can still be broken because Ethernet carrier at your handoff can remain up while connectivity deeper inside the provider network is broken.
+up/up does not prove an end-to-end circuit is healthy. It proves only certain lower-layer conditions at that interface.
+71. The same principle with BGP
+BGP Established does not prove every destination works. BGP can be established while a specific route is missing, the wrong route is selected, a route is filtered, the VRF is wrong, the application is failing, the LAN is broken, or multicast has a problem.
+Every command has a scope of what it proves. That mindset is critical.
+72. What common commands actually prove
+
+73. The troubleshooting hierarchy I want you using at work
+Instead of memorizing 100 ticket types, use a consistent decision process every time:
+                    ALERT
+                      |
+                      v
+             Is device reachable?
+               /             \
+             YES              NO
+              |                |
+              v                v
+        What is affected?    Power/OOB?
+              |                |
+      +-------+-------+        |
+      |       |       |        v
+     WAN     LAN    Protocol   CPE/transport
+      |       |       |
+      v       v       v
+ Interface  VLAN     Underlying
+ errors?    MAC      reachability
+      |      ARP       first
+      |      STP       |
+      |      trunk     v
+      |      Po       BGP/OSPF/PIM
+      |
+      v
+Carrier handoff
+      |
+      v
+Transport
+Was there a change?
+Was there a known event?
+What do the logs say?
+What changed immediately before the symptom?
+74. Your biggest next-level improvement
+You already know many commands from repetition. The gap is not simply learning more commands; it is knowing exactly what conclusion you are and are not allowed to draw from an output.
+show ip bgp summary showing Established means the BGP control-plane adjacency is established. It does not mean “the network is fine.”
+Gi0/0/0 up/up means the interface currently has operational lower-layer state. It does not mean the carrier’s entire end-to-end circuit is good.
+show ip arp showing an endpoint means the router has learned an IPv4-to-MAC mapping. It does not mean the application works.
+That distinction separates someone who knows Cisco commands from someone who can isolate faults.
+75. The four questions to ask before every command
+Before typing something, mentally ask:
+1. What layer am I testing? L1 / L2 / L3 / routing protocol / service.
+2. What question am I asking? For show interfaces Gi0/0/0: Is my WAN interface physically healthy, and what are its counters?
+3. What result do I expect if healthy? Up/up, no significant errors, reasonable utilization.
+4. If it is unhealthy, what layer do I investigate next?
+That is actual troubleshooting.
+Compact command ladder for day-to-day tickets
+You do not run every command every time. Move downward or upward depending on the symptom.
+DEVICE / BASELINE
+-----------------
+show version
+show clock
+show ip interface brief
+show logging
+
+
+PHYSICAL / INTERFACE
+--------------------
+show interfaces <interface>
+show run interface <interface>
+show controllers
+show inventory
+
+
+SWITCHING / L2
+--------------
+show interfaces status
+show interfaces <port> switchport
+show vlan brief
+show interfaces trunk
+show mac address-table
+show spanning-tree
+show spanning-tree vlan <vlan>
+show etherchannel summary
+show cdp neighbors detail
+show lldp neighbors detail
+
+
+L3
+--
+show ip arp
+show ip route
+show ip route <destination>
+ping <destination>
+ping <destination> source <source>
+traceroute <destination>
+
+
+VRF
+---
+show ip route vrf <VRF>
+ping vrf <VRF> <destination> source <source>
+
+
+BGP
+---
+show ip bgp summary
+show ip bgp
+show ip route <BGP-prefix>
+show logging | include BGP
+
+
+OSPF
+----
+show ip ospf neighbor
+show ip ospf interface
+show ip route ospf
+show ip ospf database
+
+
+MULTICAST
+---------
+show ip pim neighbor
+show ip pim interface
+show ip igmp groups
+show ip mroute
+
+
+SERIAL / T1
+-----------
+show interfaces serial <interface>
+show controllers
+show controllers t1
+show logging
+The important part is not running this as one giant command dump. It is knowing which branch applies to the alert.
+For a Se0/x/x:x down ticket, controller/serial/transport commands move near the top. For Gi1/0/20 down on an NYL access switch, VLAN/MAC/STP/PoE may matter. For a Te... alert on a Tennessee core, first determine whether it is a physical interface, subinterface, PIM-facing/core link, or service interface and whether a known change explains it.
+The operational experience you already have makes this easier to learn: router power events, BGP flaps, Ciena/NID problems, T1 controller failures, CRC accumulation, missing subinterfaces, PIM alerts, bandwidth saturation, AP/WLC problems, Port-channel links, and customer LAN issues. The useful next step is to connect each real ticket to what happened at L1 → L2 → L3 and why the commands exposed it.
+
+Command	Question you are answering
+show version	Did device reboot? What platform/software?
+show ip int brief	Which L3 interfaces are operational?
+show interfaces X	What is happening physically/operationally on X?
+show run interface X	What is X configured to do?
+show logging	What happened and in what order?
+show ip arp	Which IPv4-to-MAC mappings does this device know?
+show mac address-table	Where did the switch learn MAC addresses?
+show vlan brief	Which VLANs exist locally?
+show interfaces trunk	Which links trunk and which VLANs cross them?
+show spanning-tree	What L2 topology has STP selected?
+show etherchannel summary	Are bundle members actually participating?
+show cdp neighbors detail	What network device is connected where?
+show ip route	Which L3 paths are installed?
+show ip bgp summary	Are BGP sessions established?
+show ip bgp	What does BGP know?
+show ip ospf neighbor	Are OSPF adjacencies healthy?
+show ip pim neighbor	Are directly connected PIM routers present?
+show ip mroute	What multicast forwarding state exists?
+show controllers	What does the underlying hardware/controller see?
+ping	Can packets reach and return from this target?
+traceroute	Approximately how far does the path progress?
