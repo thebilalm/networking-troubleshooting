@@ -1,0 +1,19 @@
+Cisco TAC Case Description
+
+USADC5520WLC02 (172.28.182.214, AireOS 8.10.183.0, S/N FCH2034V2VW) is experiencing progressive AP loss and loss of management access. The controller remains reachable by ICMP from the local switch, but the HTTPS GUI and SSH are unresponsive. AP count has dropped over time (initially ~87 -> later 64 -> currently 57), and multiple remote sites (for example Z92 and S74) are reporting production wireless/internet outages. WLC logs previously showed RADIUS/AAA failures, 802.1X aborts, orphan ARP messages, and timeouts, which may be symptoms rather than root cause.
+
+What we have validated (non-disruptive):
+
+- Local L2 confirmed: WLC management MAC/ARP learned on Po26 via SWTADC_02, VLAN 220 (AP_Management) active and forwarding.
+- Po26 (channel-group 26) is up/up; member interfaces Gi7/15 and Gi9/15 both up, 1 Gbps, no CRC/errors; EtherChannel shows Po26(SU) with both members in port-channel.
+- From SWTADC_02 SVI for VLAN 220, routes to 10.111.1.0/24 and 10.112.1.0/24 are present and pings to 10.111.1.53 and 10.112.1.53 succeed (these destinations previously failed when originating from the WLC).
+- WLC remained pingable during validation, but SSH and GUI subsequently became unresponsive.
+
+Current request / ask from TAC:
+
+- Please investigate the controller management/control-plane condition and root cause for progressive AP drop while ICMP remains alive but SSH/HTTPS and AP/control-plane functionality are failing.
+- Recommend next non-disruptive diagnostics to run. We will not reboot the controller or flap Po26 without TAC approval.
+- If required, advise whether to collect a tech-support bundle and/or packet capture of Port-channel26; we will perform only on TAC request.
+- Provide remediation guidance, including whether a service/process restart is safe or whether an ordered reboot or code-level escalation is required. If this is likely a software bug, please escalate to engineering and advise on any known issues with AireOS 8.10.183.0.
+
+Suggested severity: S2 (High Impact) — multi-site production wireless impact with progressive AP loss and loss of management access while controller remains pingable.
