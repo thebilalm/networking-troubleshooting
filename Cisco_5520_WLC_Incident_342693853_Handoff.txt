@@ -1,0 +1,161 @@
+Cisco 5520 WLC Incident / TAC Case Handoff
+Updated: 2026-09-10
+
+PURPOSE
+This file summarizes troubleshooting performed for NYL wireless controller incident ticket 342693853 so another engineer/Copilot session can continue without re-reading the full chat.
+
+INCIDENT
+Customer: New York Life Insurance Company
+Internal ticket: 342693853
+Device: USADC5520WLC02
+Platform: Cisco 5520 Wireless LAN Controller
+Product/entitlement shown in Cisco Case Manager: C1-AIR-CT5520-K9
+Serial number: FCH2034V2VW
+Management IP: 172.28.182.214
+Software: Cisco AireOS 8.10.183.0
+Switch investigated: SWTADC_02
+WLC management VLAN: VLAN 220 / AP_Management
+
+REPORTED SYMPTOMS
+- WLC GUI was unreachable while SSH initially remained available.
+- WLC was progressively losing joined APs.
+- Ron Francis initially observed approximately 87 APs.
+- During Tier 3 troubleshooting, AP count was later observed at 64 and then 57.
+- Multiple remote sites reported wireless/internet issues, including Z92 and S74.
+- WLC itself failed pings to 10.111.1.53 and 10.112.1.53 during earlier testing.
+- Condition later worsened: WLC management IP remained pingable, but SSH stopped responding as well.
+- Ron Francis requested Cisco TAC engagement due to worsening condition and customer concern.
+
+WLC VALIDATION WHILE SSH WAS AVAILABLE
+show sysinfo:
+- System name: USADC5520WLC02
+- Management IP: 172.28.182.214
+- AireOS: 8.10.183.0
+- Uptime: approximately 152 days
+- CPU approximately 0%
+- Memory approximately 17%
+- Both power supplies present/OK
+- No evidence of a recent controller reboot or obvious resource exhaustion.
+
+show interface summary:
+- management: VLAN 220, 172.28.182.214, Static, AP Manager Yes
+- guest: VLAN 218, 172.28.218.18
+- vlan118: 10.19.218.18
+- vlan208: 10.19.208.18
+- vlan214: 10.19.214.18
+- vlan216: 10.19.216.18
+- vlan230: 172.28.180.18
+- virtual interface: 206.210.30.2
+
+show port summary:
+- WLC Port 1: up, 1000/full
+- WLC Port 2: up, 1000/full
+- Redundancy port: up
+- Service port: down
+- Physical WLC uplinks appeared healthy.
+
+WLC logs showed RADIUS/AAA failures, DOT1X authentication aborts, orphan ARP messages, and some timeouts. These may be symptoms rather than root cause.
+
+SWITCH / ETHERCHANNEL VALIDATION
+WLC connects to SWTADC_02 via Port-channel26.
+
+Po26 configuration includes:
+- switchport mode trunk
+- allowed VLANs 1,118,208,214-216,218,220,230
+- channel-group 26 mode on (static EtherChannel)
+- Member interfaces: Gi7/15 and Gi9/15
+
+Validation:
+- Po26 up/up.
+- Aggregate bandwidth 2 Gbps.
+- Gi7/15 up/up, 1 Gbps full duplex.
+- Gi9/15 up/up, 1 Gbps full duplex.
+- No CRC, frame, input, output, collision, or significant drop errors observed.
+- show etherchannel summary: Po26(SU), Gi7/15(P), Gi9/15(P).
+- Both links are correctly bundled and forwarding.
+- No evidence found of a physical WLC uplink or EtherChannel failure.
+
+VLAN 220 VALIDATION
+show vlan id 220:
+- VLAN 220 name AP_Management
+- Status active
+- Present on Te3/1, Po1, Po26
+
+show spanning-tree vlan 220:
+- SWTADC_02 is STP root for VLAN 220.
+- Te3/1, Po1 and Po26 were designated/forwarding.
+- No STP blocking condition identified.
+
+VLAN 220 SVI / HSRP:
+- SWTADC_02 Vlan220: 172.28.182.252/24, up/up
+- HSRP virtual IP: 172.28.182.1
+- Standby peer: 172.28.182.2
+
+DIRECT WLC REACHABILITY TEST
+From SWTADC_02:
+ping 172.28.182.214 source 172.28.182.252
+Result: 100% success, 5/5.
+
+ARP:
+172.28.182.214 resolved to MAC 00a2.ee33.ff8f on Vlan220.
+
+MAC table:
+00a2.ee33.ff8f learned dynamically through Po26.
+
+This proves local Layer-2 connectivity between SWTADC_02 VLAN 220 and the WLC management interface was functioning.
+
+UPSTREAM ROUTING VALIDATION
+show ip route 10.111.1.53:
+- Route 10.111.1.0/24 present via internal BGP AS 64513.
+- Next hop 10.102.255.1.
+
+show ip route 10.112.1.53:
+- Route 10.112.1.0/24 present via internal BGP AS 64513.
+- Next hop 10.102.255.1.
+
+Tests from SWTADC_02:
+ping 10.111.1.53 source 172.28.182.252
+- 100% success, 5/5, approximately 28 ms.
+
+ping 10.112.1.53 source 172.28.182.252
+- 100% success, 5/5, approximately 1 ms.
+
+Therefore:
+- Po26 is healthy.
+- VLAN 220 is active and forwarding.
+- WLC MAC/ARP resolution works.
+- Local connectivity to WLC management IP works.
+- Routes toward 10.111.1.0/24 and 10.112.1.0/24 are present.
+- Those destinations are reachable when sourced from the VLAN 220 switch SVI.
+- Earlier WLC-originated pings to those destinations failed, despite the switch being able to reach them from the same subnet.
+- Evidence points away from a basic SWTADC_02 Po26/VLAN220/upstream-routing failure and toward an issue involving the WLC itself or its management/control-plane behavior.
+
+LATEST STATUS
+- USADC5520WLC02 / 172.28.182.214 still passes ping testing.
+- SSH to the controller now hangs/fails and had to be aborted.
+- GUI remains inaccessible.
+- AP loss and multi-site wireless impact were reported.
+- Cisco TAC case is being opened at Ron Francis's request.
+
+CISCO TAC CASE DETAILS / RECOMMENDED DESCRIPTION
+Suggested severity: S2 / High Impact due to multi-site production wireless impact, progressive AP loss, and loss of management access while the controller remains pingable.
+
+Suggested title:
+Cisco 5520 WLC losing APs and no longer accessible via SSH/GUI
+
+Suggested TAC description:
+Cisco 5520 WLC USADC5520WLC02 (172.28.182.214), running AireOS 8.10.183.0, is experiencing an ongoing issue impacting wireless service at multiple sites. The WLC was initially reachable via SSH but not via GUI. During troubleshooting, the number of joined APs continued to decrease (initially approximately 87 APs, later observed at 64 and then 57), and multiple sites reported wireless connectivity issues.
+
+Network connectivity to the WLC has been validated from the directly connected switch SWTADC_02. WLC uplink Port-channel26 is up/up with both Gi7/15 and Gi9/15 bundled and forwarding with no interface errors. VLAN 220 (AP Management) is active and forwarding. WLC management IP 172.28.182.214 responds successfully to ping, ARP resolves, and the WLC MAC is learned through Po26.
+
+Routes to 10.111.1.0/24 and 10.112.1.0/24 are present and both 10.111.1.53 and 10.112.1.53 are reachable when sourced from the VLAN 220 SVI. Earlier, the WLC itself was unable to ping these destinations.
+
+The condition has now worsened: the WLC remains pingable at 172.28.182.214, but SSH access is no longer responding and GUI access remains unavailable.
+
+Requesting Cisco TAC assistance to investigate the WLC/controller condition and continued AP loss. Please advise on recovery steps and any additional diagnostics required.
+
+NEXT ACTIONS
+- Complete/open Cisco TAC case.
+- Do not reboot the WLC or bounce Po26/member interfaces without approved change/recovery direction.
+- Provide TAC with the above switch validation and any previously captured WLC outputs/logs.
+- If controller access returns, capture current AP count, sysinfo, interface/port status, AP join statistics, and relevant logs before making changes.
