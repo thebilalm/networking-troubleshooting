@@ -1,0 +1,128 @@
+Cisco Device Configuration Order - Console Build Guide
+
+IMPORTANT:
+- Stay connected to the console during the entire process.
+- Keep AAA/TACACS and VTY/console authentication changes until the end so you do not lock yourself out.
+- If this is a switch rather than a router, only use the sections that exist in the approved configuration for that device. Router-specific items such as BGP, IP SLA, WAN interfaces, and some VRF settings may not apply.
+- Use the existing/approved configuration as the source of truth. Do not invent or change values.
+
+Before pasting anything:
+terminal length 0
+configure terminal
+
+1. GLOBAL BASICS
+Paste first:
+- version
+- hostname
+- service ...
+- platform ...
+- boot system
+- clock timezone
+- no ip domain lookup
+- ipv6 unicast-routing
+- license boot level
+- spanning-tree
+- redundancy
+
+2. VRF AND LOOPBACKS
+Paste:
+- vrf definition Mgmt-intf
+- interface Loopback10
+- interface Loopback101
+
+3. QoS DEFINITIONS
+Paste:
+- class-map
+- policy-map
+
+Note:
+QoS definitions do not affect traffic until they are applied to interfaces.
+
+4. NETFLOW
+Paste:
+- flow record
+- flow exporter
+- flow monitor
+
+5. ACLs AND PREFIX LISTS
+Paste:
+- ip access-list
+- ipv6 access-list
+- ip prefix-list
+
+6. IP SLA
+Paste:
+- ip sla
+- ip sla schedule
+- ip sla responder
+
+7. ROUTING
+Paste:
+- router bgp 65001
+
+Note:
+Do not worry if the BGP neighbor is not established yet. Interfaces may not be configured/up yet.
+
+8. INTERFACES
+If possible, leave the WAN/uplink cable unplugged until the interface configuration is complete.
+
+Paste:
+- Gi0/0/0
+- Gi0/0/1
+- all subinterfaces
+- management interface
+- Vlan1
+- any other physical/uplink/access/trunk interfaces from the approved config
+
+9. LOGGING / SNMP / NTP
+Paste:
+- logging
+- snmp-server
+- ntp
+- banner
+- alias
+
+10. AAA AND TACACS - LAST
+Paste:
+- aaa new-model
+- all aaa authentication
+- all aaa authorization
+- all aaa accounting
+- tacacs-server
+- ip tacacs source-interface
+
+11. CONSOLE AND VTY LINES - VERY LAST
+Paste:
+- line con 0
+- line aux
+- line vty
+
+These line settings may depend on AAA already being configured.
+
+AFTER THE ENTIRE CONFIGURATION IS IN
+
+Run:
+show run | sec hostname
+show ip interface brief
+show interfaces description
+show ip bgp summary
+show ip route
+show logging
+
+For a switch, also verify as applicable:
+show interfaces status
+show interfaces trunk
+show vlan brief
+show spanning-tree
+show etherchannel summary
+
+If everything looks correct:
+write memory
+
+FINAL CHECKS
+- Confirm expected interfaces are up/up.
+- Confirm trunks/access ports and VLANs are correct.
+- Confirm management connectivity works.
+- Confirm routing/BGP only if the device actually uses it.
+- Confirm there are no unexpected interface errors or critical logs.
+- Save the configuration before disconnecting the console.
