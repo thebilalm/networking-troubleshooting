@@ -1,7 +1,0 @@
-Router replacement/configuration completed. WAN and LAN are up, remote SSH access verified, and customer confirmed connectivity is restored. Tech released. No return label was included with the replacement; tech will contact NCR for the return label.
-
-Ticket logs:
-
-Replacement router configured and installed. WAN/LAN connectivity restored and remote SSH access verified. Customer tested and confirmed connectivity is working. No return label was included in the box; tech will contact NCR to obtain return label for the old equipment. Tech released.
-
-Replacement router configured and installed. OSPF neighbor 172.21.226.15 is FULL/DR via Gi1/1/1. Default route 0.0.0.0/0 learned via OSPF 55. Ping to WAN next hop 172.21.193.241, OSPF neighbor 172.21.226.15, and LAN gateway 10.18.0.1 successful 5/5 with no loss. Remote SSH access verified. Customer tested and confirmed connectivity restored. Tech released. No return label included with replacement; tech to contact NCR for return label.
