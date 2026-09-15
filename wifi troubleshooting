@@ -36,7 +36,6 @@ Issue is still being observed when traffic is using the Verizon path. Users are 
 
 Issue is still being observed when traffic is using the Verizon path. Users are experiencing slow response on both wired and wireless connections across multiple applications. Internal ping and traceroute testing was performed. Please continue investigation and advise what additional testing/results are required from our side.
 
-replacement router installed/configured, WAN/LAN restored, OSPF FULL, default route learned, pings successful, SSH verified, and customer confirmed connectivity. NCR also confirmed the old equipment does not need to be returned, so there’s nothing outstanding.
 
 
 
