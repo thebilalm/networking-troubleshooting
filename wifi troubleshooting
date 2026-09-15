@@ -1,0 +1,51 @@
+
+
+findings from today were:
+
+* Verizon AVPN path is suspicious. When the Verizon path was taken out and traffic was forced over the AT&T AVPN path, the traces and user experience looked better. They want the site to stay on AT&T only for a few days and compare behavior from that point forward.
+* Open a Verizon ticket now. That is your action. The reason should be intermittent slowness/connectivity observed while traffic was using the Verizon path; after Verizon was removed, traffic was forced to AT&T for comparison and performance appeared improved.
+* Wireless is a separate concern. AP31 had 30+ clients, and they want a OneSource Ekahau wireless survey to check coverage, density, interference, placement, and whether another AP is needed in the conference/training area.
+* Linda’s wired issue had a local negotiation problem. Her switch port Te1/0/34 was initially negotiating at 100 Mbps. The cable diagnostic bounced the link, and when it came back it negotiated at 1 Gbps. TDR showed all four pairs normal. Her speed improved afterward. So that looks more like phone/NIC/endpoint negotiation than a bad cable.
+* The link-down/up log around 16:45 GMT corresponds to the cable diagnostic they intentionally ran, so that flap itself is not evidence of an intermittent physical fault.
+* The large output-drop totals and unknown-protocol-drop totals are historical counters. Nothing in what they showed proves those were actively driving today’s issue.
+* The CNJ routing/BGP observation is another separate lead. Abhishek found a BGP neighbor down and route/prefix differences on the CSR/R01/R03 side, but Eric specifically said that needs to go to Tony/Mario because it’s deeper NYL/DC routing and may also relate to the existing CNJ fiber-cut incident.
+
+
+for ticket:
+Joint troubleshooting bridge completed with NYL wireless/network teams. Circuit utilization remained within normal range. Verizon AVPN path was removed from service for comparison and traffic is currently operating over AT&T AVPN only. User experience appeared improved after path change. Verizon carrier ticket being opened for investigation. Wireless review also identified high client concentration on several APs; OneSource wireless/Ekahau survey to be requested. Additional NYL routing/BGP findings will be reviewed by the appropriate network team. Site to gather user impact details over the next several business days and regroup later this week.
+
+
+For Verizon Ticket:
+Describe the issue you are seeing, including frequency:
+Users are intermittently experiencing slow network performance. During troubleshooting, performance improved after traffic was moved off the Verizon AVPN path to the alternate AT&T path. Please test the Verizon circuit for packet loss, latency, errors, or other degradation.
+
+issue first detected:
+September 11, 2026
+
+intrusively test the circuit:
+immediately. 
+
+comment:
+Please expedite testing and provide findings for the circuit, including any packet loss, latency, errors, or service degradation observed. Circuit is available for intrusive testing.
+
+verizon ticket trouble description:
+Intermittent slowness/connectivity reported at NYL Houston D03. During joint troubleshooting, staff traffic was observed traversing the Verizon AVPN path during periods of degraded performance/incomplete traceroute. Verizon path was administratively removed and traffic shifted to the AT&T AVPN path for comparison; user experience and traceroute behavior improved afterward. Site will remain on AT&T path for observation. Please test Verizon circuit/path for intermittent packet loss, errors, or degradation and advise findings.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
