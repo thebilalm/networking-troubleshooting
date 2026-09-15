@@ -1,0 +1,113 @@
+
+
+what common commands actually prove:
+
+Command
+
+Question you’re answering
+
+
+show version
+
+Did device reboot? What platform/software?
+
+
+show ip int brief
+
+Which L3 interfaces are operational?
+
+
+show interfaces X
+
+What is happening physically/operationally on X?
+
+
+show run interface X
+
+What is X configured to do?
+
+
+show logging
+
+What happened and in what order?
+
+
+show ip arp
+
+Which IPv4-to-MAC mappings does this device know?
+
+
+show mac address-table
+
+Where did the switch learn MAC addresses?
+
+
+show vlan brief
+
+Which VLANs exist locally?
+
+
+show interfaces trunk
+
+Which links trunk and which VLANs cross them?
+
+
+show spanning-tree
+
+What L2 topology has STP selected?
+
+
+show etherchannel summary
+
+Are bundle members actually participating?
+
+
+show cdp neighbors detail
+
+What network device is connected where?
+
+
+show ip route
+
+Which L3 paths are installed?
+
+
+show ip bgp summary
+
+Are BGP sessions established?
+
+
+show ip bgp
+
+What does BGP know?
+
+
+show ip ospf neighbor
+
+Are OSPF adjacencies healthy?
+
+
+show ip pim neighbor
+
+Are directly connected PIM routers present?
+
+
+show ip mroute
+
+What multicast forwarding state exists?
+
+
+show controllers
+
+What does the underlying hardware/controller see?
+
+
+ping
+
+Can packets reach and return from this target?
+
+
+traceroute
+
+Approximately how far does the path progress?
+
