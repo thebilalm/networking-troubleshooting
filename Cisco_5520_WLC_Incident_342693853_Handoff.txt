@@ -159,3 +159,19 @@ NEXT ACTIONS
 - Do not reboot the WLC or bounce Po26/member interfaces without approved change/recovery direction.
 - Provide TAC with the above switch validation and any previously captured WLC outputs/logs.
 - If controller access returns, capture current AP count, sysinfo, interface/port status, AP join statistics, and relevant logs before making changes.
+
+ticket log:
+NCR CE Charles McClellan onsite with replacement WLC. Failed USADC5520WLC02 remains down/unreachable. CE proceeding with hardware replacement. Will restore configuration and validate controller/AP connectivity after installation.
+
+
+
+
+
+
+
+
+
+
+
+
+
