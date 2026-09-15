@@ -1,0 +1,132 @@
+
+The troubleshooting hierarchy
+
+                    ALERT
+                      |
+                      v
+             Is device reachable?
+               /             \
+             YES              NO
+              |                |
+              v                v
+        What is affected?    Power/OOB?
+              |                |
+      +-------+-------+        |
+      |       |       |        v
+     WAN     LAN    Protocol   CPE/transport
+      |       |       |
+      v       v       v
+ Interface  VLAN     Underlying
+ errors?    MAC      reachability
+      |      ARP       first
+      |      STP       |
+      |      trunk     v
+      |      Po       BGP/OSPF/PIM
+      |
+      v
+Carrier handoff
+      |
+      v
+Transport
+
+
+
+And underneath every branch, ask:
+Was there a change?
+Was there a known event?
+What do the logs say?
+What changed immediately before the symptom?
+
+
+
+A compact command ladder:
+
+
+DEVICE / BASELINE
+-----------------
+show version
+show clock
+show ip interface brief
+show logging
+
+
+PHYSICAL / INTERFACE
+--------------------
+show interfaces <interface>
+show run interface <interface>
+show controllers
+show inventory
+
+
+SWITCHING / L2
+--------------
+show interfaces status
+show interfaces <port> switchport
+show vlan brief
+show interfaces trunk
+show mac address-table
+show spanning-tree
+show spanning-tree vlan <vlan>
+show etherchannel summary
+show cdp neighbors detail
+show lldp neighbors detail
+
+
+L3
+--
+show ip arp
+show ip route
+show ip route <destination>
+ping <destination>
+ping <destination> source <source>
+traceroute <destination>
+
+
+VRF
+---
+show ip route vrf <VRF>
+ping vrf <VRF> <destination> source <source>
+
+
+BGP
+---
+show ip bgp summary
+show ip bgp
+show ip route <BGP-prefix>
+show logging | include BGP
+
+
+OSPF
+----
+show ip ospf neighbor
+show ip ospf interface
+show ip route ospf
+show ip ospf database
+
+
+MULTICAST
+---------
+show ip pim neighbor
+show ip pim interface
+show ip igmp groups
+show ip mroute
+
+
+SERIAL / T1
+-----------
+show interfaces serial <interface>
+show controllers
+show controllers t1
+show logging
+
+
+The important part is knowing which branch applies to the alert.
+
+For a Se0/x/x:x down ticket, controller/serial/transport commands move near the top. For Gi1/0/20 down on an NYL access switch, VLAN/MAC/STP/PoE may matter. For Te... on a Tennessee core, you first determine whether it’s a physical interface, subinterface, PIM-facing/core link, or service interface and whether a known change explains it.
+
+
+
+
+
+
+
