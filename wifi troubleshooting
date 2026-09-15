@@ -34,7 +34,7 @@ Intermittent slowness/connectivity reported at NYL Houston D03. During joint tro
 verizon ticket:
 Issue is still being observed when traffic is using the Verizon path. Users are experiencing slow response on both wired and wireless connections across multiple applications. Internal testing included ping and traceroute testing to 10.111.1.11 and 10.112.1.11. Please continue investigation and advise what additional testing/results are required from our side.
 
-
+Issue is still being observed when traffic is using the Verizon path. Users are experiencing slow response on both wired and wireless connections across multiple applications. Internal ping and traceroute testing was performed. Please continue investigation and advise what additional testing/results are required from our side.
 
 
 
