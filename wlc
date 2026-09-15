@@ -1,0 +1,2650 @@
+# WLC Config Begin
+! Number of APs: 90
+! Power Supply 1: Present, OK 
+! Power Supply 2: Present, OK 
+! PID: AIR-CT5520-K9,  SN: FCH2034V2YW 
+! Product Version: 8.10.183.0 
+! 
+! ******************** PORT SUMMARY **********************
+!  
+!            STP   Admin   Physical   Physical   Link   Link
+! Pr  Type   Stat   Mode     Mode      Status   Status  Trap     POE    
+! -- ------- ---- ------- ---------- ---------- ------ ------- ---------
+! 1  Normal  Forw Enable  Auto       1000 Full  Up     Enable  N/A     
+! 2  Normal  Forw Enable  Auto       1000 Full  Up     Enable  N/A     
+! 
+! ******************** CDP NEIGHBOUR SUMMARY **********************
+! 
+! Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+!                   S - Switch, H - Host, I - IGMP, r - Repeater, 
+!                   M - Remotely Managed Device
+! 
+! Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+! SWTADC_02.newyorklife.com
+!                  Ten 0/0/1         130           R S I    WS-C6509- Gig 9/155
+! SWTADC_02.newyorklife.com
+!                  Ten 0/0/2         173           R S I    WS-C6509- Gig 7/15
+
+config spanningtree port mode off 1 
+config spanningtree port mode off 2 
+config location expiry tags 5 
+config trapflags rrm-profile noise disable 
+config trapflags rrm-profile load disable 
+config trapflags rrm-profile interference disable 
+config trapflags rrm-profile coverage disable 
+config trapflags strong-pwdcheck disable 
+config trapflags client enhanced-802.11-associate disable 
+config trapflags client webauthuserlogin enable 
+config trapflags client authentication disable 
+config trapflags client nac-alert disable 
+config trapflags client neighborclientsignal disable 
+config trapflags client max-warning-threshold disable 
+config trapflags client 802.11-disassociate disable 
+config trapflags client enhanced-authentication disable 
+config trapflags client webauthuserlogout enable 
+config trapflags client 802.11-assoc-stats disable 
+config trapflags client excluded disable 
+config trapflags client enhanced-802.11-disassociate-stats disable 
+config trapflags client 802.11-assocfail disable 
+config trapflags client enhanced-802.11-stats disable 
+config trapflags client 802.11-authfail disable 
+config trapflags client enhanced-802.11-deauthenticate disable 
+config trapflags client 802.11-associate disable 
+config trapflags client 802.11-deauthenticate disable 
+config trapflags authentication disable 
+config trapflags multiusers disable 
+config trapflags rrm-params tx-power disable 
+config trapflags rrm-params channel disable 
+config trapflags stpmode disable 
+config trapflags rfid max-warning-threshold disable 
+config trapflags 802.11-security wepdecrypterror disable 
+config trapflags 802.11-security ids-sig-attack disable 
+config trapflags configsave disable 
+config trapflags mesh disable 
+config trapflags aaa servers disable 
+config trapflags aaa auth disable 
+config trapflags rogueap disable 
+config wps mfp infrastructure enable 
+config macfilter add 70:db:98:57:d3:80 0 management AIR-AP1572EAC-B-K9 
+config countries-list add US  
+config sys-nas Cisco_33:ff:88 
+config redundancy retries keep-alive-retry 3 
+config sessions timeout 30 
+config network webmode enable 
+config network assurance on-change ap enable 
+config network assurance on-change ap-events enable 
+config network assurance on-change ap-fra enable 
+config network assurance on-change ap-interface-stats enable 
+config network assurance on-change ap-reports enable 
+config network assurance on-change ap-rf-neighbors enable 
+config network assurance on-change client enable 
+config network assurance on-change client-app-stat-events enable 
+config network assurance on-change client-dns-reports enable 
+config network assurance on-change client-events enable 
+config network assurance on-change client-nearest-aps enable 
+config network assurance on-change client-reports enable 
+config network assurance on-change client-rf-measurements enable 
+config network assurance on-change client-traffic-measurements enable 
+config network assurance on-change dhcp enable 
+config network assurance on-change fabric enable 
+config network assurance on-change icap-serviceability enable 
+config network assurance on-change interferers enable 
+config network assurance on-change licensing enable 
+config network assurance on-change radius enable 
+config network assurance on-change redundancy enable 
+config network assurance on-change scan-reports enable 
+config network assurance on-change system-core-stats enable 
+config network assurance on-change system-general-stats enable 
+config network assurance on-change system-port-stats enable 
+config network assurance on-change ap-traffic-dist enable 
+config network assurance url https://172.20.75.132 
+config network assurance sync-interval ap 300 
+config network assurance sync-interval ap-events 30 
+config network assurance sync-interval ap-fra 300 
+config network assurance sync-interval ap-interface-stats 300 
+config network assurance sync-interval ap-reports 300 
+config network assurance sync-interval ap-rf-neighbors 300 
+config network assurance sync-interval ap-rf-stats 300 
+config network assurance sync-interval client 300 
+config network assurance sync-interval client-app-stat-events 30 
+config network assurance sync-interval client-dns-reports 30 
+config network assurance sync-interval client-events 30 
+config network assurance sync-interval client-nearest-aps 300 
+config network assurance sync-interval client-reports 30 
+config network assurance sync-interval client-rf-measurements 300 
+config network assurance sync-interval client-traffic-measurements 300 
+config network assurance sync-interval dhcp 300 
+config network assurance sync-interval fabric 300 
+config network assurance sync-interval icap-serviceability 300 
+config network assurance sync-interval interferers 300 
+config network assurance sync-interval licensing 300 
+config network assurance sync-interval radius 300 
+config network assurance sync-interval redundancy 300 
+config network assurance sync-interval scan-reports 30 
+config network assurance sync-interval system-core-stats 300 
+config network assurance sync-interval system-general-stats 300 
+config network assurance sync-interval system-port-stats 300 
+config network assurance sync-interval ap-traffic-dist 300 
+config network assurance subscribe ap 
+config network assurance subscribe ap-events 
+config network assurance subscribe ap-fra 
+config network assurance subscribe ap-interface-stats 
+config network assurance subscribe ap-reports 
+config network assurance subscribe ap-rf-neighbors 
+config network assurance subscribe ap-rf-stats 
+config network assurance subscribe client 
+config network assurance subscribe client-app-stat-events 
+config network assurance subscribe client-dns-reports 
+config network assurance subscribe client-events 
+config network assurance subscribe client-nearest-aps 
+config network assurance subscribe client-reports 
+config network assurance subscribe client-rf-measurements 
+config network assurance subscribe client-traffic-measurements 
+config network assurance subscribe dhcp 
+config network assurance subscribe fabric 
+config network assurance subscribe icap-serviceability 
+config network assurance subscribe interferers 
+config network assurance subscribe licensing 
+config network assurance subscribe radius 
+config network assurance subscribe redundancy 
+config network assurance subscribe scan-reports 
+config network assurance subscribe system-core-stats 
+config network assurance subscribe system-general-stats 
+config network assurance subscribe system-port-stats 
+config network assurance subscribe ap-traffic-dist 
+config network assurance enable 
+config network multicast l2mcast disable service-port 
+config network multicast l2mcast disable virtual 
+config network multicast mode unicast 
+config network ms-open port 16000 
+config network usertimeout 55200 
+config network rf-network-name GO/SO3 
+config mdns policy service-group user-role add default-mdns-policy admin 
+config mdns policy service-group create default-mdns-policy "Default Access Policy created by WLC" 
+config mdns profile create default-mdns-profile 
+config mdns profile service add default-mdns-profile AirTunes 
+config mdns profile service add default-mdns-profile Airplay 
+config mdns profile service add default-mdns-profile HP_Photosmart_Printer_1 
+config mdns profile service add default-mdns-profile HP_Photosmart_Printer_2 
+config mdns profile service add default-mdns-profile HomeSharing 
+config mdns profile service add default-mdns-profile Printer-IPP 
+config mdns profile service add default-mdns-profile Printer-IPPS 
+config mdns profile service add default-mdns-profile Printer-LPD 
+config mdns profile service add default-mdns-profile Printer-SOCKET 
+config mdns service origin all AirTunes 
+config mdns service create AirTunes _raop._tcp.local. origin all lss disable 
+config mdns service origin all Airplay 
+config mdns service create Airplay _airplay._tcp.local. origin all lss disable 
+config mdns service origin all HP_Photosmart_Printer_1 
+config mdns service query enable HP_Photosmart_Printer_1 
+config mdns service create HP_Photosmart_Printer_1 _universal._sub._ipp._tcp.local. origin all lss disable query enable 
+config mdns service origin all HP_Photosmart_Printer_2 
+config mdns service query enable HP_Photosmart_Printer_2 
+config mdns service create HP_Photosmart_Printer_2 _cups._sub._ipp._tcp.local. origin all lss disable query enable 
+config mdns service origin all HomeSharing 
+config mdns service query enable HomeSharing 
+config mdns service create HomeSharing _home-sharing._tcp.local. origin all lss disable query enable 
+config mdns service origin all Printer-IPP 
+config mdns service create Printer-IPP _ipp._tcp.local. origin all lss disable 
+config mdns service origin all Printer-IPPS 
+config mdns service create Printer-IPPS _ipps._tcp.local. origin all lss disable 
+config mdns service origin all Printer-LPD 
+config mdns service create Printer-LPD _printer._tcp.local. origin all lss disable 
+config mdns service origin all Printer-SOCKET 
+config mdns service create Printer-SOCKET _pdl-datastream._tcp.local. origin all lss disable 
+config time ntp server 1 135.89.153.82 
+config time ntp server 2 135.89.153.98 
+config time timezone location 13 
+config advanced 802.11b packet silver max-client-count 0 
+config advanced 802.11b packet silver max-packet-count 0 
+config advanced 802.11b packet silver timeout 0 
+config advanced 802.11b packet silver max-retry 0 
+config advanced 802.11b packet platinum max-client-count 0 
+config advanced 802.11b packet platinum max-packet-count 0 
+config advanced 802.11b packet platinum timeout 0 
+config advanced 802.11b packet platinum max-retry 0 
+config advanced 802.11b packet gold max-client-count 0 
+config advanced 802.11b packet gold max-packet-count 0 
+config advanced 802.11b packet gold timeout 0 
+config advanced 802.11b packet gold max-retry 0 
+config advanced 802.11b packet bronze max-client-count 0 
+config advanced 802.11b packet bronze max-packet-count 0 
+config advanced 802.11b packet bronze timeout 0 
+config advanced 802.11b packet bronze max-retry 0 
+config advanced 802.11b channel add 1 
+config advanced 802.11b channel add 6 
+config advanced 802.11b channel add 11 
+config advanced 802.11b profile foreign global 20 
+config advanced eap bcast-key-interval 86400 
+config advanced eap max-login-ignore-identity-response disable 
+config advanced probe limit 2 500 
+config advanced 802.11a packet silver max-client-count 0 
+config advanced 802.11a packet silver max-packet-count 0 
+config advanced 802.11a packet silver timeout 0 
+config advanced 802.11a packet silver max-retry 0 
+config advanced 802.11a packet platinum max-client-count 0 
+config advanced 802.11a packet platinum max-packet-count 0 
+config advanced 802.11a packet platinum timeout 0 
+config advanced 802.11a packet platinum max-retry 0 
+config advanced 802.11a packet gold max-client-count 0 
+config advanced 802.11a packet gold max-packet-count 0 
+config advanced 802.11a packet gold timeout 0 
+config advanced 802.11a packet gold max-retry 0 
+config advanced 802.11a packet bronze max-client-count 0 
+config advanced 802.11a packet bronze max-packet-count 0 
+config advanced 802.11a packet bronze timeout 0 
+config advanced 802.11a packet bronze max-retry 0 
+config advanced 802.11a channel add 36 
+config advanced 802.11a channel add 40 
+config advanced 802.11a channel add 44 
+config advanced 802.11a channel add 48 
+config advanced 802.11a channel add 52 
+config advanced 802.11a channel add 56 
+config advanced 802.11a channel add 60 
+config advanced 802.11a channel add 64 
+config advanced 802.11a channel add 149 
+config advanced 802.11a channel add 153 
+config advanced 802.11a channel add 157 
+config advanced 802.11a channel add 161 
+config advanced 802.11a channel dca chan-width 40 
+config advanced 802.11a profile foreign global 20 
+config ipv6 disable 
+config custom-web webmessage "This is a private monitored network that is restricted to authorized users. Access to and use of this network requires explicit approval from the owning business." 
+config custom-web weblogo disable 
+config custom-web webtitle "New York Life Wireless Network" 
+config wlan wmm allow 1 
+config wlan avc 1 visibility enable 
+config wlan mfp client enable 1 
+config wlan radio 1 802.11ag 
+config wlan wmm allow 2 
+config wlan avc 2 visibility enable 
+config wlan mfp client enable 2 
+config wlan radio 2 802.11ag 
+config wlan wmm allow 3 
+config wlan avc 3 visibility enable 
+config wlan mfp client enable 3 
+config wlan radio 3 802.11ag 
+config wlan wmm allow 4 
+config wlan avc 4 visibility enable 
+config wlan mfp client enable 4 
+config wlan radio 4 802.11ag 
+config wlan wmm allow 5 
+config wlan avc 5 visibility enable 
+config wlan mfp client enable 5 
+config wlan radio 5 802.11ag 
+config wlan wmm allow 6 
+config wlan avc 6 visibility enable 
+config wlan mfp client enable 6 
+config wlan radio 6 802.11ag 
+config wlan wmm allow 7 
+config wlan avc 7 visibility enable 
+config wlan mfp client enable 7 
+config wlan radio 7 802.11ag 
+config wlan wmm allow 8 
+config wlan avc 8 visibility enable 
+config wlan mfp client enable 8 
+config wlan radio 8 802.11ag 
+config wlan wmm allow 9 
+config wlan avc 9 visibility enable 
+config wlan mfp client enable 9 
+config wlan radio 9 802.11ag 
+config wlan wmm allow 10 
+config wlan avc 10 visibility enable 
+config wlan mfp client enable 10 
+config wlan wmm allow 11 
+config wlan avc 11 visibility enable 
+config wlan mfp client enable 11 
+config wlan radio 11 802.11a-only 
+config wlan wmm allow 12 
+config wlan avc 12 visibility enable 
+config wlan mfp client enable 12 
+config wlan radio 12 802.11ag 
+config wlan wmm allow 13 
+config wlan avc 13 visibility enable 
+config wlan mfp client enable 13 
+config wlan radio 13 802.11ag 
+config wlan wmm allow 14 
+config wlan avc 14 visibility enable 
+config wlan mfp client enable 14 
+config wlan radio 14 802.11ag 
+config wlan wmm allow 15 
+config wlan avc 15 visibility enable 
+config wlan mfp client enable 15 
+config wlan radio 15 802.11ag 
+config wlan wmm allow 17 
+config wlan avc 17 visibility enable 
+config wlan mfp client enable 17 
+config wlan radio 17 802.11ag 
+config wlan wmm allow 18 
+config wlan avc 18 visibility enable 
+config wlan mfp client enable 18 
+config wlan radio 18 802.11ag 
+config wlan wmm allow 19 
+config wlan avc 19 visibility enable 
+config wlan mfp client enable 19 
+config wlan radio 19 802.11ag 
+config wlan apgroup description AllGOWlans GOWlans 
+config wlan apgroup description AllSCWlans AllSCWlans 
+config wlan apgroup description GOWlansPilot GOWlansPilot 
+config wlan apgroup description GPP299 Gold_Point 
+config wlan apgroup description HOWlans "SC WLANs with Agentlife 5G SSIDs" 
+config wlan apgroup description HOWlans_F13 HOWlans_F13 
+config wlan apgroup description HOWlans_F14 HOWlans_F14 
+config wlan apgroup description Houston_D03_Test "Single BW NICs Issue" 
+config wlan apgroup description ISETEST ISETEST 
+config wlan apgroup description Madison_Capital_Funding_MCF Madison_Capital_Funding_MCF 
+config wlan apgroup description WPOWlans WPOWlans 
+config wlan apgroup qinq tagging eap-sim-aka AllGOWlans enable 
+config wlan apgroup hyperlocation AllGOWlans ntp 16843009 
+config wlan apgroup hyperlocation AllGOWlans trigger-threshold 10 
+config wlan apgroup hyperlocation AllGOWlans threshold 100 
+config wlan apgroup interface-mapping add AllGOWlans 1 vlan230 
+config wlan apgroup interface-mapping add AllGOWlans 2 vlan230 
+config wlan apgroup interface-mapping add AllGOWlans 3 vlan214 
+config wlan apgroup interface-mapping add AllGOWlans 4 vlan216 
+config wlan apgroup interface-mapping add AllGOWlans 5 vlan216 
+config wlan apgroup interface-mapping add AllGOWlans 6 vlan230 
+config wlan apgroup interface-mapping add AllGOWlans 7 vlan208 
+config wlan apgroup interface-mapping add AllGOWlans 9 vlan208 
+config wlan apgroup interface-mapping add AllGOWlans 10 vlan216 
+config wlan apgroup interface-mapping add AllGOWlans 11 vlan216 
+config wlan apgroup add AllGOWlans GOWlans 
+config wlan apgroup wlan-radio-policy AllGOWlans 1 none 
+config wlan apgroup wlan-radio-policy AllGOWlans 2 none 
+config wlan apgroup wlan-radio-policy AllGOWlans 3 none 
+config wlan apgroup wlan-radio-policy AllGOWlans 4 none 
+config wlan apgroup wlan-radio-policy AllGOWlans 5 none 
+config wlan apgroup wlan-radio-policy AllGOWlans 6 none 
+config wlan apgroup wlan-radio-policy AllGOWlans 7 none 
+config wlan apgroup wlan-radio-policy AllGOWlans 9 none 
+config wlan apgroup wlan-radio-policy AllGOWlans 10 none 
+config wlan apgroup wlan-radio-policy AllGOWlans 11 802.11a-only 
+config wlan apgroup atf 802.11a optimization enable AllGOWlans 
+config wlan apgroup atf 802.11b optimization enable AllGOWlans 
+config wlan apgroup qinq tagging eap-sim-aka AllSCWlans enable 
+config wlan apgroup hyperlocation AllSCWlans ntp 16843009 
+config wlan apgroup hyperlocation AllSCWlans trigger-threshold 10 
+config wlan apgroup hyperlocation AllSCWlans threshold 100 
+config wlan apgroup interface-mapping add AllSCWlans 1 vlan230 
+config wlan apgroup interface-mapping add AllSCWlans 3 vlan214 
+config wlan apgroup interface-mapping add AllSCWlans 6 vlan230 
+config wlan apgroup interface-mapping add AllSCWlans 7 vlan208 
+config wlan apgroup interface-mapping add AllSCWlans 8 vlan118 
+config wlan apgroup interface-mapping add AllSCWlans 9 vlan208 
+config wlan apgroup add AllSCWlans AllSCWlans 
+config wlan apgroup wlan-radio-policy AllSCWlans 1 none 
+config wlan apgroup wlan-radio-policy AllSCWlans 3 none 
+config wlan apgroup wlan-radio-policy AllSCWlans 6 none 
+config wlan apgroup wlan-radio-policy AllSCWlans 7 none 
+config wlan apgroup wlan-radio-policy AllSCWlans 8 none 
+config wlan apgroup wlan-radio-policy AllSCWlans 9 none 
+config wlan apgroup atf 802.11a optimization enable AllSCWlans 
+config wlan apgroup atf 802.11b optimization enable AllSCWlans 
+config wlan apgroup qinq tagging eap-sim-aka AllWlans enable 
+config wlan apgroup hyperlocation AllWlans ntp 16843009 
+config wlan apgroup hyperlocation AllWlans trigger-threshold 10 
+config wlan apgroup hyperlocation AllWlans threshold 100 
+config wlan apgroup interface-mapping add AllWlans 1 vlan230 
+config wlan apgroup interface-mapping add AllWlans 2 vlan230 
+config wlan apgroup interface-mapping add AllWlans 3 vlan214 
+config wlan apgroup interface-mapping add AllWlans 4 vlan216 
+config wlan apgroup interface-mapping add AllWlans 5 vlan216 
+config wlan apgroup interface-mapping add AllWlans 6 vlan230 
+config wlan apgroup interface-mapping add AllWlans 7 vlan208 
+config wlan apgroup interface-mapping add AllWlans 8 vlan118 
+config wlan apgroup interface-mapping add AllWlans 10 vlan216 
+config wlan apgroup interface-mapping add AllWlans 9 vlan208 
+config wlan apgroup add AllWlans 
+config wlan apgroup wlan-radio-policy AllWlans 1 none 
+config wlan apgroup wlan-radio-policy AllWlans 2 none 
+config wlan apgroup wlan-radio-policy AllWlans 3 none 
+config wlan apgroup wlan-radio-policy AllWlans 4 none 
+config wlan apgroup wlan-radio-policy AllWlans 5 none 
+config wlan apgroup wlan-radio-policy AllWlans 6 none 
+config wlan apgroup wlan-radio-policy AllWlans 7 none 
+config wlan apgroup wlan-radio-policy AllWlans 8 none 
+config wlan apgroup wlan-radio-policy AllWlans 10 none 
+config wlan apgroup wlan-radio-policy AllWlans 9 none 
+config wlan apgroup atf 802.11a optimization enable AllWlans 
+config wlan apgroup atf 802.11b optimization enable AllWlans 
+config wlan apgroup qinq tagging eap-sim-aka GOWlansPilot enable 
+config wlan apgroup hyperlocation GOWlansPilot ntp 16843009 
+config wlan apgroup hyperlocation GOWlansPilot trigger-threshold 10 
+config wlan apgroup hyperlocation GOWlansPilot threshold 100 
+config wlan apgroup interface-mapping add GOWlansPilot 1 vlan230 
+config wlan apgroup interface-mapping add GOWlansPilot 2 vlan230 
+config wlan apgroup interface-mapping add GOWlansPilot 3 vlan214 
+config wlan apgroup interface-mapping add GOWlansPilot 4 vlan216 
+config wlan apgroup interface-mapping add GOWlansPilot 5 vlan216 
+config wlan apgroup interface-mapping add GOWlansPilot 6 vlan230 
+config wlan apgroup interface-mapping add GOWlansPilot 7 vlan208 
+config wlan apgroup interface-mapping add GOWlansPilot 9 vlan208 
+config wlan apgroup interface-mapping add GOWlansPilot 10 vlan216 
+config wlan apgroup interface-mapping add GOWlansPilot 11 vlan216 
+config wlan apgroup add GOWlansPilot GOWlansPilot 
+config wlan apgroup wlan-radio-policy GOWlansPilot 1 none 
+config wlan apgroup wlan-radio-policy GOWlansPilot 2 none 
+config wlan apgroup wlan-radio-policy GOWlansPilot 3 none 
+config wlan apgroup wlan-radio-policy GOWlansPilot 4 none 
+config wlan apgroup wlan-radio-policy GOWlansPilot 5 none 
+config wlan apgroup wlan-radio-policy GOWlansPilot 6 none 
+config wlan apgroup wlan-radio-policy GOWlansPilot 7 none 
+config wlan apgroup wlan-radio-policy GOWlansPilot 9 none 
+config wlan apgroup wlan-radio-policy GOWlansPilot 10 none 
+config wlan apgroup wlan-radio-policy GOWlansPilot 11 none 
+config wlan apgroup atf 802.11a optimization enable GOWlansPilot 
+config wlan apgroup atf 802.11b optimization enable GOWlansPilot 
+config wlan apgroup qinq tagging eap-sim-aka GPP299 enable 
+config wlan apgroup hyperlocation GPP299 ntp 16843009 
+config wlan apgroup hyperlocation GPP299 trigger-threshold 10 
+config wlan apgroup hyperlocation GPP299 threshold 100 
+config wlan apgroup interface-mapping add GPP299 1 vlan230 
+config wlan apgroup interface-mapping add GPP299 3 vlan214 
+config wlan apgroup interface-mapping add GPP299 6 vlan230 
+config wlan apgroup interface-mapping add GPP299 7 vlan208 
+config wlan apgroup interface-mapping add GPP299 9 vlan208 
+config wlan apgroup interface-mapping add GPP299 10 vlan216 
+config wlan apgroup interface-mapping add GPP299 12 vlan208 
+config wlan apgroup add GPP299 Gold_Point 
+config wlan apgroup wlan-radio-policy GPP299 1 none 
+config wlan apgroup wlan-radio-policy GPP299 3 none 
+config wlan apgroup wlan-radio-policy GPP299 6 none 
+config wlan apgroup wlan-radio-policy GPP299 7 none 
+config wlan apgroup wlan-radio-policy GPP299 9 none 
+config wlan apgroup wlan-radio-policy GPP299 10 none 
+config wlan apgroup wlan-radio-policy GPP299 12 none 
+config wlan apgroup atf 802.11a optimization enable GPP299 
+config wlan apgroup atf 802.11b optimization enable GPP299 
+config wlan apgroup qinq tagging eap-sim-aka HOWlans enable 
+config wlan apgroup hyperlocation HOWlans ntp 16843009 
+config wlan apgroup hyperlocation HOWlans trigger-threshold 10 
+config wlan apgroup hyperlocation HOWlans threshold 100 
+config wlan apgroup interface-mapping add HOWlans 1 vlan230 
+config wlan apgroup interface-mapping add HOWlans 3 vlan214 
+config wlan apgroup interface-mapping add HOWlans 6 vlan230 
+config wlan apgroup interface-mapping add HOWlans 7 vlan208 
+config wlan apgroup interface-mapping add HOWlans 8 vlan118 
+config wlan apgroup interface-mapping add HOWlans 9 vlan208 
+config wlan apgroup interface-mapping add HOWlans 11 vlan216 
+config wlan apgroup add HOWlans "SC WLANs with Agentlife 5G SSIDs" 
+config wlan apgroup wlan-radio-policy HOWlans 1 none 
+config wlan apgroup wlan-radio-policy HOWlans 3 none 
+config wlan apgroup wlan-radio-policy HOWlans 6 none 
+config wlan apgroup wlan-radio-policy HOWlans 7 none 
+config wlan apgroup wlan-radio-policy HOWlans 8 none 
+config wlan apgroup wlan-radio-policy HOWlans 9 none 
+config wlan apgroup wlan-radio-policy HOWlans 11 none 
+config wlan apgroup atf 802.11a optimization enable HOWlans 
+config wlan apgroup atf 802.11b optimization enable HOWlans 
+config wlan apgroup qinq tagging eap-sim-aka HOWlans_F13 enable 
+config wlan apgroup hyperlocation HOWlans_F13 ntp 16843009 
+config wlan apgroup hyperlocation HOWlans_F13 trigger-threshold 10 
+config wlan apgroup hyperlocation HOWlans_F13 threshold 100 
+config wlan apgroup interface-mapping add HOWlans_F13 1 vlan230 
+config wlan apgroup interface-mapping add HOWlans_F13 3 vlan214 
+config wlan apgroup interface-mapping add HOWlans_F13 6 vlan230 
+config wlan apgroup interface-mapping add HOWlans_F13 7 vlan208 
+config wlan apgroup interface-mapping add HOWlans_F13 8 vlan118 
+config wlan apgroup interface-mapping add HOWlans_F13 9 vlan208 
+config wlan apgroup interface-mapping add HOWlans_F13 10 vlan216 
+config wlan apgroup interface-mapping add HOWlans_F13 11 vlan216 
+config wlan apgroup interface-mapping add HOWlans_F13 18 vlan118 
+config wlan apgroup interface-mapping add HOWlans_F13 19 vlan118 
+config wlan apgroup add HOWlans_F13 HOWlans_F13 
+config wlan apgroup wlan-radio-policy HOWlans_F13 1 none 
+config wlan apgroup wlan-radio-policy HOWlans_F13 3 none 
+config wlan apgroup wlan-radio-policy HOWlans_F13 6 none 
+config wlan apgroup wlan-radio-policy HOWlans_F13 7 none 
+config wlan apgroup wlan-radio-policy HOWlans_F13 8 none 
+config wlan apgroup wlan-radio-policy HOWlans_F13 9 none 
+config wlan apgroup wlan-radio-policy HOWlans_F13 10 none 
+config wlan apgroup wlan-radio-policy HOWlans_F13 11 none 
+config wlan apgroup wlan-radio-policy HOWlans_F13 18 none 
+config wlan apgroup wlan-radio-policy HOWlans_F13 19 none 
+config wlan apgroup atf 802.11a optimization enable HOWlans_F13 
+config wlan apgroup atf 802.11b optimization enable HOWlans_F13 
+config wlan apgroup qinq tagging eap-sim-aka HOWlans_F14 enable 
+config wlan apgroup hyperlocation HOWlans_F14 ntp 16843009 
+config wlan apgroup hyperlocation HOWlans_F14 trigger-threshold 10 
+config wlan apgroup hyperlocation HOWlans_F14 threshold 100 
+config wlan apgroup interface-mapping add HOWlans_F14 1 vlan230 
+config wlan apgroup interface-mapping add HOWlans_F14 3 vlan214 
+config wlan apgroup interface-mapping add HOWlans_F14 6 vlan230 
+config wlan apgroup interface-mapping add HOWlans_F14 7 vlan208 
+config wlan apgroup interface-mapping add HOWlans_F14 8 vlan118 
+config wlan apgroup interface-mapping add HOWlans_F14 9 vlan208 
+config wlan apgroup interface-mapping add HOWlans_F14 11 vlan216 
+config wlan apgroup interface-mapping add HOWlans_F14 10 vlan216 
+config wlan apgroup interface-mapping add HOWlans_F14 18 vlan118 
+config wlan apgroup interface-mapping add HOWlans_F14 19 vlan118 
+config wlan apgroup add HOWlans_F14 HOWlans_F14 
+config wlan apgroup wlan-radio-policy HOWlans_F14 1 none 
+config wlan apgroup wlan-radio-policy HOWlans_F14 3 none 
+config wlan apgroup wlan-radio-policy HOWlans_F14 6 none 
+config wlan apgroup wlan-radio-policy HOWlans_F14 7 none 
+config wlan apgroup wlan-radio-policy HOWlans_F14 8 none 
+config wlan apgroup wlan-radio-policy HOWlans_F14 9 none 
+config wlan apgroup wlan-radio-policy HOWlans_F14 11 none 
+config wlan apgroup wlan-radio-policy HOWlans_F14 10 none 
+config wlan apgroup wlan-radio-policy HOWlans_F14 18 none 
+config wlan apgroup wlan-radio-policy HOWlans_F14 19 none 
+config wlan apgroup atf 802.11a optimization enable HOWlans_F14 
+config wlan apgroup atf 802.11b optimization enable HOWlans_F14 
+config wlan apgroup qinq tagging eap-sim-aka Houston_D03_Test enable 
+config wlan apgroup profile-mapping add Houston_D03_Test NYL_Profile2 
+config wlan apgroup hyperlocation Houston_D03_Test ntp 16843009 
+config wlan apgroup hyperlocation Houston_D03_Test trigger-threshold 10 
+config wlan apgroup hyperlocation Houston_D03_Test threshold 100 
+config wlan apgroup interface-mapping add Houston_D03_Test 10 vlan216 
+config wlan apgroup add Houston_D03_Test "Single BW NICs Issue" 
+config wlan apgroup wlan-radio-policy Houston_D03_Test 10 none 
+config wlan apgroup atf 802.11a optimization enable Houston_D03_Test 
+config wlan apgroup atf 802.11b optimization enable Houston_D03_Test 
+config wlan apgroup qinq tagging eap-sim-aka ISETEST enable 
+config wlan apgroup hyperlocation ISETEST ntp 16843009 
+config wlan apgroup hyperlocation ISETEST trigger-threshold 10 
+config wlan apgroup hyperlocation ISETEST threshold 100 
+config wlan apgroup interface-mapping add ISETEST 1 vlan230 
+config wlan apgroup interface-mapping add ISETEST 3 vlan214 
+config wlan apgroup interface-mapping add ISETEST 6 vlan230 
+config wlan apgroup interface-mapping add ISETEST 7 vlan208 
+config wlan apgroup interface-mapping add ISETEST 9 vlan208 
+config wlan apgroup interface-mapping add ISETEST 11 vlan214 
+config wlan apgroup interface-mapping add ISETEST 13 vlan230 
+config wlan apgroup interface-mapping add ISETEST 14 vlan208 
+config wlan apgroup interface-mapping add ISETEST 15 vlan216 
+config wlan apgroup add ISETEST ISETEST 
+config wlan apgroup wlan-radio-policy ISETEST 1 none 
+config wlan apgroup wlan-radio-policy ISETEST 3 none 
+config wlan apgroup wlan-radio-policy ISETEST 6 none 
+config wlan apgroup wlan-radio-policy ISETEST 7 none 
+config wlan apgroup wlan-radio-policy ISETEST 9 none 
+config wlan apgroup wlan-radio-policy ISETEST 11 none 
+config wlan apgroup wlan-radio-policy ISETEST 13 none 
+config wlan apgroup wlan-radio-policy ISETEST 14 none 
+config wlan apgroup wlan-radio-policy ISETEST 15 none 
+config wlan apgroup atf 802.11a optimization enable ISETEST 
+config wlan apgroup atf 802.11b optimization enable ISETEST 
+config wlan apgroup qinq tagging eap-sim-aka Madison_Capital_Funding_MCF enable 
+config wlan apgroup hyperlocation Madison_Capital_Funding_MCF ntp 16843009 
+config wlan apgroup hyperlocation Madison_Capital_Funding_MCF trigger-threshold 10 
+config wlan apgroup hyperlocation Madison_Capital_Funding_MCF threshold 100 
+config wlan apgroup interface-mapping add Madison_Capital_Funding_MCF 1 vlan230 
+config wlan apgroup interface-mapping add Madison_Capital_Funding_MCF 6 vlan230 
+config wlan apgroup interface-mapping add Madison_Capital_Funding_MCF 17 vlan118 
+config wlan apgroup interface-mapping add Madison_Capital_Funding_MCF 3 vlan214 
+config wlan apgroup interface-mapping add Madison_Capital_Funding_MCF 7 vlan208 
+config wlan apgroup interface-mapping add Madison_Capital_Funding_MCF 9 vlan208 
+config wlan apgroup add Madison_Capital_Funding_MCF Madison_Capital_Funding_MCF 
+config wlan apgroup wlan-radio-policy Madison_Capital_Funding_MCF 1 none 
+config wlan apgroup wlan-radio-policy Madison_Capital_Funding_MCF 6 none 
+config wlan apgroup wlan-radio-policy Madison_Capital_Funding_MCF 17 none 
+config wlan apgroup wlan-radio-policy Madison_Capital_Funding_MCF 3 none 
+config wlan apgroup wlan-radio-policy Madison_Capital_Funding_MCF 7 none 
+config wlan apgroup wlan-radio-policy Madison_Capital_Funding_MCF 9 none 
+config wlan apgroup atf 802.11a optimization enable Madison_Capital_Funding_MCF 
+config wlan apgroup atf 802.11b optimization enable Madison_Capital_Funding_MCF 
+config wlan apgroup qinq tagging eap-sim-aka NoAgentWlan enable 
+config wlan apgroup hyperlocation NoAgentWlan ntp 16843009 
+config wlan apgroup hyperlocation NoAgentWlan trigger-threshold 10 
+config wlan apgroup hyperlocation NoAgentWlan threshold 100 
+config wlan apgroup interface-mapping add NoAgentWlan 1 vlan230 
+config wlan apgroup interface-mapping add NoAgentWlan 2 vlan230 
+config wlan apgroup interface-mapping add NoAgentWlan 3 vlan214 
+config wlan apgroup interface-mapping add NoAgentWlan 6 vlan230 
+config wlan apgroup interface-mapping add NoAgentWlan 7 vlan208 
+config wlan apgroup interface-mapping add NoAgentWlan 9 vlan208 
+config wlan apgroup add NoAgentWlan 
+config wlan apgroup wlan-radio-policy NoAgentWlan 1 none 
+config wlan apgroup wlan-radio-policy NoAgentWlan 2 none 
+config wlan apgroup wlan-radio-policy NoAgentWlan 3 none 
+config wlan apgroup wlan-radio-policy NoAgentWlan 6 none 
+config wlan apgroup wlan-radio-policy NoAgentWlan 7 none 
+config wlan apgroup wlan-radio-policy NoAgentWlan 9 none 
+config wlan apgroup atf 802.11a optimization enable NoAgentWlan 
+config wlan apgroup atf 802.11b optimization enable NoAgentWlan 
+config wlan apgroup qinq tagging eap-sim-aka NoEmployeeWlan enable 
+config wlan apgroup hyperlocation NoEmployeeWlan ntp 16843009 
+config wlan apgroup hyperlocation NoEmployeeWlan trigger-threshold 10 
+config wlan apgroup hyperlocation NoEmployeeWlan threshold 100 
+config wlan apgroup interface-mapping add NoEmployeeWlan 3 vlan214 
+config wlan apgroup interface-mapping add NoEmployeeWlan 4 vlan216 
+config wlan apgroup interface-mapping add NoEmployeeWlan 5 vlan216 
+config wlan apgroup add NoEmployeeWlan 
+config wlan apgroup wlan-radio-policy NoEmployeeWlan 3 none 
+config wlan apgroup wlan-radio-policy NoEmployeeWlan 4 none 
+config wlan apgroup wlan-radio-policy NoEmployeeWlan 5 none 
+config wlan apgroup atf 802.11a optimization enable NoEmployeeWlan 
+config wlan apgroup atf 802.11b optimization enable NoEmployeeWlan 
+config wlan apgroup qinq tagging eap-sim-aka NoPublicWlan enable 
+config wlan apgroup hyperlocation NoPublicWlan ntp 16843009 
+config wlan apgroup hyperlocation NoPublicWlan trigger-threshold 10 
+config wlan apgroup hyperlocation NoPublicWlan threshold 100 
+config wlan apgroup interface-mapping add NoPublicWlan 1 vlan230 
+config wlan apgroup interface-mapping add NoPublicWlan 2 vlan230 
+config wlan apgroup interface-mapping add NoPublicWlan 3 vlan214 
+config wlan apgroup interface-mapping add NoPublicWlan 4 vlan216 
+config wlan apgroup interface-mapping add NoPublicWlan 5 vlan216 
+config wlan apgroup interface-mapping add NoPublicWlan 6 vlan230 
+config wlan apgroup interface-mapping add NoPublicWlan 7 vlan208 
+config wlan apgroup interface-mapping add NoPublicWlan 9 vlan208 
+config wlan apgroup add NoPublicWlan 
+config wlan apgroup wlan-radio-policy NoPublicWlan 1 none 
+config wlan apgroup wlan-radio-policy NoPublicWlan 2 none 
+config wlan apgroup wlan-radio-policy NoPublicWlan 3 none 
+config wlan apgroup wlan-radio-policy NoPublicWlan 4 none 
+config wlan apgroup wlan-radio-policy NoPublicWlan 5 none 
+config wlan apgroup wlan-radio-policy NoPublicWlan 6 none 
+config wlan apgroup wlan-radio-policy NoPublicWlan 7 none 
+config wlan apgroup wlan-radio-policy NoPublicWlan 9 none 
+config wlan apgroup atf 802.11a optimization enable NoPublicWlan 
+config wlan apgroup atf 802.11b optimization enable NoPublicWlan 
+config wlan apgroup qinq tagging eap-sim-aka WPOWlans enable 
+config wlan apgroup hyperlocation WPOWlans ntp 16843009 
+config wlan apgroup hyperlocation WPOWlans trigger-threshold 10 
+config wlan apgroup hyperlocation WPOWlans threshold 100 
+config wlan apgroup interface-mapping add WPOWlans 1 vlan230 
+config wlan apgroup interface-mapping add WPOWlans 3 vlan214 
+config wlan apgroup interface-mapping add WPOWlans 6 vlan230 
+config wlan apgroup interface-mapping add WPOWlans 7 vlan208 
+config wlan apgroup interface-mapping add WPOWlans 8 vlan118 
+config wlan apgroup interface-mapping add WPOWlans 9 vlan208 
+config wlan apgroup interface-mapping add WPOWlans 10 vlan216 
+config wlan apgroup add WPOWlans WPOWlans 
+config wlan apgroup wlan-radio-policy WPOWlans 1 none 
+config wlan apgroup wlan-radio-policy WPOWlans 3 none 
+config wlan apgroup wlan-radio-policy WPOWlans 6 none 
+config wlan apgroup wlan-radio-policy WPOWlans 7 none 
+config wlan apgroup wlan-radio-policy WPOWlans 8 none 
+config wlan apgroup wlan-radio-policy WPOWlans 9 none 
+config wlan apgroup wlan-radio-policy WPOWlans 10 none 
+config wlan apgroup atf 802.11a optimization enable WPOWlans 
+config wlan apgroup atf 802.11b optimization enable WPOWlans 
+config wlan apgroup port usb-module HOWlans enable 
+config wlan apgroup port usb-module HOWlans_F13 enable 
+config wlan apgroup port usb-module HOWlans_F14 enable 
+config wlan apgroup port usb-module Houston_D03_Test enable 
+config wlan apgroup port usb-module Madison_Capital_Funding_MCF enable 
+config wlan mdns profile 1 none 
+config wlan mdns disable 1 
+config wlan mdns profile 4 none 
+config wlan mdns disable 4 
+config wlan mdns profile 5 none 
+config wlan mdns disable 5 
+config wlan mdns profile 6 none 
+config wlan mdns disable 6 
+config wlan mdns profile 10 none 
+config wlan mdns disable 10 
+config wlan mdns profile 11 none 
+config wlan mdns disable 11 
+config wlan mdns profile 12 none 
+config wlan mdns disable 12 
+config wlan mdns profile 14 none 
+config wlan mdns disable 14 
+config wlan mdns profile 17 none 
+config wlan mdns disable 17 
+config wlan band-select allow enable 1 
+config wlan radius_server acct interim-update disable 1 
+config wlan radius_server acct disable 1 
+config wlan radius_server auth add 1 8 
+config wlan radius_server auth add 1 9 
+config wlan radius_server auth add 1 1 
+config wlan broadcast-ssid disable 1 
+config wlan band-select allow enable 2 
+config wlan radius_server acct interim-update disable 2 
+config wlan radius_server acct disable 2 
+config wlan radius_server auth disable 2 
+config wlan broadcast-ssid disable 2 
+config wlan band-select allow enable 3 
+config wlan radius_server acct interim-update disable 3 
+config wlan radius_server acct disable 3 
+config wlan radius_server auth add 3 11 
+config wlan radius_server auth add 3 12 
+config wlan broadcast-ssid enable 3 
+config wlan band-select allow enable 4 
+config wlan radius_server acct interim-update disable 4 
+config wlan radius_server acct disable 4 
+config wlan radius_server auth disable 4 
+config wlan broadcast-ssid enable 4 
+config wlan band-select allow enable 5 
+config wlan radius_server acct interim-update disable 5 
+config wlan radius_server acct disable 5 
+config wlan radius_server auth disable 5 
+config wlan broadcast-ssid enable 5 
+config wlan band-select allow enable 6 
+config wlan radius_server acct interim-update disable 6 
+config wlan radius_server acct disable 6 
+config wlan radius_server auth add 6 11 
+config wlan radius_server auth add 6 12 
+config wlan broadcast-ssid disable 6 
+config wlan band-select allow enable 7 
+config wlan radius_server acct interim-update disable 7 
+config wlan radius_server acct disable 7 
+config wlan radius_server auth add 7 11 
+config wlan radius_server auth add 7 12 
+config wlan broadcast-ssid disable 7 
+config wlan band-select allow enable 8 
+config wlan radius_server acct interim-update disable 8 
+config wlan radius_server acct disable 8 
+config wlan radius_server auth disable 8 
+config wlan broadcast-ssid disable 8 
+config wlan band-select allow enable 9 
+config wlan radius_server acct interim-update disable 9 
+config wlan radius_server acct disable 9 
+config wlan radius_server auth add 9 11 
+config wlan radius_server auth add 9 12 
+config wlan broadcast-ssid enable 9 
+config wlan band-select allow enable 10 
+config wlan radius_server auth add 10 11 
+config wlan radius_server auth add 10 12 
+config wlan dms enable 10 
+config wlan broadcast-ssid enable 10 
+config wlan band-select allow enable 11 
+config wlan radius_server acct interim-update disable 11 
+config wlan radius_server acct disable 11 
+config wlan radius_server auth add 11 11 
+config wlan radius_server auth add 11 12 
+config wlan dms enable 11 
+config wlan broadcast-ssid enable 11 
+config wlan radius_server acct interim-update disable 12 
+config wlan radius_server acct disable 12 
+config wlan radius_server auth disable 12 
+config wlan dms enable 12 
+config wlan broadcast-ssid enable 12 
+config wlan band-select allow enable 13 
+config wlan radius_server auth add 13 11 
+config wlan radius_server auth add 13 12 
+config wlan dms enable 13 
+config wlan broadcast-ssid enable 13 
+config wlan band-select allow enable 14 
+config wlan radius_server acct interim-update disable 14 
+config wlan radius_server acct disable 14 
+config wlan radius_server auth add 14 11 
+config wlan radius_server auth add 14 12 
+config wlan dms enable 14 
+config wlan broadcast-ssid disable 14 
+config wlan band-select allow enable 15 
+config wlan radius_server acct interim-update disable 15 
+config wlan radius_server acct disable 15 
+config wlan radius_server auth add 15 11 
+config wlan radius_server auth add 15 12 
+config wlan dms enable 15 
+config wlan broadcast-ssid disable 15 
+config wlan dhcp-scope 17 scope-name none 
+config wlan radius_server acct interim-update disable 17 
+config wlan radius_server acct disable 17 
+config wlan radius_server auth disable 17 
+config wlan dms enable 17 
+config wlan broadcast-ssid enable 17 
+config wlan dhcp-scope 18 scope-name none 
+config wlan radius_server acct interim-update disable 18 
+config wlan radius_server acct disable 18 
+config wlan radius_server auth disable 18 
+config wlan broadcast-ssid disable 18 
+config wlan dhcp-scope 19 scope-name none 
+config wlan radius_server acct interim-update disable 19 
+config wlan radius_server acct disable 19 
+config wlan radius_server auth disable 19 
+config wlan broadcast-ssid disable 19 
+config wlan custom-web webauth-type customized 2 
+config wlan custom-web webauth-type customized 4 
+config wlan custom-web webauth-type customized 5 
+config wlan custom-web webauth-type customized 7 
+config wlan custom-web global disable 2 
+config wlan custom-web login-page loginDev.html 2 
+config wlan custom-web global disable 4 
+config wlan custom-web login-page login.html 4 
+config wlan custom-web global disable 5 
+config wlan custom-web login-page login.html 5 
+config wlan custom-web global disable 7 
+config wlan custom-web login-page loginEmployee.html 7 
+config wlan flexconnect local-switching 1 central-dhcp nat-pat disable 
+config wlan flexconnect local-switching 1 enable 
+config wlan flexconnect local-switching 4 central-dhcp nat-pat disable 
+config wlan flexconnect local-switching 4 enable 
+config wlan flexconnect local-switching 5 central-dhcp nat-pat disable 
+config wlan flexconnect local-switching 5 enable 
+config wlan flexconnect local-switching 6 central-dhcp nat-pat disable 
+config wlan flexconnect local-switching 6 enable 
+config wlan flexconnect local-switching 10 central-dhcp nat-pat disable 
+config wlan flexconnect local-switching 10 enable 
+config wlan flexconnect local-switching 11 central-dhcp nat-pat disable 
+config wlan flexconnect local-switching 11 enable 
+config wlan flexconnect local-switching 12 central-dhcp nat-pat disable 
+config wlan flexconnect local-switching 14 central-dhcp nat-pat disable 
+config wlan flexconnect local-switching 14 enable 
+config wlan flexconnect local-switching 17 central-dhcp nat-pat disable 
+config wlan usertimeout 86400 17 
+config wlan session-timeout 1 43200 
+config wlan session-timeout 2 43200 
+config wlan session-timeout 3 43200 
+config wlan dhcp_server 3 0.0.0.0 required 
+config wlan session-timeout 4 43200 
+config wlan session-timeout 5 43200 
+config wlan session-timeout 6 43200 
+config wlan session-timeout 7 43200 
+config wlan session-timeout 8 0 
+config wlan dhcp_server 8 0.0.0.0 required 
+config wlan session-timeout 9 43200 
+config wlan session-timeout 10 43200 
+config wlan session-timeout 11 43200 
+config wlan session-timeout 12 0 
+config wlan session-timeout 13 43200 
+config wlan session-timeout 14 43200 
+config wlan session-timeout 15 43200 
+config wlan session-timeout 17 43200 
+config wlan session-timeout 18 0 
+config wlan dhcp_server 18 0.0.0.0 required 
+config wlan session-timeout 19 0 
+config wlan dhcp_server 19 0.0.0.0 required 
+config wlan security wpa wpa2 ciphers ccmp256 disable 1 
+config wlan security wpa wpa2 ciphers gcmp256 disable 1 
+config wlan security wpa wpa2 ciphers gcmp128 disable 1 
+config wlan security wpa wpa2 ciphers aes disable 1 
+config wlan security wpa wpa2 disable 1 
+config wlan security wpa wpa1 ciphers tkip enable 1 
+config wlan security wpa wpa1 enable 1 
+config wlan security wpa enable 1 
+config wlan security web-auth server-precedence 1 radius   
+config wlan security wpa enable 2 
+config wlan security web-auth server-precedence 2 ldap   
+config wlan security web-auth enable 2 
+config wlan security wpa wpa2 ciphers ccmp256 disable 3 
+config wlan security wpa wpa2 ciphers gcmp256 disable 3 
+config wlan security wpa wpa2 ciphers gcmp128 disable 3 
+config wlan security wpa wpa2 ciphers aes disable 3 
+config wlan security wpa wpa2 disable 3 
+config wlan security wpa akm 802.1x disable 3 
+config wlan security wpa disable 3 
+config wlan security web-auth server-precedence 3 radius   
+config wlan security web-auth enable 3 
+config wlan security wpa wpa2 ciphers ccmp256 disable 4 
+config wlan security wpa wpa2 ciphers gcmp256 disable 4 
+config wlan security wpa wpa2 ciphers gcmp128 disable 4 
+config wlan security wpa wpa2 ciphers aes disable 4 
+config wlan security wpa wpa2 disable 4 
+config wlan security wpa wpa1 ciphers tkip enable 4 
+config wlan security wpa wpa1 enable 4 
+config wlan security wpa akm 802.1x disable 4 
+config wlan security wpa akm psk set-key hex encrypt 1 d17765b0a7423c517df8e527ef194351 aa4183b573211fb939d7466f26eeeccb6a289b48 48 539ed3ccef3fc473cce489e417bec3bfe447062601c42545ff5c0a9598d7fc36570315744aa74656e1fd9d18801d4e36000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 4 
+config wlan security wpa akm psk enable 4 
+config wlan security wpa enable 4 
+config wlan security web-auth server-precedence 4 ldap   
+config wlan security web-auth enable 4 
+config wlan security wpa akm 802.1x disable 5 
+config wlan security wpa akm psk set-key hex encrypt 1 ddf520435093dbef2e78adb49df5a8cb e5f9a07d3efd564fde5c47beae72fef79e14f744 48 3bbf1bdef32404dd1aca12c4023eab3d5fd9e5a3e5d41e5eda58738fb85ef2c2044c315c0ed2a80c24ab5ec0df911c15000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 5 
+config wlan security wpa akm psk enable 5 
+config wlan security wpa enable 5 
+config wlan security web-auth server-precedence 5 ldap   
+config wlan security web-auth enable 5 
+config wlan security wpa enable 6 
+config wlan security web-auth server-precedence 6 radius   
+config wlan security wpa akm 802.1x disable 7 
+config wlan security wpa akm psk set-key hex encrypt 1 2c38a6903fa4768845cbe5d8137a52b0 6325f1283d0e48b533781ac0b33b49aafe10dd8a 48 94ad9f7c1b2f4c9b4b2982e4f9fc860e5da13c2a2d80e42621b0c1ef088c4f60b6579b609046d62121dfb16a53a5f0cf000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 7 
+config wlan security wpa akm psk enable 7 
+config wlan security wpa enable 7 
+config wlan security web-auth server-precedence 7 radius   
+config wlan security web-auth enable 7 
+config wlan security wpa akm sae set-key hex encrypt 1 0574ae79268f0cab8ff6360f6f0bca61 349ba6a55332bb2179956d9185d254c02b9781c2 80 c5953d39c60b4adb8b6d079400122c73c995bdd51b208ee10eb494c06395db257101ef881571f30efd42a8b410dfdb18754bd4cb321204d6359fb4711739254bb8374ffc9498de71191b89e9b4cf709b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 8 
+config wlan security wpa akm 802.1x disable 8 
+config wlan security wpa akm psk set-key hex encrypt 1 3d24ae15da039ffc2af2b082be43f785 80b58e64bc80cb2c52e4187de5bf8ff6ea3c43f6 48 8c1d529ecbf808ede8e402451f414dfadc43d9bac22d224131ac42c9559dfee824df743b322a2809a9bb6ac654e12556000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 8 
+config wlan security wpa akm psk enable 8 
+config wlan security wpa enable 8 
+config wlan security ft adaptive enable 8 
+config wlan security web-auth server-precedence 8 local radius ldap 
+config wlan security wpa enable 9 
+config wlan security web-auth server-precedence 9 radius   
+config wlan security wpa enable 10 
+config wlan security ft adaptive enable 10 
+config wlan security web-auth server-precedence 10 radius   
+config wlan security wpa enable 11 
+config wlan security ft adaptive enable 11 
+config wlan security web-auth server-precedence 11 radius   
+config wlan security wpa akm 802.1x disable 12 
+config wlan security wpa akm psk set-key hex encrypt 1 c291de5ac8ebf199a6d26458cb44def5 a464da07b74d932856498d427ff104aeded90c1e 48 acc7daee499725706922eec0db7f7648c91759c05cbaded83aee99ffbcdd1321614666ec06bf2dc5b160ef2ddde9096a000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 12 
+config wlan security wpa akm psk enable 12 
+config wlan security wpa enable 12 
+config wlan security ft adaptive enable 12 
+config wlan security web-auth server-precedence 12 local radius ldap 
+config wlan security wpa wpa2 ciphers ccmp256 disable 13 
+config wlan security wpa wpa2 ciphers gcmp256 disable 13 
+config wlan security wpa wpa2 ciphers gcmp128 disable 13 
+config wlan security wpa wpa2 ciphers aes disable 13 
+config wlan security wpa wpa2 disable 13 
+config wlan security wpa akm 802.1x disable 13 
+config wlan security wpa disable 13 
+config wlan security ft adaptive enable 13 
+config wlan security web-auth server-precedence 13 radius   
+config wlan security web-auth enable 13 
+config wlan security wpa enable 14 
+config wlan security ft adaptive enable 14 
+config wlan security web-auth server-precedence 14 radius   
+config wlan security wpa enable 15 
+config wlan security ft adaptive enable 15 
+config wlan security web-auth server-precedence 15 radius   
+config wlan security wpa akm sae set-key hex encrypt 1 466249c7edd493ee7786a8c574e0ff33 21ebb51b778f8ae53bc097091e883b3526f11759 80 87ef1fd99fbe40f195d55879ecd87e396d17e0c6e59c0933024673b69689c74ec5e18a7853cbc24400bac43abcf6096d75f5b533b46a10702b9818cbe2f76ecb0c75f33beaf92f99365635f44eae10b900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 17 
+config wlan security wpa akm 802.1x disable 17 
+config wlan security wpa akm psk set-key hex encrypt 1 55f61006d968ae62ebe80ae4f23b8559 5a97d63cbb76d73cf063b7f8f3aed5bd7dd64d5c 48 725d5f98221bb7a787404acfc0c9c5d41e50a39fadc5cdc48a86cacd535cc14823ca4b885ad08e538f2d9fe88696be42000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 17 
+config wlan security wpa akm psk enable 17 
+config wlan security wpa enable 17 
+config wlan security ft adaptive enable 17 
+config wlan security web-auth server-precedence 17 local radius ldap 
+config wlan security wpa akm sae set-key hex encrypt 1 e65497cfd5327460dbfa5843de37d7f6 cf0ab865fde858dddbe92189ef9fb9d5ca70270a 16 d80545a90691e2dfd4a802e3b254bd960000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 18 
+config wlan security wpa akm 802.1x disable 18 
+config wlan security wpa akm psk set-key hex encrypt 1 23c998652a845fe965ad64111d03c164 38f39659c68c13861624fdee601778e0c987eae3 48 77f4c95b0bc8dcdd1a7847e01b96002d6ef9b0065272d6ede36c7db59aa04c1cb9a613717915d797f6d2df12d5796167000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 18 
+config wlan security wpa akm psk enable 18 
+config wlan security wpa enable 18 
+config wlan security ft adaptive enable 18 
+config wlan security web-auth server-precedence 18 local radius ldap 
+config wlan security wpa akm sae set-key hex encrypt 1 15e5903dc36316d8c1ca30f39c9c030a 0587ed7c90df03bf7b9821fc2225acfe42333139 80 50a1261019b2ebf7bb2ade05416fc7edfbae90ee48b5612e6270353dbebbbbf38b28348e7d7c40f028b688f92d92eb13990e2dfb864cb6e49afdce34325a482c1dab523b6aa4c54cf6b82c9ccd108fb600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 19 
+config wlan security wpa akm 802.1x disable 19 
+config wlan security wpa akm psk set-key hex encrypt 1 fbf6bd1f53b0e15903d0bdf228b8b115 cbc35e13ca6125d4066d656f7bac7af3cbdb677c 48 d5daf2db656bcf264d431b70c7855748f9d598915ea75a03dbaa5ce86df117143a563f3b220a0c41a2538e5d6127157b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 19 
+config wlan security wpa akm psk enable 19 
+config wlan security wpa enable 19 
+config wlan security ft adaptive enable 19 
+config wlan security web-auth server-precedence 19 local radius ldap 
+config wlan interface 1 vlan230 
+config wlan create 1 lyn321 lyn321 
+config wlan interface 2 vlan230 
+config wlan ldap add 2 3 
+config wlan ldap add 2 1 
+config wlan create 2 lifedev lifedev 
+config wlan peer-blocking drop 3 
+config wlan interface 3 vlan214 
+config wlan create 3 lifenet lifenet 
+config wlan interface 4 vlan216 
+config wlan ldap add 4 2 
+config wlan ldap add 4 5 
+config wlan create 4 AgentWebAuth agentwifi 
+config wlan interface 5 vlan216 
+config wlan ldap add 5 2 
+config wlan ldap add 5 5 
+config wlan create 5 AGENTWIFI agentwifi 
+config wlan interface 6 vlan230 
+config wlan create 6 LYN321 lyn321 
+config wlan interface 7 vlan208 
+config wlan create 7 elife elife 
+config wlan peer-blocking drop 8 
+config wlan interface 8 vlan118 
+config wlan create 8 openlife openlife 
+config wlan interface 9 vlan208 
+config wlan create 9 ELIFE elife 
+config wlan bss-transition enable 10 
+config wlan interface 10 vlan216 
+config wlan assisted-roaming neighbor-list enable 10 
+config wlan create 10 agentlife agentlife 
+config wlan bss-transition enable 11 
+config wlan interface 11 vlan216 
+config wlan assisted-roaming neighbor-list enable 11 
+config wlan create 11 agentlife_5G agentlife_5G 
+config wlan bss-transition enable 12 
+config wlan interface 12 vlan208 
+config wlan assisted-roaming neighbor-list enable 12 
+config wlan create 12 GPP299 GPP299 
+config wlan bss-transition enable 13 
+config wlan interface 13 vlan214 
+config wlan assisted-roaming neighbor-list enable 13 
+config wlan create 13 lifenet2 lifenet2 
+config wlan bss-transition enable 14 
+config wlan interface 14 vlan230 
+config wlan assisted-roaming neighbor-list enable 14 
+config wlan create 14 lyn3212 lyn3212 
+config wlan bss-transition enable 15 
+config wlan interface 15 vlan208 
+config wlan assisted-roaming neighbor-list enable 15 
+config wlan create 15 elife2 elife2 
+config wlan bss-transition enable 17 
+config wlan interface 17 vlan118 
+config wlan assisted-roaming neighbor-list enable 17 
+config wlan create 17 ApoCap ApoCap 
+config wlan interface 18 vlan118 
+config wlan create 18 Cathedral Cathedral 
+config wlan peer-blocking drop 19 
+config wlan interface 19 vlan118 
+config wlan create 19 LOMA-BOD LOMA-BOD 
+config wlan exclusionlist 1 60 
+config wlan flow 1 monitor dnacmonitor enable 
+config wlan enable 1 
+config wlan exclusionlist 2 2 
+config wlan flow 2 monitor dnacmonitor enable 
+config wlan exclusionlist 3 3 
+config wlan flow 3 monitor dnacmonitor enable 
+config wlan enable 3 
+config wlan exclusionlist 4 60 
+config wlan flow 4 monitor dnacmonitor enable 
+config wlan exclusionlist 5 60 
+config wlan flow 5 monitor dnacmonitor enable 
+config wlan exclusionlist 6 60 
+config wlan flow 6 monitor dnacmonitor enable 
+config wlan enable 6 
+config wlan exclusionlist 7 7 
+config wlan flow 7 monitor dnacmonitor enable 
+config wlan enable 7 
+config wlan exclusionlist 8 8 
+config wlan flow 8 monitor dnacmonitor enable 
+config wlan enable 8 
+config wlan exclusionlist 9 9 
+config wlan flow 9 monitor dnacmonitor enable 
+config wlan enable 9 
+config wlan exclusionlist 10 60 
+config wlan flow 10 monitor dnacmonitor enable 
+config wlan enable 10 
+config wlan exclusionlist 11 60 
+config wlan flow 11 monitor dnacmonitor enable 
+config wlan enable 11 
+config wlan exclusionlist 12 60 
+config wlan flow 12 monitor dnacmonitor enable 
+config wlan enable 12 
+config wlan exclusionlist 13 180 
+config wlan flow 13 monitor dnacmonitor enable 
+config wlan enable 13 
+config wlan exclusionlist 14 60 
+config wlan flow 14 monitor dnacmonitor enable 
+config wlan enable 14 
+config wlan exclusionlist 15 7 
+config wlan flow 15 monitor dnacmonitor enable 
+config wlan enable 15 
+config wlan exclusionlist 17 60 
+config wlan flow 17 monitor dnacmonitor enable 
+config wlan enable 17 
+config wlan exclusionlist 18 8 
+config wlan flow 18 monitor dnacmonitor enable 
+config wlan exclusionlist 19 8 
+config wlan flow 19 monitor dnacmonitor enable 
+config flexconnect group AUSTIN_D01 radius ap server-key encrypt 1 991b7c5019f685a69ea052647cc82c1b ba1f7f290070cdaa0faf85ff2ad59a3bd57550f3 6ea7c6c5be3a767971a5f8ff14ce6865e15d391935f8a84b791845a8fb1def70 
+config flexconnect group AUSTIN_D01 radius ap authority info "Cisco A_ID" 
+config flexconnect group AUSTIN_D01 radius ap authority id 436973636f0000000000000000000000 
+config flexconnect group AUSTIN_D01 wlan-vlan wlan 1 add vlan 10 
+config flexconnect group AUSTIN_D01 wlan-vlan wlan 6 add vlan 10 
+config flexconnect group AUSTIN_D01 wlan-vlan wlan 10 add vlan 40 
+config flexconnect group AUSTIN_D01 wlan-vlan wlan 11 add vlan 40 
+config flexconnect group AUSTIN_D01 add 
+config flexconnect group AUSTIN_D01 predownload mac-master 70:d3:79:d6:0d:88 
+config flexconnect group AUSTIN_D01 predownload enable 
+config flexconnect group AUSTIN_D01 ap add 0c:75:bd:ba:18:a8 
+config flexconnect group AUSTIN_D01 ap add 70:d3:79:d6:0d:88 
+config flexconnect group AUSTIN_D01 ap add c4:b9:cd:fa:03:60 
+config flexconnect group AUSTIN_D01 ap add c4:b9:cd:fc:11:80 
+config flexconnect group AUSTIN_D01 ap add c4:b9:cd:fc:12:98 
+config flexconnect group AUSTIN_D01 ap add c4:b9:cd:fc:13:70 
+config flexconnect group AUSTIN_D01 ap add c4:b9:cd:fc:30:d8 
+config flexconnect group AUSTIN_D01 ap add c4:b9:cd:fc:42:90 
+config flexconnect group AUSTIN_D01 ap add c4:b9:cd:fc:43:78 
+config flexconnect group AUSTIN_D01 ap add c4:b9:cd:fc:44:b0 
+config flexconnect group AUSTIN_D01 ap add c4:b9:cd:fc:45:70 
+config flexconnect group AUSTIN_D01 ap add c4:b9:cd:fc:48:b8 
+config flexconnect group AUSTIN_D01 ap add c4:b9:cd:fc:4d:b0 
+config flexconnect group AUSTIN_D01 ap add c4:b9:cd:fe:00:28 
+config flexconnect group AUSTIN_D01 ap add c4:b9:cd:fe:03:b0 
+config flexconnect group AUSTIN_D01 ap add c4:b9:cd:fe:03:c0 
+config flexconnect group AUSTIN_D01 ap add c4:b9:cd:fe:06:c0 
+config flexconnect group AUSTIN_D01 ap add c4:b9:cd:fe:09:80 
+config flexconnect group AUSTIN_D01 ap add c4:b9:cd:fe:0c:20 
+config flexconnect group AUSTIN_D01 ap add c4:b9:cd:fe:0c:c8 
+config flexconnect group AUSTIN_D01 ap add c4:b9:cd:fe:12:b8 
+config flexconnect group AUSTIN_D01 ap add c4:b9:cd:fe:13:b8 
+config flexconnect group AUSTIN_D01 ap add c4:b9:cd:fe:60:60 
+config flexconnect group AUSTIN_D01 ap add c4:b9:cd:fe:61:00 
+config flexconnect group AUSTIN_D01 ap add c4:b9:cd:fe:61:90 
+config flexconnect group AUSTIN_D01 ap add c4:b9:cd:fe:61:a0 
+config flexconnect group AUSTIN_D01 vlan native 30 
+config flexconnect group AUSTIN_D01 vlan override-ap enable 
+config flexconnect group Birmingham_A02 radius ap server-key encrypt 1 2ba58b5f5a1984c8023272f8f2fbc0e9 46cf497390655227c9e695ec7d6f2fffc0eacb50 7423171601b9477e955539859f306f9a75ccfa9d35a7f071ce1ae286c64331b7 
+config flexconnect group Birmingham_A02 radius ap authority info "Cisco A_ID" 
+config flexconnect group Birmingham_A02 radius ap authority id 436973636f0000000000000000000000 
+config flexconnect group Birmingham_A02 wlan-vlan wlan 1 add vlan 10 
+config flexconnect group Birmingham_A02 wlan-vlan wlan 6 add vlan 10 
+config flexconnect group Birmingham_A02 wlan-vlan wlan 10 add vlan 40 
+config flexconnect group Birmingham_A02 wlan-vlan wlan 11 add vlan 40 
+config flexconnect group Birmingham_A02 add 
+config flexconnect group Birmingham_A02 predownload enable 
+config flexconnect group Birmingham_A02 ap add 2c:0b:e9:c4:4a:28 
+config flexconnect group Birmingham_A02 ap add 2c:0b:e9:c4:4e:30 
+config flexconnect group Birmingham_A02 ap add 2c:0b:e9:c4:52:c0 
+config flexconnect group Birmingham_A02 ap add 2c:0b:e9:c4:52:e8 
+config flexconnect group Birmingham_A02 ap add 2c:0b:e9:c4:53:00 
+config flexconnect group Birmingham_A02 ap add 2c:0b:e9:c4:53:80 
+config flexconnect group Birmingham_A02 ap add 2c:0b:e9:c4:54:10 
+config flexconnect group Birmingham_A02 ap add 2c:0b:e9:c4:5a:f8 
+config flexconnect group Birmingham_A02 ap add 2c:0b:e9:c4:5b:20 
+config flexconnect group Birmingham_A02 ap add 2c:0b:e9:c4:63:98 
+config flexconnect group Birmingham_A02 ap add 2c:0b:e9:c6:02:c0 
+config flexconnect group Birmingham_A02 ap add 2c:0b:e9:c6:04:f0 
+config flexconnect group Birmingham_A02 ap add 2c:0b:e9:c6:05:30 
+config flexconnect group Birmingham_A02 ap add 2c:0b:e9:c6:0c:58 
+config flexconnect group Birmingham_A02 ap add 2c:0b:e9:c6:0d:08 
+config flexconnect group Birmingham_A02 ap add 2c:0b:e9:c6:0d:40 
+config flexconnect group Birmingham_A02 vlan native 30 
+config flexconnect group Birmingham_A02 vlan override-ap enable 
+config flexconnect group Broomfield_Z94 radius ap server-key encrypt 1 a935db55809f1ec4e6006ca4d137853f adf1ca87891ba74a709021034d7b4ae8dfc21377 3c048cfcaeeb41adcee00ba7f9882730c0d26a9db3d5bc04f067dfd2afdeec49 
+config flexconnect group Broomfield_Z94 radius ap authority info "Cisco A_ID" 
+config flexconnect group Broomfield_Z94 radius ap authority id 436973636f0000000000000000000000 
+config flexconnect group Broomfield_Z94 wlan-vlan wlan 1 add vlan 10 
+config flexconnect group Broomfield_Z94 wlan-vlan wlan 6 add vlan 10 
+config flexconnect group Broomfield_Z94 wlan-vlan wlan 10 add vlan 40 
+config flexconnect group Broomfield_Z94 wlan-vlan wlan 11 add vlan 40 
+config flexconnect group Broomfield_Z94 add 
+config flexconnect group Broomfield_Z94 predownload enable 
+config flexconnect group Broomfield_Z94 ap add f0:d8:05:db:0f:70 
+config flexconnect group Broomfield_Z94 ap add f0:d8:05:db:34:7c 
+config flexconnect group Broomfield_Z94 ap add f0:d8:05:db:69:a8 
+config flexconnect group Broomfield_Z94 ap add f0:d8:05:db:79:d0 
+config flexconnect group Broomfield_Z94 vlan native 30 
+config flexconnect group Broomfield_Z94 vlan override-ap enable 
+config flexconnect group Central_California_S87 radius ap server-key encrypt 1 ad82c48eff145684e8df67ed55332d46 73f5cd9ddbc656f3328f44e896313aa4b6e7ecfc e188eb70120251ee8225078cebe317738141f63427c1d4c8013efdec3e09867a 
+config flexconnect group Central_California_S87 radius ap authority info "Cisco A_ID" 
+config flexconnect group Central_California_S87 radius ap authority id 436973636f0000000000000000000000 
+config flexconnect group Central_California_S87 wlan-vlan wlan 1 add vlan 10 
+config flexconnect group Central_California_S87 wlan-vlan wlan 6 add vlan 10 
+config flexconnect group Central_California_S87 wlan-vlan wlan 10 add vlan 40 
+config flexconnect group Central_California_S87 wlan-vlan wlan 11 add vlan 40 
+config flexconnect group Central_California_S87 add 
+config flexconnect group Central_California_S87 predownload mac-master 2c:0b:e9:c0:08:38 
+config flexconnect group Central_California_S87 predownload enable 
+config flexconnect group Central_California_S87 ap add 24:d7:9c:bc:52:60 
+config flexconnect group Central_California_S87 ap add 34:5d:a8:54:7a:1c 
+config flexconnect group Central_California_S87 ap add 34:5d:a8:55:13:b4 
+config flexconnect group Central_California_S87 ap add 34:5d:a8:55:1a:1c 
+config flexconnect group Central_California_S87 ap add 34:5d:a8:55:6f:f8 
+config flexconnect group Central_California_S87 ap add 34:5d:a8:55:81:ac 
+config flexconnect group Central_California_S87 ap add 34:5d:a8:55:94:88 
+config flexconnect group Central_California_S87 ap add 34:5d:a8:55:a4:34 
+config flexconnect group Central_California_S87 ap add 34:5d:a8:55:a6:28 
+config flexconnect group Central_California_S87 ap add 34:5d:a8:55:a6:4c 
+config flexconnect group Central_California_S87 ap add 34:5d:a8:56:0d:c4 
+config flexconnect group Central_California_S87 ap add 34:5d:a8:56:e8:38 
+config flexconnect group Central_California_S87 ap add 34:5d:a8:57:aa:28 
+config flexconnect group Central_California_S87 ap add 34:5d:a8:57:aa:84 
+config flexconnect group Central_California_S87 ap add 34:5d:a8:57:ae:24 
+config flexconnect group Central_California_S87 ap add 34:5d:a8:57:b2:f4 
+config flexconnect group Central_California_S87 ap add 74:11:b2:ce:e0:28 
+config flexconnect group Central_California_S87 ap add c8:28:e5:6e:f9:58 
+config flexconnect group Central_California_S87 ap add c8:28:e5:6f:13:28 
+config flexconnect group Central_California_S87 ap add c8:28:e5:6f:1a:98 
+config flexconnect group Central_California_S87 ap add c8:28:e5:6f:25:30 
+config flexconnect group Central_California_S87 vlan native 30 
+config flexconnect group Central_California_S87 vlan override-ap enable 
+config flexconnect group Central_Coast_Oxnard_Z61 radius ap server-key encrypt 1 1d02b7e455df880d4311216653daef98 8158572f1bf554a3f18be1edd0fa3b2e358d90e4 e97a23d4f8d48ce6951a19bc0dfdef7a3ac7a67cd18bf870997becb150bd8821 
+config flexconnect group Central_Coast_Oxnard_Z61 radius ap authority info "Cisco A_ID" 
+config flexconnect group Central_Coast_Oxnard_Z61 radius ap authority id 436973636f0000000000000000000000 
+config flexconnect group Central_Coast_Oxnard_Z61 wlan-vlan wlan 6 add vlan 10 
+config flexconnect group Central_Coast_Oxnard_Z61 wlan-vlan wlan 10 add vlan 40 
+config flexconnect group Central_Coast_Oxnard_Z61 wlan-vlan wlan 11 add vlan 40 
+config flexconnect group Central_Coast_Oxnard_Z61 add 
+config flexconnect group Central_Coast_Oxnard_Z61 predownload enable 
+config flexconnect group Central_Coast_Oxnard_Z61 ap add 2c:0b:e9:c2:2f:18 
+config flexconnect group Central_Coast_Oxnard_Z61 ap add 2c:0b:e9:c2:49:68 
+config flexconnect group Central_Coast_Oxnard_Z61 ap add 2c:0b:e9:c2:49:78 
+config flexconnect group Central_Coast_Oxnard_Z61 ap add 2c:0b:e9:c2:5a:40 
+config flexconnect group Central_Coast_Oxnard_Z61 ap add 2c:0b:e9:c2:5a:70 
+config flexconnect group Central_Coast_Oxnard_Z61 ap add 2c:0b:e9:c2:5c:c8 
+config flexconnect group Central_Coast_Oxnard_Z61 vlan native 30 
+config flexconnect group Chicago_North_D33 radius ap server-key encrypt 1 485bfcf0a534b197bc5ca1fdc2df0a48 2f9c877d2635281e2af2627ee30d2583a3f61a54 442acf68999b94f7662aef3166a7132649a1fc3145cee5dadb297c0364c9a410 
+config flexconnect group Chicago_North_D33 radius ap authority info "Cisco A_ID" 
+config flexconnect group Chicago_North_D33 radius ap authority id 436973636f0000000000000000000000 
+config flexconnect group Chicago_North_D33 wlan-vlan wlan 1 add vlan 10 
+config flexconnect group Chicago_North_D33 wlan-vlan wlan 6 add vlan 10 
+config flexconnect group Chicago_North_D33 wlan-vlan wlan 10 add vlan 40 
+config flexconnect group Chicago_North_D33 wlan-vlan wlan 11 add vlan 40 
+config flexconnect group Chicago_North_D33 add 
+config flexconnect group Chicago_North_D33 predownload mac-master 2c:0b:e9:c0:07:d8 
+config flexconnect group Chicago_North_D33 predownload enable 
+config flexconnect group Chicago_North_D33 ap add 2c:0b:e9:c0:07:d8 
+config flexconnect group Chicago_North_D33 ap add 2c:0b:e9:c0:08:10 
+config flexconnect group Chicago_North_D33 ap add 2c:0b:e9:c0:08:40 
+config flexconnect group Chicago_North_D33 ap add 2c:0b:e9:c0:08:e8 
+config flexconnect group Chicago_North_D33 ap add 2c:0b:e9:c2:22:60 
+config flexconnect group Chicago_North_D33 ap add 2c:0b:e9:c2:28:48 
+config flexconnect group Chicago_North_D33 ap add 2c:0b:e9:c2:43:88 
+config flexconnect group Chicago_North_D33 ap add 2c:0b:e9:c2:46:68 
+config flexconnect group Chicago_North_D33 ap add 2c:0b:e9:c2:46:a8 
+config flexconnect group Chicago_North_D33 ap add 2c:0b:e9:c2:46:d8 
+config flexconnect group Chicago_North_D33 ap add 2c:0b:e9:c2:4b:d8 
+config flexconnect group Chicago_North_D33 ap add 2c:0b:e9:c6:5f:48 
+config flexconnect group Chicago_North_D33 ap add 2c:0b:e9:c6:63:68 
+config flexconnect group Chicago_North_D33 ap add 2c:0b:e9:c6:63:80 
+config flexconnect group Chicago_North_D33 ap add 2c:0b:e9:c6:63:d8 
+config flexconnect group Chicago_North_D33 ap add 2c:0b:e9:c6:63:f8 
+config flexconnect group Chicago_North_D33 ap add 2c:0b:e9:c6:64:28 
+config flexconnect group Chicago_North_D33 vlan native 30 
+config flexconnect group Chicago_North_D33 vlan override-ap enable 
+config flexconnect group Chinatown_New_Site radius ap server-key encrypt 1 b23869031940444209bd76352bb1b4bb 8ebf35a9a46e249bb6865c12ff9a222ed19b4371 0e389d67c61d3ad72efa31d6f8966444be5549f9b7263ba12da419bd0f218a28 
+config flexconnect group Chinatown_New_Site radius ap authority info "Cisco A_ID" 
+config flexconnect group Chinatown_New_Site radius ap authority id 436973636f0000000000000000000000 
+config flexconnect group Chinatown_New_Site wlan-vlan wlan 1 add vlan 10 
+config flexconnect group Chinatown_New_Site wlan-vlan wlan 6 add vlan 10 
+config flexconnect group Chinatown_New_Site wlan-vlan wlan 10 add vlan 40 
+config flexconnect group Chinatown_New_Site wlan-vlan wlan 11 add vlan 40 
+config flexconnect group Chinatown_New_Site add 
+config flexconnect group Chinatown_New_Site predownload enable 
+config flexconnect group Chinatown_New_Site ap add 70:d3:79:d6:0d:40 
+config flexconnect group Chinatown_New_Site ap add c4:b9:cd:fc:12:88 
+config flexconnect group Chinatown_New_Site ap add c4:b9:cd:fc:15:f8 
+config flexconnect group Chinatown_New_Site ap add c4:b9:cd:fc:35:b0 
+config flexconnect group Chinatown_New_Site ap add c4:b9:cd:fc:3d:98 
+config flexconnect group Chinatown_New_Site ap add c4:b9:cd:fc:3f:30 
+config flexconnect group Chinatown_New_Site ap add c4:b9:cd:fe:05:d0 
+config flexconnect group Chinatown_New_Site ap add c4:b9:cd:fe:12:98 
+config flexconnect group Chinatown_New_Site ap add c4:b9:cd:fe:60:20 
+config flexconnect group Chinatown_New_Site ap add c4:b9:cd:fe:64:60 
+config flexconnect group Chinatown_New_Site ap add c4:b9:cd:fe:64:a0 
+config flexconnect group Chinatown_New_Site ap add c4:b9:cd:fe:65:50 
+config flexconnect group Chinatown_New_Site ap add c4:b9:cd:fe:65:b8 
+config flexconnect group Chinatown_New_Site vlan native 30 
+config flexconnect group Chinatown_New_Site vlan override-ap enable 
+config flexconnect group Covina_Valley_S81 radius ap server-key encrypt 1 3bd490a851f247534d94d72530c1d58e b7fd2646c5fdb7c9df07c88e0d9be5dc53e0e575 fa0b170c62a7ade16e501b8b6be36eac4f1f94b1b77888c9380c8437ad4683eb 
+config flexconnect group Covina_Valley_S81 radius ap authority info "Cisco A_ID" 
+config flexconnect group Covina_Valley_S81 radius ap authority id 436973636f0000000000000000000000 
+config flexconnect group Covina_Valley_S81 wlan-vlan wlan 1 add vlan 10 
+config flexconnect group Covina_Valley_S81 wlan-vlan wlan 6 add vlan 10 
+config flexconnect group Covina_Valley_S81 wlan-vlan wlan 10 add vlan 40 
+config flexconnect group Covina_Valley_S81 wlan-vlan wlan 11 add vlan 40 
+config flexconnect group Covina_Valley_S81 add 
+config flexconnect group Covina_Valley_S81 predownload enable 
+config flexconnect group Covina_Valley_S81 ap add c4:b9:cd:fc:19:e8 
+config flexconnect group Covina_Valley_S81 ap add c4:b9:cd:fc:40:50 
+config flexconnect group Covina_Valley_S81 ap add c4:b9:cd:fc:44:b8 
+config flexconnect group Covina_Valley_S81 ap add c4:b9:cd:fc:49:60 
+config flexconnect group Covina_Valley_S81 ap add c4:b9:cd:fe:06:38 
+config flexconnect group Covina_Valley_S81 ap add c4:b9:cd:fe:07:18 
+config flexconnect group Covina_Valley_S81 ap add c4:b9:cd:fe:07:b8 
+config flexconnect group Covina_Valley_S81 ap add c4:b9:cd:fe:08:d8 
+config flexconnect group Covina_Valley_S81 ap add c4:b9:cd:fe:12:d0 
+config flexconnect group Covina_Valley_S81 ap add c4:b9:cd:fe:13:50 
+config flexconnect group Covina_Valley_S81 ap add c4:b9:cd:fe:14:50 
+config flexconnect group Covina_Valley_S81 ap add c4:b9:cd:fe:63:08 
+config flexconnect group Covina_Valley_S81 vlan native 30 
+config flexconnect group Covina_Valley_S81 vlan override-ap enable 
+config flexconnect group D56_Wisconsin radius ap server-key encrypt 1 32aa9efab6350aecbc20bb7a44a0227c d610cb3fcaa2783c0d6e6d693da8d68e9b185d83 35c938b2e6b1cfdad1fc17b99c594b422401285d116e3d8dd6b892ef47942e04 
+config flexconnect group D56_Wisconsin radius ap authority info "Cisco A_ID" 
+config flexconnect group D56_Wisconsin radius ap authority id 436973636f0000000000000000000000 
+config flexconnect group D56_Wisconsin wlan-vlan wlan 1 add vlan 10 
+config flexconnect group D56_Wisconsin wlan-vlan wlan 6 add vlan 10 
+config flexconnect group D56_Wisconsin wlan-vlan wlan 10 add vlan 40 
+config flexconnect group D56_Wisconsin wlan-vlan wlan 11 add vlan 40 
+config flexconnect group D56_Wisconsin add 
+config flexconnect group D56_Wisconsin predownload mac-master 2c:0b:e9:c0:00:08 
+config flexconnect group D56_Wisconsin predownload enable 
+config flexconnect group D56_Wisconsin ap add 2c:0b:e9:c0:00:08 
+config flexconnect group D56_Wisconsin ap add 2c:0b:e9:c0:08:20 
+config flexconnect group D56_Wisconsin ap add 2c:0b:e9:c2:0a:58 
+config flexconnect group D56_Wisconsin ap add 2c:0b:e9:c2:24:20 
+config flexconnect group D56_Wisconsin ap add 2c:0b:e9:c2:2d:48 
+config flexconnect group D56_Wisconsin ap add 2c:0b:e9:c6:5e:a8 
+config flexconnect group D56_Wisconsin ap add 2c:0b:e9:c6:65:78 
+config flexconnect group D56_Wisconsin ap add 2c:0b:e9:c6:65:b0 
+config flexconnect group D56_Wisconsin ap add 2c:0b:e9:c6:66:00 
+config flexconnect group D56_Wisconsin vlan native 30 
+config flexconnect group D56_Wisconsin vlan override-ap enable 
+config flexconnect group Dallas_MDAL radius ap server-key encrypt 1 bfa4c1207ca56cf305b4666784384052 4944f1a8b10fd5f4f2af47a7741dcf2cc5986450 dbbb610a8ca6e7972571fcce5cd240faa304a03d1fe3e80ad6c8163a2f97715e 
+config flexconnect group Dallas_MDAL radius ap authority info "Cisco A_ID" 
+config flexconnect group Dallas_MDAL radius ap authority id 436973636f0000000000000000000000 
+config flexconnect group Dallas_MDAL wlan-vlan wlan 1 add vlan 3 
+config flexconnect group Dallas_MDAL wlan-vlan wlan 6 add vlan 3 
+config flexconnect group Dallas_MDAL add 
+config flexconnect group Dallas_MDAL predownload enable 
+config flexconnect group Dallas_MDAL ap add 00:7e:95:70:1b:e0 
+config flexconnect group Dallas_MDAL ap add 2c:0b:e9:b6:26:48 
+config flexconnect group Dallas_MDAL ap add 2c:0b:e9:b6:28:40 
+config flexconnect group Dallas_MDAL ap add c4:b9:cd:ec:4b:00 
+config flexconnect group Dallas_MDAL vlan native 3 
+config flexconnect group Dallas_MDAL vlan override-ap enable 
+config flexconnect group Delaware_Z20 radius ap server-key encrypt 1 a864b771fd27817dd93b8af3a9b6db99 2516b199841859e1c479fe982508e4ee13e397c6 31d72cc9c539abfcaca793d9254973d81a25269db7a3fedbfaac54e4a3ccb6d1 
+config flexconnect group Delaware_Z20 radius ap authority info "Cisco A_ID" 
+config flexconnect group Delaware_Z20 radius ap authority id 436973636f0000000000000000000000 
+config flexconnect group Delaware_Z20 wlan-vlan wlan 1 add vlan 10 
+config flexconnect group Delaware_Z20 wlan-vlan wlan 6 add vlan 10 
+config flexconnect group Delaware_Z20 wlan-vlan wlan 10 add vlan 40 
+config flexconnect group Delaware_Z20 wlan-vlan wlan 11 add vlan 40 
+config flexconnect group Delaware_Z20 add 
+config flexconnect group Delaware_Z20 predownload mac-master 2c:0b:e9:b6:3a:78 
+config flexconnect group Delaware_Z20 predownload enable 
+config flexconnect group Delaware_Z20 ap add 2c:0b:e9:b6:3a:78 
+config flexconnect group Delaware_Z20 ap add 2c:0b:e9:c0:08:c8 
+config flexconnect group Delaware_Z20 ap add 2c:0b:e9:c2:15:b0 
+config flexconnect group Delaware_Z20 ap add 2c:0b:e9:c2:32:b8 
+config flexconnect group Delaware_Z20 ap add 2c:0b:e9:c2:33:e8 
+config flexconnect group Delaware_Z20 ap add 2c:0b:e9:c2:4e:60 
+config flexconnect group Delaware_Z20 ap add 2c:0b:e9:c2:4e:b0 
+config flexconnect group Delaware_Z20 ap add 2c:0b:e9:c2:5a:a8 
+config flexconnect group Delaware_Z20 ap add 2c:0b:e9:c2:5c:a0 
+config flexconnect group Delaware_Z20 vlan native 30 
+config flexconnect group Delaware_Z20 vlan override-ap enable 
+config flexconnect group Des_Moines_D59 radius ap server-key encrypt 1 611501cef99b143a745b8dac6829a836 48d6180a8b336b23bf90e875d19427999c4c2027 ed60f92d8782bc3cb123b554b334032c1634dbc93376d24d9b509f0a659b31c5 
+config flexconnect group Des_Moines_D59 radius ap authority info "Cisco A_ID" 
+config flexconnect group Des_Moines_D59 radius ap authority id 436973636f0000000000000000000000 
+config flexconnect group Des_Moines_D59 wlan-vlan wlan 1 add vlan 10 
+config flexconnect group Des_Moines_D59 wlan-vlan wlan 6 add vlan 10 
+config flexconnect group Des_Moines_D59 wlan-vlan wlan 10 add vlan 40 
+config flexconnect group Des_Moines_D59 wlan-vlan wlan 11 add vlan 40 
+config flexconnect group Des_Moines_D59 add 
+config flexconnect group Des_Moines_D59 predownload mac-master 2c:0b:e9:c6:30:70 
+config flexconnect group Des_Moines_D59 predownload enable 
+config flexconnect group Des_Moines_D59 ap add 2c:0b:e9:c6:30:70 
+config flexconnect group Des_Moines_D59 ap add 2c:0b:e9:c6:31:68 
+config flexconnect group Des_Moines_D59 ap add 2c:0b:e9:c6:33:e0 
+config flexconnect group Des_Moines_D59 ap add 2c:0b:e9:c6:35:10 
+config flexconnect group Des_Moines_D59 ap add 2c:0b:e9:c6:3d:90 
+config flexconnect group Des_Moines_D59 ap add 2c:0b:e9:c6:52:40 
+config flexconnect group Des_Moines_D59 ap add 2c:0b:e9:c6:53:38 
+config flexconnect group Des_Moines_D59 ap add 2c:0b:e9:c6:53:50 
+config flexconnect group Des_Moines_D59 ap add 2c:0b:e9:c6:55:10 
+config flexconnect group Des_Moines_D59 ap add 2c:0b:e9:c6:62:f0 
+config flexconnect group Des_Moines_D59 vlan native 30 
+config flexconnect group Des_Moines_D59 vlan override-ap enable 
+config flexconnect group EASTERN_WASHINGT_S54 radius ap server-key encrypt 1 37b6cdc2f80b38dae479262d8d1f5c41 3a17b7be7cd9304ade2ea3fa416be3474ecfbe4b c6cfc1bd4efaac95320d07a4e2aedb87bb874a6e85859fb6b9f4e0e164f64f8a 
+config flexconnect group EASTERN_WASHINGT_S54 radius ap authority info "Cisco A_ID" 
+config flexconnect group EASTERN_WASHINGT_S54 radius ap authority id 436973636f0000000000000000000000 
+config flexconnect group EASTERN_WASHINGT_S54 wlan-vlan wlan 1 add vlan 10 
+config flexconnect group EASTERN_WASHINGT_S54 wlan-vlan wlan 6 add vlan 10 
+config flexconnect group EASTERN_WASHINGT_S54 wlan-vlan wlan 10 add vlan 40 
+config flexconnect group EASTERN_WASHINGT_S54 wlan-vlan wlan 11 add vlan 40 
+config flexconnect group EASTERN_WASHINGT_S54 add 
+config flexconnect group EASTERN_WASHINGT_S54 predownload mac-master 88:1d:fc:49:2d:be 
+config flexconnect group EASTERN_WASHINGT_S54 predownload enable 
+config flexconnect group EASTERN_WASHINGT_S54 ap add 70:d3:79:da:32:40 
+config flexconnect group EASTERN_WASHINGT_S54 ap add 88:1d:fc:49:2d:be 
+config flexconnect group EASTERN_WASHINGT_S54 ap add 88:1d:fc:49:2d:d6 
+config flexconnect group EASTERN_WASHINGT_S54 ap add 88:1d:fc:49:2e:16 
+config flexconnect group EASTERN_WASHINGT_S54 ap add 88:1d:fc:49:2e:17 
+config flexconnect group EASTERN_WASHINGT_S54 ap add 88:1d:fc:49:2e:37 
+config flexconnect group EASTERN_WASHINGT_S54 ap add 88:1d:fc:49:2e:94 
+config flexconnect group EASTERN_WASHINGT_S54 ap add 88:1d:fc:49:2e:d1 
+config flexconnect group EASTERN_WASHINGT_S54 ap add 88:1d:fc:49:34:6f 
+config flexconnect group EASTERN_WASHINGT_S54 ap add 88:1d:fc:49:35:84 
+config flexconnect group EASTERN_WASHINGT_S54 ap add a0:ec:f9:ae:7d:24 
+config flexconnect group EASTERN_WASHINGT_S54 ap add c4:b9:cd:f8:55:88 
+config flexconnect group EASTERN_WASHINGT_S54 ap add c4:b9:cd:fc:41:18 
+config flexconnect group EASTERN_WASHINGT_S54 ap add c4:b9:cd:fc:48:c0 
+config flexconnect group EASTERN_WASHINGT_S54 ap add c4:b9:cd:fc:4e:18 
+config flexconnect group EASTERN_WASHINGT_S54 ap add c4:b9:cd:fe:05:00 
+config flexconnect group EASTERN_WASHINGT_S54 ap add c4:b9:cd:fe:08:20 
+config flexconnect group EASTERN_WASHINGT_S54 vlan native 30 
+config flexconnect group EASTERN_WASHINGT_S54 vlan override-ap enable 
+config flexconnect group Fort_Collins_Z55 radius ap server-key encrypt 1 56702d17ec8bf72c8224759c9e55e918 e865c212c62ed9f2f72c6241769aa47f23c72a22 c70c87b8096485157fa776c8df5f5d6b4e2bdaf7bbedd01e9665470934c54162 
+config flexconnect group Fort_Collins_Z55 radius ap authority info "Cisco A_ID" 
+config flexconnect group Fort_Collins_Z55 radius ap authority id 436973636f0000000000000000000000 
+config flexconnect group Fort_Collins_Z55 wlan-vlan wlan 1 add vlan 10 
+config flexconnect group Fort_Collins_Z55 wlan-vlan wlan 6 add vlan 10 
+config flexconnect group Fort_Collins_Z55 wlan-vlan wlan 10 add vlan 40 
+config flexconnect group Fort_Collins_Z55 wlan-vlan wlan 11 add vlan 40 
+config flexconnect group Fort_Collins_Z55 add 
+config flexconnect group Fort_Collins_Z55 predownload mac-master 2c:0b:e9:c2:4b:b8 
+config flexconnect group Fort_Collins_Z55 predownload enable 
+config flexconnect group Fort_Collins_Z55 ap add c8:28:e5:6c:06:e4 
+config flexconnect group Fort_Collins_Z55 ap add c8:28:e5:6c:0e:ac 
+config flexconnect group Fort_Collins_Z55 ap add c8:28:e5:6c:12:60 
+config flexconnect group Fort_Collins_Z55 ap add c8:28:e5:6c:16:ec 
+config flexconnect group Fort_Collins_Z55 ap add c8:28:e5:6c:4c:70 
+config flexconnect group Fort_Collins_Z55 ap add c8:28:e5:6c:53:9c 
+config flexconnect group Fort_Collins_Z55 ap add c8:28:e5:6f:02:b0 
+config flexconnect group Fort_Collins_Z55 ap add c8:28:e5:6f:3b:34 
+config flexconnect group Fort_Collins_Z55 vlan native 30 
+config flexconnect group Fort_Collins_Z55 vlan override-ap enable 
+config flexconnect group GREENVILLE_A29 radius ap server-key encrypt 1 c3a496482374d416b2e2c58a5eff3c2f 961140ab1d25eebb229b58c11aa5e2eae010077f f4b9c1d4bcda9f9787216afeeaf96cf57ee8f10d0d15e7275d81e1c10f4127ae 
+config flexconnect group GREENVILLE_A29 radius ap authority info "Cisco A_ID" 
+config flexconnect group GREENVILLE_A29 radius ap authority id 436973636f0000000000000000000000 
+config flexconnect group GREENVILLE_A29 wlan-vlan wlan 1 add vlan 10 
+config flexconnect group GREENVILLE_A29 wlan-vlan wlan 6 add vlan 10 
+config flexconnect group GREENVILLE_A29 wlan-vlan wlan 10 add vlan 40 
+config flexconnect group GREENVILLE_A29 wlan-vlan wlan 11 add vlan 40 
+config flexconnect group GREENVILLE_A29 add 
+config flexconnect group GREENVILLE_A29 predownload mac-master 2c:0b:e9:c2:0a:88 
+config flexconnect group GREENVILLE_A29 predownload enable 
+config flexconnect group GREENVILLE_A29 ap add 10:a8:29:f9:e1:e0 
+config flexconnect group GREENVILLE_A29 ap add 10:a8:29:f9:ef:70 
+config flexconnect group GREENVILLE_A29 ap add 10:a8:29:f9:f0:94 
+config flexconnect group GREENVILLE_A29 ap add 10:a8:29:f9:f4:f4 
+config flexconnect group GREENVILLE_A29 ap add 10:a8:29:f9:f5:38 
+config flexconnect group GREENVILLE_A29 ap add 10:a8:29:f9:f7:04 
+config flexconnect group GREENVILLE_A29 ap add 10:a8:29:f9:f9:54 
+config flexconnect group GREENVILLE_A29 ap add 24:16:1b:cc:00:34 
+config flexconnect group GREENVILLE_A29 ap add 24:16:1b:cc:11:24 
+config flexconnect group GREENVILLE_A29 ap add 24:16:1b:cc:11:3c 
+config flexconnect group GREENVILLE_A29 ap add 24:16:1b:cd:1f:d8 
+config flexconnect group GREENVILLE_A29 ap add 24:16:1b:cd:20:2c 
+config flexconnect group GREENVILLE_A29 ap add 24:16:1b:cd:20:fc 
+config flexconnect group GREENVILLE_A29 ap add 24:16:1b:cd:21:f8 
+config flexconnect group GREENVILLE_A29 vlan native 30 
+config flexconnect group GREENVILLE_A29 vlan override-ap enable 
+config flexconnect group Greater_Oregon_S57 radius ap server-key encrypt 1 873eee150071b8761253465e5d9197f3 7edf9ba84d138d99495046d1b262625fa4939eff a4dc26230ce276214c9c77c8852a6096659a6fe83af852616349c932b8d75f9b 
+config flexconnect group Greater_Oregon_S57 radius ap authority info "Cisco A_ID" 
+config flexconnect group Greater_Oregon_S57 radius ap authority id 436973636f0000000000000000000000 
+config flexconnect group Greater_Oregon_S57 wlan-vlan wlan 1 add vlan 10 
+config flexconnect group Greater_Oregon_S57 wlan-vlan wlan 6 add vlan 10 
+config flexconnect group Greater_Oregon_S57 wlan-vlan wlan 10 add vlan 40 
+config flexconnect group Greater_Oregon_S57 wlan-vlan wlan 11 add vlan 40 
+config flexconnect group Greater_Oregon_S57 add 
+config flexconnect group Greater_Oregon_S57 predownload enable 
+config flexconnect group Greater_Oregon_S57 ap add 00:7e:95:70:16:30 
+config flexconnect group Greater_Oregon_S57 ap add 00:7e:95:70:16:48 
+config flexconnect group Greater_Oregon_S57 ap add 00:7e:95:70:1a:68 
+config flexconnect group Greater_Oregon_S57 ap add 00:7e:95:70:1a:78 
+config flexconnect group Greater_Oregon_S57 ap add 00:7e:95:70:1c:08 
+config flexconnect group Greater_Oregon_S57 ap add 00:7e:95:70:1c:30 
+config flexconnect group Greater_Oregon_S57 ap add 2c:0b:e9:b6:2a:78 
+config flexconnect group Greater_Oregon_S57 ap add 2c:0b:e9:c0:05:28 
+config flexconnect group Greater_Oregon_S57 ap add 2c:0b:e9:c6:65:d8 
+config flexconnect group Greater_Oregon_S57 ap add c4:b9:cd:fc:12:10 
+config flexconnect group Greater_Oregon_S57 ap add c4:b9:cd:fe:04:b8 
+config flexconnect group Greater_Oregon_S57 vlan native 30 
+config flexconnect group Greater_Oregon_S57 vlan override-ap enable 
+config flexconnect group HIAWATHA_D57 radius ap server-key encrypt 1 563bdc6d45b7764997faf14c8818f3da 659b6683882c0e00f1de0918f322b0b3793ab126 87e3c94bba76de717555527f21cb8c9ba2b4aa010bdb3947e3f6c24ca5cf951b 
+config flexconnect group HIAWATHA_D57 radius ap authority info "Cisco A_ID" 
+config flexconnect group HIAWATHA_D57 radius ap authority id 436973636f0000000000000000000000 
+config flexconnect group HIAWATHA_D57 wlan-vlan wlan 1 add vlan 10 
+config flexconnect group HIAWATHA_D57 wlan-vlan wlan 6 add vlan 10 
+config flexconnect group HIAWATHA_D57 wlan-vlan wlan 10 add vlan 40 
+config flexconnect group HIAWATHA_D57 wlan-vlan wlan 11 add vlan 40 
+config flexconnect group HIAWATHA_D57 add 
+config flexconnect group HIAWATHA_D57 predownload mac-master 00:7e:95:70:18:e8 
+config flexconnect group HIAWATHA_D57 predownload enable 
+config flexconnect group HIAWATHA_D57 ap add 00:7e:95:70:18:e8 
+config flexconnect group HIAWATHA_D57 ap add 00:df:1d:2e:59:80 
+config flexconnect group HIAWATHA_D57 ap add 2c:0b:e9:c2:08:08 
+config flexconnect group HIAWATHA_D57 ap add 70:6b:b9:82:53:38 
+config flexconnect group HIAWATHA_D57 ap add b0:90:7e:96:26:b8 
+config flexconnect group HIAWATHA_D57 vlan native 30 
+config flexconnect group HIAWATHA_D57 vlan override-ap enable 
+config flexconnect group HO_14th_floor radius ap server-key encrypt 1 51def18819c750f6c73d8f8a2319d6ad 8f28cbf79a8886b4485c79501f481c91e23c2ac9 003bfe8b45e5ceb748d90b316bf759deb6d3575f37cbdc31637d2a99d8f306f4 
+config flexconnect group HO_14th_floor radius ap authority info "Cisco A_ID" 
+config flexconnect group HO_14th_floor radius ap authority id 436973636f0000000000000000000000 
+config flexconnect group HO_14th_floor add 
+config flexconnect group HO_14th_floor predownload enable 
+config flexconnect group HO_14th_floor ap add 24:16:1b:cd:27:90 
+config flexconnect group HO_14th_floor vlan native 30 
+config flexconnect group HO_14th_floor vlan override-ap enable 
+config flexconnect group Jersey_City_Office_JCNJ radius ap server-key encrypt 1 2a91a0b2fce8251fdb6990f364b8822b 8bbd045dfbdb29379b0acaa61b071e0f02a049e1 e3ca4b5ed5a7f8d9dc6d74e21067f5b61ee6d44705f6f48da10425607eab15c4 
+config flexconnect group Jersey_City_Office_JCNJ radius ap authority info "Cisco A_ID" 
+config flexconnect group Jersey_City_Office_JCNJ radius ap authority id 436973636f0000000000000000000000 
+config flexconnect group Jersey_City_Office_JCNJ wlan-vlan wlan 1 add vlan 30 
+config flexconnect group Jersey_City_Office_JCNJ wlan-vlan wlan 6 add vlan 30 
+config flexconnect group Jersey_City_Office_JCNJ add 
+config flexconnect group Jersey_City_Office_JCNJ predownload enable 
+config flexconnect group Jersey_City_Office_JCNJ ap add 08:45:d1:2f:24:a4 
+config flexconnect group Jersey_City_Office_JCNJ ap add 14:84:73:08:0a:64 
+config flexconnect group Jersey_City_Office_JCNJ ap add 14:84:73:09:14:7c 
+config flexconnect group Jersey_City_Office_JCNJ ap add 14:84:73:09:21:14 
+config flexconnect group Jersey_City_Office_JCNJ ap add 14:84:73:09:2a:84 
+config flexconnect group Jersey_City_Office_JCNJ ap add 14:84:73:09:9a:78 
+config flexconnect group Jersey_City_Office_JCNJ ap add 24:d7:9c:8d:91:94 
+config flexconnect group Jersey_City_Office_JCNJ ap add 34:5d:a8:54:8c:dc 
+config flexconnect group Jersey_City_Office_JCNJ ap add 34:5d:a8:55:5d:f0 
+config flexconnect group Jersey_City_Office_JCNJ ap add 34:5d:a8:55:aa:64 
+config flexconnect group Jersey_City_Office_JCNJ ap add 34:5d:a8:57:a9:e0 
+config flexconnect group Jersey_City_Office_JCNJ ap add 34:5d:a8:57:b7:24 
+config flexconnect group Jersey_City_Office_JCNJ ap add 74:11:b2:ce:59:70 
+config flexconnect group Jersey_City_Office_JCNJ ap add 74:11:b2:cf:02:a0 
+config flexconnect group Jersey_City_Office_JCNJ ap add 74:11:b2:cf:2b:20 
+config flexconnect group Jersey_City_Office_JCNJ ap add 74:11:b2:cf:94:ec 
+config flexconnect group Jersey_City_Office_JCNJ ap add 78:f1:c6:c4:59:b8 
+config flexconnect group Jersey_City_Office_JCNJ ap add ac:2a:a1:98:b4:e4 
+config flexconnect group Jersey_City_Office_JCNJ ap add ac:2a:a1:99:38:7c 
+config flexconnect group Jersey_City_Office_JCNJ ap add c8:28:e5:1d:aa:dc 
+config flexconnect group Jersey_City_Office_JCNJ ap add c8:28:e5:6e:f3:88 
+config flexconnect group Jersey_City_Office_JCNJ ap add e4:38:7e:00:35:9c 
+config flexconnect group Jersey_City_Office_JCNJ vlan native 30 
+config flexconnect group Jersey_City_Office_JCNJ vlan override-ap enable 
+config flexconnect group Kansas_AMN_4th_Floor radius ap server-key encrypt 1 207e58835bd927a1a013768fdfc8ee59 a4dcf65dbf1c2f5410c3864afdf7b2c4649fc5fc 160b20a92a075e8e2658774d14affed86a5d6bb80cf13513b59e5db340f47108 
+config flexconnect group Kansas_AMN_4th_Floor radius ap authority info "Cisco A_ID" 
+config flexconnect group Kansas_AMN_4th_Floor radius ap authority id 436973636f0000000000000000000000 
+config flexconnect group Kansas_AMN_4th_Floor wlan-vlan wlan 1 add vlan 30 
+config flexconnect group Kansas_AMN_4th_Floor wlan-vlan wlan 6 add vlan 30 
+config flexconnect group Kansas_AMN_4th_Floor add 
+config flexconnect group Kansas_AMN_4th_Floor predownload enable 
+config flexconnect group Kansas_AMN_4th_Floor ap add 08:7b:87:14:3b:04 
+config flexconnect group Kansas_AMN_4th_Floor ap add 34:5d:a8:55:02:c4 
+config flexconnect group Kansas_AMN_4th_Floor ap add 34:5d:a8:56:67:8c 
+config flexconnect group Kansas_AMN_4th_Floor ap add 34:5d:a8:56:76:20 
+config flexconnect group Kansas_AMN_4th_Floor ap add 34:5d:a8:56:7b:04 
+config flexconnect group Kansas_AMN_4th_Floor ap add 34:b8:83:ea:f9:b8 
+config flexconnect group Kansas_AMN_4th_Floor ap add 34:b8:83:ea:fd:4c 
+config flexconnect group Kansas_AMN_4th_Floor ap add 34:b8:83:eb:2a:50 
+config flexconnect group Kansas_AMN_4th_Floor ap add 34:b8:83:eb:31:74 
+config flexconnect group Kansas_AMN_4th_Floor ap add 34:b8:83:eb:42:00 
+config flexconnect group Kansas_AMN_4th_Floor ap add 34:b8:83:eb:98:54 
+config flexconnect group Kansas_AMN_4th_Floor ap add 74:11:b2:ce:bf:38 
+config flexconnect group Kansas_AMN_4th_Floor ap add 74:11:b2:ce:de:d8 
+config flexconnect group Kansas_AMN_4th_Floor ap add e4:a4:1c:73:af:4c 
+config flexconnect group Kansas_AMN_4th_Floor ap add f8:c6:50:61:8b:74 
+config flexconnect group Kansas_AMN_4th_Floor vlan native 30 
+config flexconnect group Kansas_AMN_4th_Floor vlan override-ap enable 
+config flexconnect group Knoxville_A03 radius ap server-key encrypt 1 00a642729430312cbe85888407e6c197 0ab26f2c6622ec29c4e43c55fffd041396c5a6e5 e89dd18c72bcc69f9bfb5ced0c8ac0950f70a6607557fa1190e9702d53d86893 
+config flexconnect group Knoxville_A03 radius ap authority info "Cisco A_ID" 
+config flexconnect group Knoxville_A03 radius ap authority id 436973636f0000000000000000000000 
+config flexconnect group Knoxville_A03 wlan-vlan wlan 1 add vlan 10 
+config flexconnect group Knoxville_A03 wlan-vlan wlan 6 add vlan 10 
+config flexconnect group Knoxville_A03 wlan-vlan wlan 10 add vlan 40 
+config flexconnect group Knoxville_A03 wlan-vlan wlan 11 add vlan 40 
+config flexconnect group Knoxville_A03 add 
+config flexconnect group Knoxville_A03 predownload mac-master 2c:0b:e9:c2:03:98 
+config flexconnect group Knoxville_A03 predownload enable 
+config flexconnect group Knoxville_A03 ap add 2c:0b:e9:c2:03:98 
+config flexconnect group Knoxville_A03 ap add 2c:0b:e9:c2:46:c0 
+config flexconnect group Knoxville_A03 ap add 2c:0b:e9:c2:4a:58 
+config flexconnect group Knoxville_A03 ap add 2c:0b:e9:c2:4a:60 
+config flexconnect group Knoxville_A03 ap add 2c:0b:e9:c2:4b:50 
+config flexconnect group Knoxville_A03 ap add 2c:0b:e9:c2:4c:48 
+config flexconnect group Knoxville_A03 ap add 2c:0b:e9:c2:4d:e0 
+config flexconnect group Knoxville_A03 ap add 2c:0b:e9:c2:4e:18 
+config flexconnect group Knoxville_A03 ap add 2c:0b:e9:c2:61:28 
+config flexconnect group Knoxville_A03 ap add 2c:0b:e9:c6:2d:c0 
+config flexconnect group Knoxville_A03 ap add 2c:0b:e9:c6:2d:c8 
+config flexconnect group Knoxville_A03 vlan native 30 
+config flexconnect group Knoxville_A03 vlan override-ap enable 
+config flexconnect group LONG_ISLAND_V65 radius ap server-key encrypt 1 dee7351718abc6aa6930efa49ac462fc bb55a7b2a728ddc4c334ec4b1cfc14fb978d8a13 593cee74b76f2f7e2c38ba622010505b16a7da79e36d316ff0dc8910d1ecb8ed 
+config flexconnect group LONG_ISLAND_V65 radius ap authority info "Cisco A_ID" 
+config flexconnect group LONG_ISLAND_V65 radius ap authority id 436973636f0000000000000000000000 
+config flexconnect group LONG_ISLAND_V65 wlan-vlan wlan 1 add vlan 10 
+config flexconnect group LONG_ISLAND_V65 wlan-vlan wlan 6 add vlan 10 
+config flexconnect group LONG_ISLAND_V65 wlan-vlan wlan 10 add vlan 40 
+config flexconnect group LONG_ISLAND_V65 wlan-vlan wlan 11 add vlan 40 
+config flexconnect group LONG_ISLAND_V65 add 
+config flexconnect group LONG_ISLAND_V65 predownload enable 
+config flexconnect group LONG_ISLAND_V65 ap add 00:df:1d:30:61:10 
+config flexconnect group LONG_ISLAND_V65 ap add 00:df:1d:68:4c:b0 
+config flexconnect group LONG_ISLAND_V65 ap add 78:02:b1:28:3f:58 
+config flexconnect group LONG_ISLAND_V65 ap add 78:02:b1:28:43:b8 
+config flexconnect group LONG_ISLAND_V65 ap add 78:02:b1:28:44:68 
+config flexconnect group LONG_ISLAND_V65 ap add 78:02:b1:28:44:78 
+config flexconnect group LONG_ISLAND_V65 ap add 78:02:b1:28:46:08 
+config flexconnect group LONG_ISLAND_V65 ap add c4:b9:cd:ea:04:28 
+config flexconnect group LONG_ISLAND_V65 ap add c4:b9:cd:ea:04:c0 
+config flexconnect group LONG_ISLAND_V65 ap add c4:b9:cd:ea:05:08 
+config flexconnect group LONG_ISLAND_V65 ap add c4:b9:cd:ea:05:18 
+config flexconnect group LONG_ISLAND_V65 ap add c4:b9:cd:ea:05:20 
+config flexconnect group LONG_ISLAND_V65 ap add c4:b9:cd:ea:05:58 
+config flexconnect group LONG_ISLAND_V65 ap add c4:b9:cd:ea:05:68 
+config flexconnect group LONG_ISLAND_V65 ap add c4:b9:cd:ea:05:70 
+config flexconnect group LONG_ISLAND_V65 ap add c4:b9:cd:ea:05:78 
+config flexconnect group LONG_ISLAND_V65 ap add c4:b9:cd:ea:05:80 
+config flexconnect group LONG_ISLAND_V65 ap add c4:b9:cd:ea:05:88 
+config flexconnect group LONG_ISLAND_V65 ap add c4:b9:cd:ea:05:90 
+config flexconnect group LONG_ISLAND_V65 ap add c4:b9:cd:ea:05:98 
+config flexconnect group LONG_ISLAND_V65 ap add c4:b9:cd:ea:05:b0 
+config flexconnect group LONG_ISLAND_V65 ap add c4:b9:cd:ea:05:b8 
+config flexconnect group LONG_ISLAND_V65 ap add c4:b9:cd:ea:05:c8 
+config flexconnect group LONG_ISLAND_V65 ap add c4:b9:cd:ea:05:d8 
+config flexconnect group LONG_ISLAND_V65 ap add c4:b9:cd:ea:05:e8 
+config flexconnect group LONG_ISLAND_V65 ap add c4:b9:cd:ea:05:f8 
+config flexconnect group LONG_ISLAND_V65 ap add c4:b9:cd:ea:06:00 
+config flexconnect group LONG_ISLAND_V65 ap add c4:b9:cd:ea:06:28 
+config flexconnect group LONG_ISLAND_V65 ap add c4:b9:cd:ea:5b:88 
+config flexconnect group LONG_ISLAND_V65 ap add c4:b9:cd:f8:54:f8 
+config flexconnect group LONG_ISLAND_V65 ap add c4:b9:cd:fc:0a:d0 
+config flexconnect group LONG_ISLAND_V65 ap add c4:b9:cd:fc:11:48 
+config flexconnect group LONG_ISLAND_V65 ap add c4:b9:cd:fc:12:b0 
+config flexconnect group LONG_ISLAND_V65 ap add c4:b9:cd:fc:13:98 
+config flexconnect group LONG_ISLAND_V65 ap add c4:b9:cd:fc:47:c8 
+config flexconnect group LONG_ISLAND_V65 ap add c4:b9:cd:fc:4b:e8 
+config flexconnect group LONG_ISLAND_V65 ap add c4:b9:cd:fe:01:38 
+config flexconnect group LONG_ISLAND_V65 ap add c4:b9:cd:fe:02:30 
+config flexconnect group LONG_ISLAND_V65 ap add c4:b9:cd:fe:02:70 
+config flexconnect group LONG_ISLAND_V65 ap add c4:b9:cd:fe:02:78 
+config flexconnect group LONG_ISLAND_V65 ap add c4:b9:cd:fe:03:d8 
+config flexconnect group LONG_ISLAND_V65 ap add c4:b9:cd:fe:04:28 
+config flexconnect group LONG_ISLAND_V65 ap add c4:b9:cd:fe:05:40 
+config flexconnect group LONG_ISLAND_V65 ap add c4:b9:cd:fe:07:38 
+config flexconnect group LONG_ISLAND_V65 ap add c4:b9:cd:fe:0b:e8 
+config flexconnect group LONG_ISLAND_V65 ap add c4:b9:cd:fe:0c:08 
+config flexconnect group LONG_ISLAND_V65 vlan native 30 
+config flexconnect group LONG_ISLAND_V65 vlan override-ap enable 
+config flexconnect group Los_Angeles_S69 radius ap server-key encrypt 1 3836d21d6a477ec25ccf1c3f00a07426 5fbc48cd6f26de69d670364bcd75ed4d03233be9 52ab033cf53f0f6263cf9d657f7ea0d943ea117c93813648e8d826c817ff1365 
+config flexconnect group Los_Angeles_S69 radius ap authority info "Cisco A_ID" 
+config flexconnect group Los_Angeles_S69 radius ap authority id 436973636f0000000000000000000000 
+config flexconnect group Los_Angeles_S69 wlan-vlan wlan 1 add vlan 10 
+config flexconnect group Los_Angeles_S69 wlan-vlan wlan 6 add vlan 10 
+config flexconnect group Los_Angeles_S69 wlan-vlan wlan 10 add vlan 40 
+config flexconnect group Los_Angeles_S69 wlan-vlan wlan 11 add vlan 40 
+config flexconnect group Los_Angeles_S69 add 
+config flexconnect group Los_Angeles_S69 predownload mac-master 2c:0b:e9:c2:16:d0 
+config flexconnect group Los_Angeles_S69 predownload enable 
+config flexconnect group Los_Angeles_S69 ap add 2c:0b:e9:c2:16:d0 
+config flexconnect group Los_Angeles_S69 ap add 2c:0b:e9:c2:39:e0 
+config flexconnect group Los_Angeles_S69 ap add 2c:0b:e9:c2:3a:60 
+config flexconnect group Los_Angeles_S69 ap add 2c:0b:e9:c2:3a:90 
+config flexconnect group Los_Angeles_S69 ap add 2c:0b:e9:c2:3c:e8 
+config flexconnect group Los_Angeles_S69 ap add 2c:0b:e9:c2:3e:10 
+config flexconnect group Los_Angeles_S69 ap add 2c:0b:e9:c6:21:60 
+config flexconnect group Los_Angeles_S69 vlan native 30 
+config flexconnect group Los_Angeles_S69 vlan override-ap enable 
+config flexconnect group Louisiana_D18 radius ap server-key encrypt 1 b87deaf0a57c4ff4638c91a60a7b8827 24c682013f384bf7c8563acc9a0da373d8417c24 ec3b906d6dcd7f0f68758a2640fd5f7719b66f237b199eb154651791c8fe69b6 
+config flexconnect group Louisiana_D18 radius ap authority info "Cisco A_ID" 
+config flexconnect group Louisiana_D18 radius ap authority id 436973636f0000000000000000000000 
+config flexconnect group Louisiana_D18 wlan-vlan wlan 1 add vlan 10 
+config flexconnect group Louisiana_D18 wlan-vlan wlan 6 add vlan 10 
+config flexconnect group Louisiana_D18 wlan-vlan wlan 10 add vlan 40 
+config flexconnect group Louisiana_D18 wlan-vlan wlan 11 add vlan 40 
+config flexconnect group Louisiana_D18 add 
+config flexconnect group Louisiana_D18 predownload enable 
+config flexconnect group Louisiana_D18 ap add 78:f1:c6:6c:81:f8 
+config flexconnect group Louisiana_D18 ap add 78:f1:c6:6c:94:38 
+config flexconnect group Louisiana_D18 ap add 78:f1:c6:6c:96:50 
+config flexconnect group Louisiana_D18 ap add 78:f1:c6:6c:98:4c 
+config flexconnect group Louisiana_D18 ap add 78:f1:c6:6c:a2:d8 
+config flexconnect group Louisiana_D18 ap add 78:f1:c6:6c:a4:f4 
+config flexconnect group Louisiana_D18 ap add 78:f1:c6:6c:a9:58 
+config flexconnect group Louisiana_D18 ap add 78:f1:c6:6c:aa:58 
+config flexconnect group Louisiana_D18 ap add 78:f1:c6:6c:ad:24 
+config flexconnect group Louisiana_D18 ap add 78:f1:c6:6c:ad:ec 
+config flexconnect group Louisiana_D18 ap add 78:f1:c6:6c:b7:6c 
+config flexconnect group Louisiana_D18 ap add 78:f1:c6:6c:ba:30 
+config flexconnect group Louisiana_D18 ap add 78:f1:c6:6c:cd:04 
+config flexconnect group Louisiana_D18 vlan native 30 
+config flexconnect group Louisiana_D18 vlan override-ap enable 
+config flexconnect group MOBILE_A19 radius ap server-key encrypt 1 6c03fb8a9b71db8dd52df49b33ccedaa ddba285a4fdbd7cfd7c76f7b573d8f55d2fc36d6 edc717ec48dc69d6be7f5e8f64d42d54999be05ee81107b3992fe7fcc15e7b9c 
+config flexconnect group MOBILE_A19 radius ap authority info "Cisco A_ID" 
+config flexconnect group MOBILE_A19 radius ap authority id 436973636f0000000000000000000000 
+config flexconnect group MOBILE_A19 wlan-vlan wlan 1 add vlan 10 
+config flexconnect group MOBILE_A19 wlan-vlan wlan 6 add vlan 10 
+config flexconnect group MOBILE_A19 wlan-vlan wlan 10 add vlan 40 
+config flexconnect group MOBILE_A19 wlan-vlan wlan 11 add vlan 40 
+config flexconnect group MOBILE_A19 add 
+config flexconnect group MOBILE_A19 predownload mac-master 2c:0b:e9:c2:03:68 
+config flexconnect group MOBILE_A19 predownload enable 
+config flexconnect group MOBILE_A19 ap add 2c:0b:e9:c2:03:68 
+config flexconnect group MOBILE_A19 ap add 2c:0b:e9:c2:06:30 
+config flexconnect group MOBILE_A19 ap add 2c:0b:e9:c2:06:e0 
+config flexconnect group MOBILE_A19 ap add 2c:0b:e9:c6:33:d8 
+config flexconnect group MOBILE_A19 ap add 2c:0b:e9:c6:4d:f8 
+config flexconnect group MOBILE_A19 ap add 2c:0b:e9:c6:4f:70 
+config flexconnect group MOBILE_A19 ap add 2c:0b:e9:c6:4f:e8 
+config flexconnect group MOBILE_A19 vlan native 30 
+config flexconnect group MOBILE_A19 vlan override-ap enable 
+config flexconnect group Madison_Capital_Funding_MCF radius ap server-key encrypt 1 87846b16a85b8907ce0aa2bfa8fc0938 511cc5e5c2ab09da21d0339b089a841e79cdf06e 032d52f5f8b3925b9e46d3d37449cdfbf36938c9ba4b3be0dc292cf0aaea6968 
+config flexconnect group Madison_Capital_Funding_MCF radius ap authority info "Cisco A_ID" 
+config flexconnect group Madison_Capital_Funding_MCF radius ap authority id 436973636f0000000000000000000000 
+config flexconnect group Madison_Capital_Funding_MCF wlan-vlan wlan 1 add vlan 10 
+config flexconnect group Madison_Capital_Funding_MCF wlan-vlan wlan 6 add vlan 10 
+config flexconnect group Madison_Capital_Funding_MCF add 
+config flexconnect group Madison_Capital_Funding_MCF predownload mac-master 00:27:e3:01:3f:54 
+config flexconnect group Madison_Capital_Funding_MCF predownload enable 
+config flexconnect group Madison_Capital_Funding_MCF ap add 24:d7:9c:8d:cc:10 
+config flexconnect group Madison_Capital_Funding_MCF ap add 24:d7:9c:bc:3c:14 
+config flexconnect group Madison_Capital_Funding_MCF ap add 34:5d:a8:54:7b:08 
+config flexconnect group Madison_Capital_Funding_MCF ap add 34:5d:a8:55:05:38 
+config flexconnect group Madison_Capital_Funding_MCF ap add 34:5d:a8:55:0e:60 
+config flexconnect group Madison_Capital_Funding_MCF ap add 34:5d:a8:55:7b:fc 
+config flexconnect group Madison_Capital_Funding_MCF ap add 34:5d:a8:55:7c:88 
+config flexconnect group Madison_Capital_Funding_MCF ap add 34:5d:a8:55:93:4c 
+config flexconnect group Madison_Capital_Funding_MCF ap add 34:5d:a8:55:9b:c8 
+config flexconnect group Madison_Capital_Funding_MCF ap add 34:5d:a8:55:9e:88 
+config flexconnect group Madison_Capital_Funding_MCF ap add 34:5d:a8:55:a2:18 
+config flexconnect group Madison_Capital_Funding_MCF ap add 34:5d:a8:55:a3:34 
+config flexconnect group Madison_Capital_Funding_MCF ap add 34:5d:a8:55:aa:80 
+config flexconnect group Madison_Capital_Funding_MCF ap add 34:5d:a8:55:ae:e0 
+config flexconnect group Madison_Capital_Funding_MCF ap add 34:5d:a8:55:c7:84 
+config flexconnect group Madison_Capital_Funding_MCF ap add 34:5d:a8:57:01:d4 
+config flexconnect group Madison_Capital_Funding_MCF ap add 34:5d:a8:57:8d:34 
+config flexconnect group Madison_Capital_Funding_MCF ap add 34:5d:a8:57:a9:30 
+config flexconnect group Madison_Capital_Funding_MCF ap add 34:5d:a8:57:aa:88 
+config flexconnect group Madison_Capital_Funding_MCF ap add 34:5d:a8:57:ad:4c 
+config flexconnect group Madison_Capital_Funding_MCF ap add 34:5d:a8:57:b6:94 
+config flexconnect group Madison_Capital_Funding_MCF ap add 34:5d:a8:57:b6:a0 
+config flexconnect group Madison_Capital_Funding_MCF ap add 34:5d:a8:57:b6:d8 
+config flexconnect group Madison_Capital_Funding_MCF ap add 38:91:b7:c2:87:40 
+config flexconnect group Madison_Capital_Funding_MCF ap add 38:91:b7:c2:93:84 
+config flexconnect group Madison_Capital_Funding_MCF ap add 38:91:b7:c2:ef:e8 
+config flexconnect group Madison_Capital_Funding_MCF ap add 38:91:b7:c3:2e:30 
+config flexconnect group Madison_Capital_Funding_MCF ap add 74:11:b2:ce:64:0c 
+config flexconnect group Madison_Capital_Funding_MCF ap add 74:11:b2:ce:9f:b4 
+config flexconnect group Madison_Capital_Funding_MCF ap add 74:11:b2:ce:b5:fc 
+config flexconnect group Madison_Capital_Funding_MCF ap add 74:11:b2:ce:b6:e0 
+config flexconnect group Madison_Capital_Funding_MCF ap add 74:11:b2:ce:bd:10 
+config flexconnect group Madison_Capital_Funding_MCF ap add 74:11:b2:ce:c9:e0 
+config flexconnect group Madison_Capital_Funding_MCF ap add 74:11:b2:ce:cb:10 
+config flexconnect group Madison_Capital_Funding_MCF ap add 74:11:b2:ce:d3:50 
+config flexconnect group Madison_Capital_Funding_MCF ap add 74:11:b2:ce:d7:30 
+config flexconnect group Madison_Capital_Funding_MCF ap add 74:11:b2:ce:db:94 
+config flexconnect group Madison_Capital_Funding_MCF ap add 74:11:b2:ce:dc:74 
+config flexconnect group Madison_Capital_Funding_MCF ap add 74:11:b2:ce:df:4c 
+config flexconnect group Madison_Capital_Funding_MCF ap add 74:11:b2:cf:1d:f8 
+config flexconnect group Madison_Capital_Funding_MCF ap add 74:11:b2:cf:1e:e4 
+config flexconnect group Madison_Capital_Funding_MCF ap add 74:11:b2:cf:1f:d0 
+config flexconnect group Madison_Capital_Funding_MCF ap add 74:11:b2:cf:20:60 
+config flexconnect group Madison_Capital_Funding_MCF ap add 74:11:b2:cf:25:74 
+config flexconnect group Madison_Capital_Funding_MCF ap add 74:11:b2:cf:25:84 
+config flexconnect group Madison_Capital_Funding_MCF ap add 74:11:b2:cf:3d:38 
+config flexconnect group Madison_Capital_Funding_MCF ap add 74:11:b2:cf:4b:3c 
+config flexconnect group Madison_Capital_Funding_MCF ap add 74:11:b2:cf:88:60 
+config flexconnect group Madison_Capital_Funding_MCF ap add 74:11:b2:cf:8f:78 
+config flexconnect group Madison_Capital_Funding_MCF ap add 74:11:b2:cf:90:00 
+config flexconnect group Madison_Capital_Funding_MCF ap add 74:11:b2:cf:94:d4 
+config flexconnect group Madison_Capital_Funding_MCF vlan native 10 
+config flexconnect group Madison_Capital_Funding_MCF vlan override-ap enable 
+config flexconnect group McAllen_Z92 radius ap server-key encrypt 1 02eba10ba79a4e2247bc3999b2dc49af 003603a111df2a4f0ae4d1796b014c56fe133c89 7e2584e6b0e42297640f31a1d1976925d48a1987e2f57c1370745e3b2963c5b5 
+config flexconnect group McAllen_Z92 radius ap authority info "Cisco A_ID" 
+config flexconnect group McAllen_Z92 radius ap authority id 436973636f0000000000000000000000 
+config flexconnect group McAllen_Z92 wlan-vlan wlan 1 add vlan 10 
+config flexconnect group McAllen_Z92 wlan-vlan wlan 6 add vlan 10 
+config flexconnect group McAllen_Z92 wlan-vlan wlan 10 add vlan 40 
+config flexconnect group McAllen_Z92 wlan-vlan wlan 11 add vlan 40 
+config flexconnect group McAllen_Z92 add 
+config flexconnect group McAllen_Z92 predownload mac-master 2c:0b:e9:c2:1b:50 
+config flexconnect group McAllen_Z92 predownload enable 
+config flexconnect group McAllen_Z92 ap add 2c:0b:e9:c2:1b:50 
+config flexconnect group McAllen_Z92 ap add 2c:0b:e9:c2:29:10 
+config flexconnect group McAllen_Z92 ap add 2c:0b:e9:c6:28:08 
+config flexconnect group McAllen_Z92 ap add 2c:0b:e9:c6:4e:20 
+config flexconnect group McAllen_Z92 ap add 2c:0b:e9:c6:4e:88 
+config flexconnect group McAllen_Z92 ap add c4:b9:cd:fc:0a:00 
+config flexconnect group McAllen_Z92 ap add c4:b9:cd:fc:13:18 
+config flexconnect group McAllen_Z92 ap add c4:b9:cd:fc:3d:90 
+config flexconnect group McAllen_Z92 ap add c4:b9:cd:fc:3f:28 
+config flexconnect group McAllen_Z92 ap add c4:b9:cd:fc:40:e0 
+config flexconnect group McAllen_Z92 ap add c4:b9:cd:fc:44:20 
+config flexconnect group McAllen_Z92 ap add c4:b9:cd:fc:44:80 
+config flexconnect group McAllen_Z92 ap add c4:b9:cd:fc:4d:30 
+config flexconnect group McAllen_Z92 ap add c4:b9:cd:fc:4d:40 
+config flexconnect group McAllen_Z92 ap add c4:b9:cd:fe:03:58 
+config flexconnect group McAllen_Z92 ap add c4:b9:cd:fe:0e:98 
+config flexconnect group McAllen_Z92 ap add c4:b9:cd:fe:11:48 
+config flexconnect group McAllen_Z92 vlan native 30 
+config flexconnect group McAllen_Z92 vlan override-ap enable 
+config flexconnect group Mississippi_A49 radius ap server-key encrypt 1 11d3e137fa23d998975115a48a72f4b8 3bd2b3835b166c0454a31e369fd24d819f8d9693 2016993ddd4d617f6d29a031fe8b940f3c599e0576fb08827d9ce5dbdae30e81 
+config flexconnect group Mississippi_A49 radius ap authority info "Cisco A_ID" 
+config flexconnect group Mississippi_A49 radius ap authority id 436973636f0000000000000000000000 
+config flexconnect group Mississippi_A49 wlan-vlan wlan 1 add vlan 10 
+config flexconnect group Mississippi_A49 wlan-vlan wlan 6 add vlan 10 
+config flexconnect group Mississippi_A49 wlan-vlan wlan 10 add vlan 40 
+config flexconnect group Mississippi_A49 wlan-vlan wlan 11 add vlan 40 
+config flexconnect group Mississippi_A49 add 
+config flexconnect group Mississippi_A49 predownload mac-master 2c:0b:e9:c2:3e:b0 
+config flexconnect group Mississippi_A49 predownload enable 
+config flexconnect group Mississippi_A49 ap add 2c:0b:e9:c2:3e:b0 
+config flexconnect group Mississippi_A49 ap add 2c:0b:e9:c2:40:08 
+config flexconnect group Mississippi_A49 ap add 2c:0b:e9:c2:41:78 
+config flexconnect group Mississippi_A49 ap add 2c:0b:e9:c6:4d:f0 
+config flexconnect group Mississippi_A49 ap add 2c:0b:e9:c6:4e:a0 
+config flexconnect group Mississippi_A49 ap add 2c:0b:e9:c6:4e:c8 
+config flexconnect group Mississippi_A49 ap add 2c:0b:e9:c6:50:58 
+config flexconnect group Mississippi_A49 ap add 2c:0b:e9:c6:50:e8 
+config flexconnect group Mississippi_A49 ap add 2c:0b:e9:c6:51:78 
+config flexconnect group Mississippi_A49 vlan native 30 
+config flexconnect group Mississippi_A49 vlan override-ap enable 
+config flexconnect group Monsey_Z37 radius ap server-key encrypt 1 bae0d914a0adb18eccf61f776860f2b6 61d9380077f176f8346adbc170c202ee0e161a3a 1788fddc24d030539466ee48ee6d6ab4f0e13cdb9c5d2db84ab1a923d3038edf 
+config flexconnect group Monsey_Z37 radius ap authority info "Cisco A_ID" 
+config flexconnect group Monsey_Z37 radius ap authority id 436973636f0000000000000000000000 
+config flexconnect group Monsey_Z37 wlan-vlan wlan 1 add vlan 10 
+config flexconnect group Monsey_Z37 wlan-vlan wlan 6 add vlan 10 
+config flexconnect group Monsey_Z37 wlan-vlan wlan 10 add vlan 40 
+config flexconnect group Monsey_Z37 wlan-vlan wlan 11 add vlan 40 
+config flexconnect group Monsey_Z37 add 
+config flexconnect group Monsey_Z37 predownload mac-master 2c:0b:e9:c2:49:50 
+config flexconnect group Monsey_Z37 predownload enable 
+config flexconnect group Monsey_Z37 ap add 00:df:1d:2e:5a:c0 
+config flexconnect group Monsey_Z37 ap add 00:df:1d:2e:5b:58 
+config flexconnect group Monsey_Z37 ap add 24:36:da:34:86:d0 
+config flexconnect group Monsey_Z37 ap add 24:36:da:35:06:80 
+config flexconnect group Monsey_Z37 ap add 24:36:da:35:26:6c 
+config flexconnect group Monsey_Z37 ap add 24:36:da:35:2e:9c 
+config flexconnect group Monsey_Z37 ap add 2c:0b:e9:c2:49:50 
+config flexconnect group Monsey_Z37 ap add 30:8b:b2:9a:54:a0 
+config flexconnect group Monsey_Z37 ap add 9c:d5:7d:c1:e9:94 
+config flexconnect group Monsey_Z37 ap add 9c:d5:7d:de:a1:44 
+config flexconnect group Monsey_Z37 ap add c4:b9:cd:fe:05:48 
+config flexconnect group Monsey_Z37 ap add e4:4e:2d:10:3e:68 
+config flexconnect group Monsey_Z37 vlan native 30 
+config flexconnect group Monsey_Z37 vlan override-ap enable 
+config flexconnect group New_Hampshire_V59 radius ap server-key encrypt 1 79023a44f0ef6cf1f606979b2a112534 afd6e5f5441a3248de83f4ec6b9af553ce9b8cd4 c5c22e9e6a17ddb013f07b07d0893c325862cd2bf7c3a3544c9c3fc660b85ffa 
+config flexconnect group New_Hampshire_V59 radius ap authority info "Cisco A_ID" 
+config flexconnect group New_Hampshire_V59 radius ap authority id 436973636f0000000000000000000000 
+config flexconnect group New_Hampshire_V59 wlan-vlan wlan 1 add vlan 10 
+config flexconnect group New_Hampshire_V59 wlan-vlan wlan 6 add vlan 10 
+config flexconnect group New_Hampshire_V59 wlan-vlan wlan 10 add vlan 40 
+config flexconnect group New_Hampshire_V59 wlan-vlan wlan 11 add vlan 40 
+config flexconnect group New_Hampshire_V59 add 
+config flexconnect group New_Hampshire_V59 predownload enable 
+config flexconnect group New_Hampshire_V59 ap add 2c:0b:e9:c2:21:38 
+config flexconnect group New_Hampshire_V59 ap add 2c:0b:e9:c2:2b:f0 
+config flexconnect group New_Hampshire_V59 ap add 2c:0b:e9:c2:3e:48 
+config flexconnect group New_Hampshire_V59 ap add 2c:0b:e9:c2:46:b8 
+config flexconnect group New_Hampshire_V59 ap add 2c:0b:e9:c2:48:48 
+config flexconnect group New_Hampshire_V59 ap add 2c:0b:e9:c2:48:50 
+config flexconnect group New_Hampshire_V59 ap add 2c:0b:e9:c2:48:68 
+config flexconnect group New_Hampshire_V59 ap add 2c:0b:e9:c2:48:d0 
+config flexconnect group New_Hampshire_V59 ap add 2c:0b:e9:c2:49:60 
+config flexconnect group New_Hampshire_V59 ap add 2c:0b:e9:c6:50:a8 
+config flexconnect group New_Hampshire_V59 ap add 2c:0b:e9:c6:50:b0 
+config flexconnect group New_Hampshire_V59 ap add 2c:0b:e9:c6:64:78 
+config flexconnect group New_Hampshire_V59 ap add c4:b9:cd:ec:49:20 
+config flexconnect group New_Hampshire_V59 vlan native 30 
+config flexconnect group New_Hampshire_V59 vlan override-ap enable 
+config flexconnect group New_Orleans_D21 radius ap server-key encrypt 1 8618d0deb586a12e81fc6a284eeb3764 01b80a54ec18495375b3682bdd26a934b7b2f9b4 24d062e6fc07088928953b9aa9be5c48595f6f591014f11c8fc7302469e2e87e 
+config flexconnect group New_Orleans_D21 radius ap authority info "Cisco A_ID" 
+config flexconnect group New_Orleans_D21 radius ap authority id 436973636f0000000000000000000000 
+config flexconnect group New_Orleans_D21 wlan-vlan wlan 1 add vlan 10 
+config flexconnect group New_Orleans_D21 wlan-vlan wlan 6 add vlan 10 
+config flexconnect group New_Orleans_D21 wlan-vlan wlan 10 add vlan 40 
+config flexconnect group New_Orleans_D21 wlan-vlan wlan 11 add vlan 40 
+config flexconnect group New_Orleans_D21 add 
+config flexconnect group New_Orleans_D21 predownload mac-master 2c:0b:e9:c2:61:00 
+config flexconnect group New_Orleans_D21 predownload enable 
+config flexconnect group New_Orleans_D21 ap add 10:a8:29:d5:a0:d8 
+config flexconnect group New_Orleans_D21 ap add 10:a8:29:f9:6b:58 
+config flexconnect group New_Orleans_D21 ap add 24:d7:9c:3e:75:d0 
+config flexconnect group New_Orleans_D21 ap add 24:d7:9c:3e:80:88 
+config flexconnect group New_Orleans_D21 ap add 24:d7:9c:3e:8c:6c 
+config flexconnect group New_Orleans_D21 ap add 24:d7:9c:3f:64:80 
+config flexconnect group New_Orleans_D21 ap add 24:d7:9c:8c:29:38 
+config flexconnect group New_Orleans_D21 ap add 78:f1:c6:6c:8e:f8 
+config flexconnect group New_Orleans_D21 ap add 78:f1:c6:6c:91:04 
+config flexconnect group New_Orleans_D21 ap add 78:f1:c6:6c:9a:fc 
+config flexconnect group New_Orleans_D21 ap add 78:f1:c6:6c:9f:fc 
+config flexconnect group New_Orleans_D21 ap add 78:f1:c6:6c:a6:20 
+config flexconnect group New_Orleans_D21 ap add 78:f1:c6:6c:a6:48 
+config flexconnect group New_Orleans_D21 ap add 78:f1:c6:6c:aa:88 
+config flexconnect group New_Orleans_D21 ap add 78:f1:c6:6c:b4:14 
+config flexconnect group New_Orleans_D21 ap add 78:f1:c6:6d:3a:00 
+config flexconnect group New_Orleans_D21 ap add 78:f1:c6:c4:a0:f8 
+config flexconnect group New_Orleans_D21 vlan native 30 
+config flexconnect group New_Orleans_D21 vlan override-ap enable 
+config flexconnect group Orange_Coast_S74 radius ap server-key encrypt 1 da7d332164b37de7b426c7f70f3605ec 7b7c3a13599e7da028206bd2658b0888b3eabb48 6849aa2533cad6262a2cd90c1658229215c7245a8c4541c42c7e1a22d90862f1 
+config flexconnect group Orange_Coast_S74 radius ap authority info "Cisco A_ID" 
+config flexconnect group Orange_Coast_S74 radius ap authority id 436973636f0000000000000000000000 
+config flexconnect group Orange_Coast_S74 wlan-vlan wlan 1 add vlan 10 
+config flexconnect group Orange_Coast_S74 wlan-vlan wlan 6 add vlan 10 
+config flexconnect group Orange_Coast_S74 wlan-vlan wlan 10 add vlan 40 
+config flexconnect group Orange_Coast_S74 wlan-vlan wlan 11 add vlan 40 
+config flexconnect group Orange_Coast_S74 add 
+config flexconnect group Orange_Coast_S74 predownload mac-master 2c:0b:e9:c0:06:a8 
+config flexconnect group Orange_Coast_S74 predownload enable 
+config flexconnect group Orange_Coast_S74 ap add 78:f1:c6:2a:c4:3c 
+config flexconnect group Orange_Coast_S74 ap add 78:f1:c6:2b:dd:48 
+config flexconnect group Orange_Coast_S74 ap add 78:f1:c6:6c:80:a4 
+config flexconnect group Orange_Coast_S74 ap add 78:f1:c6:6c:81:40 
+config flexconnect group Orange_Coast_S74 ap add 78:f1:c6:6c:82:04 
+config flexconnect group Orange_Coast_S74 ap add 78:f1:c6:6c:8a:6c 
+config flexconnect group Orange_Coast_S74 ap add 78:f1:c6:6c:8c:a0 
+config flexconnect group Orange_Coast_S74 ap add 78:f1:c6:6c:8d:50 
+config flexconnect group Orange_Coast_S74 ap add 78:f1:c6:6c:8e:44 
+config flexconnect group Orange_Coast_S74 ap add 78:f1:c6:6c:8f:40 
+config flexconnect group Orange_Coast_S74 ap add 78:f1:c6:6c:92:0c 
+config flexconnect group Orange_Coast_S74 ap add 78:f1:c6:6c:97:68 
+config flexconnect group Orange_Coast_S74 ap add 78:f1:c6:6c:9b:28 
+config flexconnect group Orange_Coast_S74 ap add 78:f1:c6:6c:a1:cc 
+config flexconnect group Orange_Coast_S74 ap add 78:f1:c6:6c:a8:90 
+config flexconnect group Orange_Coast_S74 ap add 78:f1:c6:6c:ac:54 
+config flexconnect group Orange_Coast_S74 ap add 78:f1:c6:6c:ad:6c 
+config flexconnect group Orange_Coast_S74 ap add 78:f1:c6:6c:b0:70 
+config flexconnect group Orange_Coast_S74 ap add 78:f1:c6:6c:ba:54 
+config flexconnect group Orange_Coast_S74 ap add 78:f1:c6:6c:ba:dc 
+config flexconnect group Orange_Coast_S74 ap add 78:f1:c6:6c:c7:04 
+config flexconnect group Orange_Coast_S74 vlan native 30 
+config flexconnect group Orange_Coast_S74 vlan override-ap enable 
+config flexconnect group PACIFIC_ZONE_RPA radius ap server-key encrypt 1 10cee643729b913076d76a55cd9ae82a 1adfea4f1d1e5d0918e1f2fa504e2f7fbd00b5be d9600c0b47fab39c051d8aa2ba8445d7a4c86fe7d78d2caf5ab67bd9dce7249a 
+config flexconnect group PACIFIC_ZONE_RPA radius ap authority info "Cisco A_ID" 
+config flexconnect group PACIFIC_ZONE_RPA radius ap authority id 436973636f0000000000000000000000 
+config flexconnect group PACIFIC_ZONE_RPA wlan-vlan wlan 1 add vlan 10 
+config flexconnect group PACIFIC_ZONE_RPA wlan-vlan wlan 4 add vlan 40 
+config flexconnect group PACIFIC_ZONE_RPA wlan-vlan wlan 5 add vlan 40 
+config flexconnect group PACIFIC_ZONE_RPA wlan-vlan wlan 6 add vlan 10 
+config flexconnect group PACIFIC_ZONE_RPA wlan-vlan wlan 10 add vlan 40 
+config flexconnect group PACIFIC_ZONE_RPA wlan-vlan wlan 11 add vlan 40 
+config flexconnect group PACIFIC_ZONE_RPA add 
+config flexconnect group PACIFIC_ZONE_RPA predownload mac-master 2c:0b:e9:b6:38:f8 
+config flexconnect group PACIFIC_ZONE_RPA predownload enable 
+config flexconnect group PACIFIC_ZONE_RPA ap add 48:00:b3:8c:b8:54 
+config flexconnect group PACIFIC_ZONE_RPA ap add 48:00:b3:8c:bb:a0 
+config flexconnect group PACIFIC_ZONE_RPA ap add 48:00:b3:8c:d6:f0 
+config flexconnect group PACIFIC_ZONE_RPA ap add 48:00:b3:8c:ed:a8 
+config flexconnect group PACIFIC_ZONE_RPA vlan native 30 
+config flexconnect group PACIFIC_ZONE_RPA vlan override-ap enable 
+config flexconnect group RALEIGH_A12 radius ap server-key encrypt 1 93812dff3ed9afcd0f101181555beca5 cf97583a36036553788bb1434287723ca28f517c 7ccf48d1ae467eed6e57080563cf819cc5c69a54e5dd800f0ac861f34514c7ec 
+config flexconnect group RALEIGH_A12 radius ap authority info "Cisco A_ID" 
+config flexconnect group RALEIGH_A12 radius ap authority id 436973636f0000000000000000000000 
+config flexconnect group RALEIGH_A12 wlan-vlan wlan 1 add vlan 10 
+config flexconnect group RALEIGH_A12 wlan-vlan wlan 6 add vlan 10 
+config flexconnect group RALEIGH_A12 wlan-vlan wlan 10 add vlan 40 
+config flexconnect group RALEIGH_A12 wlan-vlan wlan 11 add vlan 40 
+config flexconnect group RALEIGH_A12 add 
+config flexconnect group RALEIGH_A12 predownload mac-master 2c:0b:e9:be:4f:48 
+config flexconnect group RALEIGH_A12 predownload enable 
+config flexconnect group RALEIGH_A12 ap add 2c:0b:e9:be:4f:48 
+config flexconnect group RALEIGH_A12 ap add c4:b9:cd:e8:3e:80 
+config flexconnect group RALEIGH_A12 ap add c4:b9:cd:e8:3e:b0 
+config flexconnect group RALEIGH_A12 ap add c4:b9:cd:e8:3f:d8 
+config flexconnect group RALEIGH_A12 ap add c4:b9:cd:e8:3f:f0 
+config flexconnect group RALEIGH_A12 ap add c4:b9:cd:e8:40:e0 
+config flexconnect group RALEIGH_A12 ap add c4:b9:cd:fc:39:70 
+config flexconnect group RALEIGH_A12 ap add c4:b9:cd:fc:41:78 
+config flexconnect group RALEIGH_A12 ap add c4:b9:cd:fc:4e:28 
+config flexconnect group RALEIGH_A12 ap add c4:b9:cd:fe:00:88 
+config flexconnect group RALEIGH_A12 ap add c4:b9:cd:fe:00:98 
+config flexconnect group RALEIGH_A12 ap add c4:b9:cd:fe:04:48 
+config flexconnect group RALEIGH_A12 ap add c4:b9:cd:fe:0a:58 
+config flexconnect group RALEIGH_A12 ap add c4:b9:cd:fe:0b:18 
+config flexconnect group RALEIGH_A12 ap add c4:b9:cd:fe:0b:48 
+config flexconnect group RALEIGH_A12 ap add c4:b9:cd:fe:0d:10 
+config flexconnect group RALEIGH_A12 ap add c4:b9:cd:fe:0d:90 
+config flexconnect group RALEIGH_A12 ap add c4:b9:cd:fe:11:68 
+config flexconnect group RALEIGH_A12 ap add c4:b9:cd:fe:13:f0 
+config flexconnect group RALEIGH_A12 ap add c4:b9:cd:fe:15:90 
+config flexconnect group RALEIGH_A12 vlan native 30 
+config flexconnect group RALEIGH_A12 vlan override-ap enable 
+config flexconnect group Roanoke_A43 radius ap server-key encrypt 1 8e9b317fb2898ea5f834ae12070041a9 fa2e80d812e35de74659603795d2b05036c1d8e5 a9d2443086e780dbd0c3b0806c6b33516c925ac17d8629c8f1039aea6f3aa2ae 
+config flexconnect group Roanoke_A43 radius ap authority info "Cisco A_ID" 
+config flexconnect group Roanoke_A43 radius ap authority id 436973636f0000000000000000000000 
+config flexconnect group Roanoke_A43 wlan-vlan wlan 1 add vlan 10 
+config flexconnect group Roanoke_A43 wlan-vlan wlan 6 add vlan 10 
+config flexconnect group Roanoke_A43 wlan-vlan wlan 10 add vlan 40 
+config flexconnect group Roanoke_A43 wlan-vlan wlan 11 add vlan 40 
+config flexconnect group Roanoke_A43 add 
+config flexconnect group Roanoke_A43 predownload enable 
+config flexconnect group Roanoke_A43 ap add 48:00:b3:8c:a5:14 
+config flexconnect group Roanoke_A43 ap add 48:00:b3:8c:b9:0c 
+config flexconnect group Roanoke_A43 ap add 48:00:b3:8c:ba:74 
+config flexconnect group Roanoke_A43 ap add 48:00:b3:8c:bd:f8 
+config flexconnect group Roanoke_A43 ap add 48:00:b3:8c:d4:90 
+config flexconnect group Roanoke_A43 ap add 48:00:b3:8c:d4:b8 
+config flexconnect group Roanoke_A43 ap add 48:00:b3:8c:d6:80 
+config flexconnect group Roanoke_A43 ap add 48:00:b3:8c:df:20 
+config flexconnect group Roanoke_A43 ap add 48:00:b3:8c:e5:14 
+config flexconnect group Roanoke_A43 ap add 48:00:b3:8c:f6:88 
+config flexconnect group Roanoke_A43 vlan native 30 
+config flexconnect group Roanoke_A43 vlan override-ap enable 
+config flexconnect group Scottsdale_S58 radius ap server-key encrypt 1 b75f13f66e99014f2b4f4870d52fa241 5992e3a0745cec8df57e5306242cf5ade670aa97 5308621da5a09381960da34689a6d153b5d42bc4442e7b9bc99ab94b73b0dadc 
+config flexconnect group Scottsdale_S58 radius ap authority info "Cisco A_ID" 
+config flexconnect group Scottsdale_S58 radius ap authority id 436973636f0000000000000000000000 
+config flexconnect group Scottsdale_S58 wlan-vlan wlan 1 add vlan 10 
+config flexconnect group Scottsdale_S58 wlan-vlan wlan 6 add vlan 10 
+config flexconnect group Scottsdale_S58 wlan-vlan wlan 10 add vlan 40 
+config flexconnect group Scottsdale_S58 wlan-vlan wlan 11 add vlan 40 
+config flexconnect group Scottsdale_S58 add 
+config flexconnect group Scottsdale_S58 predownload mac-master 2c:0b:e9:c0:08:f8 
+config flexconnect group Scottsdale_S58 predownload enable 
+config flexconnect group Scottsdale_S58 ap add 2c:0b:e9:c0:08:f8 
+config flexconnect group Scottsdale_S58 ap add 2c:0b:e9:c2:22:a8 
+config flexconnect group Scottsdale_S58 ap add 2c:0b:e9:c2:24:70 
+config flexconnect group Scottsdale_S58 ap add 2c:0b:e9:c2:24:d8 
+config flexconnect group Scottsdale_S58 ap add 2c:0b:e9:c2:4b:70 
+config flexconnect group Scottsdale_S58 ap add 2c:0b:e9:c2:4b:78 
+config flexconnect group Scottsdale_S58 ap add 2c:0b:e9:c2:60:50 
+config flexconnect group Scottsdale_S58 ap add 2c:0b:e9:c6:13:08 
+config flexconnect group Scottsdale_S58 ap add 2c:0b:e9:c6:13:90 
+config flexconnect group Scottsdale_S58 ap add 2c:0b:e9:c6:2e:80 
+config flexconnect group Scottsdale_S58 ap add 2c:0b:e9:c6:2f:08 
+config flexconnect group Scottsdale_S58 vlan native 30 
+config flexconnect group Scottsdale_S58 vlan override-ap enable 
+config flexconnect group Seattle_S51 radius ap server-key encrypt 1 51cc6560a878abe1c62855e1bdbd29f0 21dbe2b3df40764ff6d6baf82392401245a60c88 f3bfb162189e0629d100692ff985e201d16f38a02333938a3253697a197a30b1 
+config flexconnect group Seattle_S51 radius ap authority info "Cisco A_ID" 
+config flexconnect group Seattle_S51 radius ap authority id 436973636f0000000000000000000000 
+config flexconnect group Seattle_S51 wlan-vlan wlan 1 add vlan 10 
+config flexconnect group Seattle_S51 wlan-vlan wlan 6 add vlan 10 
+config flexconnect group Seattle_S51 wlan-vlan wlan 10 add vlan 40 
+config flexconnect group Seattle_S51 wlan-vlan wlan 11 add vlan 40 
+config flexconnect group Seattle_S51 add 
+config flexconnect group Seattle_S51 predownload mac-master 1c:df:0f:95:06:10 
+config flexconnect group Seattle_S51 predownload mac-master 70:d3:79:da:36:28 
+config flexconnect group Seattle_S51 predownload enable 
+config flexconnect group Seattle_S51 ap add 70:d3:79:da:36:28 
+config flexconnect group Seattle_S51 ap add 70:d3:79:da:37:10 
+config flexconnect group Seattle_S51 ap add 94:d4:69:f2:55:30 
+config flexconnect group Seattle_S51 ap add c4:b9:cd:e8:40:c0 
+config flexconnect group Seattle_S51 ap add c4:b9:cd:f8:55:c8 
+config flexconnect group Seattle_S51 ap add c4:b9:cd:fc:13:00 
+config flexconnect group Seattle_S51 ap add c4:b9:cd:fc:13:20 
+config flexconnect group Seattle_S51 ap add c4:b9:cd:fc:13:60 
+config flexconnect group Seattle_S51 ap add c4:b9:cd:fc:30:d0 
+config flexconnect group Seattle_S51 ap add c4:b9:cd:fc:3e:28 
+config flexconnect group Seattle_S51 ap add c4:b9:cd:fc:4c:a0 
+config flexconnect group Seattle_S51 ap add c4:b9:cd:fe:00:e8 
+config flexconnect group Seattle_S51 ap add c4:b9:cd:fe:04:68 
+config flexconnect group Seattle_S51 ap add c4:b9:cd:fe:04:f8 
+config flexconnect group Seattle_S51 ap add c4:b9:cd:fe:05:70 
+config flexconnect group Seattle_S51 ap add c4:b9:cd:fe:09:88 
+config flexconnect group Seattle_S51 ap add c4:b9:cd:fe:0f:10 
+config flexconnect group Seattle_S51 ap add c4:b9:cd:fe:15:00 
+config flexconnect group Seattle_S51 ap add c4:b9:cd:fe:15:e8 
+config flexconnect group Seattle_S51 ap add d4:2c:44:ea:17:98 
+config flexconnect group Seattle_S51 vlan native 30 
+config flexconnect group Seattle_S51 vlan override-ap enable 
+config flexconnect group Spokane_Z54 radius ap server-key encrypt 1 7031ada8a31e62a7699d49165d42b5f0 4728ad5b75345185c4ea7807bb8b03e6eb64cef8 4013e71ccc39b7eb41a8540100f7e625c9eb70552cd29ef0436fa3ee98e7aa17 
+config flexconnect group Spokane_Z54 radius ap authority info "Cisco A_ID" 
+config flexconnect group Spokane_Z54 radius ap authority id 436973636f0000000000000000000000 
+config flexconnect group Spokane_Z54 wlan-vlan wlan 1 add vlan 10 
+config flexconnect group Spokane_Z54 wlan-vlan wlan 6 add vlan 10 
+config flexconnect group Spokane_Z54 wlan-vlan wlan 10 add vlan 40 
+config flexconnect group Spokane_Z54 wlan-vlan wlan 11 add vlan 40 
+config flexconnect group Spokane_Z54 add 
+config flexconnect group Spokane_Z54 predownload enable 
+config flexconnect group Spokane_Z54 ap add 70:d3:79:d6:0c:d0 
+config flexconnect group Spokane_Z54 ap add 70:d3:79:d6:0e:48 
+config flexconnect group Spokane_Z54 ap add 70:d3:79:d6:12:c0 
+config flexconnect group Spokane_Z54 ap add 70:d3:79:d6:52:d8 
+config flexconnect group Spokane_Z54 ap add 70:d3:79:d6:5e:08 
+config flexconnect group Spokane_Z54 ap add 70:d3:79:d8:00:b0 
+config flexconnect group Spokane_Z54 ap add 70:d3:79:d8:04:68 
+config flexconnect group Spokane_Z54 ap add 70:d3:79:d8:04:90 
+config flexconnect group Spokane_Z54 ap add 70:d3:79:d8:0a:38 
+config flexconnect group Spokane_Z54 ap add 70:d3:79:d8:0a:c8 
+config flexconnect group Spokane_Z54 ap add 70:d3:79:d8:0a:e8 
+config flexconnect group Spokane_Z54 ap add 70:d3:79:d8:0b:80 
+config flexconnect group Spokane_Z54 ap add c4:b9:cd:fe:0b:68 
+config flexconnect group Spokane_Z54 ap add c4:b9:cd:fe:61:c0 
+config flexconnect group Spokane_Z54 vlan native 30 
+config flexconnect group Spokane_Z54 vlan override-ap enable 
+config flexconnect group Sugarland_Z15 radius ap server-key encrypt 1 82526d21497382e164f7d010109043a1 b71bcc75acf9ab220860af81378b558e5d3ef91e aa7c5cd6a7ed0c4088c2d3717d795f5b6cfc1eaa3a380f9a2ecd690178b64a30 
+config flexconnect group Sugarland_Z15 radius ap authority info "Cisco A_ID" 
+config flexconnect group Sugarland_Z15 radius ap authority id 436973636f0000000000000000000000 
+config flexconnect group Sugarland_Z15 wlan-vlan wlan 1 add vlan 10 
+config flexconnect group Sugarland_Z15 wlan-vlan wlan 6 add vlan 10 
+config flexconnect group Sugarland_Z15 wlan-vlan wlan 10 add vlan 40 
+config flexconnect group Sugarland_Z15 wlan-vlan wlan 11 add vlan 40 
+config flexconnect group Sugarland_Z15 add 
+config flexconnect group Sugarland_Z15 predownload enable 
+config flexconnect group Sugarland_Z15 ap add 24:d7:9c:3e:61:34 
+config flexconnect group Sugarland_Z15 ap add 24:d7:9c:3e:67:50 
+config flexconnect group Sugarland_Z15 ap add 24:d7:9c:3e:69:c8 
+config flexconnect group Sugarland_Z15 ap add 24:d7:9c:3e:73:dc 
+config flexconnect group Sugarland_Z15 ap add 24:d7:9c:3e:75:6c 
+config flexconnect group Sugarland_Z15 ap add 24:d7:9c:3e:78:28 
+config flexconnect group Sugarland_Z15 ap add 24:d7:9c:3e:7f:1c 
+config flexconnect group Sugarland_Z15 ap add 24:d7:9c:3f:a7:a0 
+config flexconnect group Sugarland_Z15 ap add 24:d7:9c:3f:b3:20 
+config flexconnect group Sugarland_Z15 ap add 24:d7:9c:3f:bd:1c 
+config flexconnect group Sugarland_Z15 ap add 24:d7:9c:3f:c6:a8 
+config flexconnect group Sugarland_Z15 ap add 24:d7:9c:3f:c9:e0 
+config flexconnect group Sugarland_Z15 ap add 24:d7:9c:3f:cb:7c 
+config flexconnect group Sugarland_Z15 ap add 24:d7:9c:3f:cf:90 
+config flexconnect group Sugarland_Z15 ap add 24:d7:9c:3f:d2:e8 
+config flexconnect group Sugarland_Z15 vlan native 30 
+config flexconnect group Sugarland_Z15 vlan override-ap enable 
+config flexconnect group TULSA_D17 radius ap server-key encrypt 1 b0296e1f3e78ab8c7f55bf681e6c218e 97e11f9a39d92afb58d9190c8b286b875cc1e896 5fd34714d5f06aec9cc7c260273bd192f58f1451352516c9ca73218b98348573 
+config flexconnect group TULSA_D17 radius ap authority info "Cisco A_ID" 
+config flexconnect group TULSA_D17 radius ap authority id 436973636f0000000000000000000000 
+config flexconnect group TULSA_D17 wlan-vlan wlan 1 add vlan 10 
+config flexconnect group TULSA_D17 wlan-vlan wlan 6 add vlan 10 
+config flexconnect group TULSA_D17 wlan-vlan wlan 10 add vlan 40 
+config flexconnect group TULSA_D17 wlan-vlan wlan 11 add vlan 40 
+config flexconnect group TULSA_D17 add 
+config flexconnect group TULSA_D17 predownload mac-master 2c:0b:e9:c2:2d:f0 
+config flexconnect group TULSA_D17 predownload enable 
+config flexconnect group TULSA_D17 ap add 2c:0b:e9:c2:2d:f0 
+config flexconnect group TULSA_D17 ap add 2c:0b:e9:c2:3d:50 
+config flexconnect group TULSA_D17 ap add 2c:0b:e9:c2:3d:90 
+config flexconnect group TULSA_D17 ap add 2c:0b:e9:c2:3e:88 
+config flexconnect group TULSA_D17 ap add 2c:0b:e9:c2:47:38 
+config flexconnect group TULSA_D17 ap add 2c:0b:e9:c2:47:c8 
+config flexconnect group TULSA_D17 ap add 2c:0b:e9:c2:47:d0 
+config flexconnect group TULSA_D17 ap add 2c:0b:e9:c2:4c:f8 
+config flexconnect group TULSA_D17 ap add 2c:0b:e9:c2:4d:48 
+config flexconnect group TULSA_D17 ap add 2c:0b:e9:c2:4e:70 
+config flexconnect group TULSA_D17 ap add 2c:0b:e9:c2:4e:e8 
+config flexconnect group TULSA_D17 ap add 2c:0b:e9:c6:3f:f0 
+config flexconnect group TULSA_D17 ap add 2c:0b:e9:c6:40:30 
+config flexconnect group TULSA_D17 ap add 2c:0b:e9:c6:50:e0 
+config flexconnect group TULSA_D17 vlan native 30 
+config flexconnect group TULSA_D17 vlan override-ap enable 
+config flexconnect group Toledo_A67 radius ap server-key encrypt 1 cc49eb8fedd3a74b81061bf367168eaa a2e917d14be354ba8c90e37f503cc903a8efc1a9 5121c0ca0db9605ad6b4fbf4d2d552d28e7fecfd837c8afe254ac61a1576a81d 
+config flexconnect group Toledo_A67 radius ap authority info "Cisco A_ID" 
+config flexconnect group Toledo_A67 radius ap authority id 436973636f0000000000000000000000 
+config flexconnect group Toledo_A67 wlan-vlan wlan 1 add vlan 10 
+config flexconnect group Toledo_A67 wlan-vlan wlan 6 add vlan 10 
+config flexconnect group Toledo_A67 wlan-vlan wlan 10 add vlan 40 
+config flexconnect group Toledo_A67 wlan-vlan wlan 11 add vlan 40 
+config flexconnect group Toledo_A67 add 
+config flexconnect group Toledo_A67 predownload mac-master 2c:0b:e9:c2:47:48 
+config flexconnect group Toledo_A67 predownload enable 
+config flexconnect group Toledo_A67 ap add 2c:0b:e9:c2:47:48 
+config flexconnect group Toledo_A67 ap add 2c:0b:e9:c2:48:d8 
+config flexconnect group Toledo_A67 ap add 2c:0b:e9:c2:49:00 
+config flexconnect group Toledo_A67 ap add 2c:0b:e9:c2:49:70 
+config flexconnect group Toledo_A67 ap add 2c:0b:e9:c2:49:90 
+config flexconnect group Toledo_A67 ap add 2c:0b:e9:c2:58:00 
+config flexconnect group Toledo_A67 ap add 2c:0b:e9:c2:59:00 
+config flexconnect group Toledo_A67 ap add 2c:0b:e9:c2:5a:88 
+config flexconnect group Toledo_A67 ap add 2c:0b:e9:c2:5a:a0 
+config flexconnect group Toledo_A67 ap add 2c:0b:e9:c2:5b:20 
+config flexconnect group Toledo_A67 ap add 2c:0b:e9:c2:5b:38 
+config flexconnect group Toledo_A67 ap add 2c:0b:e9:c2:5b:a0 
+config flexconnect group Toledo_A67 ap add 2c:0b:e9:c6:50:00 
+config flexconnect group Toledo_A67 ap add c4:b9:cd:fe:63:20 
+config flexconnect group Toledo_A67 vlan native 30 
+config flexconnect group Toledo_A67 vlan override-ap enable 
+config flexconnect group WESTCHESTER_V71 radius ap server-key encrypt 1 7e366585f82e050794bc465b187f4ad7 7d068181bee8789be19fde036f88fef46b068d8b 5ed0c4a90bcfcfa2989181d134a21c2644ef86c6ec6e80cc6f8c9f0a6cc9cbbe 
+config flexconnect group WESTCHESTER_V71 radius ap authority info "Cisco A_ID" 
+config flexconnect group WESTCHESTER_V71 radius ap authority id 436973636f0000000000000000000000 
+config flexconnect group WESTCHESTER_V71 wlan-vlan wlan 1 add vlan 10 
+config flexconnect group WESTCHESTER_V71 wlan-vlan wlan 6 add vlan 10 
+config flexconnect group WESTCHESTER_V71 wlan-vlan wlan 10 add vlan 40 
+config flexconnect group WESTCHESTER_V71 wlan-vlan wlan 11 add vlan 40 
+config flexconnect group WESTCHESTER_V71 add 
+config flexconnect group WESTCHESTER_V71 predownload enable 
+config flexconnect group WESTCHESTER_V71 ap add 48:00:b3:8f:23:1c 
+config flexconnect group WESTCHESTER_V71 ap add 48:00:b3:8f:25:64 
+config flexconnect group WESTCHESTER_V71 ap add 48:00:b3:8f:28:94 
+config flexconnect group WESTCHESTER_V71 ap add 48:00:b3:8f:2b:68 
+config flexconnect group WESTCHESTER_V71 ap add 48:00:b3:8f:2d:d8 
+config flexconnect group WESTCHESTER_V71 ap add 48:00:b3:8f:2e:40 
+config flexconnect group WESTCHESTER_V71 ap add 48:00:b3:8f:2f:c4 
+config flexconnect group WESTCHESTER_V71 ap add 48:00:b3:8f:30:7c 
+config flexconnect group WESTCHESTER_V71 ap add 48:00:b3:8f:34:18 
+config flexconnect group WESTCHESTER_V71 ap add 48:00:b3:8f:36:00 
+config flexconnect group WESTCHESTER_V71 ap add 48:00:b3:8f:38:2c 
+config flexconnect group WESTCHESTER_V71 ap add 48:00:b3:8f:39:04 
+config flexconnect group WESTCHESTER_V71 ap add 48:00:b3:8f:3d:fc 
+config flexconnect group WESTCHESTER_V71 ap add 48:00:b3:8f:3f:e8 
+config flexconnect group WESTCHESTER_V71 ap add 50:5c:88:d2:03:a8 
+config flexconnect group WESTCHESTER_V71 ap add 50:5c:88:d2:07:4c 
+config flexconnect group WESTCHESTER_V71 vlan native 30 
+config flexconnect group WESTCHESTER_V71 vlan override-ap enable 
+config flexconnect group Wyoming_S96 radius ap server-key encrypt 1 47ffba202d7eeb2a93001008b5cfddf2 f393a82b837099696d9954ce05debc9a4d623496 7c347d12a3d1b531bfb6430e4da36a5ac7567804188e5855585100e60fcfbb6c 
+config flexconnect group Wyoming_S96 radius ap authority info "Cisco A_ID" 
+config flexconnect group Wyoming_S96 radius ap authority id 436973636f0000000000000000000000 
+config flexconnect group Wyoming_S96 wlan-vlan wlan 1 add vlan 10 
+config flexconnect group Wyoming_S96 wlan-vlan wlan 6 add vlan 10 
+config flexconnect group Wyoming_S96 wlan-vlan wlan 10 add vlan 40 
+config flexconnect group Wyoming_S96 wlan-vlan wlan 11 add vlan 40 
+config flexconnect group Wyoming_S96 add 
+config flexconnect group Wyoming_S96 predownload enable 
+config flexconnect group Wyoming_S96 ap add 2c:0b:e9:c6:51:48 
+config flexconnect group Wyoming_S96 ap add 2c:0b:e9:c6:51:50 
+config flexconnect group Wyoming_S96 ap add 2c:0b:e9:c6:51:68 
+config flexconnect group Wyoming_S96 ap add 2c:0b:e9:c6:51:70 
+config flexconnect group Wyoming_S96 vlan native 30 
+config flexconnect group Wyoming_S96 vlan override-ap enable 
+config flexconnect group default-flex-group radius ap server-key encrypt 1 738251a3ea223e9f122947cf2ff16a6c 2264e963658a4cc7a18c2ef76a9b4806a5e0f412 eef1087b9b8fcd3b6894e4eb17cf9b7a9134066b82ec4fa038c8873118b0eb64 
+config flexconnect group default-flex-group radius ap authority info "Cisco A_ID" 
+config flexconnect group default-flex-group radius ap authority id 436973636f0000000000000000000000 
+config flexconnect group default-flex-group add 
+config mobility group member add cc:16:7e:91:54:b5 172.28.182.216 GO/SO3 
+config mobility group member add 00:6b:f1:61:27:39 172.31.182.216 GO/SO3 
+config mobility group member add 00:ee:ab:74:4a:79 172.31.182.215 GO/SO3 
+config mobility group member add 00:ee:ab:74:54:09 172.28.182.215 GO/SO3 
+config mobility group member add 00:d7:8f:7e:41:6d 172.31.182.214 GO/SO3 
+config mobility group member add 00:a6:ca:f0:cd:a7 172.31.182.213 GO/SO3 
+config mobility group member add 00:a2:ee:e8:85:d7 172.28.182.213 GO/SO3 
+config mobility group domain GO/SO3 
+config tacacs acct server-timeout 1 10 
+config tacacs acct add encrypt 1 135.89.153.84 49 password 1 4108a38475f37f0b4f84fd1964ed3228 28ea6c1b4c488279a65e67599d6b766552289c27 32 8388ad3fd7c1bf4bf62b8521f4214e2870b6ce53dcc92fe15313e6810df55cf4000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+config tacacs acct add encrypt_v1 1 135.89.153.84 49 password 1 306df531b43a37fdf191f50e396dcda6 9bd5bc735944b8445277a6e6ad591a0ac1120c7b 32 c0251394ad9c1220f50b2c06f569896f26045d569956d75ba82bba2198bee29b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+config tacacs acct enable 1 
+config tacacs acct server-timeout 2 10 
+config tacacs acct add encrypt 2 135.89.153.100 49 password 1 c4673350fbc32333c84b5494f44f8ddd 63bb0a6bbe67778c5e97ef17e0f5a9c9e9178135 32 b851eb135e25d0aa0c64b0b7d1ddb16e4ceae47e678dcb65eb2cc21849fa8956000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+config tacacs acct add encrypt_v1 2 135.89.153.100 49 password 1 f9dec24b6f48ff812a788b7742b92bb3 8b1293eadc9b7fe664bdb92d712f08a7feb483a4 32 4a7e0c397c911719208e3d37f84259a8ed1e245b3a0bb40c2e07612106040f89000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+config tacacs acct enable 2 
+config tacacs dns serverip 0.0.0.0 
+config tacacs auth server-timeout 1 10 
+config tacacs auth add encrypt 1 135.89.153.84 49 password 1 d33145a6719408b560f3dbcd8a9450d9 c13ad0e774a4a2f44825c6e66ce343277914a525 32 fa5edb0fba64e9fe8c7661c134e0849207db12dadfa721225e34ea7fa42d7f9a000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+config tacacs auth add encrypt_v1 1 135.89.153.84 49 password 1 8014f890f4adb4debac239221de12b22 0545c9fac314363fb01279a64856ee46e004262c 32 02692d3cccf8efdb28a079308a86d5bdebe4cd0f3a752136523bf47fa2fe985f000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+config tacacs auth enable 1 
+config tacacs auth server-timeout 2 10 
+config tacacs auth add encrypt 2 135.89.153.100 49 password 1 0f86612388cef80c9b49a6dd6c70995e 9c6c9dafb813e41167034d52d390242444fcb4f4 32 f753ebe83326c0a749c1a07f10a61c189392747f3c569d1ef9900b3f3bbedce6000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+config tacacs auth add encrypt_v1 2 135.89.153.100 49 password 1 e0ad454a33af3b6a17164e5450dc3fac 643b209530d6268c5470a9d619b9050b740d75be 32 bb6bf28de83a1ddc8a72b6dba97f600e6f2de00460b2a42213fb6dee93f31aee000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+config tacacs auth enable 2 
+config tacacs athr server-timeout 1 10 
+config tacacs athr add encrypt 1 135.89.153.84 49 password 1 92c0645f749315db54f2d0af3f6189ce 9c4333c36da9699abe77e146160574ea71ee063d 32 9e54051d37d12859f4e1f5c63c376bf5eec97aec99f310bab29217ce1ba15487000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+config tacacs athr add encrypt_v1 1 135.89.153.84 49 password 1 52aac6492d19e718031aa57a0f37ef90 4cf369065b15b020352fe2aa619aabf1c451f563 32 aaacbb544e82892b4f804811dfddb638b4e16227614406541d7814fab8a9103b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+config tacacs athr enable 1 
+config tacacs athr server-timeout 2 10 
+config tacacs athr add encrypt 2 135.89.153.100 49 password 1 cf4242b65a265696d6940d7c2a95b30b 68178f6118cf549279a4bed7b149f9c6382a8d71 32 48cb1036eb52995e1dd98890fa172c9d0c0c7271ef00e81245bffa8ecaf250c4000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+config tacacs athr add encrypt_v1 2 135.89.153.100 49 password 1 0d43f58167e0f643861203ebb66c137a b03670fa37ded0162eaf67963f7f8d57a9e6a65c 32 05f591781dff510b6ddefb55380130bc926d07f1acfebc0b7c7bb5ffeb1fbf70000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+config tacacs athr enable 2 
+config prompt USADC5520WLC02 
+config aaa auth mgmt tacacs local 
+config sysname USADC5520WLC02 
+config rf-profile tx-power-control-thresh-v1 -65 High-Client-Density-802.11a 
+config rf-profile data-rates 802.11a disabled 6 High-Client-Density-802.11a 
+config rf-profile data-rates 802.11a disabled 9 High-Client-Density-802.11a 
+config rf-profile data-rates 802.11a mandatory 12 High-Client-Density-802.11a 
+config rf-profile data-rates 802.11a supported 18 High-Client-Density-802.11a 
+config rf-profile data-rates 802.11a mandatory 24 High-Client-Density-802.11a 
+config rf-profile data-rates 802.11a supported 36 High-Client-Density-802.11a 
+config rf-profile data-rates 802.11a supported 48 High-Client-Density-802.11a 
+config rf-profile data-rates 802.11a supported 54 High-Client-Density-802.11a 
+config rf-profile create 802.11a High-Client-Density-802.11a 
+config rf-profile data-rates 802.11b disabled 1 High-Client-Density-802.11bg 
+config rf-profile data-rates 802.11b disabled 2 High-Client-Density-802.11bg 
+config rf-profile data-rates 802.11b disabled 5.5 High-Client-Density-802.11bg 
+config rf-profile data-rates 802.11b disabled 11 High-Client-Density-802.11bg 
+config rf-profile data-rates 802.11b disabled 6 High-Client-Density-802.11bg 
+config rf-profile data-rates 802.11b supported 9 High-Client-Density-802.11bg 
+config rf-profile data-rates 802.11b mandatory 12 High-Client-Density-802.11bg 
+config rf-profile data-rates 802.11b supported 18 High-Client-Density-802.11bg 
+config rf-profile data-rates 802.11b supported 24 High-Client-Density-802.11bg 
+config rf-profile data-rates 802.11b supported 36 High-Client-Density-802.11bg 
+config rf-profile data-rates 802.11b supported 48 High-Client-Density-802.11bg 
+config rf-profile data-rates 802.11b supported 54 High-Client-Density-802.11bg 
+config rf-profile create 802.11b High-Client-Density-802.11bg 
+config rf-profile tx-power-control-thresh-v1 -60 Low-Client-Density-802.11a 
+config rf-profile data-rates 802.11a mandatory 6 Low-Client-Density-802.11a 
+config rf-profile data-rates 802.11a supported 9 Low-Client-Density-802.11a 
+config rf-profile data-rates 802.11a mandatory 12 Low-Client-Density-802.11a 
+config rf-profile data-rates 802.11a supported 18 Low-Client-Density-802.11a 
+config rf-profile data-rates 802.11a mandatory 24 Low-Client-Density-802.11a 
+config rf-profile data-rates 802.11a supported 36 Low-Client-Density-802.11a 
+config rf-profile data-rates 802.11a supported 48 Low-Client-Density-802.11a 
+config rf-profile data-rates 802.11a supported 54 Low-Client-Density-802.11a 
+config rf-profile create 802.11a Low-Client-Density-802.11a 
+config rf-profile tx-power-control-thresh-v1 -65 Low-Client-Density-802.11bg 
+config rf-profile data-rates 802.11b mandatory 1 Low-Client-Density-802.11bg 
+config rf-profile data-rates 802.11b mandatory 2 Low-Client-Density-802.11bg 
+config rf-profile data-rates 802.11b mandatory 5.5 Low-Client-Density-802.11bg 
+config rf-profile data-rates 802.11b mandatory 11 Low-Client-Density-802.11bg 
+config rf-profile data-rates 802.11b supported 6 Low-Client-Density-802.11bg 
+config rf-profile data-rates 802.11b supported 9 Low-Client-Density-802.11bg 
+config rf-profile data-rates 802.11b supported 12 Low-Client-Density-802.11bg 
+config rf-profile data-rates 802.11b supported 18 Low-Client-Density-802.11bg 
+config rf-profile data-rates 802.11b supported 24 Low-Client-Density-802.11bg 
+config rf-profile data-rates 802.11b supported 36 Low-Client-Density-802.11bg 
+config rf-profile data-rates 802.11b supported 48 Low-Client-Density-802.11bg 
+config rf-profile data-rates 802.11b supported 54 Low-Client-Density-802.11bg 
+config rf-profile create 802.11b Low-Client-Density-802.11bg 
+config rf-profile data-rates 802.11b disabled 1 NYL_Profile2 
+config rf-profile data-rates 802.11b disabled 2 NYL_Profile2 
+config rf-profile data-rates 802.11b disabled 5.5 NYL_Profile2 
+config rf-profile data-rates 802.11b supported 11 NYL_Profile2 
+config rf-profile data-rates 802.11b mandatory 6 NYL_Profile2 
+config rf-profile data-rates 802.11b supported 9 NYL_Profile2 
+config rf-profile data-rates 802.11b supported 12 NYL_Profile2 
+config rf-profile data-rates 802.11b supported 18 NYL_Profile2 
+config rf-profile data-rates 802.11b supported 24 NYL_Profile2 
+config rf-profile data-rates 802.11b supported 36 NYL_Profile2 
+config rf-profile data-rates 802.11b supported 48 NYL_Profile2 
+config rf-profile data-rates 802.11b supported 54 NYL_Profile2 
+config rf-profile create 802.11b NYL_Profile2 
+config rf-profile data-rates 802.11a mandatory 6 Typical-Client-Density-802.11a 
+config rf-profile data-rates 802.11a supported 9 Typical-Client-Density-802.11a 
+config rf-profile data-rates 802.11a mandatory 12 Typical-Client-Density-802.11a 
+config rf-profile data-rates 802.11a supported 18 Typical-Client-Density-802.11a 
+config rf-profile data-rates 802.11a mandatory 24 Typical-Client-Density-802.11a 
+config rf-profile data-rates 802.11a supported 36 Typical-Client-Density-802.11a 
+config rf-profile data-rates 802.11a supported 48 Typical-Client-Density-802.11a 
+config rf-profile data-rates 802.11a supported 54 Typical-Client-Density-802.11a 
+config rf-profile create 802.11a Typical-Client-Density-802.11a 
+config rf-profile data-rates 802.11b disabled 1 Typical-Client-Density-802.11bg 
+config rf-profile data-rates 802.11b disabled 2 Typical-Client-Density-802.11bg 
+config rf-profile data-rates 802.11b disabled 5.5 Typical-Client-Density-802.11bg 
+config rf-profile data-rates 802.11b disabled 11 Typical-Client-Density-802.11bg 
+config rf-profile data-rates 802.11b disabled 6 Typical-Client-Density-802.11bg 
+config rf-profile data-rates 802.11b supported 9 Typical-Client-Density-802.11bg 
+config rf-profile data-rates 802.11b mandatory 12 Typical-Client-Density-802.11bg 
+config rf-profile data-rates 802.11b supported 18 Typical-Client-Density-802.11bg 
+config rf-profile data-rates 802.11b supported 24 Typical-Client-Density-802.11bg 
+config rf-profile data-rates 802.11b supported 36 Typical-Client-Density-802.11bg 
+config rf-profile data-rates 802.11b supported 48 Typical-Client-Density-802.11bg 
+config rf-profile data-rates 802.11b supported 54 Typical-Client-Density-802.11bg 
+config rf-profile create 802.11b Typical-Client-Density-802.11bg 
+config rf-profile channel add 36 High-Client-Density-802.11a 
+config rf-profile channel add 40 High-Client-Density-802.11a 
+config rf-profile channel add 44 High-Client-Density-802.11a 
+config rf-profile channel add 48 High-Client-Density-802.11a 
+config rf-profile channel add 52 High-Client-Density-802.11a 
+config rf-profile channel add 56 High-Client-Density-802.11a 
+config rf-profile channel add 60 High-Client-Density-802.11a 
+config rf-profile channel add 64 High-Client-Density-802.11a 
+config rf-profile channel add 149 High-Client-Density-802.11a 
+config rf-profile channel add 153 High-Client-Density-802.11a 
+config rf-profile channel add 157 High-Client-Density-802.11a 
+config rf-profile channel add 161 High-Client-Density-802.11a 
+config rf-profile channel chan-width 20 High-Client-Density-802.11a 
+config rf-profile rx-sop threshold -78 High-Client-Density-802.11a 
+config rf-profile tx-power-min 7 High-Client-Density-802.11a 
+config rf-profile channel add 1 High-Client-Density-802.11bg 
+config rf-profile channel add 6 High-Client-Density-802.11bg 
+config rf-profile channel add 11 High-Client-Density-802.11bg 
+config rf-profile channel chan-width 20 High-Client-Density-802.11bg 
+config rf-profile rx-sop threshold -82 High-Client-Density-802.11bg 
+config rf-profile tx-power-min 7 High-Client-Density-802.11bg 
+config rf-profile channel add 36 Low-Client-Density-802.11a 
+config rf-profile channel add 40 Low-Client-Density-802.11a 
+config rf-profile channel add 44 Low-Client-Density-802.11a 
+config rf-profile channel add 48 Low-Client-Density-802.11a 
+config rf-profile channel add 52 Low-Client-Density-802.11a 
+config rf-profile channel add 56 Low-Client-Density-802.11a 
+config rf-profile channel add 60 Low-Client-Density-802.11a 
+config rf-profile channel add 64 Low-Client-Density-802.11a 
+config rf-profile channel add 149 Low-Client-Density-802.11a 
+config rf-profile channel add 153 Low-Client-Density-802.11a 
+config rf-profile channel add 157 Low-Client-Density-802.11a 
+config rf-profile channel add 161 Low-Client-Density-802.11a 
+config rf-profile channel chan-width 20 Low-Client-Density-802.11a 
+config rf-profile rx-sop threshold -80 Low-Client-Density-802.11a 
+config rf-profile coverage level 2 Low-Client-Density-802.11a 
+config rf-profile coverage voice -90 Low-Client-Density-802.11a 
+config rf-profile coverage data -90 Low-Client-Density-802.11a 
+config rf-profile channel add 1 Low-Client-Density-802.11bg 
+config rf-profile channel add 6 Low-Client-Density-802.11bg 
+config rf-profile channel add 11 Low-Client-Density-802.11bg 
+config rf-profile channel chan-width 20 Low-Client-Density-802.11bg 
+config rf-profile rx-sop threshold -85 Low-Client-Density-802.11bg 
+config rf-profile coverage level 2 Low-Client-Density-802.11bg 
+config rf-profile coverage voice -90 Low-Client-Density-802.11bg 
+config rf-profile coverage data -90 Low-Client-Density-802.11bg 
+config rf-profile channel add 1 NYL_Profile2 
+config rf-profile channel add 6 NYL_Profile2 
+config rf-profile channel add 11 NYL_Profile2 
+config rf-profile channel chan-width 20 NYL_Profile2 
+config rf-profile channel add 36 Typical-Client-Density-802.11a 
+config rf-profile channel add 40 Typical-Client-Density-802.11a 
+config rf-profile channel add 44 Typical-Client-Density-802.11a 
+config rf-profile channel add 48 Typical-Client-Density-802.11a 
+config rf-profile channel add 52 Typical-Client-Density-802.11a 
+config rf-profile channel add 56 Typical-Client-Density-802.11a 
+config rf-profile channel add 60 Typical-Client-Density-802.11a 
+config rf-profile channel add 64 Typical-Client-Density-802.11a 
+config rf-profile channel add 149 Typical-Client-Density-802.11a 
+config rf-profile channel add 153 Typical-Client-Density-802.11a 
+config rf-profile channel add 157 Typical-Client-Density-802.11a 
+config rf-profile channel add 161 Typical-Client-Density-802.11a 
+config rf-profile channel chan-width 20 Typical-Client-Density-802.11a 
+config rf-profile channel add 1 Typical-Client-Density-802.11bg 
+config rf-profile channel add 6 Typical-Client-Density-802.11bg 
+config rf-profile channel add 11 Typical-Client-Density-802.11bg 
+config rf-profile channel chan-width 20 Typical-Client-Density-802.11bg 
+config radius dns serverip 0.0.0.0 
+config radius acct network 1 enable 
+config radius acct add encrypt 1 172.31.100.60 1813 password 1 c937804bc892c64dc2eb5594ae5ef91d 172810e4966296367e0afe33d83790e800ff74c5 16 ff3c7b3e3589e2bd3dc3c1a84c07da9100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+config radius acct add encrypt_v1 1 172.31.100.60 1813 password 1 458f5b7627f26f73b9a139354016007f 62eb2bfe131964d982c02c8b5b20f09ea633a65d 16 e52599d7ac8182e5d2fd86f11bf8292000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+config radius acct retransmit-timeout 1 2 
+config radius acct network 2 enable 
+config radius acct add encrypt 2 172.28.100.60 1813 password 1 e867c42d5cc11fe4fda81ec0434a3605 20ca6be8b6d2179e482abc16144979f79a12d55a 16 9bbca08fa713656f16ae07709a069e8500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+config radius acct add encrypt_v1 2 172.28.100.60 1813 password 1 5f26ac9de4d34b624264c20e4ff267f5 3339f08e517ae64422e858b597df3fafeb2d3bfb 16 35af54cebdb91b0991de3306e32ff5ec00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+config radius acct retransmit-timeout 2 2 
+config radius acct network 11 enable 
+config radius acct add encrypt 11 10.112.1.53 1813 password 1 6a9888c487217397450244a2956b69d6 b8108450ff4b739c087ef9766430b4b5efbe50ee 16 d77cdf8e108a095dbe4a0086fb80d3f600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+config radius acct add encrypt_v1 11 10.112.1.53 1813 password 1 bf2e45b4423fa8eb1f84992b7dbc196e 612b19f8641e5361f3fd55b62ac4a39b5f7b8f56 16 857ca163729bfb9312977167b004d0a200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+config radius acct retransmit-timeout 11 5 
+config radius acct network 12 enable 
+config radius acct add encrypt 12 10.111.1.53 1813 password 1 7f4a9163f1700672deb1145e756a7bdb 2b46d20f647e165d11abbfd598f04a28dfd2543c 16 db864e44d6661eea2ea0672de0bc8a0800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+config radius acct add encrypt_v1 12 10.111.1.53 1813 password 1 79bd5bc7470d06acde84b1db0e0211be 3429f8415c5c27bddd11f7a2bd557f51bc000d73 16 3b938ba0758af12f21da6372a42cf15900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+config radius acct retransmit-timeout 12 5 
+config radius acct enable 1 
+config radius acct enable 2 
+config radius acct enable 11 
+config radius acct enable 12 
+config radius callstationidtype ipaddr 
+config radius auth network 1 enable 
+config radius auth add encrypt 1 172.31.100.10 1812 password 1 29607e41c2e8fe9b682cf732e4d19a4b 8190798cb08632d4261eeef50d3d70f3010b70a8 16 25993decf1c1f1bec6718a331d4fd94200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+config radius auth add encrypt_v1 1 172.31.100.10 1812 password 1 4362aa966507d66230ac55ce766ae274 fe379c0e78e7abda38963584f2e8c007e08471b9 16 c1e63df5c134e22d53b645412ccd907500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+config radius auth retransmit-timeout 1 5 
+config radius auth network 2 enable 
+config radius auth add encrypt 2 172.28.100.10 1812 password 1 18334b706c3a3fdb3d3993719222aae0 4f752e3ec021cea59c7de49e693ae51c4af9ee74 16 c34a4d74bd22172bfce13121d73d36bd00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+config radius auth add encrypt_v1 2 172.28.100.10 1812 password 1 a1ab3ce9ccd4d8f739d6024392899b87 08b7348dc9d00fe0af052a6fb85c82f202edd821 16 2952128bc9a767abcd3d61953547e06700000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+config radius auth retransmit-timeout 2 5 
+config radius auth network 3 enable 
+config radius auth add encrypt 3 172.28.100.60 1812 password 1 f542a8a7d2122db48d0307c607d7369b f5c02c50856c4ce19a7d89f2eccc4fa76cc2c3fa 16 37fb2c6e79741c03a17fb5e876db414b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+config radius auth add encrypt_v1 3 172.28.100.60 1812 password 1 a6af955f2f98343a873708a0c6a098a7 575a8f766b4f7a768c2b7689c21bbbecbfb30741 16 84a219f5ffb696a3b47d9557a6792afd00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+config radius auth retransmit-timeout 3 5 
+config radius auth network 4 enable 
+config radius auth add encrypt 4 172.31.49.237 1812 password 1 d03f4a6ee28ac691e1c1fe6466b5892b 3a79fefe8ed9be0a2eea926c82b1f356cb24a3e4 16 352cbda917d0fc1086a2cd4792e0d3ce00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+config radius auth add encrypt_v1 4 172.31.49.237 1812 password 1 4381b849d3604eedef5c71ea3c12fc29 422d817f07fd054a7a927cefa2e9d6ca0fdf8b33 16 76a7346daa4c6e1bbf43296ffa22c99600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+config radius auth retransmit-timeout 4 5 
+config radius auth network 5 enable 
+config radius auth add encrypt 5 172.28.137.237 1812 password 1 a59af779c71df9a09a7961493f5668e2 5357eac78d08927287ea55e718752b63ac8e3b9b 16 4cb23467e9dbcd4a33f371e31ba5e22b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+config radius auth add encrypt_v1 5 172.28.137.237 1812 password 1 c59cd5304da697dca005e95e041e998d 6eadc98a1f97e639257d65862464e3635ccd5e8c 16 5b46d88835d024225fd5c746e7425d6900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+config radius auth retransmit-timeout 5 5 
+config radius auth network 6 enable 
+config radius auth add encrypt 6 172.31.100.60 1812 password 1 5455291e8f6883b39e9d43f4735cebd9 6ab2101b3092cadea2d8e6997162d02dc684c290 16 3ddfce1f0be114a5c3752155d0634e0b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+config radius auth add encrypt_v1 6 172.31.100.60 1812 password 1 0c53a373cad4ac4bf1e92013587605e2 6a8f54614ea339ebf04dbf238e1a93b7c0935fca 16 839d32c82cbc94e8e2a3f89764b313d700000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+config radius auth retransmit-timeout 6 5 
+config radius auth network 8 enable 
+config radius auth add encrypt 8 172.31.101.5 1812 password 1 4b377dcad4005444a9a0269f9589f3f3 efad0c77f5999a2479bf8f6fbeea3cac0423029f 16 d459264591f51da0b6fcf69604056c4b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+config radius auth add encrypt_v1 8 172.31.101.5 1812 password 1 6715913ec6a1975afe11756ba5c33a67 7a5393c40dad7a5314368836a734af8e0a2e1f95 16 b8456bc9653e290424d4923c01e3873600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+config radius auth retransmit-timeout 8 5 
+config radius auth network 9 enable 
+config radius auth add encrypt 9 172.28.101.5 1812 password 1 13b50c1f2d609a892181dc94b4736036 8a69140553cf33d75006af8473e70a6591bdf2bc 16 79aeba0131821f533bcf1034f13c1cce00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+config radius auth add encrypt_v1 9 172.28.101.5 1812 password 1 9eccaf72a24e0b589ad64537da49d60c 1b9570a0f0dad6bc70588929f5662b32b711ab45 16 04d4493c61f3cccd5dc098b61d0afe5500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+config radius auth retransmit-timeout 9 2 
+config radius auth network 11 enable 
+config radius auth add encrypt 11 10.112.1.53 1812 password 1 8dfff8ae812bfc123fd19958d79f44f4 0116bd648915ab605e41ad6c01cabf709c6c82b6 16 1ee2562e64031969a8d8b602b7c7331f00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+config radius auth add encrypt_v1 11 10.112.1.53 1812 password 1 866ad38f00906015f012462c11898725 0ce600f1ad50c32806870c3ee05bf297e5e84f92 16 be93f29c042cb7b463648fd0a06c6a3900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+config radius auth retransmit-timeout 11 5 
+config radius auth network 12 enable 
+config radius auth add encrypt 12 10.111.1.53 1812 password 1 5c53525c12ea7cd7b190926a807bbaef bdecdaff27da57c9b8057884b5f7dccf669199ee 16 727a43b633dac2c3d12aa160b2856a4100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+config radius auth add encrypt_v1 12 10.111.1.53 1812 password 1 2f7bfd47ad8eb8f58893cd2194f664af db81b993a6b16b78a3270587d4ee85f760ac45ba 16 d6990fe8d4d53854c5dcad9e91f89cfd00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+config radius auth retransmit-timeout 12 5 
+config radius auth ipsec ike dh-group group-2 4 
+config radius auth ipsec ike phase1 main 4 
+config radius auth ipsec ike auth-mode pre-shared-key 4 
+config radius auth ipsec ike lifetime 28800 4 
+config radius auth ipsec authentication hmac-sha1 4 
+config radius auth ipsec profile none 4 
+config radius auth ipsec encryption des 4 
+config radius auth ipsec ike dh-group group-2 5 
+config radius auth ipsec ike phase1 main 5 
+config radius auth ipsec ike auth-mode pre-shared-key 5 
+config radius auth ipsec ike lifetime 28800 5 
+config radius auth ipsec authentication hmac-sha1 5 
+config radius auth ipsec profile none 5 
+config radius auth ipsec encryption des 5 
+config radius auth ipsec ike dh-group group-2 11 
+config radius auth ipsec ike phase1 main 11 
+config radius auth ipsec ike auth-mode pre-shared-key 11 
+config radius auth ipsec ike lifetime 28800 11 
+config radius auth ipsec authentication hmac-sha1 11 
+config radius auth ipsec profile none 11 
+config radius auth ipsec encryption des 11 
+config radius auth ipsec ike dh-group group-2 12 
+config radius auth ipsec ike phase1 main 12 
+config radius auth ipsec ike auth-mode pre-shared-key 12 
+config radius auth ipsec ike lifetime 28800 12 
+config radius auth ipsec authentication hmac-sha1 12 
+config radius auth ipsec profile none 12 
+config radius auth ipsec encryption des 12 
+config radius auth mgmt-retransmit-timeout 1 2 
+config radius auth rfc3576 enable 1 
+config radius auth enable 1 
+config radius auth mgmt-retransmit-timeout 2 2 
+config radius auth rfc3576 enable 2 
+config radius auth enable 2 
+config radius auth mgmt-retransmit-timeout 3 2 
+config radius auth rfc3576 enable 3 
+config radius auth enable 3 
+config radius auth mgmt-retransmit-timeout 4 2 
+config radius auth rfc3576 enable 4 
+config radius auth enable 4 
+config radius auth mgmt-retransmit-timeout 5 2 
+config radius auth rfc3576 enable 5 
+config radius auth enable 5 
+config radius auth mgmt-retransmit-timeout 6 2 
+config radius auth rfc3576 enable 6 
+config radius auth enable 6 
+config radius auth mgmt-retransmit-timeout 8 2 
+config radius auth rfc3576 enable 8 
+config radius auth enable 8 
+config radius auth mgmt-retransmit-timeout 9 2 
+config radius auth rfc3576 enable 9 
+config radius auth enable 9 
+config radius auth mgmt-retransmit-timeout 11 5 
+config radius auth rfc3576 enable 11 
+config radius auth enable 11 
+config radius auth mgmt-retransmit-timeout 12 5 
+config radius auth rfc3576 enable 12 
+config radius auth enable 12 
+config radius fallback-test interval 600 
+config radius fallback-test username ACS_FALLBACK 
+config radius fallback-test mode active 
+config database size 12000 
+config mgmtuser telnet Admin enable 
+config mgmtuser add encrypt Admin 1 580bbe6c475e86a3d558bc0b666c11ff 86a71ad42a92f5d0fd1e82351beec6acd0338301 32 e8e2f05749b034da9df60a43fa78de45f8f52eaa83b39249fda432ed6ff77efd00000000000000000000000000000000000000000000000000000000000000000000 read-write 
+config mgmtuser add encrypt_v1 Admin 1 0d4306f952430af44ebb68a5b48dd494 c7154bb87c1e0c745ad773d90b9e6cdb97a40bbf 32 be939dc4b0bbb4611d434c63f2cee49d6543f9b5f35e1440a236c3681d35ca19000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 read-write 
+config nmsp notification interval rssi rfid 2 
+config switchconfig strong-pwd lockout attempts mgmtuser 3 
+config switchconfig strong-pwd lockout time mgmtuser 5 
+config acl create PMIPv6 
+config acl rule add PMIPv6 1 
+config acl rule protocol PMIPv6 1 17 
+config acl rule source port range PMIPv6 1 5346 5346 
+config acl rule destination port range PMIPv6 1 0 65535 
+config acl rule action PMIPv6 2 permit 
+config acl rule add PMIPv6 2 
+config acl rule source port range PMIPv6 2 0 65535 
+config acl rule destination port range PMIPv6 2 0 65535 
+config acl rule add PMIPv6 65 
+config acl rule source port range PMIPv6 65 0 65535 
+config acl rule destination port range PMIPv6 65 0 65535 
+config acl apply PMIPv6 
+config telemetry webhook subscription topic add all 
+config icap server port 32626 
+config 802.11a cleanair alarm device enable 802.11-inv 
+config 802.11a cleanair alarm device enable 802.11-nonstd 
+config 802.11a cleanair alarm device enable jammer 
+config 802.11a cleanair enable network 
+config 802.11a cac voice sip bandwidth 64 sample-interval 20 
+config 802.11a cac voice sip codec g711 sample-interval 20 
+config 802.11a beamforming global enable 
+config lag enable 
+config 802.11b cleanair alarm device enable jammer 
+config 802.11b cleanair alarm device enable 802.11-inv 
+config 802.11b cleanair alarm device enable 802.11-nonstd 
+config 802.11b cleanair enable network 
+config 802.11b 11gsupport enable 
+config 802.11b cac voice sip bandwidth 64 sample-interval 20 
+config 802.11b cac voice sip codec g711 sample-interval 20 
+config 802.11b rate disabled 1 
+config 802.11b rate disabled 2 
+config 802.11b rate disabled 5.5 
+config 802.11b rate supported 11 
+config 802.11b rate mandatory 6 
+config 802.11b 11nsupport rifs rx disable 
+config 802.11b 11nsupport disable 
+config 802.11b beamforming global enable 
+config logging syslog host 135.89.153.82 
+config logging syslog host 135.89.153.98 
+config logging syslog host 10.199.43.212 
+config logging traceinfo disable debugging 
+config logging buffered debugging 
+config logging buffered 7 
+config interface address management 172.28.182.214 255.255.255.0 172.28.182.1 
+config interface address virtual 206.210.30.2 
+config interface address dynamic-interface vlan118 10.19.218.18 255.255.254.0 10.19.218.1 
+config interface address dynamic-interface vlan208 10.19.208.18 255.255.254.0 10.19.208.1 
+config interface address dynamic-interface vlan214 10.19.214.18 255.255.254.0 10.19.214.1 
+config interface address dynamic-interface vlan216 10.19.216.18 255.255.254.0 10.19.216.1 
+config interface address dynamic-interface vlan230 172.28.180.18 255.255.254.0 172.28.180.1 
+config interface address dynamic-interface guest 172.28.218.18 255.255.254.0 172.28.218.1 
+config interface dhcp management primary 10.112.1.11 secondary 10.111.1.11 
+config interface vlan management 220 
+config interface dhcp service-port disable 
+config interface hostname virtual wirelessauth.newyorklife.com 
+config interface dhcp dynamic-interface vlan118 primary 10.112.1.11 secondary 10.111.1.11 
+config interface create vlan118 118 
+config interface vlan vlan118 118 
+config interface dhcp dynamic-interface vlan208 primary 10.112.1.11 secondary 10.111.1.11 
+config interface create vlan208 208 
+config interface vlan vlan208 208 
+config interface dhcp dynamic-interface vlan214 primary 10.112.1.11 secondary 10.111.1.11 
+config interface create vlan214 214 
+config interface vlan vlan214 214 
+config interface dhcp dynamic-interface vlan216 primary 10.112.1.11 secondary 10.111.1.11 
+config interface create vlan216 216 
+config interface vlan vlan216 216 
+config interface dhcp dynamic-interface vlan230 primary 10.112.1.11 secondary 10.111.1.11 
+config interface create vlan230 230 
+config interface vlan vlan230 230 
+config interface dhcp dynamic-interface guest primary 10.112.1.11 secondary 10.111.1.11 
+config interface create guest 218 
+config interface vlan guest 218 
+config snmp version v3 disable 
+config snmp v3user create encrypt AttGcSc ro none none 1 a3a30dad993f1867848cdcfe600e0270 326142e3d95476d5544f52ee51701bf73757abd2 16 1890c8fab1ed66c19e59fac63e92dfb60000000000000000000000000000000000000000000000000000000000000000 1 e3d11c5da334a64debb8b01ef461ac8b 85904c0c3a07c124bace411a3352d432f33123c3 16 8def21a758809c10c936ecd7fed593ff0000000000000000000000000000000000000000000000000000000000000000 
+config snmp syscontact "ATT GCSC 800-727-2222" 
+config snmp community delete public 
+config snmp community delete private 
+config snmp community ipaddr 135.89.0.0 255.255.0.0 W2-fVn_5GcMp4K-TUy9X 
+config snmp community accessmode rw W2-fVn_5GcMp4K-TUy9X 
+config snmp community create W2-fVn_5GcMp4K-TUy9X 
+config snmp community mode enable W2-fVn_5GcMp4K-TUy9X 
+config snmp community ipaddr 135.89.0.0 255.255.0.0 TP3Ar_8Gs6Dv7Nc-LwKe 
+config snmp community create TP3Ar_8Gs6Dv7Nc-LwKe 
+config snmp community mode enable TP3Ar_8Gs6Dv7Nc-LwKe 
+config snmp community ipaddr 172.20.75.133 255.255.255.255 Dn@cAdmin_Snmp1 
+config snmp community create Dn@cAdmin_Snmp1 
+config snmp community mode enable Dn@cAdmin_Snmp1 
+config snmp community ipaddr 172.23.139.240 255.255.255.240 ATTc1sc0pr1me2 
+config snmp community create ATTc1sc0pr1me2 
+config snmp community mode enable ATTc1sc0pr1me2 
+config snmp community ipaddr 172.31.27.10 255.255.255.255 Nyl1e911wlc7UpL6! 
+config snmp community create Nyl1e911wlc7UpL6! 
+config snmp community mode enable Nyl1e911wlc7UpL6! 
+config snmp community ipaddr 172.31.25.77 255.255.255.255 Nyl1e911wlc7UpL6@ 
+config snmp community create Nyl1e911wlc7UpL6@ 
+config snmp community mode enable Nyl1e911wlc7UpL6@ 
+config snmp trapreceiver create DURNM448a 135.89.153.82 
+config snmp trapreceiver mode enable DURNM448a 
+config snmp trapreceiver create MESNM448a 135.89.153.98 
+config snmp trapreceiver mode enable MESNM448a 
+config snmp trapreceiver create 172.23.139.242 172.23.139.242 
+config snmp trapreceiver mode enable 172.23.139.242 
+config snmp trapreceiver ipsec profile none 172.20.75.132 
+config snmp trapreceiver create 172.20.75.132 172.20.75.132 
+config snmp trapreceiver mode enable 172.20.75.132 
+config rfid status enable 
+config rfid timeout 1200 
+config rfid rate-limit 25000 
+config rfid mobility pango disable 
+config ldap add 1 172.31.47.41 389 ou=people,o=agents,l=nyl,dc=newyorklife,dc=com nylftid nylWirelessAccess 
+config ldap retransmit-timeout 1 5 
+config ldap add 2 172.31.56.41 389 ou=people,o=agents,l=nyl,dc=newyorklife,dc=com nylftid nylWirelessAccess 
+config ldap retransmit-timeout 2 5 
+config ldap add 3 172.28.47.41 389 l=nyl,dc=newyorklife,dc=com uid nylMobile 
+config ldap retransmit-timeout 3 5 
+config ldap add 4 172.31.47.41 389 l=nyl,dc=newyorklife,dc=com uid nylMobile 
+config ldap retransmit-timeout 4 5 
+config ldap add 5 172.28.56.41 389 ou=people,o=agents,l=nyl,dc=newyorklife,dc=com nylftid nylWirelessAccess 
+config ldap retransmit-timeout 5 5 
+config ldap simple-bind authenticated encrypt 1 uid=ciscoacsreadadmin,ou=people,o=Administrators,l=nyl,dc=newyorklife,dc=com 1 8e176bdbc9cd3bbc1382902a807ce7a4 d5527d960e1e90fe25e7a457d2ce7af168b59daf 16 e3fc46566c20db1b692720d04da3c31100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+config ldap enable 1 
+config ldap simple-bind authenticated encrypt 2 uid=ciscoacsreadadmin,ou=people,o=Administrators,l=nyl,dc=newyorklife,dc=com 1 47ca11aa808811d8e08abf0fcded6e9f 4eb2e2abc204393035a4edec008a2c1ce5d72f51 16 87bfc1ef452c526ee12d5455a3ebcf7f00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+config ldap enable 2 
+config ldap simple-bind authenticated encrypt 3 cn=mobileadmin,ou=people,o=Administrators,l=nyl,dc=newyorklife,dc=com 1 90f6421f63e8d2d7262ceec1e619c7b6 714c1964ef069d7fd253e6fc04b1137b00ea6da1 16 692259760f4c8409386a5b94a1e862e900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+config ldap enable 3 
+config ldap simple-bind authenticated encrypt 4 cn=mobileadmin,ou=people,o=Administrators,l=nyl,dc=newyorklife,dc=com 1 a10ccc2c3590dbe911e5835cb5538702 0458979a71ec5146e1e6259f9c249266b43460dd 16 edab2fb30bd434b20d50085135e64f3300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+config ldap enable 4 
+config ldap simple-bind authenticated encrypt 5 uid=ciscoacsreadadmin,ou=people,o=Administrators,l=nyl,dc=newyorklife,dc=com 1 ef3f0ab84de0564db1fb671a9b3a5d14 6d664f298a39f47d596aefd68967d95fbb9ef539 16 99c10bd77613b8272c60afde18c4ccfa00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+config ldap enable 5 
+config ap antenna monitoring all weak-rssi 60 
+config ap antenna monitoring all rssi-failure-threshold 40 
+config ap antenna monitoring all detection-time 12 
+config ap bhrate 0 all 
+config ap dtls-version dtls_all 
+config ap cert-expiry-ignore mic enable 
+config ap cert-expiry-ignore ssc disable 
+config ap ssh enable all 
+config ap ssh enable all 
+config ap mgmtuser add encrypt username AttGcSc password 1 24a3a7728b3d43d05f4e4a7adb891d0d f1cbae8970fa18bfe8dab209d5460ce99e6bf181 16 f97b5a4463f976f6f099f1689163ba350000000000000000000000000000000000000000000000000000000000000000 24312465754c3224694f524364365974434647584a69357838395855412f00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 secret encrypt 243124764c57342439436d4142516a766b4334694f4d3248356641486b2e00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 all 
+config ap packet-dump classifier dot1x enable 
+config ap packet-dump classifier management enable 
+config ap packet-dump classifier broadcast enable 
+config ap packet-dump classifier control enable 
+config ap packet-dump buffer-size 2048 
+config ap packet-dump capture-time 60 
+config ap packet-dump truncate 0 
+config ap client-stats enable interval 90 
+config ap preferred-mode ipv4 all 
+config mesh convergence 
+config country US 
+config exclusionlist add b0:a7:37:48:bf:bf "Roku Device" 
+config exclusionlist add f4:7b:09:77:68:7f 
+config exclusionlist add e0:9d:31:fd:93:c3 
+config exclusionlist add e4:b3:18:7a:3f:f0 
+config exclusionlist add 10:a5:1d:39:74:a7 
+config remote-lan flexconnect local-switching 1 enable 
+config remote-lan flexconnect local-switching 4 enable 
+config remote-lan flexconnect local-switching 5 enable 
+config remote-lan flexconnect local-switching 6 enable 
+config remote-lan flexconnect local-switching 10 enable 
+config remote-lan flexconnect local-switching 11 enable 
+config remote-lan flexconnect local-switching 14 enable 
+config flow add monitor dnacmonitor exporter dnacexporter 
+config flow add monitor dnacmonitor record ipv4_client_src_dst_flow_record 
+config flow create exporter dnacexporter 172.20.75.132 port 6007 
+config flow create monitor dnacmonitor 
+transfer upload datatype config 
+transfer upload filename usadc5520wlc02 
+transfer upload encrypt password 1 23d4f0a1c9a6ceacbb8bee87167cc5f2 b0802af28cb2d1ae5ad0341284661f1a17e249cc 48 71c4dbb01f578bfba0d1b761b996989d72d0e964a3a4ef617297a39522b565fa399cf494dcd56924b74dc6555fb3210b 
+transfer upload serverip 135.89.153.82 
+transfer upload username sftpuser 
+transfer upload port 22 
+transfer download ap-images cco-password $password 
+transfer download ap-images cco-username $username 
+transfer download datatype webauthcert 
+transfer download filename usadc5520wlc02 
+transfer download encrypt password 1 23d4f0a1c9a6ceacbb8bee87167cc5f2 b0802af28cb2d1ae5ad0341284661f1a17e249cc 48 71c4dbb01f578bfba0d1b761b996989d72d0e964a3a4ef617297a39522b565fa399cf494dcd56924b74dc6555fb3210b 
+transfer download serverip 135.89.153.82 
+transfer download username sftpuser 
+transfer download certpassword encrypt 1 b22dff78b3148f622fd4819421de67a0 2f809885ee384fd8a3afea4f4d00cef9da7a759d e810afa5c80797fd349e03d410094d4599db7c7cf921322bc02b3e91e8ea750c000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+transfer download port 22 
+
+# WLC Config End
