@@ -31,7 +31,8 @@ Please expedite testing and provide findings for the circuit, including any pack
 verizon ticket trouble description:
 Intermittent slowness/connectivity reported at NYL Houston D03. During joint troubleshooting, staff traffic was observed traversing the Verizon AVPN path during periods of degraded performance/incomplete traceroute. Verizon path was administratively removed and traffic shifted to the AT&T AVPN path for comparison; user experience and traceroute behavior improved afterward. Site will remain on AT&T path for observation. Please test Verizon circuit/path for intermittent packet loss, errors, or degradation and advise findings.
 
-
+verizon ticket:
+Issue is still being observed when traffic is using the Verizon path. Users are experiencing slow response on both wired and wireless connections across multiple applications. Internal testing included ping and traceroute testing to 10.111.1.11 and 10.112.1.11. Please continue investigation and advise what additional testing/results are required from our side.
 
 
 
