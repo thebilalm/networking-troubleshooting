@@ -1,6 +1,7 @@
 
-
-
-
 Replacement WLC installed and configuration restore completed. Controller is reachable at 172.28.182.214 and responds to ping. Unable to authenticate via SSH using available management/AP credentials. CE no longer onsite and no OOB modem available at site. Wireless team engaged to confirm current credentials and determine next steps for post-install validation.
+
+MRS. I’m working ticket 342693853 for the ADC 02 WLC replacement. The replacement WLC is up and reachable, but we’re unable to authenticate via SSH with GTAC/RSA or the local credentials. Ron mentioned you recommended checking the management, SNMP and TACACS configs. We don’t have console/OOB access currently. Can you advise what we should check or if we need console access to proceed?
+
+
 
