@@ -14,14 +14,7 @@ AT&T investigated the reported network alert. The referenced subinterface is no 
 Opened Cisco TAC SR 701359201 for assistance with Web Authentication Certificate renewal on USCNJ5520WLC02. Requested TAC guidance on generating/renewing and installing the certificate via the WLC, including prerequisites and service impact. Awaiting TAC response.
 
 
-Hi Kevin,
 
-Thanks. I’m able to access the terminal server now. At the next prompt, the credentials are still being rejected. I’ve attached the output below.
-
-Can we schedule a quick call tomorrow morning so you can connect to the WLC and hand over control?
-
-Thanks,
-Bilal
 
 
 
