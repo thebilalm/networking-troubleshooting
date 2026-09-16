@@ -1,0 +1,12 @@
+
+
+
+Internal:
+
+Reviewed STNNAPMEMPER1 for reported PIM smoothing interval alert. Alarm references PIM neighbor 172.22.165.14 on Te0/1/0/0.197. Verified current PIM neighbors and interface status. Te0/1/0/0.197 is no longer configured on the device, and active interfaces are up/up. No active service impact observed. Closing ticket as alarm references a no longer configured subinterface.
+
+Customer:
+
+AT&T investigated the reported network alert. The referenced subinterface is no longer configured on the device. Current interfaces and network services were verified stable with no active service impact observed. Ticket will be closed.
+
+
