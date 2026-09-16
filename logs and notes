@@ -9,7 +9,9 @@ Customer log:
 
 AT&T investigated the reported network alert. The referenced subinterface is no longer configured on the device. Current interfaces and network services were verified stable with no active service impact observed. Ticket will be closed.
 
+Hi Kevin,
 
+Thanks. We tried the provided terminal server credentials, but access is still being rejected and we’re unable to connect to the WLC console port. Would you be able to reboot the terminal server and let us know once completed so we can retest?
 
 
 
