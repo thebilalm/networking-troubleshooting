@@ -6,3 +6,11 @@ ticket 342693853 for the ADC 02 WLC replacement. The replacement WLC is up and r
 also compared it with working WLC03. It has the same TACACS servers, 135.89.153.84 and .100, and both are reachable. WLC02 was rebuilt using the encrypted TACACS keys from the old controller. Could those shared keys need to be re-entered on the replacement instead of using the encrypted values?
 
 
+
+I compared WLC02 with working WLC03. show tacacs sum on WLC02 is completely blank, while WLC03 has both TACACS servers configured for authentication, authorization, and accounting. show auth-list matches on both. Looks like the TACACS config did not restore on WLC02. I can access WLC02 with the local admin account now.
+
+
+
+
+
+
