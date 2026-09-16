@@ -10,14 +10,7 @@ Customer log:
 AT&T investigated the reported network alert. The referenced subinterface is no longer configured on the device. Current interfaces and network services were verified stable with no active service impact observed. Ticket will be closed.
 
 
-Hi Osama,
 
-We have a new request for the same Cisco 5520 WLC. The Web Authentication Certificate is set to expire on October 23, 2026.
-
-Can you please advise whether the certificate can be generated/renewed through the controller and provide the recommended procedure?
-
-Thank you,
-Bilal
 
 
 
