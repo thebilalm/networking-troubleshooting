@@ -23,11 +23,19 @@ TAC confirmed one of the ADC APs is currently joined to the CNJ secondary even t
 
 TAC confirmed one of the ADC APs is still joined to the CNJ secondary even though its HA config correctly shows USADC5520WLC02 as primary. I have a session with TAC shortly to test one AP and see why it’s not failing back to ADC.
 
+
 Hi Elias,
 
-I confirmed SSH access to the AP is working now. We have CLI access to both the AP and controller, so we should be ready for the next troubleshooting session. Please let me know your availability.
+Yes, 10 AM EST tomorrow works for me. Please send the meeting invite.
 
 Thanks,
+
+
+
+
+
+
+
 
 
 
