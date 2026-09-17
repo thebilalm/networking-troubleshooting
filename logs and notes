@@ -11,18 +11,7 @@ AT&T investigated the reported network alert. The referenced subinterface is no 
 
 
 
-Opened Cisco TAC SR 701359201 for assistance with Web Authentication Certificate renewal on USCNJ5520WLC02. Requested TAC guidance on generating/renewing and installing the certificate via the WLC, including prerequisites and service impact. Awaiting TAC response.
-
-
-
-Problem Description:
-
-Transport circuit currently down
-
-Problem Details:
-
-Transport circuit BFEC514556ATI is currently down. Both endpoints, STNNAPMEMPER1 Te0/0/0/0 and STNNAPNSHCRS1 Te0/3/0/8, are down/down. Express Ticketing displays a Major Incident from 09/10 with service restored on 09/11; however, the circuit is currently down as of 09/17. Please investigate current transport outage and provide findings.
-
+Issue is cleared/BGP stable. Ticket is only still open because UD shows 1 open descendant and is blocking closure (Rule 144.331). I’m checking the descendant so we can close it.
 
 
 
