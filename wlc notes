@@ -19,7 +19,9 @@ Everything looks good at this time. You can proceed with closing the SR.
 Mario also found the WebAuth certificate on WLC02 was incorrect. He installed the valid certificate and rebooted the controller. WLC02 is back up and SSH/TACACS access is working. Do we want to wait for the APs to fail back naturally or is there anything we need to do to move them back to WLC02?
 
 
+TAC confirmed one of the ADC APs is currently joined to the CNJ secondary even though its HA config correctly shows USADC5520WLC02 as primary. He’s sending me a meeting invite in about 45 minutes so we can test one AP and see why it isn’t failing back to ADC.
 
+TAC confirmed one of the ADC APs is still joined to the CNJ secondary even though its HA config correctly shows USADC5520WLC02 as primary. I have a session with TAC shortly to test one AP and see why it’s not failing back to ADC.
 
 
 
