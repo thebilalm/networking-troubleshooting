@@ -15,6 +15,16 @@ Opened Cisco TAC SR 701359201 for assistance with Web Authentication Certificate
 
 
 
+Problem Abstract:
+Recurring packet loss / unstable connectivity - STTNOIRBS303R
+
+Customer Log:
+Investigating recurring packet loss reported at site. Router is reachable and WAN interfaces are currently up/up; however, packet loss was reproduced during testing. BGP peer is currently established. Serial interfaces show accumulated CRC/input errors. Issue has reportedly been intermittent/reoccurring. Engaging transport provider for circuit testing and further investigation.
+
+For the internal log, I’d put the actual technical details:
+
+Ping to BGP peer 172.23.226.22 with 1500-byte packets showed 60% success (6/10). BGP currently established with peer 172.23.226.22. Se0/1/0:1 and Se0/1/1:1 are up/up. Se0/1/0:1 shows 3364 input errors/3364 CRC and Se0/1/1:1 shows 969 input errors/969 CRC. Recurring instability/packet loss observed. Opening transport ticket for circuit testing.
+
 
 
 
