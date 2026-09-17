@@ -15,36 +15,16 @@ Opened Cisco TAC SR 701359201 for assistance with Web Authentication Certificate
 
 
 
-Customer log
-
-Investigated recurring packet loss. Both T1 circuits are currently up/up; high utilization was observed on both circuits at approximately 96% receive load. Packet loss has resulted in recurring alerts/tickets, reportedly occurring approximately twice daily over the past month. Customer confirmed they will use these findings to pursue a bandwidth review/upgrade and requested no transport investigation at this time. Closing ticket per customer request.
-
-Internal log
-
-Investigated recurring packet loss on STTNOIRBS303R. Both T1 interfaces Se0/1/0:1 and Se0/1/1:1 are up/up with BW 1536 Kbit/sec. Se0/1/0:1 showed rxload 245/255 with 30-sec input rate 1.476 Mbps; Se0/1/1:1 showed rxload 244/255 with 30-sec input rate 1.470 Mbps. High utilization is consistent with observed packet loss/congestion. Customer requested no transport engagement and will pursue bandwidth upgrade/review. Closing ticket per customer direction.
-
-
-Problem Type: Circuit Down
-
 Problem Description:
 
-WAN circuit down - Te0/0/0/0
+Transport circuit currently down
 
 Problem Details:
 
-Transport-facing interface Te0/0/0/0 on STNNAPMEMPER1 is currently down/down. Interface is PBR/NETTN2 transport toward NSHCRS1. Device logs show interface down and BFD session removed. No CRC or input errors observed. Please investigate circuit/transport outage and provide findings.
+Transport circuit BFEC514556ATI is currently down. Both endpoints, STNNAPMEMPER1 Te0/0/0/0 and STNNAPNSHCRS1 Te0/3/0/8, are down/down. Express Ticketing displays a Major Incident from 09/10 with service restored on 09/11; however, the circuit is currently down as of 09/17. Please investigate current transport outage and provide findings.
 
 
 
-Problem Type: Circuit Down
-
-Problem Description:
-
-WAN circuit down - Te0/3/0/8
-
-Problem Details:
-
-Transport-facing interface Te0/3/0/8 on STNNAPNSHCRS1 is currently down/down. Interface is PBR/NETTN2 transport toward MEMPER1. Device logs show interface down and BFD session removed. No CRC or input errors observed. Please investigate circuit/transport outage and provide findings.
 
 
 
