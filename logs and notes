@@ -24,7 +24,7 @@ Internal log
 Investigated recurring packet loss on STTNOIRBS303R. Both T1 interfaces Se0/1/0:1 and Se0/1/1:1 are up/up with BW 1536 Kbit/sec. Se0/1/0:1 showed rxload 245/255 with 30-sec input rate 1.476 Mbps; Se0/1/1:1 showed rxload 244/255 with 30-sec input rate 1.470 Mbps. High utilization is consistent with observed packet loss/congestion. Customer requested no transport engagement and will pursue bandwidth upgrade/review. Closing ticket per customer direction.
 
 
-
+yes, that’s the Wi-Fi/slow internet bridge ticket. We opened Verizon ticket 2026091405902. Verizon completed testing and reported the circuit up with no drops/errors found on their side. The Verizon ticket is now resolved. The site is currently running on the AT&T path while the team continues monitoring and gathering user feedback.
 
 
 
