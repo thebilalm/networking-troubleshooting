@@ -24,7 +24,27 @@ Internal log
 Investigated recurring packet loss on STTNOIRBS303R. Both T1 interfaces Se0/1/0:1 and Se0/1/1:1 are up/up with BW 1536 Kbit/sec. Se0/1/0:1 showed rxload 245/255 with 30-sec input rate 1.476 Mbps; Se0/1/1:1 showed rxload 244/255 with 30-sec input rate 1.470 Mbps. High utilization is consistent with observed packet loss/congestion. Customer requested no transport engagement and will pursue bandwidth upgrade/review. Closing ticket per customer direction.
 
 
-WFA CS4595853 opened for intermittent circuit flapping. Gi0/0/0 experienced repeated down/up events corresponding with BGP resets. Circuit/interface and BGP are currently up. Awaiting WFA investigation/update.
+Problem Type: Circuit Down
+
+Problem Description:
+
+WAN circuit down - Te0/0/0/0
+
+Problem Details:
+
+Transport-facing interface Te0/0/0/0 on STNNAPMEMPER1 is currently down/down. Interface is PBR/NETTN2 transport toward NSHCRS1. Device logs show interface down and BFD session removed. No CRC or input errors observed. Please investigate circuit/transport outage and provide findings.
+
+
+
+Problem Type: Circuit Down
+
+Problem Description:
+
+WAN circuit down - Te0/3/0/8
+
+Problem Details:
+
+Transport-facing interface Te0/3/0/8 on STNNAPNSHCRS1 is currently down/down. Interface is PBR/NETTN2 transport toward MEMPER1. Device logs show interface down and BFD session removed. No CRC or input errors observed. Please investigate circuit/transport outage and provide findings.
 
 
 
