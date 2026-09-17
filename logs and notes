@@ -24,8 +24,14 @@ Internal log
 Investigated recurring packet loss on STTNOIRBS303R. Both T1 interfaces Se0/1/0:1 and Se0/1/1:1 are up/up with BW 1536 Kbit/sec. Se0/1/0:1 showed rxload 245/255 with 30-sec input rate 1.476 Mbps; Se0/1/1:1 showed rxload 244/255 with 30-sec input rate 1.470 Mbps. High utilization is consistent with observed packet loss/congestion. Customer requested no transport engagement and will pursue bandwidth upgrade/review. Closing ticket per customer direction.
 
 
+Problem Description:
 
-Not yet. The replacement WLC is back up and accessible, but the APs are still on the secondary CNJ controller. TAC is working with us on getting them failed back to the ADC WLC. We have another troubleshooting session with them tomorrow morning.
+Intermittent circuit / WAN interface flapping
+
+Problem Details:
+
+Customer WAN circuit is intermittently flapping. Router interface Gi0/0/0 has experienced repeated down/up events, causing BGP neighbor 172.23.196.30 to reset. Most recent flaps occurred on 09/17/2026 at approximately 16:46 and 17:10 GMT. Interface and BGP session are currently restored/up. Please investigate transport circuit for intermittent instability and provide findings.
+
 
 
 
