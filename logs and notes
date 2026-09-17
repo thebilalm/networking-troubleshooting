@@ -11,7 +11,13 @@ AT&T investigated the reported network alert. The referenced subinterface is no 
 
 
 
-Issue is cleared/BGP stable. Ticket is only still open because UD shows 1 open descendant and is blocking closure (Rule 144.331). I’m checking the descendant so we can close it.
+Update on 341446446: Spoke with Zayo. They advised Matt was not reached prior to today’s dispatch, but stated someone they contacted had advised access could be arranged Mon–Fri 9 AM–4 PM. Zayo could not identify who provided that information. The FE was onsite today but could not obtain access and has now been released.
+
+Zayo is placing the case on hold pending a confirmed LCON and dispatch window from our side. Matt Stewart remains the primary LCON. Can we please coordinate with Matt/customer and get a confirmed date/time window for the next dispatch? Once confirmed, I can provide it to Zayo.
+
+Spoke with Zayo regarding TTN-0010250600. FE was onsite but unable to obtain site access after attempts to reach provided contacts. Zayo advised Matt Stewart was not reached prior to dispatch; however, a previous contact had advised that site access could be arranged Mon-Fri 9 AM-4 PM. Zayo was unable to identify the individual who provided this availability.
+
+Advised that Matt Stewart is the primary LCON and site access should be coordinated/confirmed prior to future dispatches, as personnel are not routinely onsite. Zayo released the current FE and will place case on hold pending confirmed LCON availability/dispatch window. AT&T/NYL to coordinate with customer and provide confirmed access window. Pending customer/LCON confirmation.
 
 
 
