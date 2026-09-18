@@ -24,13 +24,7 @@ TAC confirmed one of the ADC APs is currently joined to the CNJ secondary even t
 TAC confirmed one of the ADC APs is still joined to the CNJ secondary even though its HA config correctly shows USADC5520WLC02 as primary. I have a session with TAC shortly to test one AP and see why it’s not failing back to ADC.
 
 
-Internal ticket log
-
-Troubleshooting session completed with Cisco TAC. Tested affected AP WAPGOZ92_19 against primary WLC USADC5520WLC02. IP reachability between AP and primary WLC confirmed in both directions. TAC enabled synchronized CAPWAP/DTLS debugging on AP and WLC and initiated CAPWAP restart. AP debug showed CAPWAP discovery requests being sent toward primary WLC; however, no corresponding discovery requests were received in primary WLC debug. TAC advised this indicates CAPWAP traffic is being dropped somewhere in the network path before reaching the controller. Need network/path validation for UDP 5246/5247. Temporary ACL used during isolation testing was removed from AP switch port and AP rejoined the secondary WLC successfully. Primary WLC management interface and licensing were also validated by TAC. Awaiting internal network review and TAC follow-up.
-
-
-TAC completed the testing. During synchronized debugs, the AP sent CAPWAP discovery requests toward USADC5520WLC02, but the requests were not seen on the WLC. TAC believes the CAPWAP traffic is being dropped somewhere in the network path and asked us to investigate the path/UDP 5246/5247.
-
+Not sure on the DTLS cert yet. TAC didn’t get to that stage because the CAPWAP discovery request from the AP isn’t reaching WLC02 at all. They said once discovery reaches the controller we can check certificate/DTLS issues if needed. Also, the RADIUS authentication servers are currently missing on WLC02; I reached out to Mario regarding the shared secrets before adding those.
 
 
 
