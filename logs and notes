@@ -10,7 +10,9 @@ Customer log:
 AT&T investigated the reported network alert. The referenced subinterface is no longer configured on the device. Current interfaces and network services were verified stable with no active service impact observed. Ticket will be closed.
 
 
-WFA ticket FI066094 confirmed open against affected circuit 80.DHZX.562060..SC. WFA currently Pending Diagnose/testing for recurring T1 flapping/LOS. Express Ticketing initially returned temporary failure, but submission was successfully received. Will monitor WFA for test results and further updates.
+Issue is still present. BMP was opened specifically to investigate PE routing/BGP advertisement, not a physical circuit outage. ADI next hop is reachable, but Internet traffic sourced from the MIS LAN is not routing over the ADI path and the site is using the CNJ tunnel instead. Please review PE routing/BGP configuration and verify the required MIS LAN subnet advertisement.
+
+BMP was cleared based on standard circuit testing without addressing the requested PE routing/BGP investigation. ADI next hop is reachable, but traffic sourced from the MIS LAN is not routing over the ADI path. Requesting PE routing/BGP configuration review and verification of the MIS LAN subnet advertisement.
 
 
 
