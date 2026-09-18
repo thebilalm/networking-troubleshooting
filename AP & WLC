@@ -1,0 +1,438 @@
+
+
+AP:
+AP name
+AP management IP
+AP Ethernet MAC
+AP radio MAC
+Primary WLC name/IP
+Secondary WLC name/IP
+Current WLC
+
+
+WLC:
+
+Linux:
+show ap summary | grep WAPGOZ92
+
+AireOS:
+grep include "WAPGOZ92" "show ap summary"
+
+
+grep include "WAPGOZ92_24" "show ap summary"
+grep include "172.28.182.214" "show run-config"
+grep include "radius" "show run-config"
+grep include "tacacs" "show run-config"
+grep include "primary" "show run-config"
+grep include "secondary" "show run-config"
+grep include "WAPGOZ" "show ap summary"
+
+
+Can also use:
+grep exclude "pattern" "command"
+grep begin "pattern" "command"
+
+
+Overall AP state:
+show ap summary
+Shows all APs currently joined to this controller.
+
+
+Useful filtering:
+grep include "WAPGOZ" "show ap summary"
+
+
+after resetting WAPGOZ92_24, keep checking:
+grep include "WAPGOZ92_24" "show ap summary"
+On USADC5520WLC02, we're waiting for it to appear.
+
+
+Full configuration for one AP
+show ap config general WAPGOZ92_24
+
+Look for:
+Primary Cisco Switch Name
+Primary Cisco Switch IP Address
+Secondary Cisco Switch Name
+Secondary Cisco Switch IP Address
+AP IP Address
+AP Mode
+AP Group
+SSH State
+AP User Mode
+
+
+See AP join attempts
+
+On USADC5520WLC02:
+show ap join stats summary all
+
+Then for the AP’s radio MAC:
+show ap join stats summary xx:xx:xx:xx:xx:x
+AND
+show ap join stats detailed xx:xx:xx:xx:xx:xx
+
+
+
+4. Controller-side CAPWAP debugging
+
+On USADC5520WLC02:
+config paging disable
+config session timeout 0
+
+Then target the AP:
+debug mac addr xx:xx:xx:xx:xx:xx
+debug capwap events enable
+debug capwap errors enable
+debug dtls all enable
+
+
+Cisco specifically recommends CAPWAP event/error debugging when an AP won’t join.
+
+May also need:
+debug capwap packet enable
+debug pm pki enable
+
+debug pm pki enable becomes especially useful if the AP reaches the controller but certificate validation is failing.
+
+ALWAYS turn debugging off afterward
+
+debug disable-all
+
+Don’t leave those running.
+
+
+5. Commands on the AP itself
+
+Once you’re SSH’d into WAPGOZ92_24, start with these.
+
+Which WLC am I actually joined to?
+
+show capwap client config
+This is probably the single most important AP-side command.
+
+Look for controller/WLC information such as:
+mwarName
+mwarIPAddress
+Cisco documents show capwap client config as displaying the AP’s CAPWAP configuration, including controller information. 
+
+Depending on the AP software, also try:
+show capwap client rcb
+show capwap client ha
+show capwap client timers
+show capwap client traffic
+Cisco’s newer AP command reference documents these CAPWAP client views for configuration, HA state, timers, traffic, etc.
+
+
+AP network configuration
+show ip interface brief
+show interfaces
+show ip route
+You’re checking that the AP still has proper addressing and a route toward 172.28.182.214.
+
+Also:
+ping 172.28.182.214
+This is huge.
+
+If the AP itself cannot ping the restored primary WLC, don’t bother forcing failback yet—you have a reachability/routing problem.
+If it can ping 172.28.182.214, you’ve eliminated a major possibility.
+
+
+AP logging
+Already ran these:
+show logging
+show tech
+Also useful:
+show clock
+
+Timestamps matter when matching AP logs against WLC debugs.
+Cisco recommends collecting show tech, show logging, CAPWAP state and related AP information before/after troubleshooting.
+
+
+6. AP-side debugs TAC is likely to request
+
+TAC already sent us:
+debug capwap client event
+debug capwap client error
+debug dtls client event
+debug dtls client error
+term mon
+Then reproduce the issue.
+
+Afterward:
+undebug all
+
+Cisco also documents these for AP discovery problems:
+debug capwap client events
+debug capwap client errors
+debug capwap client detail
+
+So today’s ideal test is:
+ADC WLC debugging + AP debugging simultaneously → reset ONE AP → watch both sides.
+That’s exactly what Elias is trying to accomplish.
+
+
+7. How to test failback with ONE AP
+Before touching hundreds of APs, use WAPGOZ92_24.
+First verify on the secondary:
+show ap config general WAPGOZ92_24
+
+Make sure primary really says:
+USADC5520WLC02
+172.28.182.214
+
+Then make sure the AP can reach ADC:
+ping 172.28.182.214
+Then start TAC’s debugs on ADC and the AP.
+
+Finally, from the secondary WLC:
+config ap reset WAPGOZ92_24
+Cisco documents config ap reset <AP> as the AireOS command to reset an individual lightweight AP.
+
+Then watch:
+ADC:
+grep include "WAPGOZ92_24" "show ap summary"
+
+Secondary:
+grep include "WAPGOZ92_24" "show ap summary"
+If everything is correct, you’re looking to see it disappear from CNJ, discover ADC, and join ADC.
+
+
+8. Can you reload ALL APs to force failback?
+
+Technically, AireOS gives us mechanisms to reset APs, but I would not run a bulk reset during the daytime just to force failback.
+Ron already told us the planned failback can be initiated after 7 PM EST. That’s the appropriate window because forcing hundreds of APs off CNJ will interrupt wireless service.
+
+Cisco’s documented individual command is:
+config ap reset <AP_NAME>
+
+Before considering anything bulk, have TAC/Ron confirm the exact method they want. Don’t write a shell/expect loop to reset 300–600 APs from the controller. It gives you much less control over impact and recovery.
+
+Today we only need to prove:
+one ADC AP
+    ↓
+currently CNJ
+    ↓
+primary = ADC
+    ↓
+AP can reach ADC
+    ↓
+reset AP
+    ↓
+AP discovers ADC
+    ↓
+AP joins ADC
+
+Once that’s successful, you know the failback mechanism works.
+
+
+9. Primary/secondary WLC configuration commands
+For one AP:
+config ap primary-base USADC5520WLC02 WAPGOZ92_24 172.28.182.214
+
+Secondary:
+config ap secondary-base USCNJ5520WLC02 WAPGOZ92_24 172.31.182.214
+
+Then:
+save config
+Cisco documents config ap primary-base specifically for defining the AP’s preferred controller. 
+But don’t run these today unless the existing HA assignment is wrong. You’ve already seen that the AP GUI contains the correct ADC primary/CNJ secondary assignment.
+
+
+10. Check AP SSH configuration from WLC
+
+For one AP:
+show ap config general WAPGOZ92_24
+
+You can enable SSH:
+config ap ssh enable WAPGOZ92_24
+
+Or all APs:
+config ap ssh enable all
+Cisco documents both forms. 
+Again, no reason to modify this now—we already established AP SSH.
+
+
+11. RADIUS / TACACS checks
+You discovered two different missing pieces after the replacement.
+
+TACACS
+show tacacs summary
+You already fixed this. It should show the two TACACS servers for:
+Authentication
+Authorization
+Accounting
+
+RADIUS
+Use:
+show radius summary
+and/or
+show radius auth statistics
+Also inspect:
+grep include "radius" "show run-config"
+
+Compare against the working CNJ controller.
+But do not manually recreate RADIUS servers without the actual shared secrets. Seeing *** on CNJ only tells us a secret exists; it doesn’t reveal the value.
+So waiting for Mario/architecture on those secrets is correct.
+
+
+12. Very useful general AireOS commands
+
+Here’s the cheat sheet I’d keep beside you during the TAC call.
+Goal    Command
+
+All joined APs
+
+show ap summary
+
+Find one AP
+
+grep include "APNAME" "show ap summary"
+
+Full AP details
+
+show ap config general APNAME
+
+5-GHz radio
+
+show ap config 802.11a APNAME
+
+2.4-GHz radio
+
+show ap config 802.11b APNAME
+
+AP groups
+
+show wlan apgroups
+
+AP join history
+
+show ap join stats summary all
+
+One AP join summary
+
+show ap join stats summary <radio-mac>
+
+Detailed join history
+
+show ap join stats detailed <radio-mac>
+
+Controller interfaces
+
+show interface summary
+
+WLANs
+
+show wlan summary
+
+Mobility
+
+show mobility summary
+
+TACACS
+
+show tacacs summary
+
+RADIUS
+
+show radius summary
+
+Current config
+
+show run-config
+
+Controller info
+
+show sysinfo
+
+Logs
+
+show msglog
+
+Trap log
+
+show traplog
+
+Disable paging
+
+config paging disable
+
+Reset one AP
+
+config ap reset APNAME
+
+Save config
+
+save config
+
+Stop all debugging
+
+debug disable-all
+
+Cisco’s command reference is useful to keep open during the call:
+https://www.cisco.com/c/en/us/td/docs/wireless/controller/8-5/cmd-ref/b-cr85.pdf?utm_source=chatgpt.com
+
+
+13. The troubleshooting logic Elias will probably follow
+This is the part I’d understand rather than just memorizing commands.
+
+Step 1 — Is the AP configured correctly?
+show ap config general WAPGOZ92_24
+Primary should be ADC.
+
+Step 2 — Can AP reach primary WLC?
+From AP:
+ping 172.28.182.214
+If no → network/routing path.
+If yes → continue.
+
+Step 3 — Start debugs on ADC.
+debug mac addr <AP-radio-MAC>
+debug capwap events enable
+debug capwap errors enable
+debug dtls all enable
+
+Step 4 — Start AP debugs.
+debug capwap client event
+debug capwap client error
+debug dtls client event
+debug dtls client error
+term mon
+
+Step 5 — Reset ONE AP from CNJ.
+config ap reset WAPGOZ92_24
+
+Step 6 — Observe.
+
+There are basically four outcomes:
+AP never contacts ADC → discovery/reachability issue.
+ADC receives discovery but rejects AP → controller config/AP authorization/certificate/etc.
+CAPWAP establishes but DTLS fails → certificate/DTLS issue.
+AP successfully joins ADC → failback works; schedule controlled migration of remaining ADC APs after the approved window.
+
+Then immediately:
+debug disable-all
+
+and on AP:
+undebug all
+That one-AP controlled test is what I’d push to accomplish on today’s TAC session before anyone considers moving hundreds of APs. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
