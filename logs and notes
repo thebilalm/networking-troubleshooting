@@ -18,5 +18,10 @@ Circuit testing is passing and the ADI next hop 32.142.82.85 is reachable from M
 
 BMP 691800770 remains under investigation. Added comments to transport ticket requesting PE routing/BGP review, as ADI next hop is reachable but MIS LAN traffic is not routing over the ADI path. ECAT escalation reviewed by Service Assurance; response indicated CPE DCC and recommended verification of local power, equipment status and cabling. Awaiting further transport update.
 
+Hi Scott,
 
+The transport team is ready to perform intrusive testing on the circuit as part of the ongoing investigation. This testing may temporarily interrupt service. Please confirm if we have authorization to proceed with testing now, or let us know a preferred testing window.
+
+Thanks,
+Bilal
 
