@@ -16,8 +16,7 @@ BMP was cleared based on standard circuit testing without addressing the request
 
 Circuit testing is passing and the ADI next hop 32.142.82.85 is reachable from MISR01. The issue is that Internet traffic from the MIS LAN is not using the ADI path and the site is using the CNJ tunnel instead. Previous LCM/Tier 3 troubleshooting identified a possible missing LAN subnet advertisement on the PE. Please have the routing team verify PE BGP/routing for the MIS LAN subnet. This is not being reported as a physical circuit/NTE failure.
 
-Hi, I’m calling about ticket 691800770. The access circuit is testing clean, but we still have a routing issue. From the MIS router, source 12.175.24.97 can reach the ADI next hop 32.142.82.85, but Internet traffic from the MIS LAN is not routing over the ADI path. The site is using the CNJ tunnel instead. Our Tier 3 and LCM troubleshooting suspects the LAN subnet may not be advertised upstream on the PE. Can you check the PE routing/BGP configuration and confirm the LAN prefix advertisement?
-Yes, we understand the circuit itself is testing clean. We specifically need the PE routing/BGP advertisement investigated.
+BMP 691800770 remains under investigation. Added comments to transport ticket requesting PE routing/BGP review, as ADI next hop is reachable but MIS LAN traffic is not routing over the ADI path. ECAT escalation reviewed by Service Assurance; response indicated CPE DCC and recommended verification of local power, equipment status and cabling. Awaiting further transport update.
 
 
 
