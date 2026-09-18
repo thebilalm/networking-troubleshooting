@@ -279,95 +279,51 @@ So waiting for Mario/architecture on those secrets is correct.
 12. Very useful general AireOS commands
 
 Here’s the cheat sheet I’d keep beside you during the TAC call.
-Goal    Command
+    Goal                        Command
 
-All joined APs
+All joined APs            show ap summary
 
-show ap summary
+Find one AP               grep include "APNAME" "show ap summary"
 
-Find one AP
+Full AP details           show ap config general APNAME
 
-grep include "APNAME" "show ap summary"
+5-GHz radio               show ap config 802.11a APNAME
 
-Full AP details
+2.4-GHz radio             show ap config 802.11b APNAME
 
-show ap config general APNAME
+AP groups                 show wlan apgroups
 
-5-GHz radio
+AP join history           show ap join stats summary all
 
-show ap config 802.11a APNAME
+One AP join summary       show ap join stats summary <radio-mac>
 
-2.4-GHz radio
+Detailed join history     show ap join stats detailed <radio-mac>
 
-show ap config 802.11b APNAME
+Controller interfaces     show interface summary
 
-AP groups
+WLANs                     show wlan summary
 
-show wlan apgroups
+Mobility                  show mobility summary
 
-AP join history
+TACACS                    show tacacs summary
 
-show ap join stats summary all
+RADIUS                    show radius summary
 
-One AP join summary
+Current config            show run-config
 
-show ap join stats summary <radio-mac>
+Controller info           show sysinfo
 
-Detailed join history
+Logs                      show msglog
 
-show ap join stats detailed <radio-mac>
+Trap log                  show traplog
 
-Controller interfaces
+Disable paging            config paging disable
 
-show interface summary
+Reset one AP              config ap reset APNAME
 
-WLANs
+Save config               save config
 
-show wlan summary
-
-Mobility
-
-show mobility summary
-
-TACACS
-
-show tacacs summary
-
-RADIUS
-
-show radius summary
-
-Current config
-
-show run-config
-
-Controller info
-
-show sysinfo
-
-Logs
-
-show msglog
-
-Trap log
-
-show traplog
-
-Disable paging
-
-config paging disable
-
-Reset one AP
-
-config ap reset APNAME
-
-Save config
-
-save config
-
-Stop all debugging
-
-debug disable-all
+Stop all debugging        debug disable-all
 
 Cisco’s command reference is useful to keep open during the call:
 https://www.cisco.com/c/en/us/td/docs/wireless/controller/8-5/cmd-ref/b-cr85.pdf?utm_source=chatgpt.com
