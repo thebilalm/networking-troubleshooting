@@ -28,7 +28,7 @@ For the customer-facing closure log, keep it simpler:
 
 Incorrect WAN gateway configuration was identified and corrected. Traffic is now routing successfully over WAN1 and connectivity testing is successful. Issue resolved. Closing ticket.
 
-
+Got it. If you have a few minutes before you leave, can you show me what we need to verify for the DTLS cert on WLC02 and what debug/checks I should run afterward? I can continue working with TAC from there.
 
 
 
