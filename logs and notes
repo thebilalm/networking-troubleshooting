@@ -20,7 +20,11 @@ Problem Details:
 Serial0/0/1:0 – Ckt ID 80.DHZX.562060..SC. Interface currently up/up. Router logs show repeated T1/interface flaps on 09/06, 09/07, 09/09, 09/11, 09/12, 09/14, and 09/18. Latest event on 09/18: Controller T1 0/0/1 went down with LOS detected at 12:11 and interface restored around 12:26. Interface currently shows 34,442 input errors, 34,389 CRC errors, 7,520 aborts, and 43 carrier transitions. Please investigate circuit for intermittent physical-layer errors/flapping.
 
 
+BMP inventory does not recognize affected circuit 80.DHZX.562060..SC. Engagement opened using associated site circuit 80.DHZX.541959..SC for ticket creation only. AFFECTED CIRCUIT: 80.DHZX.562060..SC on Serial0/0/1:0. Interface is currently up/up but has experienced repeated flaps/LOS. Latest LOS occurred 09/18 at 12:11 with restoration around 12:26. Interface shows 34,442 input errors, 34,389 CRC errors, 7,520 aborts, and 43 carrier transitions. Please investigate 80.DHZX.562060..SC for intermittent physical-layer errors/flapping.
 
+And make the BMP Trouble Description:
+
+Affected circuit 80.DHZX.562060..SC – recurring T1 LOS/flapping; selected circuit is associated site circuit only.
 
 
 
