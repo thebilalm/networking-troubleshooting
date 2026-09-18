@@ -1,5 +1,14 @@
 
+1. Have these sessions ready
+have three terminal windows open:
 
+1. SSH to USADC5520WLC02 — restored primary.
+2. SSH to USCNJ5520WLC02 — where the ADC AP is currently joined.
+3. SSH directly to one test ADC AP, e.g. WAPGOZ92_24.
+
+Also have the GUI for both WLCs open.
+
+For the test AP, write down:
 AP:
 AP name
 AP management IP
@@ -8,14 +17,16 @@ AP radio MAC
 Primary WLC name/IP
 Secondary WLC name/IP
 Current WLC
+This matters because AireOS’s detailed join-stat commands use the AP’s radio MAC, not necessarily the management/Ethernet MAC. Cisco specifically documents show ap join stats summary and show ap join stats detailed for investigating discovery/join failures.
 
 
+2. Our grep syntax
 WLC:
 
-Linux:
+Instead of Linux:
 show ap summary | grep WAPGOZ92
 
-AireOS:
+AireOS uses:
 grep include "WAPGOZ92" "show ap summary"
 
 
@@ -28,11 +39,12 @@ grep include "secondary" "show run-config"
 grep include "WAPGOZ" "show ap summary"
 
 
-Can also use:
+We can also use:
 grep exclude "pattern" "command"
 grep begin "pattern" "command"
 
 
+3. Most important WLC commands for today’s issue. 
 Overall AP state:
 show ap summary
 Shows all APs currently joined to this controller.
@@ -42,7 +54,7 @@ Useful filtering:
 grep include "WAPGOZ" "show ap summary"
 
 
-after resetting WAPGOZ92_24, keep checking:
+For example, after resetting WAPGOZ92_24, keep checking:
 grep include "WAPGOZ92_24" "show ap summary"
 On USADC5520WLC02, we're waiting for it to appear.
 
@@ -63,7 +75,6 @@ AP User Mode
 
 
 See AP join attempts
-
 On USADC5520WLC02:
 show ap join stats summary all
 
