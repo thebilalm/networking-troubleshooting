@@ -29,7 +29,15 @@ Problem Details:
 
 Circuit experienced multiple WAN interface flaps on 09/21/2026. Gi0/0/0 went down at 12:10:31 GMT, restored at 12:33:34 GMT, went down again at 12:35:32 GMT, and restored at 12:36:12 GMT. BGP neighbor 172.23.249.142 reset due to interface flap and restored at 12:36:59 GMT. Router remained up with 50 weeks uptime and no reload. Similar physical interface flaps are also present in router logs on prior dates. Circuit is currently up. Please investigate recurring intermittent transport/circuit bouncing and provide RFO.
 
+Before WFA:
 
+Router currently reachable and service restored. Router uptime 50 weeks with no reload. WAN Gi0/0/0 (Ckt ID T3.KQFN.828522..SC) experienced multiple physical link flaps on 09/21. Interface went down at 12:10:31 GMT, restored at 12:33:34 GMT, flapped again at 12:35:32 GMT, and restored at 12:36:12 GMT. BGP neighbor 172.23.249.142 reset due to interface flap and restored at 12:36:59 GMT. Interface currently up/up with no CRC/input/output errors. Similar Gi0/0/0 flaps seen in historical logs. Opening transport ticket for recurring circuit/handoff flapping.
+
+Then create the WFA.
+
+After WFA, you don’t need to repeat everything. Just add:
+
+WFA: XXXXXXXX opened with transport for recurring circuit/WAN interface flapping. Pending transport investigation/RFO.
 
 
 
