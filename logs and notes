@@ -41,7 +41,13 @@ For the slide, shorter:
 
 STNNAPMEMPER1: BE1008 toward NSHCRS1 shows recurring member/BFD flaps on both 10G links and historical CRC/input errors. Both members currently Up and optics normal. Far-end NSHCRS1 interfaces should be correlated.
 
+Device #3 finding
 
+STNNAPBRWPER1 – 10 tickets: Router and BGP currently stable. BE1084 core bundle toward NSHCRS1 is Up with all three 10G members active and BFD operational. All three physical members currently show zero CRC/input/output errors and zero carrier transitions. Bundle/member last flap was approximately 2w4d ago, but no corresponding event remains in the recent logging buffer. No current evidence of recurring core-uplink degradation.
+
+For slide, shorter:
+
+STNNAPBRWPER1: Core bundle BE1084 toward NSHCRS1 currently healthy; 3/3 members active, BFD Up, and no interface errors. Historical flap ~2w4d ago, with no recent recurring core-link event observed.
 
 
 
