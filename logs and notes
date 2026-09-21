@@ -20,6 +20,11 @@ BMP 691800770 remains under investigation. Added comments to transport ticket re
 
 Please keep an eye out for a response from the customer on ticket 340464618/BMP 690100778. Transport is requesting a 4-hour intrusive test window and customer approval is pending. Once the customer provides the window, please update Camille McCauley (UID cm8261) so transport can proceed.
 
+NCR CE Peter Stepka onsite. Spoke with CE; technician is currently at the site complex but needs assistance locating the correct building/device GTAGDJJISPRFORGA01S14. Advised CE to contact LCON Christopher Moss for site access/location assistance. CE will call back once device is located.
+
+
+
+
 ----------
 
 STNNAPNSHPER1 – 18 tickets: Router and core uplinks are healthy. Both 40G core bundles to NSHCRS1/NSHCRS2 are Up with all members active, BFD Up, and no significant errors. Recurring instability was identified on PE-CE interface Te0/1/0/6 toward Rutherford County LEA Internet. The interface experienced recent physical signal failures/link flaps on 9/17 and 9/20, has CRC/input errors and multiple carrier transitions, and the associated Rutherford BGP peer reset in correlation with the link event. Optics are currently within thresholds with no active DOM alarms. This points to an intermittent physical/transport-side issue on that customer circuit rather than a core router or core-uplink problem.
