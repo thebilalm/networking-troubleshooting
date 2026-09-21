@@ -20,7 +20,13 @@ BMP 691800770 remains under investigation. Added comments to transport ticket re
 
 Please keep an eye out for a response from the customer on ticket 340464618/BMP 690100778. Transport is requesting a 4-hour intrusive test window and customer approval is pending. Once the customer provides the window, please update Camille McCauley (UID cm8261) so transport can proceed.
 
-Validated router accessible. Customer LAN interface Gi0/0/1 currently up/up. Logs show Gi0/0/1 went down at 12:20 GMT and restored at 12:34 GMT. BGP neighbor 172.23.197.38 currently established. WAN Gi0/0/0 up/up with no CRC/input/output errors. Service currently restored.
+Router is currently reachable and service has restored. Router uptime is 37w5d with no reload. WAN interface Gi0/0/0 (Ckt ID T3.KQFN.832171..SC) experienced multiple physical link flaps on 09/21. Interface went down at 12:10:31 GMT, restored at 12:32:02 GMT, flapped again at 12:33:47 GMT, and restored at 12:34:27 GMT. BGP neighbor 172.23.199.74 reset due to interface flap and restored at 12:35:18 GMT. Opening transport ticket to investigate intermittent circuit/handoff flapping.
+
+Problem Description:
+Intermittent circuit bouncing / WAN interface flapping
+
+Problem Details:
+Circuit experienced multiple WAN interface flaps on 09/21/2026. Gi0/0/0 went down at 12:10:31 GMT, restored at 12:32:02 GMT, went down again at 12:33:47 GMT, and restored at 12:34:27 GMT. BGP neighbor 172.23.199.74 reset due to interface flap and restored at 12:35:18 GMT. Router remained up with 37+ weeks uptime and no reload. Circuit is currently up. Please investigate intermittent transport/circuit bouncing and provide RFO.
 
 
 
