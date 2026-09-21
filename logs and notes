@@ -28,7 +28,13 @@ For Reema’s slide, I would keep it even shorter:
 
 STNNAPNSHPER1: Core/uplinks stable. Recurring Te0/1/0/6 Rutherford PE-CE link flaps observed with physical signal failure, CRC/input errors, and correlated BGP reset. Optics currently normal. Suspect intermittent circuit/physical-layer issue.
 
+for device #2
 
+STNNAPMEMPER1 – 13 tickets: Router and BGP currently stable. BE10000 crosslink toward MEMPER2 is stable. BE1008 core bundle toward NSHCRS1 is currently Up with both 10G members active and BFD operational; however, both members have experienced recent link/BFD disruptions and have high historical carrier-transition counts. BE1008 also contains historical CRC/input-error counts. Current local optics on both members are Up with no DOM alarms. Recommend correlating far-end NSHCRS1 Te0/3/0/8 and Te0/3/0/9 for recurring physical/link instability.
+
+For the slide, shorter:
+
+STNNAPMEMPER1: BE1008 toward NSHCRS1 shows recurring member/BFD flaps on both 10G links and historical CRC/input errors. Both members currently Up and optics normal. Far-end NSHCRS1 interfaces should be correlated.
 
 
 
