@@ -58,7 +58,13 @@ For slide, shorter:
 
 STNNAPNSHCRS1: BE1008 toward MEMPER1 shows recurring member/BFD instability; Te0/3/0/8 has significant recent CRC errors and correlates with matching events on MEMPER1. BE1084 toward BRWPER1 had an older flap but is currently stable/clean.
 
+Device #5
 
+STNOIRAQS13R – 8 tickets: Recurring WAN/T1 circuit impairment confirmed on Serial0/1/0:1 / T1 0/1/0. Serial interface has high CRC/input errors, aborts and carrier transitions with documented link flaps. BGP resets correlate with those interface events. T1 controller is currently Up with no active LOS/LOF/AIS, but 24-hour performance shows 472 Path Code Violations, 333 Errored Seconds and 87 Bursty Errored Seconds across multiple intervals. Findings indicate an intermittent transport/T1 line-quality issue rather than a LAN or routing-originated problem.
+
+For Reema’s slide:
+
+STNOIRAQS13R: Recurring T1/WAN degradation confirmed. Serial0/1/0:1 shows CRC/errors and flaps with correlated BGP resets; T1 controller reports repeated path-code violations and errored seconds. Recommend transport/LEC investigation.
 
 
 
