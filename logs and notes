@@ -23,11 +23,11 @@ Please keep an eye out for a response from the customer on ticket 340464618/BMP 
 Router is currently reachable and service has restored. Router uptime is 37w5d with no reload. WAN interface Gi0/0/0 (Ckt ID T3.KQFN.832171..SC) experienced multiple physical link flaps on 09/21. Interface went down at 12:10:31 GMT, restored at 12:32:02 GMT, flapped again at 12:33:47 GMT, and restored at 12:34:27 GMT. BGP neighbor 172.23.199.74 reset due to interface flap and restored at 12:35:18 GMT. Opening transport ticket to investigate intermittent circuit/handoff flapping.
 
 Problem Description:
-Intermittent circuit bouncing / WAN interface flapping
+Recurring circuit bouncing / WAN interface flapping
 
 Problem Details:
-Circuit experienced multiple WAN interface flaps on 09/21/2026. Gi0/0/0 went down at 12:10:31 GMT, restored at 12:32:02 GMT, went down again at 12:33:47 GMT, and restored at 12:34:27 GMT. BGP neighbor 172.23.199.74 reset due to interface flap and restored at 12:35:18 GMT. Router remained up with 37+ weeks uptime and no reload. Circuit is currently up. Please investigate intermittent transport/circuit bouncing and provide RFO.
 
+Circuit experienced multiple WAN interface flaps on 09/21/2026. Gi0/0/0 went down at 12:10:31 GMT, restored at 12:33:34 GMT, went down again at 12:35:32 GMT, and restored at 12:36:12 GMT. BGP neighbor 172.23.249.142 reset due to interface flap and restored at 12:36:59 GMT. Router remained up with 50 weeks uptime and no reload. Similar physical interface flaps are also present in router logs on prior dates. Circuit is currently up. Please investigate recurring intermittent transport/circuit bouncing and provide RFO.
 
 
 
