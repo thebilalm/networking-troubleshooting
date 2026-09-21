@@ -24,7 +24,7 @@ TAC confirmed one of the ADC APs is currently joined to the CNJ secondary even t
 TAC confirmed one of the ADC APs is still joined to the CNJ secondary even though its HA config correctly shows USADC5520WLC02 as primary. I have a session with TAC shortly to test one AP and see why it’s not failing back to ADC.
 
 
-Not sure on the DTLS cert yet. TAC didn’t get to that stage because the CAPWAP discovery request from the AP isn’t reaching WLC02 at all. They said once discovery reaches the controller we can check certificate/DTLS issues if needed. Also, the RADIUS authentication servers are currently missing on WLC02; I reached out to Mario regarding the shared secrets before adding those.
+Hi Hadee, following up on the ADC WLC02. Mario found the RADIUS shared secrets from another production WLC config, but wasn’t sure if the list is complete. Do you know if these are the correct RADIUS servers/shared secrets we should use on USADC5520WLC02?
 
 
 
