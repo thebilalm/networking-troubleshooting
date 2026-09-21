@@ -49,7 +49,14 @@ For slide, shorter:
 
 STNNAPBRWPER1: Core bundle BE1084 toward NSHCRS1 currently healthy; 3/3 members active, BFD Up, and no interface errors. Historical flap ~2w4d ago, with no recent recurring core-link event observed.
 
+Device #4
+STNNAPNSHCRS1
 
+STNNAPNSHCRS1 – 8 tickets: Device currently stable with all OSPF adjacencies Full. Recurring instability is confirmed on BE1008 toward MEMPER1, with both member links experiencing BFD/link resets approximately 3 days ago. Te0/3/0/8 is the primary concern, showing 7,327 CRC errors since the recent counter clear, while Te0/3/0/9 is comparatively clean. This correlates directly with the member instability observed on MEMPER1 and indicates an intermittent physical-layer issue on the Te0/3/0/8 ↔ MEMPER1 Te0/0/0/0 path. BE1084 toward BRWPER1 had a historical flap ~2w4d ago but is currently clean with all three members active and no errors.
+
+For slide, shorter:
+
+STNNAPNSHCRS1: BE1008 toward MEMPER1 shows recurring member/BFD instability; Te0/3/0/8 has significant recent CRC errors and correlates with matching events on MEMPER1. BE1084 toward BRWPER1 had an older flap but is currently stable/clean.
 
 
 
