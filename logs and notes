@@ -20,11 +20,9 @@ BMP 691800770 remains under investigation. Added comments to transport ticket re
 
 Please keep an eye out for a response from the customer on ticket 340464618/BMP 690100778. Transport is requesting a 4-hour intrusive test window and customer approval is pending. Once the customer provides the window, please update Camille McCauley (UID cm8261) so transport can proceed.
 
-We validated both endpoints of the circuit. RTRCNJIPCC01 Gi0/0 is 192.168.254.17/30 and RTRADCIPCC01 Gi0/0 is 192.168.254.18/30. Both interfaces are up/up, but neither endpoint can reach the other. From the .18 side, ARP for .17 remains incomplete after testing. We have the same issue in the opposite direction. Please investigate the Layer-2 path for the circuit.
+Morning Chris. No update from Architecture/SA yet. I followed up on 9/1, and Reema followed up again on 9/15. Both tickets are still pending their review/recommendations.
 
-Spoke with Verizon. Verizon advised circuit is up/stable and their testing shows traffic passing with no loss. Verizon-provided BGP/VRF information did not match CPE configuration. Validated both circuit endpoints: RTRCNJIPCC01 Gi0/0 192.168.254.17/30 and RTRADCIPCC01 Gi0/0 192.168.254.18/30 are up/up; however, end-to-end ping fails and ARP for the remote peer remains incomplete. BGP is not active on either CPE. Verizon ticket left open on customer time pending further investigation.
-
-
+09/21 Tier 3 follow-up: No response received from Architecture/SA to date. Initial follow-up sent 09/01 and additional follow-up sent by Reema on 09/15. Ticket remains pending Architecture/SA review and recommendations.
 
 
 
