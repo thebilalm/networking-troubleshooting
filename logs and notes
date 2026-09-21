@@ -20,51 +20,14 @@ BMP 691800770 remains under investigation. Added comments to transport ticket re
 
 Please keep an eye out for a response from the customer on ticket 340464618/BMP 690100778. Transport is requesting a 4-hour intrusive test window and customer approval is pending. Once the customer provides the window, please update Camille McCauley (UID cm8261) so transport can proceed.
 
-Customer called for status update. Advised ticket has been routed to BMC for further investigation and the appropriate team will follow up once an update is available. Customer disconnected from GCSC call; callback number 713-429-4488 was provided for follow-up.
+Spoke with Peter T. Gjerness regarding ongoing intermittent LAN/Internet slowness. Customer is currently wired. Collected affected workstation MAC 30-13-8B-23-4A-C0 and default gateway 172.18.153.1. Ping to default gateway successful, 4/4 replies with 0% loss. Customer completed requested traceroute; trace completed successfully in 3 hops with first-hop latency approximately 2-3 ms. Customer attempted Speedtest.net which returned abnormal results (~3864.76 Mbps download / 0 upload). Google speed test returned approximately 2.4 Mbps download / 12.4 Mbps upload. Customer advised Scott Pfeil/Raheem are experiencing more frequent slowness, particularly during Zoom usage. Requested customer email screenshots of ipconfig, traceroute, ping and speed-test results to L3 contacts/shared mailbox for review. Awaiting diagnostics and further L3 investigation.
 
-
+Peter called back. I collected his wired MAC, gateway ping and traceroute. Gateway ping was 0% loss and trace completed in 3 hops. Google speed test was only 2.4 Mbps down / 12.4 Mbps up. He’s emailing us screenshots now. He said Scott/Raheem are having the issue more frequently, especially on Zoom.
 
 
 ----------
 
-STNNAPNSHPER1 – 18 tickets: Router and core uplinks are healthy. Both 40G core bundles to NSHCRS1/NSHCRS2 are Up with all members active, BFD Up, and no significant errors. Recurring instability was identified on PE-CE interface Te0/1/0/6 toward Rutherford County LEA Internet. The interface experienced recent physical signal failures/link flaps on 9/17 and 9/20, has CRC/input errors and multiple carrier transitions, and the associated Rutherford BGP peer reset in correlation with the link event. Optics are currently within thresholds with no active DOM alarms. This points to an intermittent physical/transport-side issue on that customer circuit rather than a core router or core-uplink problem.
 
-For Reema’s slide, I would keep it even shorter:
-
-STNNAPNSHPER1: Core/uplinks stable. Recurring Te0/1/0/6 Rutherford PE-CE link flaps observed with physical signal failure, CRC/input errors, and correlated BGP reset. Optics currently normal. Suspect intermittent circuit/physical-layer issue.
-
-for device #2
-
-STNNAPMEMPER1 – 13 tickets: Router and BGP currently stable. BE10000 crosslink toward MEMPER2 is stable. BE1008 core bundle toward NSHCRS1 is currently Up with both 10G members active and BFD operational; however, both members have experienced recent link/BFD disruptions and have high historical carrier-transition counts. BE1008 also contains historical CRC/input-error counts. Current local optics on both members are Up with no DOM alarms. Recommend correlating far-end NSHCRS1 Te0/3/0/8 and Te0/3/0/9 for recurring physical/link instability.
-
-For the slide, shorter:
-
-STNNAPMEMPER1: BE1008 toward NSHCRS1 shows recurring member/BFD flaps on both 10G links and historical CRC/input errors. Both members currently Up and optics normal. Far-end NSHCRS1 interfaces should be correlated.
-
-Device #3 finding
-
-STNNAPBRWPER1 – 10 tickets: Router and BGP currently stable. BE1084 core bundle toward NSHCRS1 is Up with all three 10G members active and BFD operational. All three physical members currently show zero CRC/input/output errors and zero carrier transitions. Bundle/member last flap was approximately 2w4d ago, but no corresponding event remains in the recent logging buffer. No current evidence of recurring core-uplink degradation.
-
-For slide, shorter:
-
-STNNAPBRWPER1: Core bundle BE1084 toward NSHCRS1 currently healthy; 3/3 members active, BFD Up, and no interface errors. Historical flap ~2w4d ago, with no recent recurring core-link event observed.
-
-Device #4
-STNNAPNSHCRS1
-
-STNNAPNSHCRS1 – 8 tickets: Device currently stable with all OSPF adjacencies Full. Recurring instability is confirmed on BE1008 toward MEMPER1, with both member links experiencing BFD/link resets approximately 3 days ago. Te0/3/0/8 is the primary concern, showing 7,327 CRC errors since the recent counter clear, while Te0/3/0/9 is comparatively clean. This correlates directly with the member instability observed on MEMPER1 and indicates an intermittent physical-layer issue on the Te0/3/0/8 ↔ MEMPER1 Te0/0/0/0 path. BE1084 toward BRWPER1 had a historical flap ~2w4d ago but is currently clean with all three members active and no errors.
-
-For slide, shorter:
-
-STNNAPNSHCRS1: BE1008 toward MEMPER1 shows recurring member/BFD instability; Te0/3/0/8 has significant recent CRC errors and correlates with matching events on MEMPER1. BE1084 toward BRWPER1 had an older flap but is currently stable/clean.
-
-Device #5
-
-STNOIRAQS13R – 8 tickets: Recurring WAN/T1 circuit impairment confirmed on Serial0/1/0:1 / T1 0/1/0. Serial interface has high CRC/input errors, aborts and carrier transitions with documented link flaps. BGP resets correlate with those interface events. T1 controller is currently Up with no active LOS/LOF/AIS, but 24-hour performance shows 472 Path Code Violations, 333 Errored Seconds and 87 Bursty Errored Seconds across multiple intervals. Findings indicate an intermittent transport/T1 line-quality issue rather than a LAN or routing-originated problem.
-
-For Reema’s slide:
-
-STNOIRAQS13R: Recurring T1/WAN degradation confirmed. Serial0/1/0:1 shows CRC/errors and flaps with correlated BGP resets; T1 controller reports repeated path-code violations and errored seconds. Recommend transport/LEC investigation.
 
 
 
