@@ -24,7 +24,9 @@ TAC confirmed one of the ADC APs is currently joined to the CNJ secondary even t
 TAC confirmed one of the ADC APs is still joined to the CNJ secondary even though its HA config correctly shows USADC5520WLC02 as primary. I have a session with TAC shortly to test one AP and see why it’s not failing back to ADC.
 
 
-I didn’t manually shut port 2. It may have come over that way from the restored configuration. I’m checking the controller/switch side now to confirm whether port 2 is expected to be down or if it needs to be enabled.
+I found it. On SWTADC_02, Po26 is up but only Gi9/15 is currently bundled/up. Gi7/15 is down/notconnect and not in the bundle. The switch interface descriptions also don’t line up with the WLC port status, so the physical port mapping may have changed during the replacement. I’m going to verify the cabling/physical connection for the second WLC link.
+
+Checked WLC02 LAG connectivity on SWTADC_02. Po26 remains up via Gi9/15. Gi7/15 is down/notconnect and not bundled in Po26. WLC reports one physical port up and one down. Switch interface descriptions do not align with observed WLC port status, indicating possible cabling/port mapping mismatch after replacement. Physical validation of second WLC uplink required.
 
 
 
