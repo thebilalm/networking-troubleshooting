@@ -24,7 +24,13 @@ TAC confirmed one of the ADC APs is currently joined to the CNJ secondary even t
 TAC confirmed one of the ADC APs is still joined to the CNJ secondary even though its HA config correctly shows USADC5520WLC02 as primary. I have a session with TAC shortly to test one AP and see why it’s not failing back to ADC.
 
 
-Mario confirmed indexes 4 and 5 use the shared secret lifenet, not cisco. He’s not sure whether all the other servers use cisco or whether those two are still in use. Do you know the correct shared secrets for the remaining servers, especially 11 and 12?
+Hi Elias,
+
+We are still working through this internally. Based on our troubleshooting session Friday, the AP is sending CAPWAP discovery requests toward USADC5520WLC02, but the requests were not being seen on the controller. We are checking the network path for anything that may be impacting CAPWAP traffic.
+
+We are also reviewing the remaining controller configuration against the production WLCs. I’ll provide another update once we have completed those checks.
+
+Thanks,
 
 
 
