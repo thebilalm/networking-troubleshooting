@@ -20,24 +20,32 @@ BMP 691800770 remains under investigation. Added comments to transport ticket re
 
 Please keep an eye out for a response from the customer on ticket 340464618/BMP 690100778. Transport is requesting a 4-hour intrusive test window and customer approval is pending. Once the customer provides the window, please update Camille McCauley (UID cm8261) so transport can proceed.
 
-Router is currently reachable and service has restored. Router uptime is 37w5d with no reload. WAN interface Gi0/0/0 (Ckt ID T3.KQFN.832171..SC) experienced multiple physical link flaps on 09/21. Interface went down at 12:10:31 GMT, restored at 12:32:02 GMT, flapped again at 12:33:47 GMT, and restored at 12:34:27 GMT. BGP neighbor 172.23.199.74 reset due to interface flap and restored at 12:35:18 GMT. Opening transport ticket to investigate intermittent circuit/handoff flapping.
+For the two devices that ping but cannot be accessed, use:
 
-Problem Description:
-Recurring circuit bouncing / WAN interface flapping
+USPGPCRODCA01QFR1
 
-Problem Details:
+Problem Abstract: Device reachable but unable to SSH – USPGPCRODCA01QFR1
 
-Circuit experienced multiple WAN interface flaps on 09/21/2026. Gi0/0/0 went down at 12:10:31 GMT, restored at 12:33:34 GMT, went down again at 12:35:32 GMT, and restored at 12:36:12 GMT. BGP neighbor 172.23.249.142 reset due to interface flap and restored at 12:36:59 GMT. Router remained up with 50 weeks uptime and no reload. Similar physical interface flaps are also present in router logs on prior dates. Circuit is currently up. Please investigate recurring intermittent transport/circuit bouncing and provide RFO.
+Customer Logs: Device is being validated for the PGE MRS/MLAN platform migration. Device responds to ping; however, SSH access is unsuccessful. Please investigate and restore management access.
 
-Before WFA:
+Internal Logs: Ping successful. SSH login/access unsuccessful during validation.
 
-Router currently reachable and service restored. Router uptime 50 weeks with no reload. WAN Gi0/0/0 (Ckt ID T3.KQFN.828522..SC) experienced multiple physical link flaps on 09/21. Interface went down at 12:10:31 GMT, restored at 12:33:34 GMT, flapped again at 12:35:32 GMT, and restored at 12:36:12 GMT. BGP neighbor 172.23.249.142 reset due to interface flap and restored at 12:36:59 GMT. Interface currently up/up with no CRC/input/output errors. Similar Gi0/0/0 flaps seen in historical logs. Opening transport ticket for recurring circuit/handoff flapping.
+USCPHLCHOCA01QFR1
 
-Then create the WFA.
+Problem Abstract: Device reachable but unable to SSH – USCPHLCHOCA01QFR1
 
-After WFA, you don’t need to repeat everything. Just add:
+Customer Logs: Device is being validated for the PGE MRS/MLAN platform migration. Device responds to ping; however, SSH access is unsuccessful. Please investigate and restore management access.
 
-WFA: XXXXXXXX opened with transport for recurring circuit/WAN interface flapping. Pending transport investigation/RFO.
+Internal Logs: Ping successful. SSH login/access unsuccessful during validation.
 
+For the one that is completely unreachable:
+
+USAHMBHMOCA01QFR1
+
+Problem Abstract: Device unreachable – USAHMBHMOCA01QFR1
+
+Customer Logs: Device is being validated for the PGE MRS/MLAN platform migration and is currently unreachable. Device does not respond to ping. Please investigate and restore connectivity.
+
+Internal Logs: Ping to management IP 10.10.0.35 unsuccessful during validation.
 
 
