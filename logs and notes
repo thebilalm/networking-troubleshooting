@@ -20,9 +20,7 @@ BMP 691800770 remains under investigation. Added comments to transport ticket re
 
 Please keep an eye out for a response from the customer on ticket 340464618/BMP 690100778. Transport is requesting a 4-hour intrusive test window and customer approval is pending. Once the customer provides the window, please update Camille McCauley (UID cm8261) so transport can proceed.
 
-Morning Chris. No update from Architecture/SA yet. I followed up on 9/1, and Reema followed up again on 9/15. Both tickets are still pending their review/recommendations.
-
-09/21 Tier 3 follow-up: No response received from Architecture/SA to date. Initial follow-up sent 09/01 and additional follow-up sent by Reema on 09/15. Ticket remains pending Architecture/SA review and recommendations.
+Validated router accessible. Customer LAN interface Gi0/0/1 currently up/up. Logs show Gi0/0/1 went down at 12:20 GMT and restored at 12:34 GMT. BGP neighbor 172.23.197.38 currently established. WAN Gi0/0/0 up/up with no CRC/input/output errors. Service currently restored.
 
 
 
