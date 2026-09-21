@@ -24,13 +24,7 @@ TAC confirmed one of the ADC APs is currently joined to the CNJ secondary even t
 TAC confirmed one of the ADC APs is still joined to the CNJ secondary even though its HA config correctly shows USADC5520WLC02 as primary. I have a session with TAC shortly to test one AP and see why it’s not failing back to ADC.
 
 
-Hi Elias,
-
-We are still working through this internally. Based on our troubleshooting session Friday, the AP is sending CAPWAP discovery requests toward USADC5520WLC02, but the requests were not being seen on the controller. We are checking the network path for anything that may be impacting CAPWAP traffic.
-
-We are also reviewing the remaining controller configuration against the production WLCs. I’ll provide another update once we have completed those checks.
-
-Thanks,
+Yes, I’m aware. I’ve been troubleshooting it with Cisco TAC. We tested one of the affected APs Friday and confirmed it is sending CAPWAP discovery requests toward USADC5520WLC02, but the requests are not reaching the controller. IP connectivity works both ways, so we’re investigating what may be dropping the CAPWAP traffic in the path. I’m also working through the remaining WLC configuration differences.
 
 
 
