@@ -20,32 +20,24 @@ BMP 691800770 remains under investigation. Added comments to transport ticket re
 
 Please keep an eye out for a response from the customer on ticket 340464618/BMP 690100778. Transport is requesting a 4-hour intrusive test window and customer approval is pending. Once the customer provides the window, please update Camille McCauley (UID cm8261) so transport can proceed.
 
-For the two devices that ping but cannot be accessed, use:
+----------
 
-USPGPCRODCA01QFR1
+STNNAPNSHPER1 – 18 tickets: Router and core uplinks are healthy. Both 40G core bundles to NSHCRS1/NSHCRS2 are Up with all members active, BFD Up, and no significant errors. Recurring instability was identified on PE-CE interface Te0/1/0/6 toward Rutherford County LEA Internet. The interface experienced recent physical signal failures/link flaps on 9/17 and 9/20, has CRC/input errors and multiple carrier transitions, and the associated Rutherford BGP peer reset in correlation with the link event. Optics are currently within thresholds with no active DOM alarms. This points to an intermittent physical/transport-side issue on that customer circuit rather than a core router or core-uplink problem.
 
-Problem Abstract: Device reachable but unable to SSH – USPGPCRODCA01QFR1
+For Reema’s slide, I would keep it even shorter:
 
-Customer Logs: Device is being validated for the PGE MRS/MLAN platform migration. Device responds to ping; however, SSH access is unsuccessful. Please investigate and restore management access.
+STNNAPNSHPER1: Core/uplinks stable. Recurring Te0/1/0/6 Rutherford PE-CE link flaps observed with physical signal failure, CRC/input errors, and correlated BGP reset. Optics currently normal. Suspect intermittent circuit/physical-layer issue.
 
-Internal Logs: Ping successful. SSH login/access unsuccessful during validation.
 
-USCPHLCHOCA01QFR1
 
-Problem Abstract: Device reachable but unable to SSH – USCPHLCHOCA01QFR1
 
-Customer Logs: Device is being validated for the PGE MRS/MLAN platform migration. Device responds to ping; however, SSH access is unsuccessful. Please investigate and restore management access.
 
-Internal Logs: Ping successful. SSH login/access unsuccessful during validation.
 
-For the one that is completely unreachable:
 
-USAHMBHMOCA01QFR1
 
-Problem Abstract: Device unreachable – USAHMBHMOCA01QFR1
 
-Customer Logs: Device is being validated for the PGE MRS/MLAN platform migration and is currently unreachable. Device does not respond to ping. Please investigate and restore connectivity.
 
-Internal Logs: Ping to management IP 10.10.0.35 unsuccessful during validation.
+
+
 
 
