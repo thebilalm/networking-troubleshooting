@@ -20,9 +20,9 @@ BMP 691800770 remains under investigation. Added comments to transport ticket re
 
 Please keep an eye out for a response from the customer on ticket 340464618/BMP 690100778. Transport is requesting a 4-hour intrusive test window and customer approval is pending. Once the customer provides the window, please update Camille McCauley (UID cm8261) so transport can proceed.
 
-Spoke with Peter T. Gjerness regarding ongoing intermittent LAN/Internet slowness. Customer is currently wired. Collected affected workstation MAC 30-13-8B-23-4A-C0 and default gateway 172.18.153.1. Ping to default gateway successful, 4/4 replies with 0% loss. Customer completed requested traceroute; trace completed successfully in 3 hops with first-hop latency approximately 2-3 ms. Customer attempted Speedtest.net which returned abnormal results (~3864.76 Mbps download / 0 upload). Google speed test returned approximately 2.4 Mbps download / 12.4 Mbps upload. Customer advised Scott Pfeil/Raheem are experiencing more frequent slowness, particularly during Zoom usage. Requested customer email screenshots of ipconfig, traceroute, ping and speed-test results to L3 contacts/shared mailbox for review. Awaiting diagnostics and further L3 investigation.
+Received Peter’s emailed diagnostic screenshots. Google speed test showed 3.0 Mbps download / 16.1 Mbps upload with 22 ms latency. Mapped affected wired MAC 3013.8b23.4ac0 to SWTGOD52_1 Gi1/0/34. Interface is connected at 1 Gbps/full duplex on VLAN 10. Checked interface/error counters: 0 input errors, 0 CRC/frame errors, 0 output errors, 0 collisions and 0 output discards. Current utilization is low. No abnormality identified on the affected user’s access port. Further upstream investigation required.
 
-Could be somewhere upstream since his local gateway ping was clean, but hard to say yet. The 2.4 Mbps download is definitely low though. I’d probably compare with Scott/Raheem’s wired tests while they’re actually seeing the issue.
+I mapped Peter’s wired MAC to Gi1/0/34. Port is clean — 1G/full, no CRC/input/output errors or discards, and utilization is low. His emailed Google test still shows only 3.0 Mbps down / 16.1 up. Nothing points to his local access port.
 
 
 ----------
