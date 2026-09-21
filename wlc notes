@@ -24,7 +24,7 @@ TAC confirmed one of the ADC APs is currently joined to the CNJ secondary even t
 TAC confirmed one of the ADC APs is still joined to the CNJ secondary even though its HA config correctly shows USADC5520WLC02 as primary. I have a session with TAC shortly to test one AP and see why it’s not failing back to ADC.
 
 
-Hi Mario, Hadee said the RADIUS shared key should be cisco but asked me to double-check with you. Can you confirm if cisco is the correct shared secret for all the RADIUS authentication servers on USADC5520WLC02, including indexes 11 and 12?
+Mario confirmed indexes 4 and 5 use the shared secret lifenet, not cisco. He’s not sure whether all the other servers use cisco or whether those two are still in use. Do you know the correct shared secrets for the remaining servers, especially 11 and 12?
 
 
 
