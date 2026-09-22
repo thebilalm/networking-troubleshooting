@@ -25,7 +25,12 @@ TAC confirmed one of the ADC APs is still joined to the CNJ secondary even thoug
 
 
 
-Hey Eric, do you know the physical rack/location for SWTADC_02? The onsite tech is with me now, but the WLC fiber goes into the ODF and he can’t trace it to the switch. We need to get to Gi7/15 to reseat/test the switch-side SFP.
+NCR technician onsite. Verified correct replacement WLC USADC5520WLC02. WLC Port 1 remains up/operational; Port 2 remains down. Technician traced Port 2 fiber path to SWTADC_02 Gi7/15. Fiber path was validated via loopback testing and confirmed good. Gi7/15 remained down during local loopback testing. SFPs were reseated/swapped and alternate Gi7/9 was tested; link did not remain up. Module 7 diagnostics show PASS. All temporary testing/configuration was removed and physical connections/configuration were restored to original state. Primary WLC uplink remains operational. NCR technician released from site. Further investigation required on SWTADC_02/module 7 side.
+
+Hi Eric, onsite testing is complete. We confirmed the fiber path between WLC Port 2 and SWTADC_02 is good via loopback testing. Gi7/15 still would not come up, including with local loopback/SFP testing. We also tested Gi7/9 as an alternate with the same result. Module 7 diagnostics show PASS. Everything was restored to the original configuration/connections and the primary WLC uplink remains up. NCR tech has been released.
+
+
+
 
 
 
