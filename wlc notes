@@ -25,7 +25,7 @@ TAC confirmed one of the ADC APs is still joined to the CNJ secondary even thoug
 
 
 
-We’ve confirmed the affected switch port is Gi7/15 on SWTADC_02. Please trace the fiber connected to Gi7/15 from the switch all the way back to the WLC. The correct controller is the one we already verified by serial/MAC. Don’t disconnect anything yet — just identify which WLC fiber port that Gi7/15 cable lands on.
+Hey Eric, do you know the physical rack/location for SWTADC_02? The onsite tech is with me now, but the WLC fiber goes into the ODF and he can’t trace it to the switch. We need to get to Gi7/15 to reseat/test the switch-side SFP.
 
 
 
