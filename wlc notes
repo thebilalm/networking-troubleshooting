@@ -25,7 +25,7 @@ TAC confirmed one of the ADC APs is still joined to the CNJ secondary even thoug
 
 
 
-I pulled the ADCWLC02 config using the getconfig command. I can see WLAN-level RADIUS references, but I don’t see any global RADIUS accounting server definition lines in the output, so I can’t verify the accounting server list from the config. The current ADCWLC02 has the larger accounting list, while CNJWLC02 only has indexes 1, 2, 11, and 12. I’ll leave the ADC accounting entries unchanged unless you want me to modify them.
+We’ve confirmed the affected switch port is Gi7/15 on SWTADC_02. Please trace the fiber connected to Gi7/15 from the switch all the way back to the WLC. The correct controller is the one we already verified by serial/MAC. Don’t disconnect anything yet — just identify which WLC fiber port that Gi7/15 cable lands on.
 
 
 
