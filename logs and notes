@@ -40,7 +40,8 @@ Please validate that 12.175.24.96/29 is correctly provisioned/routed toward this
 
 Reviewed Eric’s request and GPS circuit information. BMP cleared based on physical/L3 CER testing; however issue persists specifically for traffic sourced from documented LAN block 12.175.24.96/29. BMP contested requesting Transport validate provisioning/routing of LAN block toward ADI circuit IZEC661638.
 
-
+BMP 692100739:
+CPE/WAN interfaces are up, however traffic sourced from the documented ADI LAN gateway 12.175.24.97 is still unable to reach the Internet. Ping to 8.8.8.8 sourced from 12.175.24.97 fails, while a normal VRF ping succeeds. GPS shows LAN block 12.175.24.96/29 with gateway 12.175.24.97 and WAN subnet 32.142.82.84/30. Please verify the LAN subnet is correctly provisioned/routed on the ADI circuit and do not close based only on physical/L3 circuit testing.
 
 
 
