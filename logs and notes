@@ -26,18 +26,19 @@ I mapped Peter’s wired MAC to Gi1/0/34. Port is clean — 1G/full, no CRC/inpu
 
 
 ----------
-Customer Log:
-Remote troubleshooting has been performed; however, we are unable to establish management/console access to the device. OOB access was also attempted but could not be successfully established.
+Please re-investigate. Physical/WAN connectivity is up, however the documented ADI/MIS LAN block is not routing through the circuit.
 
-Please confirm if we may proceed with an onsite technician dispatch. If approved, please provide the site contact name and phone number, site access hours/preferred dispatch window, and any site access requirements or restrictions.
+Circuit: IZEC661638
+WAN subnet: 32.142.82.84/30
+CPE WAN IP: 32.142.82.86
+LAN block: 12.175.24.96/29
+LAN gateway: 12.175.24.97
 
-For the 10.10.0.35 device that doesn’t ping, change the first sentence:
+Ping to 8.8.8.8 through VRF MIS_INTERNET succeeds normally, but ping sourced from 12.175.24.97 fails 0/5. Traceroute sourced from 12.175.24.97 reaches provider next hop 32.142.82.85 and does not proceed further.
 
-Customer Log:
-Device remains unreachable via the network. OOB access was also attempted but could not be successfully established.
+Please validate that 12.175.24.96/29 is correctly provisioned/routed toward this ADI circuit and confirm the transport configuration matches the documented circuit information.
 
-Please confirm if we may proceed with an onsite technician dispatch. If approved, please provide the site contact name and phone number, site access hours/preferred dispatch window, and any site access requirements or restrictions.
-
+Reviewed Eric’s request and GPS circuit information. BMP cleared based on physical/L3 CER testing; however issue persists specifically for traffic sourced from documented LAN block 12.175.24.96/29. BMP contested requesting Transport validate provisioning/routing of LAN block toward ADI circuit IZEC661638.
 
 
 
