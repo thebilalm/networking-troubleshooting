@@ -26,7 +26,9 @@ I mapped Peter’s wired MAC to Gi1/0/34. Port is clean — 1G/full, no CRC/inpu
 
 
 ----------
+Capgemini/GTC called regarding multiple GDC device-down alerts. Reviewed affected devices during call. AP11 and AP16 had brief outages and restored after approximately 1 minute. AP15 remains down and is associated with parent ticket 342885489 for Switch 4. Customer/LCON has already been contacted requesting local power/LED checks and reboot if possible. Awaiting customer response. If local checks cannot be completed or switch remains down, CE dispatch will be coordinated.
 
+AP remains down. Issue associated with parent Switch 4 ticket 342885489. Local power checks requested from customer/LCON; awaiting response. Troubleshooting continuing under parent ticket.
 
 
 
