@@ -26,22 +26,10 @@ I mapped Peter’s wired MAC to Gi1/0/34. Port is clean — 1G/full, no CRC/inpu
 
 
 ----------
-Please re-investigate. Physical/WAN connectivity is up, however the documented ADI/MIS LAN block is not routing through the circuit.
+All 3 tickets have been worked. I performed remote troubleshooting and attempted OOB access on all 3, but was unable to establish usable console access. I also found the site contacts and sent customer logs requesting approval/details for onsite dispatch.
 
-Circuit: IZEC661638
-WAN subnet: 32.142.82.84/30
-CPE WAN IP: 32.142.82.86
-LAN block: 12.175.24.96/29
-LAN gateway: 12.175.24.97
+Two devices are pingable but SSH/Telnet is refusing the connection. The third device’s management IP is not pingable; its cellular interface IP is reachable, but management access is still unavailable. Currently waiting for customer response/dispatch approval.
 
-Ping to 8.8.8.8 through VRF MIS_INTERNET succeeds normally, but ping sourced from 12.175.24.97 fails 0/5. Traceroute sourced from 12.175.24.97 reaches provider next hop 32.142.82.85 and does not proceed further.
-
-Please validate that 12.175.24.96/29 is correctly provisioned/routed toward this ADI circuit and confirm the transport configuration matches the documented circuit information.
-
-Reviewed Eric’s request and GPS circuit information. BMP 692100739 was previously cleared after physical/L3 testing; however, traffic sourced from documented LAN block 12.175.24.96/29 is still unable to reach the Internet. Contested BMP and added Transport comment requesting validation of LAN subnet provisioning/routing on ADI circuit IZEC661638. Pending Transport/BMP response.
-
-BMP 692100739:
-CPE/WAN interfaces are up, however traffic sourced from the documented ADI LAN gateway 12.175.24.97 is still unable to reach the Internet. Ping to 8.8.8.8 sourced from 12.175.24.97 fails, while a normal VRF ping succeeds. GPS shows LAN block 12.175.24.96/29 with gateway 12.175.24.97 and WAN subnet 32.142.82.84/30. Please verify the LAN subnet is correctly provisioned/routed on the ADI circuit and do not close based only on physical/L3 circuit testing.
 
 
 
