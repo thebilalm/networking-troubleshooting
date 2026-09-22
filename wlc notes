@@ -24,7 +24,13 @@ TAC confirmed one of the ADC APs is currently joined to the CNJ secondary even t
 TAC confirmed one of the ADC APs is still joined to the CNJ secondary even though its HA config correctly shows USADC5520WLC02 as primary. I have a session with TAC shortly to test one AP and see why it’s not failing back to ADC.
 
 
-Gi7/15 is still down/notconnect with no carrier, while Gi9/15 is the only active member of Po26. WLC02 also still shows one physical port up and one down. At this point the remaining check is physical cabling/port mapping on the replacement WLC.
+Special Arrangements / Notes
+
+Dispatch tech to physically verify the second uplink on replacement WLC USADC5520WLC02. Coordinate with NOC before disconnecting, reseating, or moving any cables. Do not disturb the currently active WLC uplink.
+
+Scope of Work CE Will Perform On-Site
+
+Troubleshoot second physical uplink on replacement Cisco 5520 WLC USADC5520WLC02. SWTADC_02 Gi7/15 is down/notconnect and not bundled in Po26, while Gi9/15 is the active Po26 member. WLC shows one physical port up and one down. CE to trace and verify cabling/port mapping between SWTADC_02 and WLC, confirm cable is connected to the correct WLC port, reseat the affected connection as directed by NOC, and assist with remote validation of link/LAG status. Do not disconnect the currently active uplink unless directed by NOC.
 
 
 
