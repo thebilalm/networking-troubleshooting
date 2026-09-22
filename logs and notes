@@ -26,10 +26,7 @@ I mapped Peter’s wired MAC to Gi1/0/34. Port is clean — 1G/full, no CRC/inpu
 
 
 ----------
-All 3 tickets have been worked. I performed remote troubleshooting and attempted OOB access on all 3, but was unable to establish usable console access. I also found the site contacts and sent customer logs requesting approval/details for onsite dispatch.
-
-Two devices are pingable but SSH/Telnet is refusing the connection. The third device’s management IP is not pingable; its cellular interface IP is reachable, but management access is still unavailable. Currently waiting for customer response/dispatch approval.
-
+We isolated the issue to the switch side. Tech loopback testing confirmed the fiber path between WLC Port 2 and SWTADC_02 is good. A loopback directly on Gi7/15 still did not bring the port up, and bouncing the port made no difference. We also already tried another SFP. Gi7/9 appears to be an available alternate port. Can we move the WLC Port 2 connection from Gi7/15 to Gi7/9 and mirror the Gi7/15 configuration?
 
 
 
