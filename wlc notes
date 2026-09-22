@@ -25,7 +25,7 @@ TAC confirmed one of the ADC APs is still joined to the CNJ secondary even thoug
 
 
 
-Hey Mario/Hadee, I compared the RADIUS Accounting servers between ADCWLC and CNJWLC. CNJWLC only has indexes 1, 2, 11, and 12, while ADCWLC has additional accounting entries. Should ADCWLC be changed to match CNJWLC exactly, or should the extra accounting servers remain?
+Here are both RADIUS Accounting lists. ADCWLC02 has the larger set of accounting servers, while CNJWLC02 only has indexes 1, 2, 11, and 12. Can you confirm whether ADCWLC02 should keep the current larger list or be changed to match CNJWLC02?
 
 
 
