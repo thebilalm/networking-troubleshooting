@@ -25,7 +25,7 @@ TAC confirmed one of the ADC APs is still joined to the CNJ secondary even thoug
 
 
 
-I checked the pulled ADCWLC02 config. I can see WLAN-level RADIUS references, but there are no global radius acct add / radius acct server definition lines in the output. So I can’t verify the accounting server list from this config. The current ADCWLC02 has the larger accounting list, while CNJWLC02 only has 1, 2, 11, and 12. I’ll leave the ADC accounting entries unchanged unless you want me to modify them.
+I pulled the ADCWLC02 config using the getconfig command. I can see WLAN-level RADIUS references, but I don’t see any global RADIUS accounting server definition lines in the output, so I can’t verify the accounting server list from the config. The current ADCWLC02 has the larger accounting list, while CNJWLC02 only has indexes 1, 2, 11, and 12. I’ll leave the ADC accounting entries unchanged unless you want me to modify them.
 
 
 
