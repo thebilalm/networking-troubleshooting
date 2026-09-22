@@ -26,13 +26,12 @@ I mapped Peter’s wired MAC to Gi1/0/34. Port is clean — 1G/full, no CRC/inpu
 
 
 ----------
-Contacted LCONs:
+Special Arrangements / Notes
 
-Shift Superintendent – 510-245-4535 – Contacted successfully. Advised of the network device issue at the site. LCON stated he is not aware of any current site internet issues and handles facility operations rather than IT. Provided callback number and ticket #342866993. LCON will forward the information to their IT team for follow-up.
+Site access approved for today. Site hours are 7:00 AM–6:00 PM PT. Contact site upon arrival. Gary Dean is also onsite. Please contact L3 Network Operations before performing any reboot or making changes to the device.
 
-Tomas Zambrano – 510-245-5879 – No answer; voicemail not available.
+Scope of Work CE Will Perform
 
-Awaiting callback from site IT.
-
+Locate Cisco router USCPHLCHOCA01QFR1. Verify device power, cabling, and LED/status indicators. Connect console cable to the router and contact L3 Network Operations for remote troubleshooting. Do not reboot, replace equipment, or make configuration changes without L3 authorization.
 
 
