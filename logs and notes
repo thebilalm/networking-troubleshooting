@@ -26,12 +26,24 @@ I mapped Peter’s wired MAC to Gi1/0/34. Port is clean — 1G/full, no CRC/inpu
 
 
 ----------
-Special Arrangements / Notes
+Customer Log:
 
-Site access approved for today. Site hours are 7:00 AM–6:00 PM PT. Contact site upon arrival. Gary Dean is also onsite. Please contact L3 Network Operations before performing any reboot or making changes to the device.
+NCR onsite technician dispatch has been initiated for further troubleshooting. Technician requested ASAP with maximum SLA of 4:50 PM PT today. Site contact and access information have been provided to the dispatch team.
 
-Scope of Work CE Will Perform
+Technician will verify the device onsite and coordinate with Network Operations for further troubleshooting.
 
-Locate Cisco router USCPHLCHOCA01QFR1. Verify device power, cabling, and LED/status indicators. Connect console cable to the router and contact L3 Network Operations for remote troubleshooting. Do not reboot, replace equipment, or make configuration changes without L3 authorization.
+For handover, I’d make it very clear what the next shift actually needs to do.
+
+Action Required:
+
+Monitor NCR dispatch and coordinate with CE when onsite. Assist CE with console troubleshooting and revalidate ping/SSH access after onsite work. Update customer and migration team with findings/status.
+
+Notes:
+
+USCPHLCHOCA01QFR1 (10.10.0.2) is pingable, but SSH/Telnet connections are refused. OOB access attempted but usable console access could not be established. Site confirmed stable power. NCR engaged ASAP for onsite troubleshooting; max SLA 4:50 PM PT today. Site access approved 7:00 AM–6:00 PM PT. CE instructed to verify power/cabling/LEDs, connect console, and contact NOC before rebooting or making changes. Customer/site contact aware of dispatch.
+
+
+
+
 
 
