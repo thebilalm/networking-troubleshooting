@@ -44,6 +44,15 @@ USCPHLCHOCA01QFR1 (10.10.0.2) is pingable, but SSH/Telnet connections are refuse
 
 Called LCON Paul Ziesing at 352-895-5599 regarding onsite troubleshooting/dispatch coordination. No answer. Voicemail left requesting callback and provided ticket #342868026 and NOC callback number. Awaiting customer response.
 
+PGEQF – 3 Ticket Summary
 
+342866993 – USPGPCRODCA01QFR1 (Phillips 66)
+Device is pingable, but SSH/Telnet connections are refused. OOB/console access could not be successfully established. Contacted site Shift Superintendent; no known service impact reported and he will forward the issue to their IT team. Secondary LCON did not answer. Awaiting site IT/customer response for further troubleshooting/dispatch coordination.
+
+342867208 – USCPHLCHOCA01QFR1 (CPH/Chowchilla)
+Device is pingable, but SSH/Telnet connections are refused. OOB/console access could not be successfully established. Site confirmed stable power and approved onsite dispatch. NCR engaged ASAP for today; max SLA 4:50 PM PT. CE to verify power/cabling/device status and establish console access with NOC before any reboot/config changes.
+
+342868026 – USAHMBHMOCA01QFR1 (Half Moon Bay)
+Expected management IP 10.10.0.35 is unreachable. Cellular interface 10.10.0.38 is up/reachable; possible DHCP/addressing issue, but root cause is not confirmed. OOB access is not reliable enough to complete remote troubleshooting. Called LCON Paul Ziesing; no answer and voicemail left requesting callback to coordinate onsite dispatch. Awaiting customer response.
 
 
