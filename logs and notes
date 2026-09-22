@@ -26,7 +26,13 @@ I mapped Peter’s wired MAC to Gi1/0/34. Port is clean — 1G/full, no CRC/inpu
 
 
 ----------
-We isolated the issue to the switch side. Tech loopback testing confirmed the fiber path between WLC Port 2 and SWTADC_02 is good. A loopback directly on Gi7/15 still did not bring the port up, and bouncing the port made no difference. We also already tried another SFP. Gi7/9 appears to be an available alternate port. Can we move the WLC Port 2 connection from Gi7/15 to Gi7/9 and mirror the Gi7/15 configuration?
+Contacted LCONs:
+
+Shift Superintendent – 510-245-4535 – Contacted successfully. Advised of the network device issue at the site. LCON stated he is not aware of any current site internet issues and handles facility operations rather than IT. Provided callback number and ticket #342866993. LCON will forward the information to their IT team for follow-up.
+
+Tomas Zambrano – 510-245-5879 – No answer; voicemail not available.
+
+Awaiting callback from site IT.
 
 
 
