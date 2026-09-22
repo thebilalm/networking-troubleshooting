@@ -26,10 +26,17 @@ I mapped Peter’s wired MAC to Gi1/0/34. Port is clean — 1G/full, no CRC/inpu
 
 
 ----------
-Capgemini/GTC called regarding multiple GDC device-down alerts. Reviewed affected devices during call. AP11 and AP16 had brief outages and restored after approximately 1 minute. AP15 remains down and is associated with parent ticket 342885489 for Switch 4. Customer/LCON has already been contacted requesting local power/LED checks and reboot if possible. Awaiting customer response. If local checks cannot be completed or switch remains down, CE dispatch will be coordinated.
+Customer Log:
+Remote troubleshooting has been performed; however, we are unable to establish management/console access to the device. OOB access was also attempted but could not be successfully established.
 
-AP remains down. Issue associated with parent Switch 4 ticket 342885489. Local power checks requested from customer/LCON; awaiting response. Troubleshooting continuing under parent ticket.
+Please confirm if we may proceed with an onsite technician dispatch. If approved, please provide the site contact name and phone number, site access hours/preferred dispatch window, and any site access requirements or restrictions.
 
+For the 10.10.0.35 device that doesn’t ping, change the first sentence:
+
+Customer Log:
+Device remains unreachable via the network. OOB access was also attempted but could not be successfully established.
+
+Please confirm if we may proceed with an onsite technician dispatch. If approved, please provide the site contact name and phone number, site access hours/preferred dispatch window, and any site access requirements or restrictions.
 
 
 
