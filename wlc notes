@@ -24,15 +24,8 @@ TAC confirmed one of the ADC APs is currently joined to the CNJ secondary even t
 TAC confirmed one of the ADC APs is still joined to the CNJ secondary even though its HA config correctly shows USADC5520WLC02 as primary. I have a session with TAC shortly to test one AP and see why it’s not failing back to ADC.
 
 
-Subject: NCR Dispatch Today – ADC WLC Uplink Check
 
-Hi Kevin,
-
-We have an NCR field technician scheduled to arrive today to verify the second uplink/cabling on the replacement WLC at ADC. The technician is expected onsite before 12:30 PM ET.
-
-Please assist with site access/coordination as needed. We will coordinate remotely with the technician during the work.
-
-Thanks,
+Hey Mario/Hadee, I compared the RADIUS Accounting servers between ADCWLC and CNJWLC. CNJWLC only has indexes 1, 2, 11, and 12, while ADCWLC has additional accounting entries. Should ADCWLC be changed to match CNJWLC exactly, or should the extra accounting servers remain?
 
 
 
