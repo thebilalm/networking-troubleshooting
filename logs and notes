@@ -27,15 +27,12 @@ I mapped Peter’s wired MAC to Gi1/0/34. Port is clean — 1G/full, no CRC/inpu
 
 ----------
 
-342868026 – USAHMBHMOCA01QFR1 / Half Moon Bay, Paul has now approved dispatch and specified Monday–Friday, 8 AM–3 PM PT
+NCR onsite technician dispatch has been initiated for further troubleshooting. LCON Paul Ziesing approved the dispatch with preferred site access Monday–Friday, 8:00 AM–3:00 PM PT.
 
-Special Arrangements / Notes
+Technician will verify the device onsite, establish console access, and coordinate with AT&T Network Operations for further troubleshooting. We will continue to monitor and provide updates.
 
-LCON Paul Ziesing approved onsite technician dispatch. Preferred site access window is Monday–Friday, 8:00 AM–3:00 PM PT. Please coordinate with LCON/site upon arrival and contact AT&T Network Operations for troubleshooting assistance before making any changes or rebooting the device.
 
-Scope of Work CE Will Perform
 
-Locate Cisco router USAHMBHMOCA01QFR1. Verify device power, cabling, and LED/status indicators. Connect console to the router and contact AT&T Network Operations for remote troubleshooting. Management IP 10.10.0.35 is currently unreachable. Verify router/interface status and current IP addressing from console. Do not reboot or make configuration changes without NOC authorization.
 
 
 
