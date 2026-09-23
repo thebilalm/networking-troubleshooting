@@ -26,23 +26,16 @@ I mapped Peter’s wired MAC to Gi1/0/34. Port is clean — 1G/full, no CRC/inpu
 
 
 ----------
-Spoke with Raheem Soledhin regarding ongoing site-wide Internet slowness. During live troubleshooting, customer reproduced approximately 2.65 Mbps download / 11.9 Mbps upload while wired. Multiple users are reporting similar degradation, including significant Zoom performance issues.
-
-Verified affected user IP 172.18.153.61 and mapped wired MAC 4c56.df1d.a5f1 to SWTGOD52_1 Gi1/0/41. Access port is up/up at 1 Gbps/full duplex with no CRC, input/output errors, or discards. Checked shared switch uplinks and site routers during active impact; utilization remained low and no active physical-layer errors or increasing packet-drop counters were observed.
-
-Advised customer that local LAN checks do not currently identify the source of the degradation and that the issue will be escalated for circuit/service-provider investigation. Customer requested urgent handling due to business impact and requested inclusion on ticket email updates. Added Raheem Soledhin as contact for ongoing updates. Transport/provider ticket to be opened and escalated accordingly.
-
-For the transport ticket, use slowness/degraded throughput and request an end-to-end test, preferably throughput/RFC testing if available:
-
-Persistent site-wide degraded Internet performance affecting wired and wireless users for approximately four weeks. Multiple users consistently reproduce ~2–3 Mbps download with ~11–16 Mbps upload. Local LAN and router checks during active impact show low utilization, clean physical/interface counters, and no active packet loss or increasing discards. Request end-to-end provider/transport investigation for degraded throughput, including throughput/RFC testing and dispatch if carrier-side testing indicates onsite work is required.
 
 Hi Peter,
 
-Thank you for the follow-up and for speaking with me today. We reviewed the site network again and checked the routers and switch while the issue is ongoing. At this time, the network interfaces are up and we are not seeing high utilization, packet loss, or physical errors that would explain the reported slowness.
+Thank you for following up. I spoke with Raheem this morning and was able to reproduce the issue while he was actively experiencing the slowness. His speed test showed approximately 2.65 Mbps download and 11.9 Mbps upload.
 
-As discussed, the next step is to collect live diagnostics from one of the users experiencing the more severe issue, preferably while the slowness or Zoom problem is actively occurring. You mentioned Raheem will call us so we can perform those checks and compare the results with the network utilization in real time.
+We also checked his wired switchport, the shared uplinks, and the site routers during the issue. We did not identify high utilization, physical errors, or active packet loss on the local network.
 
-We will continue troubleshooting once we receive that live test data.
+I have now opened a transport/provider investigation for the Internet circuit. The carrier is currently analyzing the service, and we will continue to follow up and escalate as needed. I also added Raheem to the ticket updates.
+
+We will keep you informed as additional findings become available.
 
 Thanks,
 
