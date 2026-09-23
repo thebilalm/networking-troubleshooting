@@ -27,7 +27,7 @@ I mapped Peter’s wired MAC to Gi1/0/34. Port is clean — 1G/full, no CRC/inpu
 
 ----------
 
-Additional BMP opened on R01/MPLS circuit BBEC.659996.ATI for degraded throughput investigation. User traffic path observed traversing R01 via 10.20.153.209 toward 10.0.0.158. Multiple users continue to reproduce approximately 2–3 Mbps download with ~11–16 Mbps upload while local access ports, switch uplinks, and router utilization remain clean. Requested end-to-end transport/RFC testing and provider-side validation.
+Customer impact remains active and unresolved. Multiple users continue to experience persistent degraded throughput, approximately 2–3 Mbps download with ~11–16 Mbps upload, significantly affecting Zoom and normal business operations. Local access ports, switch uplinks, and router checks during active impact show low utilization, clean physical/error counters, and no increasing packet loss/discards. User traffic has been observed traversing the R01/MPLS path via 10.20.153.209 toward 10.0.0.158. Please perform end-to-end throughput/RFC testing and do not close based solely on interface up/up or successful Layer 3 ping.
 
 
 
