@@ -6,14 +6,19 @@
 
 ---------
 
-Action Required
+Hello Team,
+Please expedite CE assignment for tonight’s dispatch. The customer requires the CE name and ETA before 4:00 PM ET today in order to arrange DC access.
+Please provide the technician details as soon as possible. Thank you.
 
-Critical site – severe customer impact. Continue hourly BMP escalation on R01/MPLS circuit BBEC.659996.ATI and closely monitor both BMPs. Expedite provider throughput/RFC investigation. Contest any closure if customer impact remains. After BMP L4, submit ECAT escalation and continue hourly follow-up until resolution. Provide customer updates and coordinate dispatch if required.
+For the handover sheet:
 
-Notes
+Action Required:
 
-Site-wide Internet degradation ongoing ~4 weeks. Multiple wired/wireless users consistently getting ~2–3 Mbps download / ~11–16 Mbps upload; Zoom and business applications severely impacted. Live L3 troubleshooting found clean access ports/uplinks, low utilization, and no active errors/loss or increasing discards. MIS BMP 692301067 was cleared/no trouble found and contested. R01/MPLS BMP 692301114 active and being escalated. Customer requesting urgent resolution.
+Follow up with NCR CS0449156 for CE assignment/ETA. Customer requires technician details before 4 PM ET for DC access. CE dispatch approved for after 10 PM ET tonight.
 
+Notes:
+
+NCR dispatch requested for critical asset CNJIADN7K1-2-L2AGG. Customer/site approved dispatch during regular maintenance window after 10 PM ET. NCR acknowledged request and is working on technician assignment. DC access must be coordinated; CE name/ETA pending.
 
 
 
