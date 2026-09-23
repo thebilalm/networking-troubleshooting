@@ -26,10 +26,13 @@ I mapped Peter’s wired MAC to Gi1/0/34. Port is clean — 1G/full, no CRC/inpu
 
 
 ----------
+Validated device HOSA9410_F4. Vlan10 (10.157.195.1) is currently up/up and passing traffic. Interface counters show no CRC/input/output errors. Historical logs indicate a temporary interface/SVI flap which has auto-restored. No current impact observed. Closing ticket as service restored.
 
-NCR onsite technician dispatch has been initiated for further troubleshooting. LCON Paul Ziesing approved the dispatch with preferred site access Monday–Friday, 8:00 AM–3:00 PM PT.
+And for customer log:
 
-Technician will verify the device onsite, establish console access, and coordinate with AT&T Network Operations for further troubleshooting. We will continue to monitor and provide updates.
+The reported interface has restored and is currently operating normally. Vlan10 is up/up and no current errors or service impact are observed. Earlier alarms indicate a temporary interface flap which auto-restored. Proceeding with ticket closure.
+
+
 
 
 
