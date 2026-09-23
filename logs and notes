@@ -27,22 +27,11 @@ I mapped Peter’s wired MAC to Gi1/0/34. Port is clean — 1G/full, no CRC/inpu
 
 ----------
 
-Hi Raheem,
-
-Thank you again for working with us earlier. We’d like to collect two additional traceroute results from your wired computer for comparison.
-
-Please open Command Prompt and run the following commands:
-
-tracert 172.18.153.1
-
-tracert 8.8.8.8
-
-Once both are complete, please send screenshots of the full results.
-
-Thanks,
-Bilal
+Customer impact remains ongoing. Multiple users continue to reproduce approximately 2–3 Mbps download with ~11–16 Mbps upload. Current testing confirms reachability only and does not validate throughput. Request reopen and further investigation including throughput/RFC testing. Please do not close based solely on interface up/up and successful ping.
 
 
+BBEC.659996.ATI
+Persistent site-wide degraded network performance affecting multiple wired and wireless users. Multiple users consistently reproduce approximately 2–3 Mbps download with ~11–16 Mbps upload. Local access ports and switch uplinks are clean with low utilization and no active physical errors or increasing discards. User traffic path has been observed traversing the R01/MPLS path via 10.20.153.209 toward 10.0.0.158. Request end-to-end transport investigation on circuit BBEC.659996.ATI for degraded throughput, including throughput/RFC testing and provider-side validation.
 
 
 
