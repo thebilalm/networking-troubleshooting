@@ -1,5 +1,11 @@
 
-Persistent site-wide degraded throughput remains active and unresolved. Multiple users continue to reproduce approximately 2–3 Mbps download with ~11–16 Mbps upload, significantly impacting Zoom and business operations. Local access ports, switch uplinks, and router checks during active impact remain clean with low utilization and no active physical errors, packet loss, or increasing discards. User traffic has been observed traversing the R01/MPLS path. Request expedited end-to-end throughput/RFC testing and provider investigation. Please do not close based solely on successful ping or circuit up/up status.
+Escalation note
+
+Persistent site-wide degraded throughput remains unresolved. Multiple users continue to reproduce ~2-3 Mbps download with ~11-16 Mbps upload, significantly impacting Zoom and business operations. Local access ports, switch uplinks, and router checks remain clean with low utilization and no active errors, loss, or increasing discards. User traffic traverses the R01/MPLS path. Request expedited throughput/RFC testing and provider investigation.
+
+Impact statement
+
+Site-wide business impact. Multiple users are affected on wired and wireless connections. Zoom performance is severely degraded, with slow Internet also affecting normal business applications and daily operations. Customer reports the issue has persisted for approximately four weeks and is preventing staff from working effectively.
 
 
 
