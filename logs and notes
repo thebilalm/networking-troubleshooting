@@ -22,14 +22,13 @@ NCR provided CE details for tonight’s dispatch. CE: Rober Sheider, UID RS2827,
 
 
 
-Escalation note — under 500 characters:
+Escalation note
 
-Repeat escalation: Site-wide degraded throughput remains unresolved with no root cause identified. Multiple users continue to experience ~2-3 Mbps download and ~11-16 Mbps upload with significant Zoom/business impact. Local LAN/router checks remain clean with low utilization and no active errors or loss. Request urgent status and expedited end-to-end throughput/RFC testing on the R01/MPLS path.
+Repeat escalation: Severe site-wide degraded throughput remains unresolved. Multiple users continue to experience ~2-3 Mbps download and ~11-16 Mbps upload with major Zoom/business impact. Local LAN/router checks remain clean with low utilization and no active errors or loss. Request urgent provider status, expedited throughput/RFC testing, and continued investigation on R01/MPLS circuit BBEC.659996.ATI.
 
-Impact statement — under 500 characters:
+Impact statement
 
-Business impact remains ongoing and unchanged. Multiple wired and wireless users are affected, with Zoom severely degraded and general Internet/business applications slow. Customer reports the issue has persisted for approximately four weeks and is significantly affecting daily operations. Management has requested urgent resolution and continued escalation.
-
+Critical business impact remains ongoing. Multiple wired and wireless users are affected, with Zoom severely degraded and normal business applications slow. Issue has persisted for approximately four weeks. Customer management is actively requesting urgent resolution and continued escalation.
 
 
 
