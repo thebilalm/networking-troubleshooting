@@ -1,33 +1,28 @@
 
+Problem Description:
+
+T1 circuit/interface bouncing intermittently.
+
+Problem Details:
+
+Serial0/1/0:1 is experiencing repeated interface and line protocol flaps. Multiple up/down events observed on 09/23/2026, most recently between approximately 15:15 and 15:23 GMT. Interface is currently up/up but has a history of recurrent flapping. Interface counters show 21,442,373 input errors, 10,639,936 CRC errors, 10,802,437 aborts, and 10,617 interface resets. Please test the T1 circuit and investigate for intermittent transport/line issues.
+Circuit ID: 80.DHZX.557233..SC
 
 
-Internal log:
-
-Reviewed STNNAPNSHPER2 for reported PIM smoothing interval alert. Alarm references PIM neighbor 172.23.251.46 on Gi0/1/1/12.747. Verified current PIM neighbors and interface status. Gi0/1/1/12.747 is no longer configured on the device, and active interfaces are up/up. No active service impact observed. Closing ticket as alarm references a no longer configured subinterface.
-
-Customer log:
-
-AT&T investigated the reported network alert. The referenced subinterface is no longer configured on the device. Current interfaces and network services were verified stable with no active service impact observed. Ticket will be closed.
+Checked router STTNO1RRPL08R. Serial0/1/0:1 currently up/up; however, logs show repeated interface/line protocol flaps, including multiple occurrences on 09/23. Interface also has significant CRC/input errors, aborts, and interface resets. Opening WFA transport ticket for intermittent T1 circuit bouncing/errors.
 
 
-Issue is still present. BMP was opened specifically to investigate PE routing/BGP advertisement, not a physical circuit outage. ADI next hop is reachable, but Internet traffic sourced from the MIS LAN is not routing over the ADI path and the site is using the CNJ tunnel instead. Please review PE routing/BGP configuration and verify the required MIS LAN subnet advertisement.
 
-BMP was cleared based on standard circuit testing without addressing the requested PE routing/BGP investigation. ADI next hop is reachable, but traffic sourced from the MIS LAN is not routing over the ADI path. Requesting PE routing/BGP configuration review and verification of the MIS LAN subnet advertisement.
 
-Circuit testing is passing and the ADI next hop 32.142.82.85 is reachable from MISR01. The issue is that Internet traffic from the MIS LAN is not using the ADI path and the site is using the CNJ tunnel instead. Previous LCM/Tier 3 troubleshooting identified a possible missing LAN subnet advertisement on the PE. Please have the routing team verify PE BGP/routing for the MIS LAN subnet. This is not being reported as a physical circuit/NTE failure.
 
-BMP 691800770 remains under investigation. Added comments to transport ticket requesting PE routing/BGP review, as ADI next hop is reachable but MIS LAN traffic is not routing over the ADI path. ECAT escalation reviewed by Service Assurance; response indicated CPE DCC and recommended verification of local power, equipment status and cabling. Awaiting further transport update.
 
-Please keep an eye out for a response from the customer on ticket 340464618/BMP 690100778. Transport is requesting a 4-hour intrusive test window and customer approval is pending. Once the customer provides the window, please update Camille McCauley (UID cm8261) so transport can proceed.
-
-Received Peter’s emailed diagnostic screenshots. Google speed test showed 3.0 Mbps download / 16.1 Mbps upload with 22 ms latency. Mapped affected wired MAC 3013.8b23.4ac0 to SWTGOD52_1 Gi1/0/34. Interface is connected at 1 Gbps/full duplex on VLAN 10. Checked interface/error counters: 0 input errors, 0 CRC/frame errors, 0 output errors, 0 collisions and 0 output discards. Current utilization is low. No abnormality identified on the affected user’s access port. Further upstream investigation required.
-
-I mapped Peter’s wired MAC to Gi1/0/34. Port is clean — 1G/full, no CRC/input/output errors or discards, and utilization is low. His emailed Google test still shows only 3.0 Mbps down / 16.1 up. Nothing points to his local access port.
 
 
 ----------
 
-Customer impact remains active and unresolved. Multiple users continue to experience persistent degraded throughput, approximately 2–3 Mbps download with ~11–16 Mbps upload, significantly affecting Zoom and normal business operations. Local access ports, switch uplinks, and router checks during active impact show low utilization, clean physical/error counters, and no increasing packet loss/discards. User traffic has been observed traversing the R01/MPLS path via 10.20.153.209 toward 10.0.0.158. Please perform end-to-end throughput/RFC testing and do not close based solely on interface up/up or successful Layer 3 ping.
+
+
+
 
 
 
