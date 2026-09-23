@@ -1,15 +1,8 @@
 
-Problem Description:
+Hello Team,
+Please proceed with dispatching the CE for this ticket. Customer/site team has confirmed to proceed with the onsite dispatch.
+Please provide CE name and ETA once assigned. Thank you.
 
-T1 circuit/interface bouncing intermittently.
-
-Problem Details:
-
-Serial0/1/0:1 is experiencing repeated interface and line protocol flaps. Multiple up/down events observed on 09/23/2026, most recently between approximately 15:15 and 15:23 GMT. Interface is currently up/up but has a history of recurrent flapping. Interface counters show 21,442,373 input errors, 10,639,936 CRC errors, 10,802,437 aborts, and 10,617 interface resets. Please test the T1 circuit and investigate for intermittent transport/line issues.
-Circuit ID: 80.DHZX.557233..SC
-
-
-Checked router STTNO1RRPL08R. Serial0/1/0:1 currently up/up; however, logs show repeated interface/line protocol flaps, including multiple occurrences on 09/23. Interface also has significant CRC/input errors, aborts, and interface resets. Opening WFA transport ticket for intermittent T1 circuit bouncing/errors.
 
 
 
