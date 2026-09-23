@@ -26,33 +26,22 @@ I mapped Peter’s wired MAC to Gi1/0/34. Port is clean — 1G/full, no CRC/inpu
 
 
 ----------
-Customer Log:
 
-NCR onsite technician dispatch has been initiated for further troubleshooting. Technician requested ASAP with maximum SLA of 4:50 PM PT today. Site contact and access information have been provided to the dispatch team.
+342868026 – USAHMBHMOCA01QFR1 / Half Moon Bay, Paul has now approved dispatch and specified Monday–Friday, 8 AM–3 PM PT
 
-Technician will verify the device onsite and coordinate with Network Operations for further troubleshooting.
+Special Arrangements / Notes
 
-For handover, I’d make it very clear what the next shift actually needs to do.
+LCON Paul Ziesing approved onsite technician dispatch. Preferred site access window is Monday–Friday, 8:00 AM–3:00 PM PT. Please coordinate with LCON/site upon arrival and contact AT&T Network Operations for troubleshooting assistance before making any changes or rebooting the device.
 
-Action Required:
+Scope of Work CE Will Perform
 
-Monitor NCR dispatch and coordinate with CE when onsite. Assist CE with console troubleshooting and revalidate ping/SSH access after onsite work. Update customer and migration team with findings/status.
+Locate Cisco router USAHMBHMOCA01QFR1. Verify device power, cabling, and LED/status indicators. Connect console to the router and contact AT&T Network Operations for remote troubleshooting. Management IP 10.10.0.35 is currently unreachable. Verify router/interface status and current IP addressing from console. Do not reboot or make configuration changes without NOC authorization.
 
-Notes:
 
-USCPHLCHOCA01QFR1 (10.10.0.2) is pingable, but SSH/Telnet connections are refused. OOB access attempted but usable console access could not be established. Site confirmed stable power. NCR engaged ASAP for onsite troubleshooting; max SLA 4:50 PM PT today. Site access approved 7:00 AM–6:00 PM PT. CE instructed to verify power/cabling/LEDs, connect console, and contact NOC before rebooting or making changes. Customer/site contact aware of dispatch.
 
-Called LCON Paul Ziesing at 352-895-5599 regarding onsite troubleshooting/dispatch coordination. No answer. Voicemail left requesting callback and provided ticket #342868026 and NOC callback number. Awaiting customer response.
 
-PGEQF – 3 Ticket Summary
 
-342866993 – USPGPCRODCA01QFR1 (Phillips 66)
-Device is pingable, but SSH/Telnet connections are refused. OOB/console access could not be successfully established. Contacted site Shift Superintendent; no known service impact reported and he will forward the issue to their IT team. Secondary LCON did not answer. Awaiting site IT/customer response for further troubleshooting/dispatch coordination.
 
-342867208 – USCPHLCHOCA01QFR1 (CPH/Chowchilla)
-Device is pingable, but SSH/Telnet connections are refused. OOB/console access could not be successfully established. Site confirmed stable power and approved onsite dispatch. NCR engaged ASAP for today; max SLA 4:50 PM PT. CE to verify power/cabling/device status and establish console access with NOC before any reboot/config changes.
 
-342868026 – USAHMBHMOCA01QFR1 (Half Moon Bay)
-Expected management IP 10.10.0.35 is unreachable. Cellular interface 10.10.0.38 is up/reachable; possible DHCP/addressing issue, but root cause is not confirmed. OOB access is not reliable enough to complete remote troubleshooting. Called LCON Paul Ziesing; no answer and voicemail left requesting callback to coordinate onsite dispatch. Awaiting customer response.
 
 
