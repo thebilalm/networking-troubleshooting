@@ -27,17 +27,20 @@ I mapped Peter’s wired MAC to Gi1/0/34. Port is clean — 1G/full, no CRC/inpu
 
 ----------
 
-Hi Peter,
+Hi Raheem,
 
-Thank you for following up. I spoke with Raheem this morning and was able to reproduce the issue while he was actively experiencing the slowness. His speed test showed approximately 2.65 Mbps download and 11.9 Mbps upload.
+Thank you again for working with us earlier. We’d like to collect two additional traceroute results from your wired computer for comparison.
 
-We also checked his wired switchport, the shared uplinks, and the site routers during the issue. We did not identify high utilization, physical errors, or active packet loss on the local network.
+Please open Command Prompt and run the following commands:
 
-I have now opened a transport/provider investigation for the Internet circuit. The carrier is currently analyzing the service, and we will continue to follow up and escalate as needed. I also added Raheem to the ticket updates.
+tracert 172.18.153.1
 
-We will keep you informed as additional findings become available.
+tracert 8.8.8.8
+
+Once both are complete, please send screenshots of the full results.
 
 Thanks,
+Bilal
 
 
 
