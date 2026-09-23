@@ -1,5 +1,5 @@
 
-Called Kali at 510-245-4500 to follow up on preferred site contact information for onsite technician dispatch. No answer; voicemail left requesting callback and provided NOC callback number and ticket #342866993. Awaiting customer response.
+Persistent site-wide degraded throughput remains active and unresolved. Multiple users continue to reproduce approximately 2–3 Mbps download with ~11–16 Mbps upload, significantly impacting Zoom and business operations. Local access ports, switch uplinks, and router checks during active impact remain clean with low utilization and no active physical errors, packet loss, or increasing discards. User traffic has been observed traversing the R01/MPLS path. Request expedited end-to-end throughput/RFC testing and provider investigation. Please do not close based solely on successful ping or circuit up/up status.
 
 
 
