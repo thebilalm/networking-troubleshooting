@@ -1,5 +1,20 @@
 
-Please confirm you have USAHMBHMOCA01QFR1 in front of you. Can you check the power/LED status and cabling, then connect your console cable to the Cisco router? Once you’re connected, let me know and I’ll work with you on the troubleshooting. Please don’t reboot or disconnect anything yet.
+customer log like:
+
+Onsite technician completed troubleshooting. Cisco router and Digi/OOB device were rebooted. After recovery, management access was successfully restored and the router is now reachable via SSH. Cellular0/1/0 is up/up with management IP 10.10.0.35. Device is currently accessible and operational. Technician released from site.
+
+And an internal log:
+
+NCR CE Robert Bilovocky onsite. CE verified router powered. Cisco router rebooted, followed by Digi/OOB reboot due to unusable/slow console access. After Digi recovery, console access to USAHMBHMOCA01QFR1 was restored. In-band SSH also successful. show ip int brief confirms Cellular0/1/0 = 10.10.0.35, up/up. Routing table shows 10.10.0.35 directly connected via Cellular0/1/0. Device restored and CE released.
+
+---------
+
+342867208 – USCPHLCHOCA01QFR1: NCR CE onsite, router was power-cycled, SSH access restored, and the device remained stable afterward. Ticket has been closed.
+
+342868026 – USAHMBHMOCA01QFR1: NCR CE onsite today. Cisco router and Digi/OOB were rebooted. Console and in-band SSH access are now restored. Cellular0/1/0 is up/up with IP 10.10.0.35. Device is operational and CE has been released.
+
+Only 342866993 remains outstanding.
+---------
 
 
 
