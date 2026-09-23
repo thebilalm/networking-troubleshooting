@@ -26,12 +26,15 @@ I mapped Peter’s wired MAC to Gi1/0/34. Port is clean — 1G/full, no CRC/inpu
 
 
 ----------
-Spoke with Peter Gjerness regarding continued site-wide Internet slowness. Peter confirmed issue affects multiple users on both wired and Wi-Fi connections; Zoom is most impacted, though Outlook/Teams/InfoCentral and general Internet access are also reported slow. Peter advised all users are affected to some degree, with Raheem and Scott experiencing more severe impact.
+Spoke with Raheem Soledhin regarding ongoing site-wide Internet slowness. During live troubleshooting, customer reproduced approximately 2.65 Mbps download / 11.9 Mbps upload while wired. Multiple users are reporting similar degradation, including significant Zoom performance issues.
 
-Reviewed site network during active issue. Checked R01 AVPN router, MISR01 Internet router, and switch uplinks. Interfaces are up/up with low utilization and no CRC/input/output errors or other physical-layer faults observed. R01 MPLS-facing interface showed no current saturation; MISR01 WAN and LAN-facing interfaces also showed low utilization and clean counters. Router CPU utilization normal/low. Large-packet testing to 10.0.0.158 completed successfully with 0% loss. MIS_INTERNET next-hop 12.119.220.45 reachable successfully from 12.185.61.225. Circuit inventory indicates 50 Mbps service.
+Verified affected user IP 172.18.153.61 and mapped wired MAC 4c56.df1d.a5f1 to SWTGOD52_1 Gi1/0/41. Access port is up/up at 1 Gbps/full duplex with no CRC, input/output errors, or discards. Checked shared switch uplinks and site routers during active impact; utilization remained low and no active physical-layer errors or increasing packet-drop counters were observed.
 
-Advised Peter that additional diagnostics are needed from a more heavily affected user while the issue is actively occurring. Peter will have Raheem call in so live workstation testing and network utilization can be compared during the reported slowness/Zoom issue. Awaiting Raheem callback for further troubleshooting.
+Advised customer that local LAN checks do not currently identify the source of the degradation and that the issue will be escalated for circuit/service-provider investigation. Customer requested urgent handling due to business impact and requested inclusion on ticket email updates. Added Raheem Soledhin as contact for ongoing updates. Transport/provider ticket to be opened and escalated accordingly.
 
+For the transport ticket, use slowness/degraded throughput and request an end-to-end test, preferably throughput/RFC testing if available:
+
+Persistent site-wide degraded Internet performance affecting wired and wireless users for approximately four weeks. Multiple users consistently reproduce ~2–3 Mbps download with ~11–16 Mbps upload. Local LAN and router checks during active impact show low utilization, clean physical/interface counters, and no active packet loss or increasing discards. Request end-to-end provider/transport investigation for degraded throughput, including throughput/RFC testing and dispatch if carrier-side testing indicates onsite work is required.
 
 Hi Peter,
 
