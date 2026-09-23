@@ -1,4 +1,13 @@
 
+Please confirm you have USAHMBHMOCA01QFR1 in front of you. Can you check the power/LED status and cabling, then connect your console cable to the Cisco router? Once you’re connected, let me know and I’ll work with you on the troubleshooting. Please don’t reboot or disconnect anything yet.
+
+
+
+
+
+
+
+
 Escalation note
 
 Persistent site-wide degraded throughput remains unresolved. Multiple users continue to reproduce ~2-3 Mbps download with ~11-16 Mbps upload, significantly impacting Zoom and business operations. Local access ports, switch uplinks, and router checks remain clean with low utilization and no active errors, loss, or increasing discards. User traffic traverses the R01/MPLS path. Request expedited throughput/RFC testing and provider investigation.
