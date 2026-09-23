@@ -26,12 +26,22 @@ I mapped Peter’s wired MAC to Gi1/0/34. Port is clean — 1G/full, no CRC/inpu
 
 
 ----------
-Validated device HOSA9410_F4. Vlan10 (10.157.195.1) is currently up/up and passing traffic. Interface counters show no CRC/input/output errors. Historical logs indicate a temporary interface/SVI flap which has auto-restored. No current impact observed. Closing ticket as service restored.
+Spoke with Peter Gjerness regarding continued site-wide Internet slowness. Peter confirmed issue affects multiple users on both wired and Wi-Fi connections; Zoom is most impacted, though Outlook/Teams/InfoCentral and general Internet access are also reported slow. Peter advised all users are affected to some degree, with Raheem and Scott experiencing more severe impact.
 
-And for customer log:
+Reviewed site network during active issue. Checked R01 AVPN router, MISR01 Internet router, and switch uplinks. Interfaces are up/up with low utilization and no CRC/input/output errors or other physical-layer faults observed. R01 MPLS-facing interface showed no current saturation; MISR01 WAN and LAN-facing interfaces also showed low utilization and clean counters. Router CPU utilization normal/low. Large-packet testing to 10.0.0.158 completed successfully with 0% loss. MIS_INTERNET next-hop 12.119.220.45 reachable successfully from 12.185.61.225. Circuit inventory indicates 50 Mbps service.
 
-The reported interface has restored and is currently operating normally. Vlan10 is up/up and no current errors or service impact are observed. Earlier alarms indicate a temporary interface flap which auto-restored. Proceeding with ticket closure.
+Advised Peter that additional diagnostics are needed from a more heavily affected user while the issue is actively occurring. Peter will have Raheem call in so live workstation testing and network utilization can be compared during the reported slowness/Zoom issue. Awaiting Raheem callback for further troubleshooting.
 
+
+Hi Peter,
+
+Thank you for the follow-up and for speaking with me today. We reviewed the site network again and checked the routers and switch while the issue is ongoing. At this time, the network interfaces are up and we are not seeing high utilization, packet loss, or physical errors that would explain the reported slowness.
+
+As discussed, the next step is to collect live diagnostics from one of the users experiencing the more severe issue, preferably while the slowness or Zoom problem is actively occurring. You mentioned Raheem will call us so we can perform those checks and compare the results with the network utilization in real time.
+
+We will continue troubleshooting once we receive that live test data.
+
+Thanks,
 
 
 
