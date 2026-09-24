@@ -2,13 +2,29 @@
 
 
 ---------
-Hello Team,
-Please reschedule the CE dispatch for today, 09/24/2026, at 10:00 PM ET, during the regular maintenance window. Customer has approved DC access for today.
+Customer impact remains active and unresolved. Multiple users continue to experience approximately 2–3 Mbps download with ~11–16 Mbps upload, significantly impacting Zoom and normal business operations. Circuit reachability/up-up testing does not validate throughput. Request reopen and further investigation including end-to-end throughput/RFC testing. Please do not close based solely on successful ping or circuit-clear status.
 
-The customer requires the CE name and ETA before 4:00 PM ET today in order to complete DC access arrangements.
+User traffic has been observed traversing the R01/MPLS path via 10.20.153.209 toward 10.0.0.158.
 
-Please provide the assigned technician details as soon as possible. Thank you.
-And I’d reply to Ron’s chat briefly:
+internal:
+Both transport BMPs were cleared after circuit/reachability testing with no trouble found. Customer impact has not been confirmed resolved and original degraded-throughput condition remains under investigation. Closure contested on both BMPs with request for throughput/RFC testing rather than reachability-only validation.
+
+
+Subject: Follow-Up – Internet Slowness / AOTS 342835651
+
+Hi Peter and Raheem,
+
+Good morning. I’m following up on the ongoing Internet slowness at the site.
+
+The provider tested both circuits yesterday and reported them clear; however, their testing appears to have confirmed circuit availability/reachability rather than the degraded throughput you have been experiencing.
+
+Before we contest the closures and continue escalation, could you please run a fresh Internet speed test this morning from an affected computer and send us the results or a screenshot showing the download and upload speeds?
+
+If the issue is still affecting Zoom or other applications today, please include that as well.
+
+Thank you,
+Bilal
+
 
 Yesterday’s dispatch could not proceed due to DC access approval. NCR is being rescheduled for tonight at the regular 10 PM ET maintenance window. I’ll provide the updated CE details once assigned.
 
