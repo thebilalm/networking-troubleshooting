@@ -2,7 +2,22 @@
 
 
 ---------
-Severe site-wide throughput degradation remains unresolved after BMP investigation. Multiple users consistently reproduce ~2-3 Mbps download / ~11-16 Mbps upload with major Zoom/business impact. Local LAN/router checks are clean with low utilization and no active errors/loss. BMPs were cleared based on circuit/reachability testing only. Closure was contested; status has not changed. Request urgent throughput/RFC investigation and provider action.
+For the ticket log, I’d use:
+
+Fresh customer testing from Peter Gjerness on 09/24 continues to show severe degradation at approximately 2.10 Mbps download / 0.08 Mbps upload, confirming impact remains active. ECAT/ENOC escalations for both transport BMPs were approved. R01/MPLS BMP 692301114 is now assigned to a tester for further investigation. Both prior BMP closures were contested. Continuing provider follow-up and awaiting tester findings / throughput validation.
+
+For Peter’s email, send:
+
+Hi Peter,
+
+Thank you for sending the updated speed test. The result confirms the issue is still ongoing, with approximately 2.10 Mbps download and 0.08 Mbps upload.
+
+We have contested the previous provider closures and submitted additional escalations. Those escalations have now been approved, and the R01/MPLS circuit ticket has been assigned to a tester for further investigation.
+
+We are continuing to follow up and will provide another update as soon as we receive the tester’s findings.
+
+Thanks,
+Bilal
 
 
 
