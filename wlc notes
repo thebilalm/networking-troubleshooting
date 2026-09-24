@@ -25,13 +25,7 @@ TAC confirmed one of the ADC APs is still joined to the CNJ secondary even thoug
 
 
 
-Hi Elias,
-
-Thanks for following up. The WLC has been replaced and is currently accessible. We are continuing post-replacement validation and working through the remaining uplink/configuration items.
-
-We are still actively working the issue and will provide another update once the remaining validation is completed. Please keep the SR open for now.
-
-Thanks
+NCR onsite troubleshooting completed for USADC5520WLC02 secondary uplink. WLC Port 1 remains UP/operational; Port 2 remains DOWN. Fiber path between WLC Port 2 and SWTADC_02 was validated via loopback testing and confirmed good. Switch-side Gi7/15 remained down after SFP reseat/swap and port bounce. Alternate Gi7/9 was configured/tested with multiple SFPs but link did not remain up. Module 7 diagnostics PASS. All temporary testing/configuration was removed and original physical connections/configuration restored. NCR CE released from site. Secondary uplink remains unresolved; primary uplink remains operational. Pending LCM/engineering direction for switch-side remediation.
 
 
 
