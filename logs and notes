@@ -4,7 +4,7 @@
 ---------
 Hi Peter and Rahim,
 
-Thanks for the additional testing. The Zscaler test is showing approximately 41 Mbps down / 41 Mbps up, which is much closer to the available circuit bandwidth than the earlier Internet speed tests.
+Thanks for the additional testing. The Zscaler test is showing approximately 41 Mbps down / 41 Mbps up, which is much closer to the expected circuit throughput than the earlier Internet speed tests.
 
 Can you please confirm whether you are still experiencing the same slowness with Zoom and other business applications at this time? We’re continuing to compare the different traffic paths and provider test results.
 
