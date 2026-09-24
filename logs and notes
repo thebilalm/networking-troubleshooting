@@ -6,7 +6,23 @@
 
 
 ---------
-Verified router reachable. BGP neighbor 12.204.200.2 is currently established and service has restored. Logs show earlier interface/BGP flaps with subsequent recovery. No current outage observed. Closing ticket as restored.
+Hi Lori,
+
+Thank you for the update. Could you please confirm whether you see any lights/LEDs illuminated on the router?
+
+In the meantime, we are arranging for a technician to be dispatched onsite as soon as possible. We will provide an update once the dispatch is assigned.
+
+Thank you.
+
+For the NCR dispatch:
+
+Special arrangements / notes
+
+Please dispatch ASAP. Site has building power, but router remains down/no Internet access after site power was restored. Please contact LCON Lori Waters prior to arrival/site access.
+
+Scope of work CE will perform
+
+CE to inspect the router onsite, verify power and power connections, check router LEDs/status, cabling and physical connections, and reseat connections as needed. Troubleshoot why router remains down after site power restoration. Contact Network Support from onsite for further troubleshooting and follow instructions. Do not replace equipment unless authorized by Network Support.
 
 
 ---------
