@@ -2,22 +2,18 @@
 
 
 ---------
-For the ticket log, I’d use:
+Problem Description:
 
-Fresh customer testing from Peter Gjerness on 09/24 continues to show severe degradation at approximately 2.10 Mbps download / 0.08 Mbps upload, confirming impact remains active. ECAT/ENOC escalations for both transport BMPs were approved. R01/MPLS BMP 692301114 is now assigned to a tester for further investigation. Both prior BMP closures were contested. Continuing provider follow-up and awaiting tester findings / throughput validation.
+WAN circuit/interface Te0/1/0/3 experienced an extended service interruption and has now restored.
 
-For Peter’s email, send:
+Problem Details:
 
-Hi Peter,
+CPE uptime is approximately 13 weeks with no reboot. Te0/1/0/3 and associated BFD neighbor 172.31.1.65 went down on 09/19 and restored on 09/24. Interface is currently up/up and BFD has re-established. No CRC errors currently observed. Please investigate transport/access circuit for the cause of the outage/flap and provide findings/RFO.
 
-Thank you for sending the updated speed test. The result confirms the issue is still ongoing, with approximately 2.10 Mbps download and 0.08 Mbps upload.
+For your ticket log, I’d put:
 
-We have contested the previous provider closures and submitted additional escalations. Those escalations have now been approved, and the R01/MPLS circuit ticket has been assigned to a tester for further investigation.
+Investigated Te0/1/0/3. CPE uptime ~13 weeks; no device reboot observed. Logs show interface and BFD neighbor 172.31.1.65 went down 09/19 and restored 09/24. Interface currently up/up and BFD recovered. Opening transport ticket for investigation/RFO prior to closure.
 
-We are continuing to follow up and will provide another update as soon as we receive the tester’s findings.
-
-Thanks,
-Bilal
 
 
 
