@@ -2,7 +2,13 @@
 
 
 ---------
-Peter completed Zscaler Cloud Performance Test. Results showed approximately 41.12 Mbps download / 41.60 Mbps upload, HTTP ping 42 ms, and jitter 2 ms. This differs significantly from Peter’s Google Internet speed test earlier today of 2.10 Mbps download / 0.08 Mbps upload. Zscaler test indicates substantially better throughput on the measured Zscaler Service Edge-to-Client Egress path. Customer-side management is included on the email thread. Continuing transport/ECAT investigation and comparison of traffic paths.
+Hi Peter and Rahim,
+
+Thanks for the additional testing. The Zscaler test is showing approximately 41 Mbps down / 41 Mbps up, which is much closer to the available circuit bandwidth than the earlier Internet speed tests.
+
+Can you please confirm whether you are still experiencing the same slowness with Zoom and other business applications at this time? We’re continuing to compare the different traffic paths and provider test results.
+
+Thanks,
 
 
 
