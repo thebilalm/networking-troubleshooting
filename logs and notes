@@ -1,27 +1,8 @@
 
 
-
+Troubleshooting confirmed backup Routing Engine 1 failure on USSTOJSPWI01H04. RE0 remains Master and operational. RE1 is detected in chassis inventory and environment as Present, but is not in Backup state. Chassis/System alarm shows “Loss of communication with Backup RE.” Attempt to reboot other routing engine failed with “Could not connect to re1: No route to host.” Chassis environment/fans otherwise normal. Router remains in service on RE0 but redundancy is lost. Hardware/onsite investigation required for RE1.
 ---------
-Customer call completed. Confirmed tonight’s NCR dispatch for CNJ at 10:00 PM ET. New CE assigned: Jason Molina, UID jx8744. Rex advised CNJ data center access requires prior coordination with security and onsite contacts. Rex will coordinate security/access for tonight’s visit. Tech details and ETA to be sent by email and included in shift handover.
 
-Updated CE Dispatch Details – CNJ – 09/24 at 10:00 PM ET
-
-Body:
-
-Hello Team,
-
-Please see the updated NCR dispatch details for tonight:
-
-CE Name: Jason Molina
-UID: jx8744
-Date: 09/24/2026
-ETA: 10:00 PM ET
-
-Rex is coordinating the required CNJ security/DC access arrangements.
-
-Please let us know if anything further is needed before the dispatch.
-
-Thank you.
 
 For handover:
 
