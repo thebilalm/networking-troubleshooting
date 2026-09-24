@@ -2,18 +2,7 @@
 
 
 ---------
-Problem Description:
-
-WAN circuit/interface Te0/1/0/3 experienced an extended service interruption and has now restored.
-
-Problem Details:
-
-CPE uptime is approximately 13 weeks with no reboot. Te0/1/0/3 and associated BFD neighbor 172.31.1.65 went down on 09/19 and restored on 09/24. Interface is currently up/up and BFD has re-established. No CRC errors currently observed. Please investigate transport/access circuit for the cause of the outage/flap and provide findings/RFO.
-
-For your ticket log, I’d put:
-
-Investigated Te0/1/0/3. CPE uptime ~13 weeks; no device reboot observed. Logs show interface and BFD neighbor 172.31.1.65 went down 09/19 and restored 09/24. Interface currently up/up and BFD recovered. Opening transport ticket for investigation/RFO prior to closure.
-
+Reviewed transport circuit T1.KGGS.820008..SC. Circuit was associated with a known AT&T major incident caused by a damaged cable. Transport reported service restored 09/22 at 21:27 CDT. CPE remains up with Te0/1/0/3 up/up and BFD neighbor restored. No current interface errors observed. Issue attributed to transport outage; service restored. Closing ticket.
 
 
 
