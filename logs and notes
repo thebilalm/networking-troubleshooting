@@ -2,7 +2,17 @@
 
 
 ---------
-Reviewed transport circuit T1.KGGS.820008..SC. Circuit was associated with a known AT&T major incident caused by a damaged cable. Transport reported service restored 09/22 at 21:27 CDT. CPE remains up with Te0/1/0/3 up/up and BFD neighbor restored. No current interface errors observed. Issue attributed to transport outage; service restored. Closing ticket.
+Problem Type: Bouncing
+
+Problem Description:
+Router unreachable; repeated BGP adjacency resets/flaps observed around outage.
+
+Problem Details:
+Ticket 342927307. Router is currently unreachable. Building power has been verified, but physical power to router has not yet been confirmed. Digi OOB device is reachable. Digi logs show repeated BGP adjacency changes/resets involving neighbors 172.23.163.142 and 172.23.204.30, with sessions transitioning Down/Up. Request transport test circuit and verify for outage/flapping/errors. If circuit tests clean, CPE/NCR dispatch will be pursued.
+
+before/after opening WFA:
+
+Digi OOB reachable. Reviewed Digi logs and observed repeated BGP adjacency resets/flaps. Router remains unreachable. Customer verified building power and approved dispatch if required; physical power to router not yet confirmed. Opening transport ticket to validate circuit prior to NCR/CPE dispatch.
 
 
 
