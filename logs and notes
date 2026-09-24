@@ -2,42 +2,9 @@
 
 
 ---------
- Hi Michael,
+ 
+  Transport investigations remain active on both paths. R01/MPLS BMP was returned to active status following ECAT escalation and further analysis is pending. MISR01 provider investigation contacted Lumen; no current circuit errors/drops were reported, with last observed drop noted on 9/9. AT&T tester was unable to complete further circuit testing due to an issue accessing the test port and opened INC4840920 for repair. Awaiting completion of provider testing on both paths. Customer impact remains active.
 
-Thank you for the update. We understand the urgency and the impact this is having on the business. Both carrier paths are currently under further investigation following escalation.
-
-To help us compare your connection with the other affected users, could you please run the following from your computer while the slowness is occurring?
-
-1. Click the Windows search bar, type CMD, and open Command Prompt.
-2. Run:
-    ipconfig /all
-
-Under the Ethernet adapter Ethernet section, please send us the following:
-
-* IPv4 Address
-* Physical Address
-* Default Gateway
-
-A screenshot of that section is fine.
-
-3. Next, run:
-    ping <your Default Gateway>
-4. Then run:
-    tracert <your Default Gateway>
-5. Then run:
-    tracert 8.8.8.8
-
-6. Finally, please run both of the following while the slowness is occurring:
-
-* A regular Internet speed test and send the download, upload, and latency results.
-* The Zscaler speed test and send the download, upload, HTTP ping, and jitter results.
-
-Please send screenshots of the complete results.
-
-This will allow us to identify your exact wired connection and compare your local network path and Internet performance with the other affected users.
-
-Thanks,
-Bilal
 
 ---------
 Transport ticket 692400558 tested the circuit clear and advised verification of CPE. NCR dispatch CS0450424 has been opened for onsite troubleshooting of the unreachable router. CE Michael Madelo (UID MM0919) assigned with ETA 10:53 LT. Customer previously approved dispatch.
