@@ -2,27 +2,44 @@
 
 
 ---------
-Reviewed Tampa GO slowness issue. Transport/ECAT/WFA troubleshooting completed, including intrusive/hard-loop testing. Carrier testing found no transport fault and circuit tested clean. No network-side issue or abnormal latency currently observed from our end. Per NYL team direction, closing ticket. Customer may open a new ticket if the issue recurs for further investigation.
+Customer call completed. Confirmed tonight’s NCR dispatch for CNJ at 10:00 PM ET. New CE assigned: Jason Molina, UID jx8744. Rex advised CNJ data center access requires prior coordination with security and onsite contacts. Rex will coordinate security/access for tonight’s visit. Tech details and ETA to be sent by email and included in shift handover.
 
+Updated CE Dispatch Details – CNJ – 09/24 at 10:00 PM ET
 
----------
-Hi Lori,
+Body:
 
-Thank you for the update. Could you please confirm whether you see any lights/LEDs illuminated on the router?
+Hello Team,
 
-In the meantime, we are arranging for a technician to be dispatched onsite as soon as possible. We will provide an update once the dispatch is assigned.
+Please see the updated NCR dispatch details for tonight:
+
+CE Name: Jason Molina
+UID: jx8744
+Date: 09/24/2026
+ETA: 10:00 PM ET
+
+Rex is coordinating the required CNJ security/DC access arrangements.
+
+Please let us know if anything further is needed before the dispatch.
 
 Thank you.
 
-For the NCR dispatch:
+For handover:
 
-Special arrangements / notes
+Action Required:
 
-Please dispatch ASAP. Site has building power, but router remains down/no Internet access after site power was restored. Please contact LCON Lori Waters prior to arrival/site access.
+Monitor NCR CS0449156 dispatch tonight at 10:00 PM ET. Coordinate with Rex/DC security and CE as needed. Confirm technician gains access and update ticket with onsite findings.
 
-Scope of work CE will perform
+Notes:
 
-CE to inspect the router onsite, verify power and power connections, check router LEDs/status, cabling and physical connections, and reseat connections as needed. Troubleshoot why router remains down after site power restoration. Contact Network Support from onsite for further troubleshooting and follow instructions. Do not replace equipment unless authorized by Network Support.
+Previous 09/23 dispatch did not occur due to DC access not being completed. New CE assigned for 09/24: Jason Molina, UID jx8744, ETA 10:00 PM ET. Rex confirmed CNJ requires prior security registration and will coordinate access. Tech details being emailed to customer/DC team. For future CNJ/data center dispatches, contact Rex directly if access confirmation is still pending as dispatch time approaches.
+
+
+
+
+
+---------
+
+
 
 
 ---------
