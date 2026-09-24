@@ -2,17 +2,11 @@
 
 
 ---------
-Problem Type: Bouncing
+Special arrangements / notes:
+Router is unreachable. Commercial/building power has been verified, but physical power to the router has not been confirmed. Digi OOB device is reachable. Transport ticket G92400558 tested the circuit clear and advised verification of customer premise equipment. Customer has approved onsite dispatch. Please contact LCON prior to arrival and coordinate site access.
 
-Problem Description:
-Router unreachable; repeated BGP adjacency resets/flaps observed around outage.
-
-Problem Details:
-Ticket 342927307. Router is currently unreachable. Building power has been verified, but physical power to router has not yet been confirmed. Digi OOB device is reachable. Digi logs show repeated BGP adjacency changes/resets involving neighbors 172.23.163.142 and 172.23.204.30, with sessions transitioning Down/Up. Request transport test circuit and verify for outage/flapping/errors. If circuit tests clean, CPE/NCR dispatch will be pursued.
-
-before/after opening WFA:
-
-Digi OOB reachable. Reviewed Digi logs and observed repeated BGP adjacency resets/flaps. Router remains unreachable. Customer verified building power and approved dispatch if required; physical power to router not yet confirmed. Opening transport ticket to validate circuit prior to NCR/CPE dispatch.
+Scope of work CE will perform:
+Dispatch CE onsite to troubleshoot unreachable router/CPE. Verify physical power and LEDs on router, power connections, cabling, and local equipment. Reseat power/network cables as needed and power cycle router if authorized. Connect console and assist remote Tier 3 engineer with troubleshooting. Replace failed CPE/components only if directed/authorized. Remain onsite until remote engineer confirms service status and releases technician.
 
 
 
