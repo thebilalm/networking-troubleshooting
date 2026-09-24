@@ -2,7 +2,7 @@
 
 
 ---------
-Reviewed WFA FI066047. TDM escalation was rejected; however, WFA now shows field technician dispatched on 9/24 with ETA 08:28 AM CDT. Dispatch is currently in progress. Monitoring WFA for field tech findings and restoration update.
+Peter completed Zscaler Cloud Performance Test. Results showed approximately 41.12 Mbps download / 41.60 Mbps upload, HTTP ping 42 ms, and jitter 2 ms. This differs significantly from Peter’s Google Internet speed test earlier today of 2.10 Mbps download / 0.08 Mbps upload. Zscaler test indicates substantially better throughput on the measured Zscaler Service Edge-to-Client Egress path. Customer-side management is included on the email thread. Continuing transport/ECAT investigation and comparison of traffic paths.
 
 
 
