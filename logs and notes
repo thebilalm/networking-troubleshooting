@@ -1,6 +1,7 @@
 
+Before you left, what troubleshooting was completed on the router? Was the router powered on and did it have link/status LEDs? Were you able to console into it or verify the WAN handoff?
 
-Troubleshooting confirmed backup Routing Engine 1 failure on USSTOJSPWI01H04. RE0 remains Master and operational. RE1 is detected in chassis inventory and environment as Present, but is not in Backup state. Chassis/System alarm shows “Loss of communication with Backup RE.” Attempt to reboot other routing engine failed with “Could not connect to re1: No route to host.” Chassis environment/fans otherwise normal. Router remains in service on RE0 but redundancy is lost. Hardware/onsite investigation required for RE1.
+
 ---------
 
 
