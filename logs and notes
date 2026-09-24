@@ -2,7 +2,7 @@
 
 
 ---------
- Customer confirmed router/equipment has lights/LEDs on. NCR CS0450473 remains open for ASAP onsite dispatch.
+Reviewed Tampa GO slowness issue. Transport/ECAT/WFA troubleshooting completed, including intrusive/hard-loop testing. Carrier testing found no transport fault and circuit tested clean. No network-side issue or abnormal latency currently observed from our end. Per NYL team direction, closing ticket. Customer may open a new ticket if the issue recurs for further investigation.
 
 
 ---------
