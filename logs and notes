@@ -2,21 +2,7 @@
 
 
 ---------
-Hi Peter and Rahim,
-
-Thank you both for the updates. We’ve documented that the issue remains active, with Rahim reporting severe impact and Peter continuing to experience general slowness with business applications.
-
-Both carrier paths are currently under further investigation following escalation. The MIS circuit is being reviewed with the access provider, and the R01/MPLS case has been accepted for additional ECAT testing.
-
-We’re continuing to follow up with both provider teams and will provide another update as soon as we receive additional findings.
-
-Thanks,
-Bilal
-
-For the ticket log:
-
-Rahim confirmed customer impact remains active and has worsened; user advised he is no longer working from the office due to ongoing network degradation. MIS carrier investigation remains active with access provider review in progress; latest provider check found no current errors/drops and noted last observed drop on 9/9, with further checking ongoing. R01/MPLS ECAT escalation was approved and queued for tester review. Severe business impact remains; continuing follow-up on both carrier paths.
-
+Rahim was mapped to Gi1/0/41 during live troubleshooting on 9/23 using MAC 4c56.df1d.a5f1. He’s no longer working from the office, so his workstation MAC has aged out. Port 41 currently only shows c418.fcc2.9048, likely the phone/desk device on VLANs 10 and 40.
 
 ---------
 Transport ticket 692400558 tested the circuit clear and advised verification of CPE. NCR dispatch CS0450424 has been opened for onsite troubleshooting of the unreachable router. CE Michael Madelo (UID MM0919) assigned with ETA 10:53 LT. Customer previously approved dispatch.
