@@ -2,13 +2,21 @@
 
 
 ---------
-Hi Peter and Rahim,
+Hi Rahim,
 
-Thanks for the additional testing. The Zscaler test is showing approximately 41 Mbps down / 41 Mbps up, which is much closer to the expected circuit throughput than the earlier Internet speed tests.
+Thank you for confirming. I’m sorry to hear the issue has worsened to the point that you’re no longer able to work from the office.
 
-Can you please confirm whether you are still experiencing the same slowness with Zoom and other business applications at this time? We’re continuing to compare the different traffic paths and provider test results.
+We’ve documented that the customer impact remains active and severe. Both carrier paths are now under further investigation following escalation. The MIS circuit is being reviewed with the access provider, and the R01/MPLS case has been accepted for additional ECAT testing.
+
+We’re continuing to follow up with both provider teams and will provide another update as soon as we receive additional findings.
 
 Thanks,
+Bilal
+
+For the ticket log:
+
+Rahim confirmed customer impact remains active and has worsened; user advised he is no longer working from the office due to ongoing network degradation. MIS carrier investigation remains active with access provider review in progress; latest provider check found no current errors/drops and noted last observed drop on 9/9, with further checking ongoing. R01/MPLS ECAT escalation was approved and queued for tester review. Severe business impact remains; continuing follow-up on both carrier paths.
+
 
 ---------
 Called agent Brian D. Esway to follow up on AgentLife connectivity issue and confirm current status/availability for testing. No answer; voicemail left requesting callback. Awaiting customer response.
