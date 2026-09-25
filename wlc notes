@@ -1,11 +1,15 @@
 
-Replacement WLC installed and configuration restore completed. Controller is reachable at 172.28.182.214 and responds to ping. Unable to authenticate via SSH using available management/AP credentials. CE no longer onsite and no OOB modem available at site. Wireless team engaged to confirm current credentials and determine next steps for post-install validation.
+Hi Elias,
 
-ticket 342693853 for the ADC 02 WLC replacement. The replacement WLC is up and reachable, but we’re unable to authenticate via SSH with GTAC/RSA or the local credentials. Ron mentioned you recommended checking the management, SNMP and TACACS configs. We don’t have console/OOB access currently. Can you advise what we should check or if we need console access to proceed?
+Thank you for following up. The replacement WLC is currently accessible and operational. The primary uplink is up and working.
 
-also compared it with working WLC03. It has the same TACACS servers, 135.89.153.84 and .100, and both are reachable. WLC02 was rebuilt using the encrypted TACACS keys from the old controller. Could those shared keys need to be re-entered on the replacement instead of using the encrypted values?
+We completed an onsite dispatch to troubleshoot the secondary uplink, which remains down. The fiber path was validated successfully, and testing isolated the remaining issue to the switch side rather than the replacement WLC. We are coordinating internally on the next steps for the switch-side issue.
 
-I compared WLC02 with working WLC03. show tacacs sum on WLC02 is completely blank, while WLC03 has both TACACS servers configured for authentication, authorization, and accounting. show auth-list matches on both. Looks like the TACACS config did not restore on WLC02. I can access WLC02 with the local admin account now.
+At this time, no further action is required from Cisco TAC on the WLC. You may proceed with closing the SR. Thank you for your assistance.
+
+Thank you,
+
+
 
 
 The replacement WLC is up and reachable. We are completing the remaining TACACS configuration and post-replacement validation. Please keep the SR open for now. I’ll confirm once validation is complete.
