@@ -56,6 +56,31 @@ Critical business impact remains ongoing. Multiple wired and wireless users are 
 
 ----------
 
+Resolution Set Name -------------------------------------- Resolution Description
+
+WAN 2015 AT&T Brief Circuit Hit or Came Clear-----------ATT ckt issue, brief hit or diag/test was/was not run or disp occurred,ckt CC, no repair,no RFO
+WAN 2015 AT&T Caused/Disconnect in Error----------------AT&T Caused Service Disconnect in Error (DIE)
+WAN 2015 AT&T HW Issue /Replace/Repair------------------HW issue on ATT mgd WAN/LAN CPE. Applies to brief HW bounce,no repair was made,NOT a ckt outage
+WAN 2015 AT&T Major Circuit Outage----------------------Related to a CNOC/AIM/WAIM major network outage impacting multiple custs and or a wide geo region
+WAN 2015 AT&T Managed Application-----------------------AT&T Managed Application issues, e.g. email, DNS, server, PSTU
+WAN 2015 AT&T Routing/Configuration Issue---------------Any in-scope outage caused by Routing or Configuration Issues ( inc CPE, AT&T, LEC)
+WAN 2015 AT&T Standard Circuit Outage-------------------Outage on a managed ATT ckt where clear RFO is avail,NOT impacted by CNOC/AIM/WAIM maj incident
+WAN 2015 AT&T Tools-------------------------------------DMS, SMARTS, InfoVista, OOB or ISDN testing, etc. Polling issues that generate non-svc impacting tkt
+WAN 2015 Customer Issue---------------------------------Caused by virus,CPE, IW cust app, 3rd party ckt, Maint Vendor contracted to cust, not mgd by ATT
+WAN 2015 Customer Over Utilization----------------------High traffic causing over utilization of customer premise equipment or WAN circuit
+WAN 2015 Customer Power Issue---------------------------Power outage occurred, commercial power or cust infrastructure, affecting site or prem equip.
+WAN 2015 Duplicate Ticket-------------------------------DupTkt created by Cust HD or automation same event & loc. NOT applied to Major Incid/multi-site
+WAN 2015 Failed Change/Maintenance----------------------Chg implemented incorrectly, impact outside of the sch window by ATT or LEC/PTT, impact to cust
+WAN 2015 Force Majeure----------------------------------Weather-widespread damage and/or delays in repair. A Force Majeure outage/Use ONLY if agreed wth mgr
+WAN 2015 Informational or Provided Info-----------------Customer Call requesting information/non-service impacting issue (turn on IP accounting, RFO)
+WAN 2015 LEC/PTT Brief Hit or Came Clear----------------LEC/PTT issue, brief hit, diag/test was/was not run or disp occurred,CCWT, no oth repair,no RFO
+WAN 2015 LEC/PTT Major Outage---------------------------Related to a LEC/PTT core network outage impacting multiple custs and or a wide geographical region
+WAN 2015 LEC/PTT Standard Outage------------------------Ckt outage related to LEC/PTT where clear RFO is avail/NOT impacted by CNOC/AIM/WAIM major incident
+WAN 2015 MACD - Move/Add/Change/Delete------------------Any tkt cut as a resulf of a sched MACD of Site or AT&T Equip, or by site no longer in prod.
+WAN 2015 Misdirected Ticket-----------------------------Tkt sent/open by Cust HD or internal SVC Line that is OOS redirect to correct resolver, missing MDS
+WAN 2015 Scheduled Maintenance--------------------------A ticket raised by Scheduled Maintenance by AT&T or LEC/PTT
+WAN 2015 Software Caused Outage-------------------------SW problem on AT&T managed WAN or LAN CPE - reloads or crashes due to software
+
 
 
 
