@@ -1,5 +1,15 @@
 
-ECAT follow-up escalations submitted for both transport investigations due to continued severe customer impact and lack of substantive provider updates since 9/24. MIS circuit IZEC.693445..ATI remains pending completion of testing after provider test-port issue/INC484092. R01/MPLS circuit BBEC.659996.ATI remains active for further analysis with no new findings documented. Requested expedited status, throughput/RFC validation, and provider action on both paths.
+For Engaged Problem Abstract, put:
+
+Juniper backup Routing Engine 1 down/unreachable on USSTOJSPWI01H04; RE0 remains Master and operational.
+
+For the Engaged Internal Log:
+
+Requesting GT3 review of Juniper routing engine issue on USSTOJSPWI01H04. RE0 is Master and operational. RE1 is physically detected as Present but is not in Backup state. Both chassis and system alarms show “Loss of communication with Backup RE.” Attempt to reboot the other routing engine failed with “Could not connect to re1: No route to host.” Chassis hardware detects both routing engines and environment/fans are otherwise normal. Please review and advise on further troubleshooting or whether onsite/NCR dispatch is required.
+
+Engaged GT3 (US-NTCM-TCH) for further review of backup Routing Engine 1 issue. RE0 remains Master and operational; RE1 is present but not communicating/in Backup state. Awaiting GT3 recommendations before proceeding with onsite/NCR dispatch.
+
+
 ---------
 
 
