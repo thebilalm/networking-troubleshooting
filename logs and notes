@@ -1,14 +1,5 @@
 
-For Engaged Problem Abstract, put:
-
-Juniper backup Routing Engine 1 down/unreachable on USSTOJSPWI01H04; RE0 remains Master and operational.
-
-For the Engaged Internal Log:
-
-Requesting GT3 review of Juniper routing engine issue on USSTOJSPWI01H04. RE0 is Master and operational. RE1 is physically detected as Present but is not in Backup state. Both chassis and system alarms show “Loss of communication with Backup RE.” Attempt to reboot the other routing engine failed with “Could not connect to re1: No route to host.” Chassis hardware detects both routing engines and environment/fans are otherwise normal. Please review and advise on further troubleshooting or whether onsite/NCR dispatch is required.
-
-Engaged GT3 (US-NTCM-TCH) for further review of backup Routing Engine 1 issue. RE0 remains Master and operational; RE1 is present but not communicating/in Backup state. Awaiting GT3 recommendations before proceeding with onsite/NCR dispatch.
-
+ECAT follow-up escalations reviewed on 9/25. MIS BMP 692301067 escalation approved and ticket placed in queue for ECAT tester assignment/review. R01/MPLS BMP 692301114 escalation reviewed and referred for further circuit/access investigation; awaiting additional tester/provider findings. Both transport investigations remain active with severe customer impact unresolved.
 
 ---------
 
