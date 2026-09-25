@@ -1,5 +1,5 @@
 
-ECAT follow-up escalations reviewed on 9/25. MIS BMP 692301067 escalation approved and ticket placed in queue for ECAT tester assignment/review. R01/MPLS BMP 692301114 escalation reviewed and referred for further circuit/access investigation; awaiting additional tester/provider findings. Both transport investigations remain active with severe customer impact unresolved.
+Spoke with Jason Young, San Francisco Unified School District IT. Customer confirmed current 40G handoffs are up with no reported service impact. Ticketed 10G interfaces are down with no traffic; multiple interfaces have been down since 2022, and hardware checks on sampled devices did not show transceivers installed on the ticketed ports. Interfaces appear unused, but customer is not onsite to physically verify cabling. Customer requested no configuration changes at this time and will verify the interfaces during a future site visit. Ticket to remain deferred/on hold pending customer confirmation before any interface shutdown or monitoring change.
 
 ---------
 
