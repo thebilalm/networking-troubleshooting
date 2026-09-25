@@ -1,16 +1,13 @@
 
-Hello NCR Team,
+Hi Michael, the router is restored and reachable now. It has been up for over 17 hours and BGP has been established for about 10 hours. No need to return to the site today. Thanks again for your help yesterday.
 
-Please keep NCR CS0450424 open. The issue remains unresolved. CE Michael Madelo confirmed he is available to return to the Livingston site tomorrow to continue troubleshooting under the existing dispatch.
+Then update NCR:
 
-CE has already located the affected router and is familiar with the site. Please coordinate his return visit and ensure he contacts Tier 3 for console/WAN troubleshooting before leaving the site.
+Router is currently restored and reachable. Device uptime is over 17 hours and BGP has remained established for approximately 10 hours. CE return visit is no longer required at this time. Please cancel the planned return visit. We will continue monitoring and re-engage if the issue recurs.
 
-Please provide the confirmed ETA once scheduled.
+For 342927307, I’d log:
 
-Then add a shorter note on 342927307:
-
-NCR CS0450424 remains open. CE Michael Madelo confirmed availability to return tomorrow and continue troubleshooting under the same NCR. Requested NCR coordinate return visit and provide ETA. Tier 3 will work directly with CE for console/WAN validation before release.
-
+Router is currently reachable and service appears restored. Device uptime is 17+ hours and BGP has remained established for approximately 10 hours. Planned NCR return visit is no longer required; NCR notified to cancel return visit. Continuing to monitor for stability before closure.
 
 ---------
 
