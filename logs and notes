@@ -1,5 +1,5 @@
 
-Router remains reachable and stable. Device uptime is 17+ hours and BGP sessions have remained established for over 11 hours with no further observed flaps. Service is restored. NCR return visit was canceled as onsite troubleshooting is no longer required. Closing ticket as restored/stable.
+Verified WAN Serial0/1/0:1 is currently up/up and stable. BGP neighbor is established and routing is restored. Router uptime remains intact. Logs indicate intermittent serial interface flaps; no current fault observed. Closing ticket as restored.
 ---------
 
 
