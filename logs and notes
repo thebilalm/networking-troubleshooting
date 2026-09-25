@@ -1,5 +1,17 @@
 
-Verified WAN Serial0/1/0:1 is currently up/up and stable. BGP neighbor is established and routing is restored. Router uptime remains intact. Logs indicate intermittent serial interface flaps; no current fault observed. Closing ticket as restored.
+MISR01 / IZEC.693445..ATI
+Latest meaningful update: 9/24 11:20 AM CDT — tester could not complete testing with Lumen because of an issue accessing the test port and opened INC484092 to have the test port repaired. No further update since then.
+
+ECAT roadblock:
+
+Severe customer impact remains unresolved with no update since 9/24. Provider testing on MIS circuit could not be completed due to test-port access issue; INC484092 was opened for repair. Multiple users remain impacted by severe Internet/application slowness. Request urgent status on test-port repair and completion of end-to-end throughput/RFC testing. Please expedite provider follow-up and resolution.
+
+R01 / BBEC.659996.ATI
+Latest meaningful update: 9/24 11:20 AM CDT — ticket placed back into active status for further analysis after ECAT approval. No subsequent findings or resolution documented.
+
+ECAT roadblock:
+
+Severe site-wide degradation remains unresolved with no substantive update since 9/24. R01 ticket was returned to active status for further analysis following ECAT approval, but no additional findings have been provided. Customer continues to report major Zoom and business-application impact. Request urgent tester status, end-to-end throughput/RFC validation, and expedited provider action.
 ---------
 
 
