@@ -1,5 +1,5 @@
 
-Not sure yet what the exact fix was. The router has been up since yesterday and BGP came back later and has stayed established. It may have recovered after the reboot, but I can’t confirm that was the actual fix. For now it’s stable and reachable.
+Router remains reachable and stable. Device uptime is 17+ hours and BGP sessions have remained established for over 11 hours with no further observed flaps. Service is restored. NCR return visit was canceled as onsite troubleshooting is no longer required. Closing ticket as restored/stable.
 ---------
 
 
