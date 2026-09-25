@@ -1,14 +1,5 @@
 
-Hi Michael, the router is restored and reachable now. It has been up for over 17 hours and BGP has been established for about 10 hours. No need to return to the site today. Thanks again for your help yesterday.
-
-Then update NCR:
-
-Router is currently restored and reachable. Device uptime is over 17 hours and BGP has remained established for approximately 10 hours. CE return visit is no longer required at this time. Please cancel the planned return visit. We will continue monitoring and re-engage if the issue recurs.
-
-For 342927307, I’d log:
-
-Router is currently reachable and service appears restored. Device uptime is 17+ hours and BGP has remained established for approximately 10 hours. Planned NCR return visit is no longer required; NCR notified to cancel return visit. Continuing to monitor for stability before closure.
-
+Not sure yet what the exact fix was. The router has been up since yesterday and BGP came back later and has stayed established. It may have recovered after the reboot, but I can’t confirm that was the actual fix. For now it’s stable and reachable.
 ---------
 
 
