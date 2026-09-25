@@ -1,9 +1,5 @@
 
-GT3 reviewed the issue and confirmed RE1 remains unreachable with “No route to host” while RE0 remains Master/operational. GT3 advised this MRS customer is now supported by Wipro Tier 3 and is outside current GT3 scope. Issue appears to have existed for several months. GT3 recommends Wipro Tier 3 review and likely onsite dispatch to remove/reseat RE1 to determine if functionality can be restored.
-
-
-Ticketed 10G interfaces remain administratively enabled but are physically down with no traffic. Hardware checks indicate no transceivers are currently installed on the affected ports. Historical interface activity dates back to 2022/2026. Current 40G handoffs remain operational with no reported service impact. Customer is not onsite to physically verify the ports and requested no configuration changes at this time. Ticket deferred pending customer verification and guidance regarding interface shutdown/monitoring removal.
-
+Attempted to contact LCON Andy at 608-837-8505 to obtain dispatch approval and site access details. Call rang several times and reached an automated recording requesting entry of the phone number with area code followed by #. Number was entered multiple times but system returned “invalid” and terminated the call. Unable to reach LCON or leave voicemail. Additional LCON/contact information needed before NCR dispatch.
 ---------
 
 
