@@ -1,9 +1,5 @@
 
-* Problem Description: Router down / circuit unreachable
-* Problem Details: STTNOIRPHT08R at 101 West Blythe Street, Paris, TN 38242 is currently unreachable. Router management IP is not responding to ping. Please investigate the transport circuit and verify for any alarms/outage or access-side issue.
-
-Verified router STTNOIRPHT08R remains unreachable and is not responding to ping. Opening transport/WFA ticket for circuit investigation. Customer contacted to verify local power/WAN handoff and provide site access/dispatch information.
-
+Spoke with CNJ contact Surendar. Confirmed both power supplies on SWTCNJVEND_1 are healthy and active. Contact observed amber and red status LEDs on the switch. Device remains unreachable and upstream link remains down from our side. Power issue ruled out. Will continue network-side troubleshooting and follow up if further onsite assistance is required.
 
 ---------
 
