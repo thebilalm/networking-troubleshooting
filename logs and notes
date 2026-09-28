@@ -1,8 +1,5 @@
 
-Contacted Twin Lakes regarding intermittent packet loss/latency. Twin Lakes confirmed they provide the last-mile service and verified ONT light levels and Ethernet handoff with no errors observed. Twin Lakes advised their upstream equipment supporting the ONT also appears healthy based on current ONT/error monitoring. Intermittent packet loss was previously observed toward the provider gateway. Twin Lakes ticket 699-989 will remain open while AT&T investigates the remaining transport path. Next step is to obtain the applicable EDGE/AG circuit ID and VLAN and engage AT&T transport. Twin Lakes support: 931-405-3310.
-
-Twin Lakes checked their side and everything looks clean. They confirmed they’re only the last-mile provider. We’re still seeing intermittent packet loss to the BGP gateway. Do you happen to have the EDGE/AG circuit ID and VLAN for this service so we can open a transport ticket and check the rest of the path?
-
+Attempted to contact site to verify whether recurring router power loss is related to a site-wide power issue or the router power source/UPS. No answer; voicemail left requesting callback. Router is currently up and stable.
 ---------
 
 
