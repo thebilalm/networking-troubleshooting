@@ -1,5 +1,5 @@
 
-Spoke with CNJ contact Surendar. Confirmed both power supplies on SWTCNJVEND_1 are healthy and active. Contact observed amber and red status LEDs on the switch. Device remains unreachable and upstream link remains down from our side. Power issue ruled out. Will continue network-side troubleshooting and follow up if further onsite assistance is required.
+Reviewed BGP/syslog event for neighbor 172.23.164.233. Logs indicate a transient BGP adjacency flap. Neighbor is not currently present in BGP or running configuration, and no route exists for the peer. No additional recurring events observed and router remains operational. Closing as transient/cleared.
 
 ---------
 
