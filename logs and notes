@@ -1,5 +1,5 @@
 
-Opened WFA 692800824 for transport testing. Router remains down/unreachable after customer power cycle. WFA currently Work In Progress.
+It’s a user/access port, assigned to VLAN 40. switchport mode access confirms it’s not a trunk, and the description also says User Port - VLAN:40. So basically it’s a user port in VLAN 40.
 
 
 ---------
