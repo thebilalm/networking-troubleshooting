@@ -1,5 +1,9 @@
 
-Contacted Ben Lomand regarding ticket #648258. Carrier advised circuit was up and passing traffic during previous testing. Explained this is now the 6th intermittent outage within approximately 30 days; router has remained up and BGP is currently stable, but repeated neighbor drops have been observed. Requested investigation of upstream/circuit history and RFO. Ben Lomand is referring the ticket back to their CO/circuit department for further review. Provided site and AT&T contact information. Awaiting carrier update.
+Problem Description:
+Router remains down after customer power cycle. Please test transport circuit and investigate for loss of connectivity.
+
+Problem Details:
+Router STTNOIRLYV07R is currently unreachable/down. LCON Lindsey Pipkin power cycled the router with no change. Device remains down after reboot. Please test the circuit end-to-end and investigate for any transport/access issue causing the outage.
 
 
 ---------
