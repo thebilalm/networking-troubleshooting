@@ -1,5 +1,5 @@
 
-It’s a user/access port, assigned to VLAN 40. switchport mode access confirms it’s not a trunk, and the description also says User Port - VLAN:40. So basically it’s a user port in VLAN 40.
+Yeah, it looks like the port is already configured as a user port on VLAN 40. I think TI was saying it needed to be configured because jack D63 wasn’t active when they tested it. We’d probably need to verify the port status/authentication and see why the jack still isn’t passing traffic.
 
 
 ---------
