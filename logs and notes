@@ -1,5 +1,8 @@
 
-Yeah, the port is up/up and already configured on VLAN 40, but I’m seeing over 6K input errors and CRC errors. So the config looks okay, but there could still be a cabling/jack issue. I’d clear the counters and see if the CRCs keep increasing.
+* Problem Description: Router down / circuit unreachable
+* Problem Details: STTNOIRPHT08R at 101 West Blythe Street, Paris, TN 38242 is currently unreachable. Router management IP is not responding to ping. Please investigate the transport circuit and verify for any alarms/outage or access-side issue.
+
+Verified router STTNOIRPHT08R remains unreachable and is not responding to ping. Opening transport/WFA ticket for circuit investigation. Customer contacted to verify local power/WAN handoff and provide site access/dispatch information.
 
 
 ---------
