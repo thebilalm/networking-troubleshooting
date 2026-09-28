@@ -1,16 +1,5 @@
 
-For R01 / BMP 692301114 / BBEC.659996.ATI, use:
-
-No substantive update since 9/25. Ticket remains Pending Customer Information requesting intrusive test authorization; authorization was provided electronically on 9/25 at 2:56 PM CDT, but status has not advanced. Severe customer impact remains unresolved. Request immediate acknowledgement of authorization, removal of customer-info hold, completion of intrusive/throughput testing, and expedited tester findings.
-
-For MISR01 / BMP 692301067 / IZEC.693445..ATI, use:
-
-No substantive update since 9/25. Ticket remains Referred to Local after ECAT approval. Previous testing was blocked by provider test-port issue INC484092; no subsequent test results or resolution have been posted. Severe customer impact remains unresolved. Request urgent status on test-port repair, completion of end-to-end throughput/RFC testing, and expedited provider findings.
-
-And after submitting both, put this in the main ticket:
-
-ECAT follow-up escalations submitted on both transport paths due to no substantive updates since 9/25. R01 BMP 692301114 remains Pending Customer Information despite intrusive-test authorization being provided on 9/25; requested removal of hold and completion of testing. MIS BMP 692301067 remains Referred to Local with no update following prior test-port issue INC484092; requested status and completion of throughput/RFC testing. Customer impact remains unresolved.
-
+Spoke with onsite POC Jon following another brief intermittent connectivity event lasting approximately 1 minute. Issue had cleared prior to troubleshooting. User currently connected via Wi-Fi with IP 172.18.41.105 and gateway 172.18.41.1. Continuous ping to gateway showed no loss with 1ms min / 37ms max / 3ms avg latency; connectivity currently stable. Traceroute to external destination timed out; however, no current service impact observed. Advised POC to run continuous ping to gateway during next occurrence and contact GCSC while issue is active for real-time troubleshooting. Also recommended testing via wired connection to help isolate wireless vs. LAN/WAN path. Will review network logs for any corresponding events and continue monitoring.
 
 ---------
 
