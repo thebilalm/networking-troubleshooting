@@ -1,5 +1,15 @@
 
-Confirmed with STS that the router was intentionally disconnected on 09/23/2026 and the equipment has already been removed/returned. Router-down alert correlates with the disconnect date. NCR CE was unable to access the locked cabinet, but no further troubleshooting was required based on STS confirmation. CE released from site. Closing ticket as disconnect/decommission related.
+For R01 / BMP 692301114 / BBEC.659996.ATI, use:
+
+No substantive update since 9/25. Ticket remains Pending Customer Information requesting intrusive test authorization; authorization was provided electronically on 9/25 at 2:56 PM CDT, but status has not advanced. Severe customer impact remains unresolved. Request immediate acknowledgement of authorization, removal of customer-info hold, completion of intrusive/throughput testing, and expedited tester findings.
+
+For MISR01 / BMP 692301067 / IZEC.693445..ATI, use:
+
+No substantive update since 9/25. Ticket remains Referred to Local after ECAT approval. Previous testing was blocked by provider test-port issue INC484092; no subsequent test results or resolution have been posted. Severe customer impact remains unresolved. Request urgent status on test-port repair, completion of end-to-end throughput/RFC testing, and expedited provider findings.
+
+And after submitting both, put this in the main ticket:
+
+ECAT follow-up escalations submitted on both transport paths due to no substantive updates since 9/25. R01 BMP 692301114 remains Pending Customer Information despite intrusive-test authorization being provided on 9/25; requested removal of hold and completion of testing. MIS BMP 692301067 remains Referred to Local with no update following prior test-port issue INC484092; requested status and completion of throughput/RFC testing. Customer impact remains unresolved.
 
 
 ---------
