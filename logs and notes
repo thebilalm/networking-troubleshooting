@@ -1,5 +1,7 @@
 
-Attempted to contact site to verify whether recurring router power loss is related to a site-wide power issue or the router power source/UPS. No answer; voicemail left requesting callback. Router is currently up and stable.
+Contacted Ben Lomand regarding ticket #648258. Carrier advised circuit was up and passing traffic during previous testing. Explained this is now the 6th intermittent outage within approximately 30 days; router has remained up and BGP is currently stable, but repeated neighbor drops have been observed. Requested investigation of upstream/circuit history and RFO. Ben Lomand is referring the ticket back to their CO/circuit department for further review. Provided site and AT&T contact information. Awaiting carrier update.
+
+
 ---------
 
 
