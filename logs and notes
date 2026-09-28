@@ -1,9 +1,5 @@
 
-Problem Description:
-Router remains down after customer power cycle. Please test transport circuit and investigate for loss of connectivity.
-
-Problem Details:
-Router STTNOIRLYV07R is currently unreachable/down. LCON Lindsey Pipkin power cycled the router with no change. Device remains down after reboot. Please test the circuit end-to-end and investigate for any transport/access issue causing the outage.
+Opened WFA 692800824 for transport testing. Router remains down/unreachable after customer power cycle. WFA currently Work In Progress.
 
 
 ---------
