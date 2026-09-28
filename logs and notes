@@ -1,5 +1,5 @@
 
-Reviewed BGP alert for neighbor 172.23.209.29. Historical logs show a brief BGP adjacency event followed by hold timer expiration. Neighbor is not currently present in BGP or running configuration, no route exists for the peer, and no additional recurring events were observed. Router remains operational. Closing as transient/cleared.
+Verified router is reachable and service has restored. WAN interface Gi0/0/0 is up/up with no CRC/input/output errors observed. Router uptime remains intact and BGP neighbor is established. Transport ticket 692800824 reports circuit clear/pending closure. No current fault observed. Closing ticket as restored.
 ---------
 
 
