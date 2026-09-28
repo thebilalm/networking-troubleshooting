@@ -1,5 +1,5 @@
 
-Yeah, it looks like the port is already configured as a user port on VLAN 40. I think TI was saying it needed to be configured because jack D63 wasn’t active when they tested it. We’d probably need to verify the port status/authentication and see why the jack still isn’t passing traffic.
+Yeah, the port is up/up and already configured on VLAN 40, but I’m seeing over 6K input errors and CRC errors on it. So the config looks fine, but there may still be a cabling/jack issue. I’d compare it with the old port and probably clear the counters and see if the CRCs keep increasing.
 
 
 ---------
