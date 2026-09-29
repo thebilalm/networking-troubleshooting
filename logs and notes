@@ -1,31 +1,15 @@
 
-Ticket Category: NOL
-This is essentially a no-access / dispatch coordination roadblock now, rather than simply “Circuit Down.” The underlying circuit/router is still down, but the thing preventing WFA from progressing is access.
+* Ticket Category: Bouncing / Intermittent Circuit
+    If “Bouncing” is available, use that rather than Circuit Down because the circuit is presently up.
+* Escalation Level: Level 1 if this is the first TDM escalation on WTNTG030356.
+* Reason / Roadblock:
+    WFA WTNTG030356 remains open with no resolution since 9/25. T1 circuit continues to show chronic intermittent flapping. Router logs show repeated controller/serial interface drops and interface counters show significant CRC/abort errors. WFA testing indicated potential framing issue but no final repair/RFO has been provided. Requesting escalation for further transport investigation and resolution.
 
-Escalation Level: 4
+I would also put a short ticket log after submitting:
 
-TSP: No
+Reviewed WFA WTNTG030356. Circuit is currently up; however, router history confirms repeated T1/interface flaps with significant CRC/abort errors. WFA remains open without final resolution/RFO. Submitted TDM escalation for further transport investigation.
 
-Reason / Roadblock:
-
-WFA FI066047 remains open with no resolution. Last field dispatch was 9 24 and ticket is now in no access status. Site access has previously been coordinated with the customer. Please review and assist with dispatch and access coordination to continue repair.
-
-WFA FI066047 remains open with no resolution. Last field dispatch was 9 24 and ticket is now in no access status. Site access has previously been coordinated with customer. Please assist with dispatch and access coordination to continue repair.
-
-Reviewed WFA FI066047. WFA remains open and currently reflects no access customer will call with access information following the 9 24 field dispatch. No further resolution update received. Submitted TDM escalation requesting follow up and dispatch access coordination.
 ---------
-
-
-For handover:
-
-Action Required:
-
-Monitor NCR CS0449156 dispatch tonight at 10:00 PM ET. Coordinate with Rex/DC security and CE as needed. Confirm technician gains access and update ticket with onsite findings.
-
-Notes:
-
-Previous 09/23 dispatch did not occur due to DC access not being completed. New CE assigned for 09/24: Jason Molina, UID jx8744, ETA 10:00 PM ET. Rex confirmed CNJ requires prior security registration and will coordinate access. Tech details being emailed to customer/DC team. For future CNJ/data center dispatches, contact Rex directly if access confirmation is still pending as dispatch time approaches.
-
 
 
 
