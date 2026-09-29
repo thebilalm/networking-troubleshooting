@@ -1,8 +1,5 @@
 
-Customer escalation received reporting continued intermittent connectivity issues affecting multiple users at Houston D03. Customer advises multiple users are experiencing connection drops and approximately half of the office may be impacted. It is not yet confirmed whether all impacted users are wired, wireless, or a combination of both. Previous troubleshooting was unable to reproduce the issue once connectivity restored. Requesting further coordinated investigation while issue is actively occurring to isolate LAN/WLAN/WAN impact.
-
-Hey, just saw Shelley’s latest response. She’s saying multiple users are getting dropped and about half the office is impacted. I’m not sure yet if they’re all on Wi-Fi or if this includes wired users too. Since the impact is broader now, should we get another bridge going while it’s happening and confirm wired vs wireless before we send a tech?
-
+Router is currently reachable and cellular session is active. Cellular0/1/0 is up/up and ping to 10.10.0.35 is successful. However, router logs show repeated cellular interface flaps, modem radio cycling, SIM activation, and SIM failover timeout events on 09/28 and 09/29. Requested CTN/MSISDN, IMSI, ICCID and site information have been obtained from the router. Please continue investigation for intermittent cellular/RAN connectivity.
 ---------
 
 
