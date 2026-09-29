@@ -1,5 +1,13 @@
 
-Reviewed PIM neighbor-down alert for 172.23.215.210. Neighbor is no longer present in the PIM table and associated subinterface Te0/0/0/1.2204 is no longer present on the router. No current network fault observed. Closing as stale/cleared alert.
+Router STTNOIRPHT08R remains unreachable and service is still down. Level 1 escalation was acknowledged at 9:42 AM, but no restoration or dispatch update has been provided. Please escalate for expedited investigation and provide current dispatch/repair status.
+
+Impact statement:
+
+State of Tennessee Paris site router remains down/unreachable, impacting network connectivity at the location.
+
+After submitting, add a short ticket log:
+
+Router remains unreachable. WFA CS4700739 previously escalated to Level 1 with no restoration update. Submitted additional escalation for expedited status/dispatch follow-up.
 ---------
 
 
