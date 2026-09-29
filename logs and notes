@@ -1,5 +1,13 @@
 
-Following up on WFA FI066047. Issue remains unresolved. Latest status indicates no access/customer to provide access information. Please contact LCON Terrance at 901-456-9587 to coordinate site access and advise current dispatch status/next action.
+Escalation note:
+
+Router remains unreachable and is still not responding to ping. WFA CS4700739 has been open since 9/28 and the issue remains unresolved. Please expedite investigation and provide current status/next steps.
+
+Impact statement:
+
+State of Tennessee site router is down/unreachable, impacting network connectivity at the Paris, TN location.
+
+Rechecked router STTNOIRPHT08R (172.23.234.251); device remains unreachable and is not responding to ping. WFA CS4700739 remains open. Submitted escalation for further investigation/status.
 
 ---------
 
