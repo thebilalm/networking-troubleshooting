@@ -1,5 +1,9 @@
 
-Contacted site POC Shelley regarding the ongoing intermittent connectivity issue. No answer; voicemail left requesting callback to coordinate troubleshooting and gather details from currently impacted users. Will continue troubleshooting with site once contact is established.
+Router is currently reachable and BGP has restored. Customer LAN interface Gi0/0/2 (McNairy Co THP Customer LAN) remains down/down with no interface errors. Please verify the connected LAN equipment, power/cabling, and confirm whether this interface is expected to be active.
+
+And ticket log:
+
+Router reachable. BGP neighbor restored after earlier interface flap and is currently established. Gi0/0/2 (McNairy Co THP Customer LAN) remains down/down with no CRC/input/output errors observed. Engaging STS to verify customer-side LAN equipment/connectivity.
 
 ---------
 
