@@ -1,5 +1,5 @@
 
-Router is currently reachable and cellular service is restored. Cellular0/1/0 is up/up and ping to 10.10.0.35 is successful. Associated Wireless internal engagement has been moved to Ready to Close. No current outage condition observed. Closing ticket as restored.
+Reviewed recurring platform temperature alarms on STNNAPNSHCRS2. Alarm history continues to show intermittent MINOR_HI events on Exhaust1/Hotspot1 sensors with alarms clearing between occurrences. No service-impacting condition observed. Recurrence is confirmed; keeping ticket deferred pending further hardware/environmental investigation/direction.
 
 
 ---------
