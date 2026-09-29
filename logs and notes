@@ -1,10 +1,5 @@
 
-Router is currently reachable and BGP has restored. Customer LAN interface Gi0/0/2 (McNairy Co THP Customer LAN) remains down/down with no interface errors. Please verify the connected LAN equipment, power/cabling, and confirm whether this interface is expected to be active.
-
-And ticket log:
-
-Router reachable. BGP neighbor restored after earlier interface flap and is currently established. Gi0/0/2 (McNairy Co THP Customer LAN) remains down/down with no CRC/input/output errors observed. Engaging STS to verify customer-side LAN equipment/connectivity.
-
+Reviewed PIM neighbor-down alert for 172.23.200.230. Neighbor is no longer present in the PIM table and the associated subinterface is no longer present on the router. No current network fault observed. Closing as stale/cleared alert.
 ---------
 
 
