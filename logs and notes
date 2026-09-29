@@ -1,5 +1,6 @@
 
-Router is currently reachable and cellular session is active. Cellular0/1/0 is up/up and ping to 10.10.0.35 is successful. However, router logs show repeated cellular interface flaps, modem radio cycling, SIM activation, and SIM failover timeout events on 09/28 and 09/29. Requested CTN/MSISDN, IMSI, ICCID and site information have been obtained from the router. Please continue investigation for intermittent cellular/RAN connectivity.
+Contacted Frontier for update on ticket 4150511. Frontier advised a bad cable was identified and repaired yesterday. Circuit has been held for monitoring since the repair and Frontier confirms circuit is currently up and passing traffic. Verified router/circuit status from network side; service remains stable. Closing ticket as resolved.
+
 ---------
 
 
