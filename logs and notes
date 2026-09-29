@@ -1,5 +1,5 @@
 
-Reviewed PIM neighbor-down alert for 172.23.200.230. Neighbor is no longer present in the PIM table and the associated subinterface is no longer present on the router. No current network fault observed. Closing as stale/cleared alert.
+Reviewed PIM neighbor-down alert for 172.23.215.210. Neighbor is no longer present in the PIM table and associated subinterface Te0/0/0/1.2204 is no longer present on the router. No current network fault observed. Closing as stale/cleared alert.
 ---------
 
 
