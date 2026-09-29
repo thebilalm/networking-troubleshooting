@@ -1,5 +1,18 @@
 
-Reviewed PIM neighbor-down alert for 172.23.200.234 on Te0/1/0/0.2359. Neighbor is no longer present in the PIM table and the associated subinterface is no longer present on the router. No current network fault observed. Closing as cleared/stale alert.
+Ticket Category: NOL
+This is essentially a no-access / dispatch coordination roadblock now, rather than simply “Circuit Down.” The underlying circuit/router is still down, but the thing preventing WFA from progressing is access.
+
+Escalation Level: 4
+
+TSP: No
+
+Reason / Roadblock:
+
+WFA FI066047 remains open with no resolution. Last field dispatch was 9 24 and ticket is now in no access status. Site access has previously been coordinated with the customer. Please review and assist with dispatch and access coordination to continue repair.
+
+WFA FI066047 remains open with no resolution. Last field dispatch was 9 24 and ticket is now in no access status. Site access has previously been coordinated with customer. Please assist with dispatch and access coordination to continue repair.
+
+Reviewed WFA FI066047. WFA remains open and currently reflects no access customer will call with access information following the 9 24 field dispatch. No further resolution update received. Submitted TDM escalation requesting follow up and dispatch access coordination.
 ---------
 
 
