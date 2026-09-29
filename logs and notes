@@ -1,5 +1,5 @@
 
-Contacted Frontier for update on ticket 4150511. Frontier advised a bad cable was identified and repaired yesterday. Circuit has been held for monitoring since the repair and Frontier confirms circuit is currently up and passing traffic. Verified router/circuit status from network side; service remains stable. Closing ticket as resolved.
+Frontier advised the circuit repair was completed yesterday, however the router is currently unreachable from our side. Can you please verify site power and the router/interface LED status? Please hold off on rebooting for now while Frontier rechecks the circuit.
 
 ---------
 
