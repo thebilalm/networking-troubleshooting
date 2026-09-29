@@ -1,5 +1,5 @@
 
-Reviewed recurring platform temperature alarms on STNNAPNSHCRS2. Alarm history continues to show intermittent MINOR_HI events on Exhaust1/Hotspot1 sensors with alarms clearing between occurrences. No service-impacting condition observed. Recurrence is confirmed; keeping ticket deferred pending further hardware/environmental investigation/direction.
+Follow-up review completed. Production interfaces remain up/up and BGP is established with no WAN service impact observed. Gi0 remains down/down and is identified as the RP management interface. Customer was previously contacted multiple times to confirm whether Gi0 is expected to be connected, with no additional response received. No production impairment identified.
 
 
 ---------
