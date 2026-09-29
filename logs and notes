@@ -1,13 +1,7 @@
 
-Escalation note:
+Customer escalation received reporting continued intermittent connectivity issues affecting multiple users at Houston D03. Customer advises multiple users are experiencing connection drops and approximately half of the office may be impacted. It is not yet confirmed whether all impacted users are wired, wireless, or a combination of both. Previous troubleshooting was unable to reproduce the issue once connectivity restored. Requesting further coordinated investigation while issue is actively occurring to isolate LAN/WLAN/WAN impact.
 
-Router remains unreachable and is still not responding to ping. WFA CS4700739 has been open since 9/28 and the issue remains unresolved. Please expedite investigation and provide current status/next steps.
-
-Impact statement:
-
-State of Tennessee site router is down/unreachable, impacting network connectivity at the Paris, TN location.
-
-Rechecked router STTNOIRPHT08R (172.23.234.251); device remains unreachable and is not responding to ping. WFA CS4700739 remains open. Submitted escalation for further investigation/status.
+Hey, just saw Shelley’s latest response. She’s saying multiple users are getting dropped and about half the office is impacted. I’m not sure yet if they’re all on Wi-Fi or if this includes wired users too. Since the impact is broader now, should we get another bridge going while it’s happening and confirm wired vs wireless before we send a tech?
 
 ---------
 
