@@ -1,12 +1,7 @@
 
-MISR01 / IZEC.693445.ATI roadblock
+I checked both carrier tickets. Providers are still showing the circuits as tested OK/restored, but customer impact has not been confirmed resolved. I submitted ECAT follow-up escalations on both MIS and R01 asking for throughput/RFC validation and continued investigation before closure.
 
-Customer impact remains unresolved despite provider stating circuit is up/passing traffic and closing local referral. Multiple users continue to report severe slowness and Zoom disconnects, with inconsistent speed-test results. No root cause or throughput resolution has been provided. Request ECAT review, end-to-end throughput/RFC validation, and provider follow-up before closure.
-
-R01 / BBEC.659996.ATI roadblock
-
-Customer impact remains unresolved despite provider stating service restored after reflector removal. Multiple users continue to report severe slowness/Zoom issues and service restoration has not been confirmed by the customer. No root cause validating the reported degradation has been provided. Request ECAT review, throughput/RFC validation, and continued investigation before closure.
-
+Reviewed both transport investigations. Providers have reported circuits up/restored; however, customer impact has not been confirmed resolved and prior reports of severe slowness/Zoom disconnects remain outstanding. ECAT follow-up escalations submitted on both MIS and R01 circuits requesting end-to-end throughput/RFC validation and continued provider investigation before closure. Awaiting ECAT/provider findings and customer confirmation.
 ---------
 
 
