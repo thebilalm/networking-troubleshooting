@@ -1,5 +1,9 @@
 
-Reviewed PIM neighbor-down alert for 172.23.219.250. Neighbor is no longer present in the PIM table and associated subinterface Te0/0/1/0.3860 is no longer present on the router. No current network fault observed. Closing as stale/cleared alert.
+Problem Description:
+Circuit intermittently bouncing
+
+Problem Details:
+Serial0/0/1:0 is experiencing repeated up/down transitions and packet loss. Router logs show frequent LINEPROTO-5-UPDOWN events from 9/28 through 9/30. Interface currently up but shows high CRC/input errors, aborts, carrier transitions, and degraded reliability. Please test circuit 80.DHZX.562060..SC and investigate intermittent line instability.
 
 ---------
 
