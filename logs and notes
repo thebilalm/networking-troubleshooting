@@ -1,5 +1,6 @@
 
-Serial0/0/1:0 confirmed intermittently bouncing with repeated up/down events and high CRC/input errors. Packet loss also observed during testing. WFA FI066128 opened with transport for investigation. Circuit currently up; monitoring pending carrier update.
+Quick update — MIS BMP 692301067 was cleared as a third-party report. Their note says the customer needs to contact MIS at 888-613-6330, options 2-1-2, to open a ticket, and MIS can refer to ECAT if needed. R01 BMP 692301114 is still pending analysis and was assigned to an ECAT tester at 12:54 today. I’m continuing to monitor it.
+
 
 ---------
 
