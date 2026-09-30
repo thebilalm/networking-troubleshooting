@@ -1,10 +1,5 @@
 
-Spoke with Mike. He said he personally isn’t having the issue right now, but a handful of users in the office are still reporting network slowness. He also clarified the original issue was office-wide and not related specifically to his laptop/CPU. I asked him to have an affected user call us so we can troubleshoot directly.
-
-For the ticket log:
-
-Spoke with Mike. He advised he is not currently experiencing the issue himself; however, a handful of users at the site are still reporting network slowness. Mike clarified the original incident was site-wide and not isolated to his endpoint. He was unable to confirm whether currently affected users are wired/wireless or which applications are impacted. Requested that an affected user contact us with the ticket number for further troubleshooting. Ticket remains open pending user contact.
-
+Frontier tech cleaned/reset the fiber and circuit restored. Verified router reachable, WAN interface Gi0/0/0 up/up with no input/CRC/output errors. Both BGP neighbors established and stable for nearly 2 hours with no additional drops observed. Frontier continuing 72-hour monitoring on their side. Closing ticket as resolved.
 ---------
 
 
