@@ -1,9 +1,5 @@
 
-Problem Description:
-Circuit intermittently bouncing
-
-Problem Details:
-Serial0/0/1:0 is experiencing repeated up/down transitions and packet loss. Router logs show frequent LINEPROTO-5-UPDOWN events from 9/28 through 9/30. Interface currently up but shows high CRC/input errors, aborts, carrier transitions, and degraded reliability. Please test circuit 80.DHZX.562060..SC and investigate intermittent line instability.
+Serial0/0/1:0 confirmed intermittently bouncing with repeated up/down events and high CRC/input errors. Packet loss also observed during testing. WFA FI066128 opened with transport for investigation. Circuit currently up; monitoring pending carrier update.
 
 ---------
 
