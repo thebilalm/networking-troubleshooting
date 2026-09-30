@@ -1,10 +1,5 @@
 
-Problem Description:
-Slow network / packet loss – high receive utilization
-
-Problem Details:
-Customer reports slow network for approximately 2 days and users are unable to load web applications. WAN interface Serial0/2/0:1 is up/up but showing high receive utilization (rxload approximately 237-245/255). Packet loss observed during testing, ranging approximately 4-15%. No physical interface errors/CRC errors observed. Customer is requesting the circuit be tested to rule out a transport/circuit issue.
-
+Working on recreating the transport ticket with the corrected circuit ID. Express Ticketing is currently returning a temporary system error. Will retry and provide the new WFA ticket number/PIN once created.
 
 ---------
 
