@@ -1,5 +1,5 @@
 
-Working on recreating the transport ticket with the corrected circuit ID. Express Ticketing is currently returning a temporary system error. Will retry and provide the new WFA ticket number/PIN once created.
+Ticket created in error due to incorrect circuit ID format. Correct transport ticket is being recreated using the proper circuit ID. Closing duplicate/incorrect ticket.
 
 ---------
 
