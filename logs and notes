@@ -1,5 +1,11 @@
 
-Rechecked BGP peer 12.148.191.218. Issue remains active. Current system logs show repeated BGP state changes/resets on 09/30 around 12:32–12:33, including Hold Time Expired and Operation Timed Out events. Peer repeatedly transitions Established/EstabSync and recovers. Ticket should remain open pending far-end investigation.
+MISR01 / IZEC.693445.ATI roadblock
+
+Customer impact remains unresolved despite provider stating circuit is up/passing traffic and closing local referral. Multiple users continue to report severe slowness and Zoom disconnects, with inconsistent speed-test results. No root cause or throughput resolution has been provided. Request ECAT review, end-to-end throughput/RFC validation, and provider follow-up before closure.
+
+R01 / BBEC.659996.ATI roadblock
+
+Customer impact remains unresolved despite provider stating service restored after reflector removal. Multiple users continue to report severe slowness/Zoom issues and service restoration has not been confirmed by the customer. No root cause validating the reported degradation has been provided. Request ECAT review, throughput/RFC validation, and continued investigation before closure.
 
 ---------
 
