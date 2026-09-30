@@ -1,5 +1,7 @@
 
-Frontier tech cleaned/reset the fiber and circuit restored. Verified router reachable, WAN interface Gi0/0/0 up/up with no input/CRC/output errors. Both BGP neighbors established and stable for nearly 2 hours with no additional drops observed. Frontier continuing 72-hour monitoring on their side. Closing ticket as resolved.
+show bgp summary | match 12.148.191.218
+show bgp neighbor 12.148.191.218 | match "State|Last Error|Last flap|Number of flaps|Holdtime|Keepalive"
+ping routing-instance INTERNET-MIS_VPN 12.148.191.218 count 50
 ---------
 
 
