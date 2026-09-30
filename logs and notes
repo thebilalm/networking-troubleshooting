@@ -1,7 +1,6 @@
 
-show bgp summary | match 12.148.191.218
-show bgp neighbor 12.148.191.218 | match "State|Last Error|Last flap|Number of flaps|Holdtime|Keepalive"
-ping routing-instance INTERNET-MIS_VPN 12.148.191.218 count 50
+Rechecked BGP peer 12.148.191.218. Issue remains active. Current system logs show repeated BGP state changes/resets on 09/30 around 12:32–12:33, including Hold Time Expired and Operation Timed Out events. Peer repeatedly transitions Established/EstabSync and recovers. Ticket should remain open pending far-end investigation.
+
 ---------
 
 
