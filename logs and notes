@@ -1,7 +1,13 @@
 
-I checked both carrier tickets. Providers are still showing the circuits as tested OK/restored, but customer impact has not been confirmed resolved. I submitted ECAT follow-up escalations on both MIS and R01 asking for throughput/RFC validation and continued investigation before closure.
+MISR01 / IZEC.693445.ATI
 
-Reviewed both transport investigations. Providers have reported circuits up/restored; however, customer impact has not been confirmed resolved and prior reports of severe slowness/Zoom disconnects remain outstanding. ECAT follow-up escalations submitted on both MIS and R01 circuits requesting end-to-end throughput/RFC validation and continued provider investigation before closure. Awaiting ECAT/provider findings and customer confirmation.
+Customer impact remains unresolved despite provider reporting circuit tested OK. Customer has not confirmed restoration and prior severe slowness/Zoom issues remain outstanding. MIS path was referred to local access provider and RFC/throughput validation was requested. Request ECAT review of provider findings, confirmation of end-to-end throughput testing, and continued investigation before closure.
+
+R01 / BBEC.659996.ATI
+
+Customer impact remains unresolved despite provider reporting service restored. Customer has not confirmed resolution and continues to report slowness/Zoom impact. R01 path previously required intrusive testing and provider validation. Request ECAT review, end-to-end throughput/RFC validation, and dispatch consideration if onsite work is required before closure.
+
+I also submitted another ECAT follow-up with the customer’s explicit request for onsite dispatch due to the ongoing severe impact. Waiting on ECAT/provider response now.
 ---------
 
 
