@@ -1,9 +1,5 @@
 
-I traced Jon’s wired client. IP 172.18.41.129 / MAC 24fb.e379.f20b is on D03C9401_1 Te2/0/28, VLAN 10 STAFF. Port is up/up at 1G full duplex. I checked the interface and it looks clean — 0 CRC/frame, 0 output errors/drops, and no recent interface logs. He confirmed they’re seeing the issue on both wired and wireless users across the office. I asked him to send me IP/MAC and connection type for a couple more affected users so we can see if they’re on different switches/APs.
-
-
-Spoke with Jon. He says this is broader than the user we tested yesterday — roughly 75% of the office is seeing intermittent issues and he confirmed both wired and wireless users are affected across different areas. I collected one affected wired client (172.18.41.129) and asked him to send IP/MAC + wired/wireless info for at least 2 more affected users. I’m tracing the wired client to the switch/port now.
-
+Yeah, yesterday Frontier didn’t really do any live testing while I was on with them. They just advised the previous ticket showed a bad cable had been repaired and the circuit was being monitored. After I checked and saw the router was completely unreachable, I called them back and they wanted the customer equipment rebooted before they continued troubleshooting. Since you opened the new Frontier ticket this morning, I’d let them test it from their side now. If they still point toward the router after that, then we can coordinate further with STS/site.
 ---------
 
 
