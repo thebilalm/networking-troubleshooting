@@ -1,5 +1,5 @@
 
-Pending customer information – awaiting confirmation whether Gi0 RP management interface is expected to be connected. No production/WAN impact observed.
+Reviewed current router status and logs. No new T1/controller flaps observed since 9/23. BGP remains established and stable. Related WFA tickets are closed following carrier restoration. No current recurrence observed. Closing ticket.
 
 
 ---------
