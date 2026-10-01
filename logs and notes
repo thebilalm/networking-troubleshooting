@@ -1,5 +1,5 @@
 
-Reviewed current router status and logs. No new T1/controller flaps observed since 9/23. BGP remains established and stable. Related WFA tickets are closed following carrier restoration. No current recurrence observed. Closing ticket.
+Current testing shows no active packet loss; 1000/1000 ping successful, BGP established, and no interface errors/CRC observed. QoS policy total drops increased from 25,439 on 9/23 to 82,435, indicating intermittent egress congestion since prior testing. Current queue depth/drop rate is zero. Need to verify configured 3.904 Mbps shaping rate against circuit bandwidth/profile.
 
 
 ---------
