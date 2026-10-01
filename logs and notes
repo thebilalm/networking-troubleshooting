@@ -15,9 +15,9 @@ For 692301067 / old MIS BMP:
 
 Customer impact has not been confirmed resolved. This BMP was cleared as third-party/MIS while the broader site issue remains under investigation. A separate active ADI/MIS failure is now being worked under ticket 343028132 / BMP 693001200. Please contest closure and keep this record active/correlated pending resolution and customer confirmation.
 
- tell Anuj:
+Attempted to contest closure on R01 BMP 692301114 through eBonded BMP view; request failed with 500 REST timeout. Express Ticketing chat was also attempted but did not process the contest and only returned current verifying-repair status. ECAT escalation remains submitted; awaiting ECAT guidance/action.
 
-I found the Contest option in the eBonded BMP view and contested both cleared BMPs from there. The R01 contest notes the unresolved customer impact and pending ECAT review; the MIS contest references the new active ADI failure under 343028132 / BMP 693001200.
+
 
 
 ---------
