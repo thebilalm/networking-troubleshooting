@@ -1,5 +1,5 @@
 
-Re-escalated WFA NTNTG030356 via TDM. WFA remains WIP with no update since 9/25; diagnostics indicate problem between test points/manual handling required. Awaiting transport update/resolution.
+NCR onsite. Tech found UPS powered off and powered it back on. R1 and S11 recovered. Verified both devices reachable; R1 BGP neighbors up and S11 management VLAN up/up. Service restored. Released NCR tech and closing ticket.
 
 ---------
 
