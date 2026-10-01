@@ -28,21 +28,9 @@ Please contest the closure/reopen the ticket and keep it active for continued in
 
 
 
-I’d keep the onsite checks limited and purposeful.
+Onsite CE advised that site leadership reports the intermittent connectivity issues began after recent AT&T equipment replacements/upgrades. Site showed boxes from Cisco switches that had been replaced and stated the issue was not present prior to the changes. Reviewing recent Houston D03 SR/change history to correlate equipment changes with reported issue start. No root cause confirmed at this time.
 
-Even if Eric suspects Zscaler, that still isn’t the same as a confirmed root cause. Since the CE is already onsite and the customer specifically asked for someone there, it makes sense to use the visit to rule out obvious local physical issues and capture live evidence if the problem occurs.
-
-What I would not do is have the tech spend hours randomly checking every cable/AP. Have him verify a few known affected wired drops, visually check AP status/placement, and if someone is actively impacted, capture the user’s IP/MAC, wired vs wireless, exact location/time, and what application is failing. Then your team can correlate that with Zscaler/network-side data.
-
-So the sequence is basically:
-
-* CE rules out obvious physical/local issues.
-* If impact is active, CE helps capture evidence.
-* Zscaler/network team handles the deeper path/security investigation.
-* No hardware swaps or config changes unless something specific is found.
-
-That actually helps the Zscaler theory too: if the wired port/cabling/AP side looks clean while multiple users still have the same issue, it strengthens the case that the problem is higher up the stack rather than a physical access-layer fault.
-
+Thanks. Can the tech confirm which switches/equipment were replaced onsite and capture the current device names/labels or serials if available? That’ll help us match them to the recent SRs and compare the change timeline.
 
 ---------
 
