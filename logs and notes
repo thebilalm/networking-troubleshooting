@@ -1,5 +1,5 @@
 
-NCR onsite. Tech found UPS powered off and powered it back on. R1 and S11 recovered. Verified both devices reachable; R1 BGP neighbors up and S11 management VLAN up/up. Service restored. Released NCR tech and closing ticket.
+Yeah, I’ve been following that one. Latest update is the R01 carrier ticket ran a successful RFC test with CenturyLink last night and they’re showing no trouble found / verifying repair. The MIS ticket was cleared as a third-party report and says the customer needs to contact MIS at 888-613-6330, options 2-1-2, so MIS can open their own ticket and refer to ECAT if needed. I haven’t seen customer confirmation yet that the slowness is actually resolved.
 
 ---------
 
