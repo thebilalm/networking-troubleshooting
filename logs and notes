@@ -28,7 +28,7 @@ Please contest the closure/reopen the ticket and keep it active for continued in
 
 
 
-Since the tech is already onsite, can we have him verify the known affected wired ports/cabling, check the APs physically for anything abnormal, and if any user is actively impacted, capture the user’s IP/MAC, connection type, location and exact time? No hardware changes unless we identify something specific.
+Since the tech is already onsite, can we have him verify the known affected wired ports/cabling, physically check the APs for anything abnormal, and if any user is actively impacted, capture the user’s IP/MAC, connection type, location and exact time? No hardware changes unless we identify something specific. He can share his onsite findings with Jon, and we’ll continue the network-side investigation from here.
 
 
 ---------
