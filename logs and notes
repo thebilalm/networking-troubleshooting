@@ -17,6 +17,10 @@ Hi, I need assistance contesting closure on ticket 692301114. The ticket is curr
 Please contest the closure/reopen the ticket and keep it active for continued investigation. An ECAT escalation has already been submitted requesting review of the RFC results and further throughput validation before closure.
 
 
+
+Yeah, that’s what I was thinking too. Since we don’t have a specific hardware fault isolated yet, I’m not sure what the NCR tech will be able to do beyond assisting with live onsite testing. I’ll check with Eric on what he wants us to have the tech verify while he’s there.
+
+
 ---------
 
 Hello Team,
