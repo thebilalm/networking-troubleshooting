@@ -1,21 +1,10 @@
 
-Old MIS BMP 692301067: this one was ultimately cleared as a third-party/MIS case and instructed the customer to contact MIS directly. I would not keep escalating this old MIS BMP now. The new ticket/BMP 693001200 is the right place to work the current hard failure.
 
-R01 BMP 692301114: Customer restoration has not been confirmed. Original site-wide slowness/Zoom issue remains unresolved. R01 provider reported successful RFC testing/no trouble found, but customer impact persists. Request ECAT review of RFC results, end-to-end throughput/path validation, and continued investigation before closure. ADI/MIS hard failure is being worked separately under 343028132 / BMP 693001200.
+For TDM Escalation need:
+Ticket Category (i.e. AP, PP, PRVx, ACT, NOL, NWP, REF RNT, TST, TS2),
+Escalation Level, & 
+Reason/Roadblock
 
-R01 BMP 692301114 remains in Verifying Repair after provider reported successful RFC testing/no trouble found. Customer restoration has not been confirmed. ECAT follow-up escalation submitted and BMP updated requesting continued investigation/throughput validation before closure. Awaiting ECAT/provider findings and customer confirmation.
-
-Repeat escalation – active ADI/MIS service failure remains unresolved. MISR01 Gi0/0/0.65 is up/up with default route via 12.119.220.45, but provider next-hop ping sourced from 12.185.61.225 still fails 0/5 and ARP remains incomplete. Level 1 escalation already submitted with no restoration. Request urgent provider investigation and service restoration.
-
-For 692301114 / R01:
-
-Customer restoration has not been confirmed. Provider reported successful RFC testing/no trouble found, but original site slowness and Zoom/business application impact remain under investigation. ECAT follow-up has already been submitted requesting review of RFC results and continued throughput validation. Please keep the ticket active until customer restoration is confirmed.
-
-For 692301067 / old MIS BMP:
-
-Customer impact has not been confirmed resolved. This BMP was cleared as third-party/MIS while the broader site issue remains under investigation. A separate active ADI/MIS failure is now being worked under ticket 343028132 / BMP 693001200. Please contest closure and keep this record active/correlated pending resolution and customer confirmation.
-
-Attempted to contest closure on R01 BMP 692301114 through eBonded BMP view; request failed with 500 REST timeout. Express Ticketing chat was also attempted but did not process the contest and only returned current verifying-repair status. ECAT escalation remains submitted; awaiting ECAT guidance/action.
 
 
 
