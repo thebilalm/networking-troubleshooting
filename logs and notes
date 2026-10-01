@@ -3,7 +3,7 @@ Old MIS BMP 692301067: this one was ultimately cleared as a third-party/MIS case
 
 R01 BMP 692301114: keep monitoring it because it still represents the R01/MPLS side of the original slowness case. If it is still active/pending analysis, let the existing ECAT work continue. Don’t open another duplicate ECAT unless there is a new R01-specific failure or the existing escalation stalls and your process allows a follow-up.
 
-I checked the new ADI ticket. BMP 693001200 is the one I’m going to keep escalating now since we have an active next-hop failure and incomplete ARP. The old MIS BMP on 342835651 was cleared as third-party/MIS, so I’m not going to keep duplicating escalations there. I’ll keep monitoring the R01 BMP separately under the original slowness ticket.
+Active ADI/MIS service failure confirmed. MISR01 Gi0/0/0.65 remains up/up with default route via 12.119.220.45, but provider next-hop ping sourced from 12.185.61.225 fails 0/5 and ARP for 12.119.220.45 is incomplete. This path previously passed testing. Request urgent provider investigation and restoration; customer impact remains active.
 
 
 ---------
