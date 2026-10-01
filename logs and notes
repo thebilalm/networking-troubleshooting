@@ -28,7 +28,20 @@ Please contest the closure/reopen the ticket and keep it active for continued in
 
 
 
-Since the tech is already onsite, can we have him verify the known affected wired ports/cabling, physically check the APs for anything abnormal, and if any user is actively impacted, capture the user’s IP/MAC, connection type, location and exact time? No hardware changes unless we identify something specific. He can share his onsite findings with Jon, and we’ll continue the network-side investigation from here.
+I’d keep the onsite checks limited and purposeful.
+
+Even if Eric suspects Zscaler, that still isn’t the same as a confirmed root cause. Since the CE is already onsite and the customer specifically asked for someone there, it makes sense to use the visit to rule out obvious local physical issues and capture live evidence if the problem occurs.
+
+What I would not do is have the tech spend hours randomly checking every cable/AP. Have him verify a few known affected wired drops, visually check AP status/placement, and if someone is actively impacted, capture the user’s IP/MAC, wired vs wireless, exact location/time, and what application is failing. Then your team can correlate that with Zscaler/network-side data.
+
+So the sequence is basically:
+
+* CE rules out obvious physical/local issues.
+* If impact is active, CE helps capture evidence.
+* Zscaler/network team handles the deeper path/security investigation.
+* No hardware swaps or config changes unless something specific is found.
+
+That actually helps the Zscaler theory too: if the wired port/cabling/AP side looks clean while multiple users still have the same issue, it strengthens the case that the problem is higher up the stack rather than a physical access-layer fault.
 
 
 ---------
