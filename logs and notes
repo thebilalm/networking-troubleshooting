@@ -7,7 +7,7 @@ R01 BMP 692301114 remains in Verifying Repair after provider reported successful
 
 Active ADI/MIS service failure confirmed. MISR01 Gi0/0/0.65 remains up/up with default route via 12.119.220.45, but provider next-hop ping sourced from 12.185.61.225 fails 0/5 and ARP for 12.119.220.45 is incomplete. This path previously passed testing. Request urgent provider investigation and restoration; customer impact remains active.
 
-I’m not able to resubmit the contest form through Express Ticketing because the Contest Closure option is disabled/greyed out on my side. I already submitted the ECAT escalation and added a note directly to BMP 692301114 stating that customer restoration has not been confirmed and requesting continued investigation before closure. Is there anything else you need me to do, or can you move/reopen the ticket from the ECAT side?
+This one is for the original site-wide slowness/Zoom issue. Customer restoration has still not been confirmed. We’re asking for review of the RFC results and end-to-end throughput/path validation before closure. The ADI circuit not passing traffic is being worked separately under ticket 343028132 / BMP 693001200.
 
 
 ---------
