@@ -28,7 +28,7 @@ Please contest the closure/reopen the ticket and keep it active for continued in
 
 
 
-Onsite CE advised that site leadership reports the intermittent connectivity issues began after recent AT&T equipment replacements/upgrades. Site showed boxes from Cisco switches that had been replaced and stated the issue was not present prior to the changes. ACTION shows multiple recent Houston D03 SRs involving switch/router upgrades and hardware changes. Full SR details are not available from current access. No root cause confirmed at this time.
+ACTION shows multiple recent Houston D03 SRs involving switch/router upgrades and hardware changes. Full SR details are not available from current access. Current findings point toward a possible Zscaler-related issue; confirmation is still pending.
 
 
 
