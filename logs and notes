@@ -1,5 +1,5 @@
 
-Reviewed ticket history and carrier testing. RFC testing passed at full bandwidth with no loss/drops and normal latency. Router/BGP stable, utilization low, and no WAN-related faults identified. No further customer response received following 9/23 update. Closing ticket.
+Reviewed ticket history. Customer continues to report slow LAN performance but has declined direct troubleshooting with AT&T network team. Customer was previously directed to coordinate through Sal Volpe/Tom Bartle. Pending NYL coordination for further troubleshooting.
 
 
 ---------
