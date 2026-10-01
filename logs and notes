@@ -28,7 +28,7 @@ Please contest the closure/reopen the ticket and keep it active for continued in
 
 
 
-Yeah, that’s what I was thinking too. Since we don’t have a specific hardware fault isolated yet, I’m not sure what the NCR tech will be able to do beyond assisting with live onsite testing. I’ll check with Eric on what he wants us to have the tech verify while he’s there.
+Since the tech is already onsite, can we have him verify the known affected wired ports/cabling, check the APs physically for anything abnormal, and if any user is actively impacted, capture the user’s IP/MAC, connection type, location and exact time? No hardware changes unless we identify something specific.
 
 
 ---------
