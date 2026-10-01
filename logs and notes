@@ -5,11 +5,11 @@ R01 BMP 692301114: Customer impact has not been confirmed resolved. R01 provider
 
 R01 BMP 692301114 remains in Verifying Repair after provider reported successful RFC testing/no trouble found. Customer restoration has not been confirmed. ECAT follow-up escalation submitted and BMP updated requesting continued investigation/throughput validation before closure. Awaiting ECAT/provider findings and customer confirmation.
 
-I contested the closure through Express Ticketing chat since the normal contest option was grayed out. The carrier ticket now has a note that customer restoration has not been confirmed and to continue investigation before closure. ECAT follow-up is also already submitted, so I’m monitoring for their response now.
-
 Active ADI/MIS service failure confirmed. MISR01 Gi0/0/0.65 remains up/up with default route via 12.119.220.45, but provider next-hop ping sourced from 12.185.61.225 fails 0/5 and ARP for 12.119.220.45 is incomplete. This path previously passed testing. Request urgent provider investigation and restoration; customer impact remains active.
 
+Got it, thanks. I already contested the closure through Express Ticketing and the contest note is on the carrier ticket. Since it’s still sitting in AQU, is there anything else you need from me, or does it just need to be moved out of automation for continued review?
 
+R01 BMP 692301114 closure contested successfully through Express Ticketing. ECAT tester advised ticket remains in AQU/Automation Queue. Awaiting ECAT/provider action to move ticket forward for continued investigation.
 ---------
 
 Yeah, NCR was opened since the customer has been requesting onsite support. CE Jeremy Pickens is scheduled for 9:30 this morning. The issue still hasn’t been isolated to a specific device, so the CE will mainly be onsite to assist with live testing/physical checks while the users are experiencing the problem.
