@@ -7,7 +7,17 @@ R01 BMP 692301114 remains in Verifying Repair after provider reported successful
 
 Repeat escalation – active ADI/MIS service failure remains unresolved. MISR01 Gi0/0/0.65 is up/up with default route via 12.119.220.45, but provider next-hop ping sourced from 12.185.61.225 still fails 0/5 and ARP remains incomplete. Level 1 escalation already submitted with no restoration. Request urgent provider investigation and service restoration.
 
+For 692301114 / R01:
 
+Customer restoration has not been confirmed. Provider reported successful RFC testing/no trouble found, but original site slowness and Zoom/business application impact remain under investigation. ECAT follow-up has already been submitted requesting review of RFC results and continued throughput validation. Please keep the ticket active until customer restoration is confirmed.
+
+For 692301067 / old MIS BMP:
+
+Customer impact has not been confirmed resolved. This BMP was cleared as third-party/MIS while the broader site issue remains under investigation. A separate active ADI/MIS failure is now being worked under ticket 343028132 / BMP 693001200. Please contest closure and keep this record active/correlated pending resolution and customer confirmation.
+
+ tell Anuj:
+
+I found the Contest option in the eBonded BMP view and contested both cleared BMPs from there. The R01 contest notes the unresolved customer impact and pending ECAT review; the MIS contest references the new active ADI failure under 343028132 / BMP 693001200.
 
 
 ---------
