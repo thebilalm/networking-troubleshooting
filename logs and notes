@@ -1,7 +1,7 @@
 
 Old MIS BMP 692301067: this one was ultimately cleared as a third-party/MIS case and instructed the customer to contact MIS directly. I would not keep escalating this old MIS BMP now. The new ticket/BMP 693001200 is the right place to work the current hard failure.
 
-R01 BMP 692301114: Customer impact has not been confirmed resolved. R01 provider reports successful RFC test and no trouble found, but site continues to have unresolved service degradation and the customer has requested continued investigation before closure. Request ECAT review of RFC results, end-to-end throughput validation, and confirmation that the reported customer issue is resolved before ticket closure.
+R01 BMP 692301114: Customer restoration has not been confirmed. Original site-wide slowness/Zoom issue remains unresolved. R01 provider reported successful RFC testing/no trouble found, but customer impact persists. Request ECAT review of RFC results, end-to-end throughput/path validation, and continued investigation before closure. ADI/MIS hard failure is being worked separately under 343028132 / BMP 693001200.
 
 R01 BMP 692301114 remains in Verifying Repair after provider reported successful RFC testing/no trouble found. Customer restoration has not been confirmed. ECAT follow-up escalation submitted and BMP updated requesting continued investigation/throughput validation before closure. Awaiting ECAT/provider findings and customer confirmation.
 
