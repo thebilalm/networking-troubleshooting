@@ -1,5 +1,5 @@
 
-WFA TG030359 opened for circuit down/errors. Transport investigation in progress. Monitoring for updates.
+Router currently reachable. Cellular0/1/0 is up/up; however, device logs show recurring cellular/SIM failover events and interface flaps throughout 10/02. Will continue monitoring for stability before closure.
 
 ---------
 
