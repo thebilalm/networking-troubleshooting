@@ -1,5 +1,17 @@
 
-Router reachable and Cellular0/1/0 up/up. Last cellular flap observed at 17:45 GMT; stable for over 1 hour with no further recurrence. Closing as restored/transient.
+For Escalation note, I’d use:
+
+STS requested escalation due to no movement on WFA CS4728319. Circuit remains down. Site contact verified power. Please provide status and expedite investigation/dispatch as needed.
+
+For Impact Statement:
+
+State of Tennessee site circuit remains down; router STTN0IRDA104R remains unreachable.
+
+Then submit it.
+
+I’d also add a short log to your main ticket 343052735:
+
+STS called requesting WFA escalation due to no movement. Escalated WFA CS4728319 for status/expedited investigation. Circuit remains down; site previously verified power.
 
 ---------
 
