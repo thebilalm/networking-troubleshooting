@@ -1,5 +1,5 @@
 
-Reviewed PIM neighbor-down alert for 172.23.219.154 on Te0/0/1/0.2385. Alert was generated during intentional configuration changes. Associated subinterface and peer configuration were removed and changes have been committed. No current network fault observed. Closing as configuration-change related/cleared.
+STS called for status update. Advised latest provider update remains from 10/1: DeKalb Telephone reported no further issues observed since last week but was asked to re-engage their central office due to WFA still showing referral to independent LEC. No new provider update received yet. Will continue follow-up.
 
 
 ---------
