@@ -1,5 +1,11 @@
 
-Followed up with DeKalb Telephone. Provider advised technician is currently onsite at the Smith County Welcome Center troubleshooting the circuit. Root cause not yet available. DeKalb will provide an update once the technician returns the ticket/order; advised to follow up again if no callback is received.
+Problem Description:
+
+Router STTNO1RRPL08R is currently unreachable. Serial 0/1/0:1 was observed with significant input/CRC errors and interface resets prior to loss of connectivity.
+
+Problem Details:
+
+Please investigate transport circuit for errors/outage. Router STTNO1RRPL08R (172.23.235.102) is currently unreachable. Prior diagnostics showed 24,565,843 input errors, 12,175,336 CRC errors, 12,390,507 aborts, and 10,650 interface resets on Serial 0/1/0:1. Please test the circuit and advise findings.
 
 
 ---------
