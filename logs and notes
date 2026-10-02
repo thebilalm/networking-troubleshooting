@@ -1,5 +1,5 @@
 
-Router currently reachable. Cellular0/1/0 is up/up; however, device logs show recurring cellular/SIM failover events and interface flaps throughout 10/02. Will continue monitoring for stability before closure.
+Router reachable and Cellular0/1/0 up/up. Last cellular flap observed at 17:45 GMT; stable for over 1 hour with no further recurrence. Closing as restored/transient.
 
 ---------
 
