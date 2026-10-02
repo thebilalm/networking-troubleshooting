@@ -1,17 +1,6 @@
 
-For Escalation note, I’d use:
+STS called requesting WFA escalation due to no movement. WFA CS4728319 successfully escalated via AT&T Smart Chat. Circuit remains down; site power verified.
 
-STS requested escalation due to no movement on WFA CS4728319. Circuit remains down. Site contact verified power. Please provide status and expedite investigation/dispatch as needed.
-
-For Impact Statement:
-
-State of Tennessee site circuit remains down; router STTN0IRDA104R remains unreachable.
-
-Then submit it.
-
-I’d also add a short log to your main ticket 343052735:
-
-STS called requesting WFA escalation due to no movement. Escalated WFA CS4728319 for status/expedited investigation. Circuit remains down; site previously verified power.
 
 ---------
 
