@@ -1,5 +1,5 @@
 
-Investigated BGP neighbor 10.0.253.2 (RCS SCHS Core Switch). Neighbor remains in Active state and is unreachable from BGP source 172.21.225.32 (0/5 ping). Static route to 10.0.253.0/30 points via 208.182.101.110 over Te0/2/0. Immediate next-hop 208.182.101.110 is reachable 100%, ARP resolves, and Te0/2/0 is currently up/up. Logs show earlier Te0/2/0 remote-fault flap with subsequent restoration. AT&T WAN BGP peer 172.21.198.150 remains Established/stable. Issue appears beyond local next-hop toward RCS/customer LAN/core. No WFA indicated at this time.
+BGP neighbor 10.0.253.2 (RCS SCHS Core Switch) remains Active and unreachable from BGP source 172.21.225.32. Static route to 10.0.253.0/30 is via 208.182.101.110 over Te0/2/0 (Rutherford County LEA Customer LAN). Immediate next-hop 208.182.101.110 is reachable 100%, ARP resolves, and Te0/2/0 is currently up/up. Logs show an earlier Te0/2/0 remote-fault flap with subsequent restoration. WAN BGP peer 172.21.198.150 remains Established/stable. Request STS/customer LAN review of path toward 10.0.253.2 / RCS core.
 
 ---------
 
