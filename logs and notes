@@ -1,13 +1,5 @@
 
-Far-end device USSTOJMKEWI4601UJZZ01 is managed by the Rome/Wipro unrestricted team. Previous escalation was sent to Rome Shift Lead for far-end investigation. Current agent is not included on the existing email thread; requested leads on the thread to follow up for status. Awaiting far-end team response.
-Hi Team,
-Following up on AOTS 338760628 regarding BGP instability between USSTOJMIWI02H02 and USSTOJMKEWI4601UJZZ01.
-
-The BGP session is currently Established, but testing today continues to show intermittent packet loss to peer 12.148.191.218 (14% loss, 43/50 received). The neighbor also continues to report Hold Timer Expired as the last error/flap event.
-
-Could you please validate the far-end device/link and advise on your findings or current status?
-
-Thanks.
+Reviewed PIM neighbor-down alert for 172.23.217.230. Neighbor is no longer present in the PIM table and associated subinterface Te0/0/0/1.556 is no longer present on the router. No current network fault observed. Closing as stale/cleared alert.
 
 
 ---------
