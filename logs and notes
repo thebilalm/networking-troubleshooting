@@ -1,13 +1,10 @@
 
-show interface TenGigE0/0/0/0
-show bundle Bundle-Ether1008
-show logging | i TenGigE0/0/0/0
+Service is currently restored and stable. Associated AOTS/UD ticket 343015839 has already been cleared. BMP 693000592 remains in Verifying Repair. Last observed flap on TenGigE0/0/0/0 was 10/02; interface is currently up/up, BFD is established, and both Bundle-Ether1008 members are active. No current service impact observed. Please close BMP engagement 693000592.
 
-Service is currently restored and stable. Associated AOTS/UD ticket 343015839 has already been cleared. BMP 693000592 remains in Verifying Repair status. Original TenGigE0/0/0/0 flap restored, with BFD session and Bundle-Ether1008 membership recovered. No current impact observed. Please close BMP engagement 693000592.
+internal ticket log:
 
-ticket log:
+Current validation completed. TenGigE0/0/0/0 up/up, BFD established, and Bundle-Ether1008 up with both members active. Last observed interface flap was 10/02 with no newer events found. Requested closure of BMP 693000592 via Express Ticketing; awaiting BMP closure.
 
-Verified service restored. AOTS/UD ticket previously cleared. BMP 693000592 remains in Verifying Repair and is preventing final closure. Requested BMP closure via Express Ticketing. Awaiting BMP engagement closure.
 
 ---------
 
