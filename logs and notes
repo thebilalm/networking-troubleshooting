@@ -1,5 +1,5 @@
 
-Circuit remains unstable. Serial0/1/0:1 continued flapping after reported restoration, with additional down/up events on 10/04 and 10/05. Latest flaps occurred 10/05 between 03:22-03:25. Interface is currently up/up, but intermittent issue persists. Please continue investigation and do not close ticket.
+WFA TG030359 closure contested due to continued circuit instability. Serial0/1/0:1 experienced additional flaps on 10/04 and 10/05 after reported restoration. Latest flaps observed 10/05 03:22-03:25. Interface currently up/up with no errors. WFA reopened and transport verifying repair. Monitoring for further updates.
 
 ---------
 
