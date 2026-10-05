@@ -1,6 +1,8 @@
 
 WFA/transport investigation completed. Service restored and provider verification confirmed port up with no remaining issue found. CPE router is currently reachable with ~13 weeks uptime, confirming no router reboot. Historical logs show WAN interface Gi0/0/0 flapped down/up, causing BGP adjacency loss. Interface and BGP sessions are currently restored/stable. Closing as transient circuit/interface flap.
-
+show clock
+show ip bgp summary
+show logging | i Gi0/0/0|172.23.188.122|172.23.160.106|UPDOWN|ADJCHANGE
 
 ---------
 
