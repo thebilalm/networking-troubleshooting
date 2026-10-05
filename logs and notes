@@ -1,8 +1,5 @@
 
-338760628 – I rechecked the BGP issue. Peer is currently Established, but testing is still showing intermittent packet loss. Omar previously emailed the Rome Shift Lead regarding the far-end device, but I’m not included on that email thread. Can someone on the thread please follow up with Rome Shift Lead for an update?
-
-Revalidated BGP peer 12.148.191.218. Peer currently Established; however, intermittent packet loss persists during VRF testing. Previous escalation to Rome Shift Lead was sent by Omar for validation of far-end device USSTOJMKEWI4601UJZZ01. Current agent is not included on original email thread. Requested follow-up from leads who are included on the thread. Awaiting far-end team response.
-
+Far-end device USSTOJMKEWI4601UJZZ01 is managed by the Rome/Wipro unrestricted team. Previous escalation was sent to Rome Shift Lead for far-end investigation. Current agent is not included on the existing email thread; requested leads on the thread to follow up for status. Awaiting far-end team response.
 Hi Team,
 Following up on AOTS 338760628 regarding BGP instability between USSTOJMIWI02H02 and USSTOJMKEWI4601UJZZ01.
 
