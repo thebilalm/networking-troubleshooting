@@ -1,5 +1,7 @@
 
-WFA TG030359 closure contested due to continued circuit instability. Serial0/1/0:1 experienced additional flaps on 10/04 and 10/05 after reported restoration. Latest flaps observed 10/05 03:22-03:25. Interface currently up/up with no errors. WFA reopened and transport verifying repair. Monitoring for further updates.
+Service has been restored and stable. Associated AOTS/UD ticket was previously cleared. BMP ticket 690200346 has remained in Verifying Repair status since 09/02/2026 and is preventing closure of the associated ticket. Current validation confirms interface TenGigE0/3/0/7 is up/up and operating normally. Please close the BMP ticket.
+
+Requested closure of BMP 690200346 via Express Ticketing. BMP remains stuck in Verifying Repair since 09/02. Service previously restored and current validation confirms TenGigE0/3/0/7 up/up. Awaiting BMP closure to clear associated engagement and close ticket.
 
 ---------
 
