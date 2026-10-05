@@ -1,5 +1,16 @@
 
-Reviewed WFA WTNTG030356. WFA indicates Central Office assistance was engaged and repair work completed on 10/1; status remains Verifying Repair. Router logs reviewed and no additional T1/interface flaps observed since 10/1 following provider repair activity. Circuit has remained stable for approximately 4 days. Closing ticket as service is stable.
+Problem Description:
+
+Circuit is intermittently bouncing/flapping. Previous WFA WTNFI066129 was closed on 10/03 after a cable/facility repair, but the issue persists. Router logs show multiple Serial0/0/0 down/up events on 10/04 and additional flapping on 10/05. Request further transport investigation and permanent resolution.
+
+For Problem Details:
+
+Circuit ID 80.DHZX.561909..SC on STTNOIRMEM75R, interface Serial0/0/0. Previous WFA WTNFI066129 was closed as repaired on 10/03; however, post-repair logs show continued instability. Multiple interface/line protocol down-up events occurred on 10/04, with additional flapping on 10/05 and latest restoration around 09:12. Please investigate recurring circuit instability and verify underlying facility/transport issue is fully resolved.
+
+* Problem Type: Bouncing
+* WFA: Express Ticketing
+* Problem Description: concise summary above
+* Problem Details: detailed recurrence-after-repair note above
 
 
 ---------
