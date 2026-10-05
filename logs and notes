@@ -1,5 +1,5 @@
 
-STS/Ben called advising WFA CS4728319 was resolved while site remained down and NCR dispatch might be required. Rechecked device and router STTNOIRDAT04R has since restored. Router recently powered on, Gi0/0/0 is up/up with no interface errors/CRC, and BGP neighbor 172.23.223.86 is established with routes received. WFA is resolved. Service currently restored; closing ticket.
+Rechecked hub USSTOJMIWI02H02. BGP peer 12.148.191.218 is currently Established and irb.3748 is up/up. However, VRF ping testing to peer shows 14% packet loss (43/50 received). Neighbor continues to show Last Error: Hold Timer Expired / Last flap event: HoldTime. Issue cannot be considered fully cleared at this time. Continuing investigation/coordination with far-end team.
 
 
 ---------
