@@ -1,9 +1,5 @@
 
-Service is currently restored and stable. Associated AOTS/UD ticket 343015839 has already been cleared. BMP 693000592 remains in Verifying Repair. Last observed flap on TenGigE0/0/0/0 was 10/02; interface is currently up/up, BFD is established, and both Bundle-Ether1008 members are active. No current service impact observed. Please close BMP engagement 693000592.
-
-internal ticket log:
-
-Current validation completed. TenGigE0/0/0/0 up/up, BFD established, and Bundle-Ether1008 up with both members active. Last observed interface flap was 10/02 with no newer events found. Requested closure of BMP 693000592 via Express Ticketing; awaiting BMP closure.
+STS/Ben called advising WFA CS4728319 was resolved while site remained down and NCR dispatch might be required. Rechecked device and router STTNOIRDAT04R has since restored. Router recently powered on, Gi0/0/0 is up/up with no interface errors/CRC, and BGP neighbor 172.23.223.86 is established with routes received. WFA is resolved. Service currently restored; closing ticket.
 
 
 ---------
