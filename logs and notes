@@ -1,5 +1,5 @@
 
-STS called requesting WFA escalation due to no movement. WFA CS4728319 successfully escalated via AT&T Smart Chat. Circuit remains down; site power verified.
+WFA/transport investigation completed. Service restored and provider verification confirmed port up with no remaining issue found. CPE router is currently reachable with ~13 weeks uptime, confirming no router reboot. Historical logs show WAN interface Gi0/0/0 flapped down/up, causing BGP adjacency loss. Interface and BGP sessions are currently restored/stable. Closing as transient circuit/interface flap.
 
 
 ---------
