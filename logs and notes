@@ -1,5 +1,14 @@
 
-Reviewed ticket and current alert history. Gi0 is identified as the RP management interface with no production/WAN service impact. Production interfaces remain operational and BGP is established. Multiple prior attempts were made to obtain customer confirmation regarding whether Gi0 is expected to be connected, with no response received. No recurring traps/events observed for the interface since the original alert. Closing ticket.
+show interface TenGigE0/0/0/0
+show bundle Bundle-Ether1008
+show logging | i TenGigE0/0/0/0
+
+Service is currently restored and stable. Associated AOTS/UD ticket 343015839 has already been cleared. BMP 693000592 remains in Verifying Repair status. Original TenGigE0/0/0/0 flap restored, with BFD session and Bundle-Ether1008 membership recovered. No current impact observed. Please close BMP engagement 693000592.
+
+ticket log:
+
+Verified service restored. AOTS/UD ticket previously cleared. BMP 693000592 remains in Verifying Repair and is preventing final closure. Requested BMP closure via Express Ticketing. Awaiting BMP engagement closure.
+
 ---------
 
 Hi, I need assistance contesting closure on ticket 692301114. The ticket is currently in cleared/verifying repair status, but customer impact has not been confirmed resolved and the original slowness/Zoom issue remains under investigation. The “Contest Closure” option in Express Ticketing is currently greyed out, so I’m unable to submit the contest electronically.
