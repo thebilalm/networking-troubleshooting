@@ -1,5 +1,5 @@
 
-Reviewed PIM neighbor-down alert for 172.23.217.230. Neighbor is no longer present in the PIM table and associated subinterface Te0/0/0/1.556 is no longer present on the router. No current network fault observed. Closing as stale/cleared alert.
+Reviewed WFA WTNTG030356. WFA indicates Central Office assistance was engaged and repair work completed on 10/1; status remains Verifying Repair. Router logs reviewed and no additional T1/interface flaps observed since 10/1 following provider repair activity. Circuit has remained stable for approximately 4 days. Closing ticket as service is stable.
 
 
 ---------
