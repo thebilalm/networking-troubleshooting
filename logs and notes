@@ -1,13 +1,15 @@
 
-Action Required
+For 341817518 / STTNOIRCSV02R:
 
-Monitor NCR dispatch and coordinate with CE upon arrival. Have CE verify power/cabling/LEDs, perform controlled router power cycle with NOC coordination, then revalidate ping and SSH access. Update customer/migration team with results.
+Verified disconnect SR 8983497. Asset has been removed from poller/GPS. Per LCM confirmation, no further action required. Closing ticket.
 
-Notes
+For 341815507 / STTNOIRCSV17R:
 
-342866993 – USPGPCRODCA01QFR1. Device responds to ping but SSH/Telnet connections are refused. OOB troubleshooting unsuccessful. LCON Terry Shafer approved onsite dispatch for today; preferred arrival by 1:30 PM PT. Site support available until ~4:30–5:00 PM PT. Front gate will contact Terry and onsite resource will escort CE to equipment. NCR being initiated ASAP.
+Verified disconnect SR 8972997. Asset has been removed from poller/GPS. Per LCM confirmation, no further action required. Closing ticket.
 
----------
+
+
+-------
 
 Hi, I need assistance contesting closure on ticket 692301114. The ticket is currently in cleared/verifying repair status, but customer impact has not been confirmed resolved and the original slowness/Zoom issue remains under investigation. The “Contest Closure” option in Express Ticketing is currently greyed out, so I’m unable to submit the contest electronically.
 
