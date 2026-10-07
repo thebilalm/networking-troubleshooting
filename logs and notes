@@ -1,5 +1,11 @@
 
-Contacted LCON Terry Shafer regarding onsite dispatch for ticket #342866993. Terry approved technician dispatch for today and requested arrival as early as possible, preferably by 1:30 PM PT. Site support is available until approximately 4:30–5:00 PM PT. Upon arrival at the front gate, site security will contact Terry and an onsite resource will escort the technician to the AT&T equipment. Proceeding with NCR dispatch for further troubleshooting.
+Action Required
+
+Monitor NCR dispatch and coordinate with CE upon arrival. Have CE verify power/cabling/LEDs, perform controlled router power cycle with NOC coordination, then revalidate ping and SSH access. Update customer/migration team with results.
+
+Notes
+
+342866993 – USPGPCRODCA01QFR1. Device responds to ping but SSH/Telnet connections are refused. OOB troubleshooting unsuccessful. LCON Terry Shafer approved onsite dispatch for today; preferred arrival by 1:30 PM PT. Site support available until ~4:30–5:00 PM PT. Front gate will contact Terry and onsite resource will escort CE to equipment. NCR being initiated ASAP.
 
 ---------
 
