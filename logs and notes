@@ -1,12 +1,5 @@
 
-Special Arrangements / Notes
-
-Onsite dispatch approved by LCON Terry Shafer for today. Technician should arrive as early as possible, preferably by 1:30 PM PT. Site support/electricians are available until approximately 4:30–5:00 PM PT. Upon arrival at the front gate, site security should contact Terry and an onsite resource will meet/escort the technician to the AT&T equipment. Terry will coordinate with Cali as needed regarding the exact equipment location.
-
-Scope of Work CE Will Perform
-
-Locate router USPGPCRODCA01QFR1. Device is reachable by ping but SSH/Telnet management access is currently refused. Verify device power, cabling, and LED/status indicators. Coordinate with AT&T Network Operations and perform a controlled power cycle of the router as directed. After reboot, allow device to fully recover and contact NOC to verify ping and SSH management access. Do not make configuration changes or replace equipment without NOC authorization.
-
+Contacted LCON Terry Shafer regarding onsite dispatch for ticket #342866993. Terry approved technician dispatch for today and requested arrival as early as possible, preferably by 1:30 PM PT. Site support is available until approximately 4:30–5:00 PM PT. Upon arrival at the front gate, site security will contact Terry and an onsite resource will escort the technician to the AT&T equipment. Proceeding with NCR dispatch for further troubleshooting.
 
 ---------
 
