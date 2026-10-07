@@ -1,5 +1,13 @@
 
-Revalidated router. BGP neighbor 172.23.249.58 currently established and stable for 3+ hours. 100x1500-byte ping test completed with 100% success. No current packet loss observed. WFA remains open/Pending Field Resolution for reported serial circuit instability and historical interface errors. Continue monitoring pending transport/WFA update.
+Hi Shane,
+
+Please join this Teams meeting so we can review the console session and troubleshoot the router outage at the Tennessee site.
+
+We’ll verify the router identity, interface status, and connectivity to determine the next steps.
+
+Thanks.
+
+NCR CE onsite for router-down troubleshooting. CE confirmed Cisco ISR 4321 powered on; observed intermittent interface LED activity. Physical chassis serial FLM2029W0T5 does not match inventory serial FLM2230W21Q. CE confirmed no additional router identified in the inspected equipment rooms. Coordinating Teams session with CE to obtain console access, verify device identity, and investigate WAN/T1 interface status. Troubleshooting ongoing.
 
 
 
