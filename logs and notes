@@ -1,5 +1,15 @@
 
-BGP neighbor 10.0.253.2 (RCS SCHS Core Switch) remains Active and unreachable from BGP source 172.21.225.32. Static route to 10.0.253.0/30 is via 208.182.101.110 over Te0/2/0 (Rutherford County LEA Customer LAN). Immediate next-hop 208.182.101.110 is reachable 100%, ARP resolves, and Te0/2/0 is currently up/up. Logs show an earlier Te0/2/0 remote-fault flap with subsequent restoration. WAN BGP peer 172.21.198.150 remains Established/stable. Request STS/customer LAN review of path toward 10.0.253.2 / RCS core.
+Problem Description:
+
+Serial0/0/0 circuit bouncing causing BGP neighbor instability.
+
+Problem Details:
+
+Serial0/0/0 has experienced repeated interface and line protocol flaps from 10/02 through 10/07. BGP neighbor 172.23.249.58 repeatedly resets with “Interface flap.” Interface currently up/up but shows significant errors including 140K+ input errors, 7,803 CRC errors and 73K+ aborts. Router uptime is approximately 43 weeks with no reload associated with the outage. Please investigate transport/circuit instability.
+
+I would also put something like this in the main ticket:
+
+Router reachable and uptime is approximately 43 weeks. Investigation shows Serial0/0/0 repeatedly bouncing, causing BGP neighbor 172.23.249.58 to reset. Serial interface currently up/up; however, significant input/CRC/abort errors are present and multiple interface/line protocol flaps occurred through 10/07. Opening WFA on circuit 80.DHZX.561909..SC for transport investigation.
 
 ---------
 
