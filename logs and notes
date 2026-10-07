@@ -1,5 +1,5 @@
 
-Reviewed PIM neighbor-down alert for 172.23.220.34. Neighbor is no longer present in the PIM table and the associated .2616 subinterface is no longer present on the router. No current network fault observed. Closing as stale/cleared alert.
+Called Cali again to follow up on preferred dispatch date/time and onsite contact information required for technician scheduling. No answer; voicemail left requesting callback and referencing ticket #342866993. Device remains reachable by ping, but SSH/Telnet management access is still unavailable. Awaiting customer/site confirmation to proceed with dispatch.
 
 ---------
 
