@@ -1,15 +1,5 @@
 
-Problem Description:
-
-Serial0/0/0 circuit bouncing causing BGP neighbor instability.
-
-Problem Details:
-
-Serial0/0/0 has experienced repeated interface and line protocol flaps from 10/02 through 10/07. BGP neighbor 172.23.249.58 repeatedly resets with “Interface flap.” Interface currently up/up but shows significant errors including 140K+ input errors, 7,803 CRC errors and 73K+ aborts. Router uptime is approximately 43 weeks with no reload associated with the outage. Please investigate transport/circuit instability.
-
-I would also put something like this in the main ticket:
-
-Router reachable and uptime is approximately 43 weeks. Investigation shows Serial0/0/0 repeatedly bouncing, causing BGP neighbor 172.23.249.58 to reset. Serial interface currently up/up; however, significant input/CRC/abort errors are present and multiple interface/line protocol flaps occurred through 10/07. Opening WFA on circuit 80.DHZX.561909..SC for transport investigation.
+Reviewed PIM neighbor-down alert for 172.23.220.34. Neighbor is no longer present in the PIM table and the associated .2616 subinterface is no longer present on the router. No current network fault observed. Closing as stale/cleared alert.
 
 ---------
 
