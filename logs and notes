@@ -1,8 +1,5 @@
 
-Circuit continues to flap as of 10/08. BGP neighbor 172.23.249.58 has experienced repeated resets due to interface flaps, with current BGP uptime approximately 2 hours 20 minutes. Serial0/0/0 has significant historical CRC/input errors and aborts. Previous escalation acknowledged, but issue remains unresolved. Please expedite field/specialist investigation and provide current repair status and ETA.
-
-Revalidated router. BGP neighbor 172.23.249.58 currently established with uptime approximately 2 hours 20 minutes. Logs confirm recurring BGP resets due to interface flaps through 10/08. Serial0/0/0 circuit instability persists. WFA WTNF1066135 remains open, pending field resolution/specialist assistance. Following up with transport for expedited investigation and repair ETA.
-
+Router USPG BPTAFCA01QFR1 is now reachable and accessible via SSH. Device was found to have recently rebooted with last reload reason reported as Power-on. Cellular0/1/0 (10.10.0.45) is currently up/up with no input/output errors or drops. Interface logs show restoration at 17:18:25 GMT and no subsequent down events at the time of verification. Service appears restored. Exact cause of reboot is undetermined.
 
 duplicate- 
 
