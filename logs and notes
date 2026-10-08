@@ -1,8 +1,5 @@
 
-Please provide current status and ETA for field resolution. Circuit experienced repeated Serial0/0/0 and BGP flaps with significant CRC/input errors. Service is currently restored/stable, however underlying intermittent issue remains unresolved. WFA has been pending field resolution since 10/07.
-
-WFA FI066135 escalated for updated field status/ETA. Circuit currently stable; however, WFA remains pending field resolution for recurring Serial0/0/0 instability and historical interface errors. Continue monitoring pending transport update.
-
+Investigated interface down alert on STNNAPMEMPER2. Verified TenGig0/0/0/0 is currently up/up. Checked peer device STNNAPMCRS1, interface TenGig0/3/0/8, also up/up. Last link flap approximately 1 hour ago. Interface counters show no CRC or input/output errors. Historical logs indicate link/BFD flapping; however, both ends are currently restored. Closing ticket as transient interface flap. Monitor for recurrence.
 
 -------
 
