@@ -1,10 +1,9 @@
 
-Investigatd interface down alert on STNNAPKNXCRS1 TenGig0/3/0/8. Interface currently up/up, last flapped approximately 1 hour ago. Verified peer interface on STNNAPMEMPER2 is also up/up. No CRC or input/output errors observed. Historical logs indicate link and BFD session flapping; however, connectivity has been restored. Closing as Standard Circuit Outage.
-
+Reviewed PIM neighbor-down alert for 172.23.160.118 on Te0/1/0/3.2104. Neighbor is no longer present in the PIM table and associated subinterface is no longer present on the router. No current network fault observed. Closing as stale/cleared alert.
 
 duplicate- 
 
-Duplicate interface down alert for STNNAPKNXCRS1 TenGig0/3/0/8. Same interface and link flap event investigated under ticket 343147574. Both local and peer interfaces verified up/up. No additional issues observed during verification. Closing as duplicate of ticket 343147574.
+Duplicate of ticket 343149118. Both tickets generated for the same PIM neighbor-down event on 172.23.160.118 within seconds of each other. Closing as duplicate.
 
 -------
 
