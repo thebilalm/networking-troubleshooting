@@ -1,13 +1,14 @@
 
-Hi Shane,
+tdm roadblock:
+Requesting urgent escalation for aged SEV1 router-down issue. STTNOIRKS301R remains unreachable (172.23.226.13), confirmed by failed ping test on 10/08. Circuit has experienced recurring outages since 09/23 despite buried copper cable repairs on 09/25 and multiple WFA dispatches. Current WFA TG030360 shows Pending Field Resolution, with specialist assistance required. Field technicians were dispatched on 10/06 and 10/07; however, no confirmed repair, field findings, or restoration ETA has been provided. Level 4 escalation was acknowledged on 10/07. Request higher-level intervention, technician findings, specialist coordination, and firm restoration action plan/ETR.
 
-Please join this Teams meeting so we can review the console session and troubleshoot the router outage at the Tennessee site.
+ticket log:
+Validated STTNOIRKS301R (172.23.226.13) via pingit; test failed, device remains unreachable. Reviewed WFA TG030360. Circuit continues experiencing outages despite previous buried cable repairs and multiple field dispatches. WFA indicates technicians dispatched on 10/06 and 10/07, with Level 4 escalation acknowledged on 10/07. Current status remains Pending Field Resolution, specialist assistance required. No confirmed restoration or ETR available. Proceeding with TDM escalation for further intervention and updated field findings.
 
-We’ll verify the router identity, interface status, and connectivity to determine the next steps.
+after submittimg tdm - separate log:
+Submitted TDM escalation for WFA TG030360 due to prolonged service impact, repeated unsuccessful dispatches, and lack of confirmed restoration. Requested updated field technician findings, specialist assistance, next repair action, and ETR. Pending transport escalation response.
 
-Thanks.
 
-NCR CE onsite for router-down troubleshooting. CE confirmed Cisco ISR 4321 powered on; observed intermittent interface LED activity. Physical chassis serial FLM2029W0T5 does not match inventory serial FLM2230W21Q. CE confirmed no additional router identified in the inspected equipment rooms. Coordinating Teams session with CE to obtain console access, verify device identity, and investigate WAN/T1 interface status. Troubleshooting ongoing.
 
 
 
