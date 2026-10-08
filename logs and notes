@@ -1,5 +1,5 @@
 
-Investigated interface down alert on STNNAPMEMPER2. Verified TenGig0/0/0/0 is currently up/up. Checked peer device STNNAPMCRS1, interface TenGig0/3/0/8, also up/up. Last link flap approximately 1 hour ago. Interface counters show no CRC or input/output errors. Historical logs indicate link/BFD flapping; however, both ends are currently restored. Closing ticket as transient interface flap. Monitor for recurrence.
+Duplicate interface down alert for STNNAPMEMPER2 TenGig0/0/0/0. Same issue investigated under previously closed ticket. Interface verified up/up on both ends with no current errors. No additional action required. Closing as duplicate.
 
 -------
 
