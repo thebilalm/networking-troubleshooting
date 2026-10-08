@@ -1,5 +1,10 @@
 
-Duplicate interface down alert for STNNAPMEMPER2 TenGig0/0/0/0. Same issue investigated under previously closed ticket. Interface verified up/up on both ends with no current errors. No additional action required. Closing as duplicate.
+Investigatd interface down alert on STNNAPKNXCRS1 TenGig0/3/0/8. Interface currently up/up, last flapped approximately 1 hour ago. Verified peer interface on STNNAPMEMPER2 is also up/up. No CRC or input/output errors observed. Historical logs indicate link and BFD session flapping; however, connectivity has been restored. Closing as Standard Circuit Outage.
+
+
+duplicate- 
+
+Duplicate interface down alert for STNNAPKNXCRS1 TenGig0/3/0/8. Same interface and link flap event investigated under ticket 343147574. Both local and peer interfaces verified up/up. No additional issues observed during verification. Closing as duplicate of ticket 343147574.
 
 -------
 
