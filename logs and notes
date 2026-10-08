@@ -1,5 +1,14 @@
 
-Hey Omar, I’m following up on 342726217. Your last update said the network/circuits looked good and the degradation appeared related to Zscaler tunnels, with the NYL Zscaler team investigating. Do you know if we have confirmation that it’s resolved, or should we keep the ticket open?
+Reviewed ticket history for Seattle GO WiFi connectivity issue. Initial network troubleshooting confirmed routers reachable, interfaces up/up, and successful connectivity tests. Per 09/14 update, site contact Alexander Barrett confirmed no further internet issues following AP migration to alternate WLC.
+
+Last update on 09/17 indicated APs remained on secondary CNJ WLC, with Cisco TAC assisting with migration back to ADC WLC. Related WLC replacement ticket 342693853 referenced.
+
+Following up with wireless team to confirm current WLC migration/replacement status and determine whether any further action is required before closure.
+
+Hi Team, following up on ticket 342675201 regarding the Seattle GO WiFi issue. Per the last update on 9/17, the APs were still on the secondary CNJ WLC, and Cisco TAC was assisting with migrating them back to the ADC WLC. The customer previously confirmed service was restored.
+
+Can someone confirm whether the WLC migration was completed and if we can proceed with closing this ticket? Thanks.
+
 
 duplicate- 
 
