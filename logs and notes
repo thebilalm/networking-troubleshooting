@@ -1,12 +1,13 @@
 
-tdm roadblock:
-Requesting urgent escalation for aged SEV1 router-down issue. STTNOIRKS301R remains unreachable (172.23.226.13), confirmed by failed ping test on 10/08. Circuit has experienced recurring outages since 09/23 despite buried copper cable repairs on 09/25 and multiple WFA dispatches. Current WFA TG030360 shows Pending Field Resolution, with specialist assistance required. Field technicians were dispatched on 10/06 and 10/07; however, no confirmed repair, field findings, or restoration ETA has been provided. Level 4 escalation was acknowledged on 10/07. Request higher-level intervention, technician findings, specialist coordination, and firm restoration action plan/ETR.
+Hello, I’m following up on WFA TG030360 associated with AT&T ticket 342918331 for STTNOIRKS301R in Kingston Springs, TN.
 
-ticket log:
-Validated STTNOIRKS301R (172.23.226.13) via pingit; test failed, device remains unreachable. Reviewed WFA TG030360. Circuit continues experiencing outages despite previous buried cable repairs and multiple field dispatches. WFA indicates technicians dispatched on 10/06 and 10/07, with Level 4 escalation acknowledged on 10/07. Current status remains Pending Field Resolution, specialist assistance required. No confirmed restoration or ETR available. Proceeding with TDM escalation for further intervention and updated field findings.
+The router remains unreachable, and WFA is currently showing Pending Field Resolution with specialist assistance required.
 
-after submittimg tdm - separate log:
-Submitted TDM escalation for WFA TG030360 due to prolonged service impact, repeated unsuccessful dispatches, and lack of confirmed restoration. Requested updated field technician findings, specialist assistance, next repair action, and ETR. Pending transport escalation response.
+I submitted a TDM escalation, but it was rejected with instructions to contact dispatch directly to discuss JEP per process.
+
+Could you please connect me with the appropriate dispatch team or provide their contact information? We need confirmation of the previous field dispatch, current troubleshooting findings, next steps, and an updated restoration ETA.
+
+TDM escalation submitted for WFA TG030360 was rejected by reviewer David F. Pennington Jr., with instructions to contact dispatch directly regarding JEP process (Category HDDJ). Router STTNOIRKS301R remains unreachable. WFA continues to show Pending Field Resolution with specialist assistance required. Next action is to contact WFA/transport dispatch directly for technician status, field findings, next repair action, and ETR.
 
 
 
