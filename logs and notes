@@ -1,14 +1,5 @@
 
-Hi Peter and Rahim,
-
-Following up on AOTS 342835651. Our latest troubleshooting indicated the network circuits were testing normally and the performance issue appeared to be associated with the Zscaler path. The NYL Zscaler team was investigating from there.
-
-Can you please confirm whether the internet/Zoom slowness is now resolved, or if you are still experiencing the issue?
-
-Thanks,
-Bilal
-
-Follow-up sent to customer requesting current service status. Previous troubleshooting determined underlying AT&T circuits tested normally and performance degradation appeared associated with Zscaler tunnels; NYL Zscaler team was investigating. Both associated transport BMPs are now closed. Awaiting customer confirmation of restoration before resolving AOTS ticket.
+Hi Jon/Shelley, following up on ticket 342726217. Our network/circuit testing was completed and the degradation appeared to be associated with the Zscaler tunnels. Can you confirm whether users are still experiencing the intermittent slowness/drops, or has the issue cleared?
 
 duplicate- 
 
