@@ -1,5 +1,14 @@
 
-Following up on the requested diagnostic information for the reported site slowness. We have not received the requested speed test/Zscaler details or contact from an affected user. Please provide the requested information if the issue is still occurring. If no response is received, the ticket will be closed due to lack of additional troubleshooting information.
+Hi Peter and Rahim,
+
+Following up on AOTS 342835651. Our latest troubleshooting indicated the network circuits were testing normally and the performance issue appeared to be associated with the Zscaler path. The NYL Zscaler team was investigating from there.
+
+Can you please confirm whether the internet/Zoom slowness is now resolved, or if you are still experiencing the issue?
+
+Thanks,
+Bilal
+
+Follow-up sent to customer requesting current service status. Previous troubleshooting determined underlying AT&T circuits tested normally and performance degradation appeared associated with Zscaler tunnels; NYL Zscaler team was investigating. Both associated transport BMPs are now closed. Awaiting customer confirmation of restoration before resolving AOTS ticket.
 
 duplicate- 
 
