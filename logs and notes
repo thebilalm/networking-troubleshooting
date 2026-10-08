@@ -1,16 +1,9 @@
 
-Reviewed Seattle GO WiFi ticket and related WLC ticket 342693853. Per 09/14 update, customer confirmed no further connectivity issues following AP migration to secondary CNJ WLC.
+Reviewed related Seattle WiFi ticket 342675201. Customer previously confirmed wireless service was restored after APs were moved to the secondary CNJ WLC.
 
-Related ticket 342693853 tracks the ADC WLC uplink issue. NCR troubleshooting confirmed WLC Port 1 operational while Port 2 remains down. Fiber and SFP troubleshooting completed; secondary uplink remains unresolved. NCR dispatch subsequently closed on 10/02.
+For ADC WLC USADC5520WLC02, NCR troubleshooting was completed on 09/22. Primary uplink remains operational; secondary uplink remains down due to suspected switch-side issue on SWTADC_02. Fiber path was validated, and SFP/alternate port testing did not restore the link. NCR engagement CS0449532 has been closed.
 
-Pending confirmation from NYL service management regarding WLC remediation/failback status and whether this WiFi incident can be closed while remaining WLC work continues under ticket 342693853.
-
-
-Hi Team, following up on Seattle WiFi ticket 342675201. The customer previously confirmed service was restored after the APs were moved to the secondary CNJ WLC.
-
-I also reviewed related WLC ticket 342693853, which I worked on previously. The ADC WLC secondary uplink remained unresolved following NCR troubleshooting, although the primary uplink was operational.
-
-Can you confirm whether we should keep 342675201 open pending WLC remediation, or close it since customer connectivity was restored and the remaining issue is tracked under 342693853?
+Followed up with the team to confirm whether ticket 342675201 can be closed since customer service was restored, while the remaining ADC WLC uplink issue continues to be tracked under this ticket. Awaiting confirmation and further LCM/engineering direction for remediation.
 
 duplicate- 
 
