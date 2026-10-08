@@ -1,5 +1,5 @@
 
-Hi Jon/Shelley, following up on ticket 342726217. Our network/circuit testing was completed and the degradation appeared to be associated with the Zscaler tunnels. Can you confirm whether users are still experiencing the intermittent slowness/drops, or has the issue cleared?
+Seattle GO WiFi connectivity issue mitigated following migration of affected APs to secondary CNJ WLC. Customer previously confirmed no further connectivity issues after migration. Remaining ADC WLC uplink issue is being tracked under ticket 342693853. Per shift lead Ron Johnson’s direction, proceeding with closure of ticket 342675201 as service impact has been mitigated.
 
 duplicate- 
 
