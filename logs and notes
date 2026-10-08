@@ -1,5 +1,5 @@
 
-Reviewed L2 findings and validated STNNAPCHTPER1 MgmtEth0/RSP0/CPU0/0. Interface is currently up/up. Logs indicate a brief 2-second interface flap followed by restoration. No CRC, input, or output errors observed. Interface has remained stable since the event. No apparent service impact. Closing as transient interface flap.
+Hey Omar, I’m following up on 342726217. Your last update said the network/circuits looked good and the degradation appeared related to Zscaler tunnels, with the NYL Zscaler team investigating. Do you know if we have confirmation that it’s resolved, or should we keep the ticket open?
 
 duplicate- 
 
