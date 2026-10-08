@@ -1,5 +1,5 @@
 
-Router USPG BPTAFCA01QFR1 is now reachable and accessible via SSH. Device was found to have recently rebooted with last reload reason reported as Power-on. Cellular0/1/0 (10.10.0.45) is currently up/up with no input/output errors or drops. Interface logs show restoration at 17:18:25 GMT and no subsequent down events at the time of verification. Service appears restored. Exact cause of reboot is undetermined.
+Reviewed L2 findings and validated STNNAPCHTPER1 MgmtEth0/RSP0/CPU0/0. Interface is currently up/up. Logs indicate a brief 2-second interface flap followed by restoration. No CRC, input, or output errors observed. Interface has remained stable since the event. No apparent service impact. Closing as transient interface flap.
 
 duplicate- 
 
