@@ -1,5 +1,8 @@
 
-Reviewed PIM neighbor-down alert for 172.23.188.74 on Te0/0/1/0.2104. Neighbor is no longer present in the PIM table and associated subinterface is no longer present on the router. No current network fault observed. Closing as stale/cleared alert.
+Circuit continues to flap as of 10/08. BGP neighbor 172.23.249.58 has experienced repeated resets due to interface flaps, with current BGP uptime approximately 2 hours 20 minutes. Serial0/0/0 has significant historical CRC/input errors and aborts. Previous escalation acknowledged, but issue remains unresolved. Please expedite field/specialist investigation and provide current repair status and ETA.
+
+Revalidated router. BGP neighbor 172.23.249.58 currently established with uptime approximately 2 hours 20 minutes. Logs confirm recurring BGP resets due to interface flaps through 10/08. Serial0/0/0 circuit instability persists. WFA WTNF1066135 remains open, pending field resolution/specialist assistance. Following up with transport for expedited investigation and repair ETA.
+
 
 duplicate- 
 
