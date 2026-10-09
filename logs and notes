@@ -1,4 +1,8 @@
-Reviewed STNNAPJHNPER1 for reported PIM smoothing interval exceeded alert. Logs indicate PIM neighbor down event due to interface state change. Verified current PIM neighbors and interface status. Referenced subinterface Te0/1/0/0.235 is no longer configured on the device, likely removed. Remaining PIM neighbors are stable. No ongoing instability observed. Closing as informational.
+Reviewed device logs and observed historical BGP adjacency flaps and resets involving both neighbors, 172.21.210.1 and 172.21.210.54. Both neighbors have experienced intermittent session interruptions.
+
+Jeff Fellows has contacted the appropriate teams and site contacts to confirm whether the reported outage is related to a planned cutover or an actual service disruption.
+
+We’re waiting for confirmation from the site or team, so the ticket will remain open for monitoring and follow-up.
 
 duplicate- 
 
