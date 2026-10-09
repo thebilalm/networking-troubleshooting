@@ -1,4 +1,4 @@
-Contesting closure of WFA TG030360. STS reported continued circuit bouncing and service impact on 10/09 despite WFA showing restored. AFO Business Dispatch confirmed additional equipment troubleshooting was required following cable repair. On 10/09, dispatch marked the job incomplete and issued new job reference 212975960. TDM escalation was also approved. Service stability has not been confirmed. Request continued investigation, technician dispatch, and verified restoration before closure.
+Reviewed STNNAPJHNPER1 for reported PIM smoothing interval exceeded alert. Logs indicate PIM neighbor 172.23.211.206 went down on Te0/1/0/0.235 due to interface state change. Verified current PIM neighbors and interface status. Referenced subinterface is no longer present on the device. Remaining PIM neighbors are stable. No additional active alarms observed in the reviewed output. Pending confirmation of subinterface removal before closure.
 
 duplicate- 
 
