@@ -1,4 +1,4 @@
-Reviewed STNNAPJHNPER1 for reported PIM smoothing interval exceeded alert. Logs indicate PIM neighbor 172.23.211.206 went down on Te0/1/0/0.235 due to interface state change. Verified current PIM neighbors and interface status. Referenced subinterface is no longer present on the device. Remaining PIM neighbors are stable. No additional active alarms observed in the reviewed output. Pending confirmation of subinterface removal before closure.
+Reviewed STNNAPJHNPER1 for reported PIM smoothing interval exceeded alert. Logs indicate PIM neighbor down event due to interface state change. Verified current PIM neighbors and interface status. Referenced subinterface Te0/1/0/0.235 is no longer configured on the device, likely removed. Remaining PIM neighbors are stable. No ongoing instability observed. Closing as informational.
 
 duplicate- 
 
