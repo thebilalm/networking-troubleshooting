@@ -1,5 +1,9 @@
+wfa
+STS contacted L3 on 10/09 reporting continued circuit instability/outage. Although WFA TG030360 indicates trouble restored and pending 24-hour closure, STS confirms service remains impacted and circuit continues bouncing. Previous AFO Dispatch update indicated cable trouble cleared but additional technician required for equipment troubleshooting. Request continued investigation, verification of end-to-end service restoration, and prevention of premature ticket closure.
 
-Pending verification of configured 3.904 Mbps QoS shaping rate against circuit bandwidth/profile. No active packet loss or interface errors currently observed.
+aots
+Received call from STS regarding ongoing service impact for STTNOIRKS301R. STS advised circuit remains unstable/bouncing despite WFA TG030360 reporting restoration and pending 24-hour closure. Previous AFO Dispatch update on 10/08 confirmed cable repair completed, but additional equipment troubleshooting was required. Will revalidate device reachability and follow up with transport to contest restoration and request continued investigation. Ticket remains open pending confirmed stability.
+
 
 duplicate- 
 
