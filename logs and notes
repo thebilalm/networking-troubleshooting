@@ -1,9 +1,5 @@
 
-Duplicate alert identified for router STTNAPCHTPER1, interface MgmtEth0/RSP0/CPU0/0. Same interface-down condition is being tracked under ticket #343208197. Closing this ticket as duplicate. Further investigation will continue under the primary ticket.
-
-
-Multiple interface-down alerts identified for STTNAPCHTPER1, interface MgmtEth0/RSP0/CPU0/0. Related ticket #343208592 identified as duplicate. No corresponding clear event observed in the reviewed ticket history. Router CLI access currently unavailable due to GTAC authentication issues. Unable to verify current interface status. Keeping ticket open pending further investigation.
-
+Reviewed ticket events for STTNAPCHTPER1. Interface MgmtEth0/RSP0/CPU0/0 briefly transitioned down and subsequently returned to up state. No further down events observed in the reviewed event history. CLI verification unavailable due to GTAC authentication issues. Closing ticket as restored based on recovery events.
 
 
 -------
