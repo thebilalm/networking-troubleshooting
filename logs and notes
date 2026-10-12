@@ -1,5 +1,8 @@
 
-Router is currently reachable and responding to ping. Router_Down_CLEAR and syslog clear events received, indicating recovery from the previously reported outage. Associated WFA remains part of a major network event. No further router-down alarms observed in the reviewed event history. Closing ticket as restored.
+Duplicate alert identified for router STTNAPCHTPER1, interface MgmtEth0/RSP0/CPU0/0. Same interface-down condition is being tracked under ticket #343208197. Closing this ticket as duplicate. Further investigation will continue under the primary ticket.
+
+
+Multiple interface-down alerts identified for STTNAPCHTPER1, interface MgmtEth0/RSP0/CPU0/0. Related ticket #343208592 identified as duplicate. No corresponding clear event observed in the reviewed ticket history. Router CLI access currently unavailable due to GTAC authentication issues. Unable to verify current interface status. Keeping ticket open pending further investigation.
 
 
 
