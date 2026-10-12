@@ -1,5 +1,7 @@
 
-Reviewed ticket events for STTNAPCHTPER1. Interface MgmtEth0/RSP0/CPU0/0 briefly transitioned down and subsequently returned to up state. No further down events observed in the reviewed event history. CLI verification unavailable due to GTAC authentication issues. Closing ticket as restored based on recovery events.
+Existing BMP ticket #692100548 identified for circuit ASKQFN001228.ATI. BMP remains in Pending Analysis status, with provider diagnostics indicating possible access trouble. STS confirmed site power and LCON performed router power cycle; device remains unreachable. Linked existing BMP ticket to Express #343208187 for continued transport investigation.
+
+Reviewed circuit records and identified existing transport ticket BMP #692100548. Provider indicates possible access trouble, with further analysis pending. Site power verified and router power cycle completed by LCON; router remains unreachable. Continuing to monitor BMP for repair updates and service restoration.
 
 
 -------
