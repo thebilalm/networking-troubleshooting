@@ -1,13 +1,5 @@
 
-NCR Part & Tech dispatch created for replacement of SW1 on SWTGOS15_1 due to suspected PoE hardware failure.
-
-NCR Reference: CS0456666
-Scheduled: Monday, 10/19/2026 at 2:00 PM PT (4:00 PM CT), per site contact’s preferred maintenance window.
-
-Previous troubleshooting included power cycling the switches without restoring PoE to the affected APs. APs were moved from SW1 to SW3 and are currently operational.
-
-Pending NCR technician assignment, replacement part delivery, and scheduled switch replacement. Ticket will remain open pending replacement and post-maintenance verification.
-
+Rechecked ADCDCIN7K1-DCI Eth3/22, circuit IXEC.791392.ATI. Interface remains up/up and passing traffic, with no additional interface resets or CRC errors observed compared to previous checks. Last link flap was approximately 12 hours and 31 minutes ago. AT&T transport investigation reported Loss of Clock (LOC) and incoming Loss of Signal (LOS) toward the core at NWRKNJ02 during the previous maintenance window. BMP 601201432 has progressed to Return Notified, with repair verification in progress. Circuit is currently stable and operational.
 
 -------
 
