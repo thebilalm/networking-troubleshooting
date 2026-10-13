@@ -1,8 +1,8 @@
 
-Action Required Continue hourly BMP escalations. Monitor CRC/input errors and follow up with transport.
-Assigned Evening Shift
-Notes STNNAPNSHCRS1 Te0/3/0/8 UP/UP, but CRC errors continue incrementing. Transport investigation ongoing. Keep ticket open pending resolution.
+STTNOIRKS301R remains unreachable at 172.23.226.13. STS advised previous WFA TG030360 was opened against the incorrect circuit. New WFA WTNFI866147 opened for circuit 80.DHZX.562240.SC. Router remains down despite previous transport repairs. Interface Serial0/2/0:1 previously showed significant CRC errors, aborts and interface resets. Request expedited circuit testing, fault isolation, technician findings and ETR.
 
+
+Validated STTNOIRKS301R via pingit; device remains unreachable. Reviewed previous WFA TG030360 and new WFA WTNFI866147. Per STS, previous transport ticket was opened against an incorrect circuit. New WFA created on circuit 80.DHZX.562240.SC and currently open with Level 2 escalation acknowledged. Prior interface logs show CRC errors, aborts and resets on Serial0/2/0:1. Awaiting transport testing, fault isolation and restoration. Ticket remains open.
 
 -------
 
