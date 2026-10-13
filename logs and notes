@@ -1,7 +1,8 @@
 
-WFA FT066131 remains in Verifying Repair status with no updates since 10/07. Previous notes indicate CO investigation involving framing errors, LOS, and wiring issues. Current router checks show serial interfaces UP/UP; however, circuit flapping was observed on 10/12. Requesting an expedited carrier status update, confirmation of repair completion, and next steps toward resolution.
+Persistent CRC/input errors observed on STNNAPNSHCRS1 interface TenGigE0/3/0/8. Interface remains UP/UP; however, CRC counters continue incrementing following previous CO investigation and counter clearing. Input errors increased from 4,808 to 4,822 and CRC errors from 4,768 to 4,782 during monitoring. Requesting further transport investigation and testing to identify and resolve ongoing physical-layer errors. AT&T circuit BFEC.514556.ATI; local LEC circuit T4.KGGS.820053.SC.
 
-Reviewed WFA FT066131, currently in Verifying Repair status with no updates since 10/07. Previous carrier notes indicate CO investigation involving framing errors, LOS, and wiring issues. Current checks show serial interfaces UP/UP and BGP established; however, logs indicate intermittent circuit flapping on 10/12. Submitted TDM Level 5 escalation requesting carrier status update and repair confirmation. Ticket remains open pending further updates.
+
+Reviewed ongoing interface error issue on STNNAPNSHCRS1 TenGigE0/3/0/8. Interface currently UP/UP with no recent carrier transitions; however, input errors and CRC counters continue incrementing. Previous CO investigation and counter clearing did not fully resolve the issue. Further transport investigation required. Ticket remains open pending carrier troubleshooting and resolution.
 
 
 -------
