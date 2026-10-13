@@ -1,5 +1,8 @@
 
-Router is currently reachable and operational. Device uptime indicates a recent reboot, possibly due to a power interruption. Verified active interfaces are up/up and both BGP neighbors are established. Associated transport ticket CS4812952 has been resolved, with AT&T testing indicating a possible customer-side issue. Service appears restored. Closing ticket.
+Recurring T1 circuit outage/flapping on STTNOIRWIL02R, Serial0/1/0:1. Previous logs confirmed interface down/down with CRC errors, resets, and repeated controller transitions. WFA testing returned NTF despite continued circuit instability. Multiple prior escalations submitted without confirmed resolution. Current ping test passes; however, SSH access fails with “No route to host,” preventing further interface verification. Requesting TDM investigation, coordinated end-to-end testing, and restoration status update.
+
+Reviewed ongoing T1 circuit issue and previous troubleshooting. Device responds to ping; however, SSH access is unsuccessful, preventing current interface verification. Previous logs indicate repeated circuit flapping and interface down events. WFA ticket WTNTG030358 remains open. Submitted additional TDM escalation requesting further investigation and restoration updates. Continuing to monitor pending carrier response.
+
 
 -------
 
