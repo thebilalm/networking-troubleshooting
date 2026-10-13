@@ -1,5 +1,9 @@
 
-Attempted to contact customer at the requested callback time (10:30 AM ET) regarding the ongoing eLife Wi-Fi/VDI connectivity issue. No answer. Left voicemail requesting a callback at 713-429-4488 and provided ticket reference 343056632. Awaiting customer response to proceed with troubleshooting.
+NCR tech was onsite yesterday to troubleshoot the PoE issue. Power cycled the switches, but the APs still weren’t receiving PoE from SW1. The APs were moved from SW1 to SW3 and came back online.
+
+The site contact advised that the preferred maintenance window for replacing SW1 is Monday at 2 PM PT (4 PM CT).
+
+I’ll arrange an NCR tech and replacement switch for Monday, Oct 19, at 2 PM PT.
 
 
 
