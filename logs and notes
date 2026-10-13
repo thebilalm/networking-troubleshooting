@@ -1,8 +1,7 @@
 
-Persistent CRC/input errors observed on STNNAPNSHCRS1 interface TenGigE0/3/0/8. Interface remains UP/UP; however, CRC counters continue incrementing following previous CO investigation and counter clearing. Input errors increased from 4,808 to 4,822 and CRC errors from 4,768 to 4,782 during monitoring. Requesting further transport investigation and testing to identify and resolve ongoing physical-layer errors. AT&T circuit BFEC.514556.ATI; local LEC circuit T4.KGGS.820053.SC.
-
-
-Reviewed ongoing interface error issue on STNNAPNSHCRS1 TenGigE0/3/0/8. Interface currently UP/UP with no recent carrier transitions; however, input errors and CRC counters continue incrementing. Previous CO investigation and counter clearing did not fully resolve the issue. Further transport investigation required. Ticket remains open pending carrier troubleshooting and resolution.
+Action Required Continue hourly BMP escalations. Monitor CRC/input errors and follow up with transport.
+Assigned Evening Shift
+Notes STNNAPNSHCRS1 Te0/3/0/8 UP/UP, but CRC errors continue incrementing. Transport investigation ongoing. Keep ticket open pending resolution.
 
 
 -------
