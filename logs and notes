@@ -1,5 +1,6 @@
 
-Following up on previous Level 1 escalation from 10/08. WFA remains open with no confirmed resolution. Circuit has experienced recurring Serial0/0/0 flaps causing BGP neighbor 172.23.249.58 to reset. Please provide current field investigation status, actions taken, repair ETA, and next steps. Request expedited resolution due to prolonged intermittent circuit instability.
+Following up on the reported intermittent packet loss/latency. Previous testing showed no active packet loss or physical interface errors; however, QoS policy counters indicate historical egress drops. Gi0/0/0 is currently configured with a 3.904 Mbps outbound shaping rate. Please confirm the expected/provisioned circuit bandwidth and advise whether the customer is still experiencing intermittent issues so we can determine the next course of action.
+
 -------
 
 Hi, I need assistance contesting closure on ticket 692301114. The ticket is currently in cleared/verifying repair status, but customer impact has not been confirmed resolved and the original slowness/Zoom issue remains under investigation. The “Contest Closure” option in Express Ticketing is currently greyed out, so I’m unable to submit the contest electronically.
