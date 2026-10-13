@@ -1,5 +1,8 @@
 
-Follow-up: Eth3/21 restored to up state at 13:08:59 UTC following the latest link failure. Circuit continues to experience intermittent flapping. Verizon Level 4 ticket remains open pending permanent repair, updated RFO, and confirmation of circuit stability. Continuing to monitor.
+Following up on pending RFO for NYL datacenter circuit IXEC.791392.ATI. Circuit has restored and is currently up and passing traffic. Previous diagnostics returned NTF (No Trouble Found). Customer is requesting the RFO and confirmed outage duration. Prior Level 1 and Level 2 escalations have not yet resulted in an RFO. Please engage the appropriate transport team and provide the outage cause and duration.
+
+Rechecked ADCDCIN7K1-DCI Eth3/22. Interface is up/up and passing traffic, with 44 interface resets. AT&T diagnostics returned NTF (No Trouble Found). RFO remains pending. Followed up through UD escalation on BMP 601201432 requesting the outage cause and confirmed downtime. Ticket remains open pending RFO from transport.
+
 
 
 -------
