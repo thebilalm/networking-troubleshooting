@@ -1,5 +1,5 @@
 
-Rechecked ADCDCIN7K1-DCI Eth3/22, circuit IXEC.791392.ATI. Interface remains up/up and passing traffic, with no additional interface resets or CRC errors observed compared to previous checks. Last link flap was approximately 12 hours and 31 minutes ago. AT&T transport investigation reported Loss of Clock (LOC) and incoming Loss of Signal (LOS) toward the core at NWRKNJ02 during the previous maintenance window. BMP 601201432 has progressed to Return Notified, with repair verification in progress. Circuit is currently stable and operational.
+Rechecked ADCDCIN7K2-DCI Eth3/21, Verizon circuit W1E37883. Interface is currently up/up and passing traffic. Last link flap was approximately 2 hours and 29 minutes ago. Verizon ticket 2026101204822 has been resolved. Provider confirmed a fiber cut/damage, with field technicians completing fiber-splicing repairs and restoring service. Circuit has recovered following the provider repairs and will continue to be monitored through standard network monitoring. Proceeding with ticket closure.
 
 -------
 
