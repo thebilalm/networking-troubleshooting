@@ -1,20 +1,12 @@
 
-Schedule CE for Monday, 10/19/2026 at 2:00 PM PT (4:00 PM CT), per site contact’s preferred maintenance window.
+NCR Part & Tech dispatch created for replacement of SW1 on SWTGOS15_1 due to suspected PoE hardware failure.
 
-Site: Stockton (S15), NYL
-LCON: Crystal Duaime – 209-955-2468
+NCR Reference: CS0456666
+Scheduled: Monday, 10/19/2026 at 2:00 PM PT (4:00 PM CT), per site contact’s preferred maintenance window.
 
-Coordinate site access and maintenance with LCON. Replacement switch must be available prior to dispatch. Contact AT&T Network Support for remote assistance.
+Previous troubleshooting included power cycling the switches without restoring PoE to the affected APs. APs were moved from SW1 to SW3 and are currently operational.
 
---
-
-CE to replace failed switch member SW1 in stack SWTGOS15_1 due to suspected PoE hardware failure.
-
-Previous troubleshooting included power cycling the switches without restoring PoE to affected APs. APs were moved from SW1 to SW3 and are currently operational.
-
-CE to coordinate with AT&T Network Support, replace SW1 with the approved RMA unit, reconnect cables, verify stack membership and switch status, and assist with post-replacement PoE and connectivity testing.
-
-Do not proceed with replacement until authorized by AT&T Network Support.
+Pending NCR technician assignment, replacement part delivery, and scheduled switch replacement. Ticket will remain open pending replacement and post-maintenance verification.
 
 
 -------
