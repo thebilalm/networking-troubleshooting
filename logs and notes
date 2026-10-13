@@ -1,5 +1,6 @@
 
-Rechecked ADCDCIN7K2-DCI Eth3/21. Interface is currently down (link not connected), admin up, with 0 bps traffic. Interface resets increased to 531, and syslogs confirm continued link flapping, with latest down event at 13:07:52 UTC. Verizon ticket 2026101204822 remains open at Level 4. Previous provider updates indicate incorrect fiber splicing at the north handhole. Requesting expedited repair status, dispatch update, ETR, and updated RFO. Ticket remains open pending restoration.
+Follow-up: Eth3/21 restored to up state at 13:08:59 UTC following the latest link failure. Circuit continues to experience intermittent flapping. Verizon Level 4 ticket remains open pending permanent repair, updated RFO, and confirmation of circuit stability. Continuing to monitor.
+
 
 -------
 
