@@ -1,5 +1,5 @@
 
-Following up on the reported intermittent packet loss/latency. Previous testing showed no active packet loss or physical interface errors; however, QoS policy counters indicate historical egress drops. Gi0/0/0 is currently configured with a 3.904 Mbps outbound shaping rate. Please confirm the expected/provisioned circuit bandwidth and advise whether the customer is still experiencing intermittent issues so we can determine the next course of action.
+Router STTNOIRTHA16R is reachable and operational. Verified BGP neighbor 172.23.162.46 is established, and interface Gi0/0/0 is up/up with no CRC, input, or output errors. No recent flaps observed in device logs. Service appears restored. Closing ticket.
 
 -------
 
