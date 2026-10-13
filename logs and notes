@@ -1,8 +1,5 @@
 
-Existing BMP ticket #692100548 identified for circuit ASKQFN001228.ATI. BMP remains in Pending Analysis status, with provider diagnostics indicating possible access trouble. STS confirmed site power and LCON performed router power cycle; device remains unreachable. Linked existing BMP ticket to Express #343208187 for continued transport investigation.
-
-Reviewed circuit records and identified existing transport ticket BMP #692100548. Provider indicates possible access trouble, with further analysis pending. Site power verified and router power cycle completed by LCON; router remains unreachable. Continuing to monitor BMP for repair updates and service restoration.
-
+Reviewed updated environmental readings and platform logs for STNNAPNSHCRS2. Current temperatures remain below configured thresholds; however, recurring minor temperature alarms and subsequent clears continue to be observed. RP0 alarm LED remains in MINOR status. Ticket will remain open for further investigation and monitoring.
 
 -------
 
