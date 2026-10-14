@@ -1,15 +1,11 @@
 
-Hey Shadi, I’m looking at a few PGE routers where normal SSH/command authorization reaches GTAC, but enable authentication does not hit GTAC at all.
+Hi Team,
 
-I pulled the configs and the AAA/TACACS statements look consistent, but I noticed a routing difference: one device has a default route via a next hop, while another has its default route to Null0. TACACS is sourced from Loopback10 and points to 135.89.206.8 / 135.89.206.40.
+We are reviewing the affected device configurations and comparing the AAA/TACACS and routing behavior against known-working PGE devices. I’ve also engaged additional technical support to help validate the expected design.
 
-The affected devices I’m looking at are:
-172.18.5.2 – PGEBROCCA01R1
-172.18.5.15 – USCAGPPITCA01QFR1
-172.18.5.1 – PGEBVACCA01R1 is also being reported, although I was able to get privileged access there using one of the older enable passwords.
+We’ll provide an update once the comparison is complete.
 
-
-Before we conclude anything, do you know if these PGE devices are supposed to have specific routes toward the GTAC servers, or who would normally validate the AAA/TACACS routing design?
+Regards,
 
 
 
