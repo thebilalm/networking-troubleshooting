@@ -1,17 +1,21 @@
 
-Thanks, Robert. I’ll coordinate with STS to arrange onsite CPE support for further isolation. Once we have their availability, we’ll follow up to coordinate testing with WFA.
-
 Hello STS Team,
 
-Following up on the recurring T1 circuit flapping issue under WFA FT066131.
+Following up on the recurring T1 circuit flapping issue on STTNOIRBVA01R under WFA FT066131.
 
-Per AT&T WFA technician Robert Hansen, CO testing detected 5 CRC errors toward the Z end during approximately one hour of nonintrusive T-BERD monitoring. No trouble was found toward the A end.
+Per AT&T transport, CO monitoring detected 5 CRC errors toward the Z end during approximately one hour of testing. Further isolation is needed to determine the source of the intermittent errors.
 
-Further isolation is required. Please coordinate with the onsite CPE support team and provide their availability for joint troubleshooting with AT&T transport to determine the source of the errors.
+We can coordinate an NCR field technician for onsite CPE-side troubleshooting if required.
 
-The router is responding to ping; however, SSH access is currently unsuccessful, preventing further interface verification.
+Please provide the following information so we can arrange a dispatch:
 
-Please advise on availability and next steps.
+* Preferred service window/date and time
+* Site access hours
+* Onsite contact name and phone number
+* Building, floor, and room/location of the equipment
+* Any escort or special access requirements
+
+Once the details are available, we can coordinate with NCR and AT&T transport for further testing.
 
 Thank you.
 
