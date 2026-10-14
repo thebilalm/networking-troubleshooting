@@ -1,5 +1,9 @@
 
-Yeah, I see it now. They added 172.18.5.15 and 10.10.0.47 to the list. .47 is already marked ready, so I’m just going to validate 172.18.5.15 and recheck 172.18.5.1 since they’re questioning the enable result.
+SEV1 STTNOIRKS301R remains unreachable at 172.23.226.13. WFA WTNFI866147 remains open. Transport previously reported trouble at Dickson POP and framing issues in both directions. Latest testing indicates T1 live in both directions with no trouble detected, but RPV testing returned Manual Handling Required. Router remains down. Request expedited manual troubleshooting, end to end circuit verification, further fault isolation, and updated ETR.
+
+Validated STTNOIRKS301R via pingit; device remains unreachable. Reviewed WFA WTNFI866147 for circuit 80.DHZX.562240.SC. Previous transport logs indicated framing issues and trouble at Dickson POP. Latest testing reported T1 live in both directions with no trouble detected; however, automated RPV testing indicated manual handling required. Continuing WFA escalation for further fault isolation and restoration. Pending transport findings and ETR.
+
+
 -------
 
 Hi, I need assistance contesting closure on ticket 692301114. The ticket is currently in cleared/verifying repair status, but customer impact has not been confirmed resolved and the original slowness/Zoom issue remains under investigation. The “Contest Closure” option in Express Ticketing is currently greyed out, so I’m unable to submit the contest electronically.
