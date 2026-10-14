@@ -5,41 +5,21 @@
 
 ---------
 
-Hi, I need assistance contesting closure on ticket 692301114. The ticket is currently in cleared/verifying repair status, but customer impact has not been confirmed resolved and the original slowness/Zoom issue remains under investigation. The “Contest Closure” option in Express Ticketing is currently greyed out, so I’m unable to submit the contest electronically.
-
-Please contest the closure/reopen the ticket and keep it active for continued investigation. An ECAT escalation has already been submitted requesting review of the RFC results and further throughput validation before closure.
 
 
 
-Yeah, maybe just have him verify what equipment was recently replaced and whether anything looks abnormal onsite. Since Eric said two users were showing Zscaler trouble, I don’t think it’s worth having the tech spend a lot of time digging into the hardware unless he finds something specific.
+
+
+
+
 
 
 
 ---------
 
-Hello Team,
-NCR has assigned the CE for tonight’s dispatch.
-
-CE Name: Rober Sheider
-UID: RS2827
-ETA: 09/23/2026 at 10:00 PM ET
-
-Please proceed with the required DC access arrangements. Thank you.
-
-I’d also add a ticket log after sending:
-
-NCR provided CE details for tonight’s dispatch. CE: Rober Sheider, UID RS2827, ETA 10:00 PM ET. Customer/DC team notified to arrange access.
 
 
 
-
-Escalation note
-
-Repeat escalation: Severe site-wide degraded throughput remains unresolved. Multiple users continue to experience ~2-3 Mbps download and ~11-16 Mbps upload with major Zoom/business impact. Local LAN/router checks remain clean with low utilization and no active errors or loss. Request urgent provider status, expedited throughput/RFC testing, and continued investigation on R01/MPLS circuit BBEC.659996.ATI.
-
-Impact statement
-
-Critical business impact remains ongoing. Multiple wired and wireless users are affected, with Zoom severely degraded and normal business applications slow. Issue has persisted for approximately four weeks. Customer management is actively requesting urgent resolution and continued escalation.
 
 
 
