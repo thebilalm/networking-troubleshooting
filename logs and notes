@@ -1,4 +1,16 @@
 
+Hey Edgar, Shadi pointed me back to you regarding the PGE AAA/routing design.
+
+We have a few PGE routers where SSH login and command authorization reach GTAC successfully, but when we run enable and enter the password, GTAC says no enable-authentication request reaches their servers.
+
+I compared the configs and the affected devices have:
+aaa authentication enable default group tacacs+ enable
+and TACACS servers 135.89.206.8 / 135.89.206.40 sourced from Loopback10.
+
+On one device, an older local enable password works, which makes me think it may be falling through to the local enable secret. On the others, none of the available enable passwords work.
+
+Shadi mentioned you can assist with the specific route injections and AAA setup for PGE. Can you help us validate the expected routing toward the GTAC servers and whether this AAA behavior is correct before we make any changes?
+
 
 
 
