@@ -1,7 +1,9 @@
 
-Thanks. Understood. The router is responding to ping, but SSH access is currently failing, so we’re unable to verify the latest interface counters. Since the circuit was still flapping on 10/12, could you confirm whether the T-BERD testing showed any errors and whether further testing is needed? We want to ensure the intermittent issue is resolved before closing the ticket.
+Requesting transport investigation for MIS_INTERNET connectivity issue on USNYLIWTSNY03MISR01, circuit IZEC.557247..ATI.
 
-Followed up with WFA technician Robert Hansen regarding FT066131. Technician advised no onsite work has been performed since 10/07, when CO technician exercised DSX jacks and performed intrusive monitoring using a T-BERD test set. Carrier reports circuit currently appears healthy. Router responds to ping; however, SSH access fails with “No route to host,” preventing current interface verification. Requested testing results and further confirmation of circuit stability. Ticket remains open pending follow-up.
+WAN interface Gi0/0/0 is up/up with no CRC/input errors. Default route points to 206.121.82.157. ARP resolves successfully; however, ping to upstream gateway sourced from LAN interface 12.180.136.249 fails (0/5).
+
+Customer reports no internet connectivity. Please investigate circuit health, upstream gateway reachability, and return-path routing, and provide findings.
 
 
 
