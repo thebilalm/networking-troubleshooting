@@ -1,23 +1,18 @@
 
-Hello STS Team,
+Hey Shadi, quick question on the PGE migration devices. We have three routers where SSH login works, but enable authentication is failing:
+172.18.5.2 – PGEBROCCA01R1
+172.18.5.15 – USCAGPPITCA01QFR1
+and they’re also reporting the issue on 172.18.5.1 – PGEBVACCA01R1.
 
-Following up on the recurring T1 circuit flapping issue on STTNOIRBVA01R under WFA FT066131.
+GTAC checked their side and said the enable attempts are not hitting the GTAC servers at all. Normal login/command authorization does hit GTAC, but after entering enable they see nothing reach their interface. They believe it’s a device/routing/AAA configuration issue rather than GTAC itself.
 
-Per AT&T transport, CO monitoring detected 5 CRC errors toward the Z end during approximately one hour of testing. Further isolation is needed to determine the source of the intermittent errors.
+Do you know who owns the AAA/TACACS configuration for these PGE devices, or can you point me to the right team? They’re also asking us to compare the TACACS server statements, server/port settings, and AAA configuration against the working PGE routers.
 
-We can coordinate an NCR field technician for onsite CPE-side troubleshooting if required.
+if hes willing to help technically:
 
-Please provide the following information so we can arrange a dispatch:
+If you want, I can pull the config backups for the affected devices and a known-good PGE router so we can compare the AAA/TACACS sections.
 
-* Preferred service window/date and time
-* Site access hours
-* Onsite contact name and phone number
-* Building, floor, and room/location of the equipment
-* Any escort or special access requirements
 
-Once the details are available, we can coordinate with NCR and AT&T transport for further testing.
-
-Thank you.
 
 
 ---------
