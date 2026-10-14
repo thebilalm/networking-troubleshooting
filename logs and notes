@@ -1,8 +1,5 @@
 
-Requesting urgent TDM intervention for ongoing SEV1 router outage affecting STTNOIRKS301R. Device 172.23.226.13 remains unreachable. New WFA WTNFI866147 opened on circuit 80DHZX562240SC after STS identified the previous circuit ticket as incorrect. WFA has reached Level 4 escalation without restoration. Transport previously identified trouble at Dickson POP and framing failures in both directions. Latest testing reported T1 live in both directions but RPV testing required manual handling. Request expedited fault isolation, manual testing, corrective action and ETR.
-
-STTNOIRKS301R remains unreachable via pingit. Reviewed WFA WTNFI866147 for circuit 80.DHZX.562240.SC. WFA has reached Level 4 escalation. Previous transport findings indicated trouble at Dickson POP and framing failures. Subsequent testing reported T1 live in both directions; however, automated RPV testing required manual handling. Submitting TDM escalation for further investigation, fault isolation, and restoration. Pending transport response and ETR.
-
+Reviewed ECAT escalation response for BMP 601301034. Escalation status returned as Refer with instructions to follow up on NERS 26ners193854. Latest carrier update indicates faulty network equipment identified and replacement parts ordered; ETR remains unavailable. BMP remains active in Restore and Repair in Progress status. Continuing to monitor pending equipment replacement, restoration confirmation, and verification of CRC/input error stability on STNNAPNSHCRS1 Te0/3/0/8.
 
 -------
 
