@@ -1,12 +1,6 @@
 
-Hello Team,
-
-We investigated the reported internet connectivity issue and identified a potential upstream connectivity issue on the MIS_INTERNET circuit.
-
-A transport ticket (BMP 601400877) has been opened for further investigation. We are awaiting the transport team’s findings and will provide updates as they become available.
-
-Thank you,
-AT&T Network Support
+Action Required Follow up on BMP 6O140087 for transport investigation. Check for updates, validate MIS_INTERNET connectivity, and coordinate with customer as needed.
+Notes NYL E-Life internet connectivity issue. Router USNYLIWTSNY03MISR01, circuit IZEC.557247..ATI. WAN Gi0/0/0 up/up, no CRC errors. Default route and ARP present; LAN-sourced ping to gateway 206.121.82.157 failed (0/5). BMP opened for upstream investigation. Awaiting transport findings. Known NY/NJ DHCP issue also reported; correlation pending.
 
 
 
