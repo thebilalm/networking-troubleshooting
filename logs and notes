@@ -1,8 +1,5 @@
 
-Recurring CRC/input errors on STNNAPNSHCRS1 Te0/3/0/8 remain unresolved. Previous ENOC ticket 692401008 closed without resolution. New BMP 601301034 escalated to Level 4. ENOC reports core path clean; LEC ticket OT107275 opened for further investigation. Requesting urgent status of LEC testing, findings, responsible team, next action and ETA. Please coordinate with LEC and ENOC to isolate and resolve persistent errors.
-
-Reviewed ongoing CRC/input error issue on STNNAPNSHCRS1 Te0/3/0/8. Previous ENOC ticket 692401008 closed without confirmed resolution. New BMP 601301034 remains active and was escalated to Level 4. ENOC reported no errors on the core path and advised LEC investigation. LEC ticket OT107275 opened for additional troubleshooting. Submitted ECAT escalation requesting investigation status, findings, action plan and ETA. Continuing to monitor pending resolution.
-
+Yeah, I see it now. They added 172.18.5.15 and 10.10.0.47 to the list. .47 is already marked ready, so I’m just going to validate 172.18.5.15 and recheck 172.18.5.1 since they’re questioning the enable result.
 -------
 
 Hi, I need assistance contesting closure on ticket 692301114. The ticket is currently in cleared/verifying repair status, but customer impact has not been confirmed resolved and the original slowness/Zoom issue remains under investigation. The “Contest Closure” option in Express Ticketing is currently greyed out, so I’m unable to submit the contest electronically.
