@@ -1,10 +1,22 @@
 
-Action Required Follow up on BMP 6O140087 for transport investigation. Check for updates, validate MIS_INTERNET connectivity, and coordinate with customer as needed.
-Notes NYL E-Life internet connectivity issue. Router USNYLIWTSNY03MISR01, circuit IZEC.557247..ATI. WAN Gi0/0/0 up/up, no CRC errors. Default route and ARP present; LAN-sourced ping to gateway 206.121.82.157 failed (0/5). BMP opened for upstream investigation. Awaiting transport findings. Known NY/NJ DHCP issue also reported; correlation pending.
+Thanks, Robert. I’ll coordinate with STS to arrange onsite CPE support for further isolation. Once we have their availability, we’ll follow up to coordinate testing with WFA.
+
+Hello STS Team,
+
+Following up on the recurring T1 circuit flapping issue under WFA FT066131.
+
+Per AT&T WFA technician Robert Hansen, CO testing detected 5 CRC errors toward the Z end during approximately one hour of nonintrusive T-BERD monitoring. No trouble was found toward the A end.
+
+Further isolation is required. Please coordinate with the onsite CPE support team and provide their availability for joint troubleshooting with AT&T transport to determine the source of the errors.
+
+The router is responding to ping; however, SSH access is currently unsuccessful, preventing further interface verification.
+
+Please advise on availability and next steps.
+
+Thank you.
 
 
-
--------
+---------
 
 Hi, I need assistance contesting closure on ticket 692301114. The ticket is currently in cleared/verifying repair status, but customer impact has not been confirmed resolved and the original slowness/Zoom issue remains under investigation. The “Contest Closure” option in Express Ticketing is currently greyed out, so I’m unable to submit the contest electronically.
 
