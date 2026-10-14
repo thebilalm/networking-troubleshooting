@@ -1,10 +1,12 @@
 
-Requesting transport investigation for MIS_INTERNET connectivity issue on USNYLIWTSNY03MISR01, circuit IZEC.557247..ATI.
+Hello Team,
 
-WAN interface Gi0/0/0 is up/up with no CRC/input errors. Default route points to 206.121.82.157. ARP resolves successfully; however, ping to upstream gateway sourced from LAN interface 12.180.136.249 fails (0/5).
+We investigated the reported internet connectivity issue and identified a potential upstream connectivity issue on the MIS_INTERNET circuit.
 
-Customer reports no internet connectivity. Please investigate circuit health, upstream gateway reachability, and return-path routing, and provide findings.
+A transport ticket (BMP 601400877) has been opened for further investigation. We are awaiting the transport team’s findings and will provide updates as they become available.
 
+Thank you,
+AT&T Network Support
 
 
 
