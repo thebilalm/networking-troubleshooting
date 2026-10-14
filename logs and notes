@@ -1,5 +1,5 @@
 
-Reviewed TDM escalation for WFA FT066131. Escalation approved, with comments indicating the ticket was referred to a technician for follow-up and previous monitoring was clean. Contacted WFA technician via Teams requesting latest testing results, CO repair confirmation, and circuit stability status. Awaiting technician response. Ticket remains open pending further verification.
+Thanks, Robert. We observed repeated circuit flapping on 10/12, even though the interfaces are currently UP/UP. Are you able to check whether any errors or alarms were recorded on your side around that time? Also, can you confirm whether the CO work on 10/7 resolved the original framing/wiring issue?
 
 
 -------
