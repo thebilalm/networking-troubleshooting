@@ -1,13 +1,5 @@
 
-Received inbound call from Michael Randle regarding the ongoing Peach Pass VLAN 33 issue.
-
-Customer advised that Peach Pass desktops at Metro Reentry Facility and Metro Transitional Center are expected to operate on restricted VLAN 33. Eight devices at Metro Reentry and one at Metro Transitional reportedly experienced issues accessing the Peach Pass portal. Customer also expressed concerns that other devices may be connected to an incorrect VLAN.
-
-Customer forwarded a spreadsheet containing device MAC addresses and network information for review. Discussed the need to identify the affected switch ports and verify VLAN assignments.
-
-Michael will coordinate with onsite personnel and provide the port numbers, building, floor, and room locations for the affected devices.
-
-Pending customer information and further investigation. Issue remains unresolved.
+Reviewed BMP 601301034. Transport confirmed service restoration on 10/14 at 9:29 PM CDT following repair of damaged cabling. Independently validated STNNAPNSHCRS1 interface Te0/3/0/8 UP/UP, with the last observed link flap occurring prior to the reported repair. No subsequent interface flapping observed in reviewed logs. Service restored. Proceeding with UD/AOTS ticket closure.
 
 
 
