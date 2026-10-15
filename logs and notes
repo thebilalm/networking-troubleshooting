@@ -1,15 +1,5 @@
 
-Hello,
-
-We are following up regarding the reported outage for device STTNOIRDC302R.
-
-The router is currently reachable, and the WAN and LAN interfaces are up/up. BGP connectivity has been restored, with the neighbor established and stable for approximately 12 hours at the time of validation.
-
-Previous logs indicate a BGP neighbor reset due to hold-time expiration on 10/14. Current checks confirm that the device is reachable, interfaces are operational, and traffic is passing.
-
-No further connectivity issues were observed during validation. As service has been restored, we will proceed with closing this ticket. The device will remain under standard network monitoring.
-
-Thank you.
+Reviewed WFA CS4819894. Transport reported service restoration on 10/14 following a major network outage involving damaged cabling. Independently validated router STTNOIRDC302R reachable, WAN/LAN interfaces up/up, and BGP neighbor established and stable. No current connectivity issues observed. Proceeding with ticket closure.
 
 
 
