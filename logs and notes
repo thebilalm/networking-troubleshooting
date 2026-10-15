@@ -1,5 +1,5 @@
 
-Validated STTNOIRKS301R restored and reachable. Router uptime 15 days 23 hours. Both serial interfaces Se0/2/0:1 and Se0/2/1:1 are up/up, LAN interfaces operational, and BGP neighbor 172.23.226.22 established and stable for approximately 1 day 23 hours. Previous interface flaps observed on 10/13 and 10/14 with no current connectivity issues identified. Service appears restored. Proceeding with AOTS ticket closure.
+Multiple follow-ups sent to STS requesting confirmation of provisioned circuit bandwidth and current service impact, with no response received. Previous testing showed no active packet loss or physical interface errors, and BGP remained established. Historical QoS drops observed; configured shaping rate remains unverified. Closing due to no customer response.
 
 
 
