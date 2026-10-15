@@ -1,5 +1,5 @@
 
-Reviewed BMP 601301034. Transport confirmed service restoration on 10/14 at 9:29 PM CDT following repair of damaged cabling. Independently validated STNNAPNSHCRS1 interface Te0/3/0/8 UP/UP, with the last observed link flap occurring prior to the reported repair. No subsequent interface flapping observed in reviewed logs. Service restored. Proceeding with UD/AOTS ticket closure.
+Validated STTNOIRKS301R restored and reachable. Router uptime 15 days 23 hours. Both serial interfaces Se0/2/0:1 and Se0/2/1:1 are up/up, LAN interfaces operational, and BGP neighbor 172.23.226.22 established and stable for approximately 1 day 23 hours. Previous interface flaps observed on 10/13 and 10/14 with no current connectivity issues identified. Service appears restored. Proceeding with AOTS ticket closure.
 
 
 
