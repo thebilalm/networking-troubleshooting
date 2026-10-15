@@ -1,5 +1,23 @@
 
-Multiple follow-ups sent to STS requesting confirmation of provisioned circuit bandwidth and current service impact, with no response received. Previous testing showed no active packet loss or physical interface errors, and BGP remained established. Historical QoS drops observed; configured shaping rate remains unverified. Closing due to no customer response.
+Reopening investigation under a new UD/AOTS ticket, referencing previously closed ticket 342935154.
+
+Ongoing intermittent CRC/input errors on STNNAPNSHCRS1 interface Te0/3/0/8. Previous BMP 601301034 was closed following reported service restoration on 10/14 due to damaged cable repair. However, further coordination with the engineering team confirmed that the planned equipment replacement has not yet been completed.
+
+Interface remains UP/UP, but historical CRC/input errors and repeated interface flapping require further investigation. Previous counters reached 9,076 input errors and 8,994 CRC errors before being cleared for monitoring.
+
+Opening a new BMP for continued transport investigation, confirmation of pending equipment replacement, and verification of circuit stability. Ticket to remain open pending resolution.
+
+
+BMP:
+
+Persistent intermittent CRC/input errors and interface flapping on STNNAPNSHCRS1 Te0/3/0/8.
+
+AT&T Circuit: BFEC.514556..ATI
+Local LEC: T4.KGGS.820053..SC
+
+Previous BMP 601301034 closed following reported damaged cable repair on 10/14. However, planned equipment replacement has not been completed. Interface currently UP/UP, but previous counters showed 9,076 input errors and 8,994 CRC errors, with recurring link instability.
+
+Request further transport investigation, confirmation of equipment replacement status, and verification that physical-layer errors have been resolved. Please provide findings, action plan, and ETA.
 
 
 
