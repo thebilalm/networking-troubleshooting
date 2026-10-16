@@ -1,9 +1,5 @@
 
-Reviewed ticket 343276762 for GTAGCSUCLARMILGA01R1. Per Unity field technician, the site has migrated to fiber and is no longer utilizing the three legacy T1 circuits (.811, .812, .813).
-
-David Tishler has notified SOG Service Management and initiated coordination for formal circuit disconnects. VCR000009504645 was created to suppress further outage alerts while decommissioning is coordinated.
-
-No additional troubleshooting required for this VCR-related ticket. Proceeding with closure.
+Reviewed PIM neighbor-down alert for 172.23.217.42 on Te0/0/0/1.2046. Neighbor is no longer present in the PIM table and associated subinterface is no longer present on the router. No current network fault observed. Closing as stale/cleared alert.
 
 
 
