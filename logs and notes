@@ -1,12 +1,16 @@
-customer:
-Device USWCOCBAKCA01QFR1 is being validated for the PGE MRS/MLAN platform migration and is currently unreachable. Management IP 10.10.0.14 does not respond to ping, and SSH/Telnet access is unavailable. OOB/Digi access was also attempted but console connectivity to the router could not be established.
+Hi Mike,
 
-Please verify onsite power and cabling to the device and advise whether a local power cycle can be performed. If the issue cannot be resolved locally, an onsite technician dispatch may be required.
+This is Bilal with AT&T Network Operations. I attempted to contact you by phone regarding AT&T ticket 343275609 for network device USWCOCBAKCA01QFR1 at the site.
 
-internal:
-PGE migration validation performed for USWCOCBAKCA01QFR1. Management IP 10.10.0.14 unreachable. Ping failed; SSH/Telnet timed out. Digi/OOB device is available, but console session to the router could not be established. Proceeding with LCON/site coordination for power/cabling verification and possible power cycle. NCR dispatch to be considered if remote/local recovery is unsuccessful.
+The device is currently unreachable remotely, and we are also unable to establish access through the out-of-band connection. We are requesting assistance with verifying power/cabling to the device and, if authorized, performing a local power cycle.
 
-Device unreachable - USWCOCBAKCA01QFR1
+If you are unable to perform the onsite checks, please let us know whether we may arrange an AT&T technician dispatch and provide the preferred site access window and any access/escort requirements.
+
+Please reply to this email or contact AT&T Network Operations using the contact information provided in the ticket notification.
+
+
+Attempted to contact LCON Mike Baker regarding onsite power/cabling verification for USWCOCBAKCA01QFR1. LCON was unable to verify caller identity and declined to provide information over the phone. Follow-up customer email sent from the ticket with ticket/device details requesting onsite checks or dispatch authorization. Awaiting response.
+
 
 
 
