@@ -1,6 +1,9 @@
-this is for USWCOCBAKCA01QFR1 / 10.10.0.14. It’s hard down and Digi/OOB console isn’t connecting. I tried the listed LCON Mike Baker, but he wouldn’t verify anything over the phone since he couldn’t confirm who I was. I sent him an official ticket email as well.
 
-You worked with some of these PGE site contacts before — do you know anyone else we can reach for a power check/reboot or dispatch coordination?
+Received confirmation from Unity field technician that Georgia College and State University has migrated services to fiber and is no longer utilizing the three legacy T1 circuits (DHEC.900356.811/.812/.813.ATI).
+
+Updated Georgia SMs/LCMs. David Tishler coordinated with SOG Service Management, emailed Tiffani Greene and Steven Jarvis regarding circuit disconnects, and created VCR000009504645 to prevent further outage auto-detect tickets.
+
+Circuit disconnect coordination is being handled separately. Per management guidance, proceeding with UD/AOTS ticket closure.
 
 
 
