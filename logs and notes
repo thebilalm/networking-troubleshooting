@@ -1,21 +1,12 @@
+customer:
+Device USWCOCBAKCA01QFR1 is being validated for the PGE MRS/MLAN platform migration and is currently unreachable. Management IP 10.10.0.14 does not respond to ping, and SSH/Telnet access is unavailable. OOB/Digi access was also attempted but console connectivity to the router could not be established.
 
-Received call from Alvin with Unity regarding BMP 601500957 for circuit DHEC.900356.811.ATI. Unity field technician advised that he spoke with Cheyenne, the site facilities contact, who confirmed that the location has migrated services from copper T1 circuits to fiber and is no longer utilizing any of the three T1 circuits (.811/.812/.813).
+Please verify onsite power and cabling to the device and advise whether a local power cycle can be performed. If the issue cannot be resolved locally, an onsite technician dispatch may be required.
 
-Validated router GTAGCSUCLARMILGA01R1. Interface Se0/0/1:0 (.811) is currently up/down, while the other two T1 interfaces are up/up.
+internal:
+PGE migration validation performed for USWCOCBAKCA01QFR1. Management IP 10.10.0.14 unreachable. Ping failed; SSH/Telnet timed out. Digi/OOB device is available, but console session to the router could not be established. Proceeding with LCON/site coordination for power/cabling verification and possible power cycle. NCR dispatch to be considered if remote/local recovery is unsuccessful.
 
-Unity technician could not confirm whether formal disconnect orders have been submitted. Unity agreed to hold BMP for 24 hours pending further confirmation.
-
-Customer/service-owner validation required to confirm circuit decommissioning and determine next steps.
-
-CHAT:
-Good morning team, regarding ticket 343262744 for GTAGCSUCLARMILGA01R1 (Georgia College and State University, Milledgeville, GA).
-
-Received a call from Unity regarding BMP 601500957 for T1 circuit DHEC.900356.811.ATI. Their field technician spoke with the site facilities contact, who advised that the location has migrated to fiber and is no longer utilizing any of the three T1 circuits (.811, .812, .813).
-
-Currently, the .811 circuit is up/down, while .812 and .813 remain up/up. Unity could not confirm whether formal disconnect orders were submitted and has placed the BMP on a 24-hour hold.
-
-Can someone confirm whether these T1 circuits have been officially decommissioned or are scheduled for disconnect? Please advise how we should proceed with the ticket and circuit monitoring.
-
+Device unreachable - USWCOCBAKCA01QFR1
 
 
 
