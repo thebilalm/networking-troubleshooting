@@ -1,24 +1,20 @@
 
-Reopening investigation under a new UD/AOTS ticket, referencing previously closed ticket 342935154.
+Received call from Alvin with Unity regarding BMP 601500957 for circuit DHEC.900356.811.ATI. Unity field technician advised that he spoke with Cheyenne, the site facilities contact, who confirmed that the location has migrated services from copper T1 circuits to fiber and is no longer utilizing any of the three T1 circuits (.811/.812/.813).
 
-Ongoing intermittent CRC/input errors on STNNAPNSHCRS1 interface Te0/3/0/8. Previous BMP 601301034 was closed following reported service restoration on 10/14 due to damaged cable repair. However, further coordination with the engineering team confirmed that the planned equipment replacement has not yet been completed.
+Validated router GTAGCSUCLARMILGA01R1. Interface Se0/0/1:0 (.811) is currently up/down, while the other two T1 interfaces are up/up.
 
-Interface remains UP/UP, but historical CRC/input errors and repeated interface flapping require further investigation. Previous counters reached 9,076 input errors and 8,994 CRC errors before being cleared for monitoring.
+Unity technician could not confirm whether formal disconnect orders have been submitted. Unity agreed to hold BMP for 24 hours pending further confirmation.
 
-Opening a new BMP for continued transport investigation, confirmation of pending equipment replacement, and verification of circuit stability. Ticket to remain open pending resolution.
+Customer/service-owner validation required to confirm circuit decommissioning and determine next steps.
 
+CHAT:
+Good morning team, regarding ticket 343262744 for GTAGCSUCLARMILGA01R1 (Georgia College and State University, Milledgeville, GA).
 
-BMP:
+Received a call from Unity regarding BMP 601500957 for T1 circuit DHEC.900356.811.ATI. Their field technician spoke with the site facilities contact, who advised that the location has migrated to fiber and is no longer utilizing any of the three T1 circuits (.811, .812, .813).
 
-Persistent intermittent CRC/input errors and interface flapping on STNNAPNSHCRS1 Te0/3/0/8.
+Currently, the .811 circuit is up/down, while .812 and .813 remain up/up. Unity could not confirm whether formal disconnect orders were submitted and has placed the BMP on a 24-hour hold.
 
-AT&T Circuit: BFEC.514556..ATI
-Local LEC: T4.KGGS.820053..SC
-
-Previous BMP 601301034 closed following reported damaged cable repair on 10/14. However, planned equipment replacement has not been completed. Interface currently UP/UP, but previous counters showed 9,076 input errors and 8,994 CRC errors, with recurring link instability.
-
-Request further transport investigation, confirmation of equipment replacement status, and verification that physical-layer errors have been resolved. Please provide findings, action plan, and ETA.
-
+Can someone confirm whether these T1 circuits have been officially decommissioned or are scheduled for disconnect? Please advise how we should proceed with the ticket and circuit monitoring.
 
 
 
