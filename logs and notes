@@ -1,9 +1,10 @@
 
-Received confirmation from Unity field technician that Georgia College and State University has migrated services to fiber and is no longer utilizing the three legacy T1 circuits (DHEC.900356.811/.812/.813.ATI).
+Reviewed ticket 343276762 for GTAGCSUCLARMILGA01R1. Per Unity field technician, the site has migrated to fiber and is no longer utilizing the three legacy T1 circuits (.811, .812, .813).
 
-Updated Georgia SMs/LCMs. David Tishler coordinated with SOG Service Management, emailed Tiffani Greene and Steven Jarvis regarding circuit disconnects, and created VCR000009504645 to prevent further outage auto-detect tickets.
+David Tishler has notified SOG Service Management and initiated coordination for formal circuit disconnects. VCR000009504645 was created to suppress further outage alerts while decommissioning is coordinated.
 
-Circuit disconnect coordination is being handled separately. Per management guidance, proceeding with UD/AOTS ticket closure.
+No additional troubleshooting required for this VCR-related ticket. Proceeding with closure.
+
 
 
 
