@@ -1,7 +1,7 @@
 
-Hey Chris, we had NCR onsite and isolated the issue to the switch side. Fiber testing passed, but WLC Port 2 is still down. We tested multiple SFPs and an alternate switch port without success. Port 1 is still operational.
+Hey Chris, we isolated the issue to the switch side during NCR troubleshooting. WLC Port 2 came up with a local loopback, and the fiber path back to the switch also tested good. However, SWTADC_02 Gi7/15 remained down even with a loopback. We also tested alternate port Gi7/9 with different SFPs, but couldn’t get a stable link.
 
-I reached out to Eric for direction on the next steps but never heard back. I believe LCM/engineering needs to review the switch-side issue and determine whether we need a replacement SFP or further hardware troubleshooting. No one has confirmed ownership yet.
+We didn’t have a brand-new known-good SFP to test, so it could still be an SFP or switch-side hardware issue. I reached out to Eric for direction but haven’t heard back. I believe LCM/engineering needs to determine the next steps.
 
 ---------
 
