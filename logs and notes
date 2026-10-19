@@ -1,5 +1,5 @@
 
-Duplicate ticket for the same interface-down alert on STNNAPKNXIGR1. Interface TenGigE0/1/0/22 was verified up/up and stable under the previous ticket, which has already been closed. Closing this ticket as duplicate.
+Checked router STNNAPKNXPER2. Interface TenGigE0/1/0/7 is currently up/up and has remained stable for over 3 hours. No interface errors or drops observed. Previous interface flap appears transient, and traffic is passing normally. Proceeding with ticket closure.
 
 ---------
 
