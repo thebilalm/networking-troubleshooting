@@ -1,5 +1,7 @@
 
-Checked router STNNAPKNXPER2. Interface TenGigE0/1/0/7 is currently up/up and has remained stable for over 3 hours. No interface errors or drops observed. Previous interface flap appears transient, and traffic is passing normally. Proceeding with ticket closure.
+Hey Chris, we had NCR onsite and isolated the issue to the switch side. Fiber testing passed, but WLC Port 2 is still down. We tested multiple SFPs and an alternate switch port without success. Port 1 is still operational.
+
+I reached out to Eric for direction on the next steps but never heard back. I believe LCM/engineering needs to review the switch-side issue and determine whether we need a replacement SFP or further hardware troubleshooting. No one has confirmed ownership yet.
 
 ---------
 
