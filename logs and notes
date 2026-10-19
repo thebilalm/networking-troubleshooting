@@ -1,8 +1,11 @@
 
-Hi Anne, this is regarding WFA FI066135. The circuit was experiencing recurring Serial0/0/0 flaps and BGP resets, with the last reported outage on 10/15. It has been stable since then with no further flaps observed. We’re just looking to confirm whether the underlying issue has been permanently resolved and obtain the RFO/repair details before proceeding with closure. Also, can you confirm if this circuit was affected by the major cable failure you mentioned?
+Hi Grayling, Tamara Davis referred me to you regarding UD 343272926 for the GDC-GED wireless issue at the Garden City site.
 
-I don't have a separate BMP ticket associated with this issue. We've been tracking it under WFA FI066135 and UD ticket 000000343129587.
+Multiple Chromebooks are unable to connect to the GDC-GED SSID. I found that Meraki maps the SSID to VLAN 303, which is configured on S12 and S34 but missing from S11 and its trunk links.
 
+Before making any changes, I wanted to check whether this is an expected configuration or something that needs to be corrected. Ron also mentioned SR 8861876 as potentially related.
+
+Could you please advise? Thanks!
 
 ---------
 
