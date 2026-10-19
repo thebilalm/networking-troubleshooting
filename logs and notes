@@ -1,14 +1,5 @@
 
-Circuit experiencing recurring Serial0/0/0 flaps and BGP neighbor 172.23.249.58 resets since 10/02. STS reported another router outage on 10/15. Previous L1-L3 escalations have not resulted in a confirmed resolution. WFA remains Pending Field Resolution. Request immediate transport/field investigation, current repair status, root cause, and firm ETA for permanent resolution.
-
-Recurring WAN circuit instability affecting State of Tennessee site connectivity. Repeated serial interface flaps cause BGP adjacency loss and intermittent router reachability. Additional outage reported by STS on 10/15. Exact number of impacted users not confirmed.
-
-tdm: 
-WFA WTNF1066135 remains unresolved since 10/07 despite repeated escalations. Router STTNOIRMEM75R has experienced recurring Serial0/0/0 flaps causing BGP neighbor 172.23.249.58 resets and intermittent outages. STS reported another outage on 10/15. Transport remains Pending Field Resolution with specialist assistance required. Request TDM engagement to expedite field troubleshooting, identify root cause, coordinate permanent repair, and provide firm ETA.
-
-UD:
-Reviewed ongoing transport issue. STS reported router down again on 10/15. WFA WTNF1066135 remains unresolved with recurring Serial0/0/0 instability and BGP resets. Proceeding with Level 4 WFA escalation and TDM escalation for expedited transport investigation and permanent resolution. Pending transport update/repair ETA.
-
+Revalidated router STTNOIRMEM75R. Serial0/0/0 currently up/up with no additional interface flaps observed since 10/15. Historical interface errors remain significant, including 535,273 input errors, 38,448 CRC errors, 271,299 aborts, and 6,151 interface resets. WFA WTNF1066135 escalated to Level 4 and TDM escalation submitted due to recurring circuit instability and lack of confirmed permanent resolution. Pending transport investigation/update and repair ETA.
 
 
 ---------
