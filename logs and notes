@@ -1,8 +1,5 @@
 
-Hey Chris, we isolated the issue to the switch side during NCR troubleshooting. WLC Port 2 came up with a local loopback, and the fiber path back to the switch also tested good. However, SWTADC_02 Gi7/15 remained down even with a loopback. We also tested alternate port Gi7/9 with different SFPs, but couldn’t get a stable link.
-
-We didn’t have a brand-new known-good SFP to test, so it could still be an SFP or switch-side hardware issue. I reached out to Eric for direction but haven’t heard back. I believe LCM/engineering needs to determine the next steps.
-
+Reviewed PIM neighbor-down alert for 172.23.217.42 on Te0/0/0/1.2046. Neighbor is no longer present in the current PIM neighbor table and the associated subinterface is no longer present on the router. Other PIM adjacencies remain established. No current network fault observed. Closing as stale/cleared alert.
 ---------
 
 
