@@ -1,5 +1,7 @@
 
-Please disregard the previous log, as it was entered under the wrong ticket by mistake. Continuing investigation of this issue.
+Hi Anne, this is regarding WFA FI066135. The circuit was experiencing recurring Serial0/0/0 flaps and BGP resets, with the last reported outage on 10/15. It has been stable since then with no further flaps observed. We’re just looking to confirm whether the underlying issue has been permanently resolved and obtain the RFO/repair details before proceeding with closure. Also, can you confirm if this circuit was affected by the major cable failure you mentioned?
+
+I don't have a separate BMP ticket associated with this issue. We've been tracking it under WFA FI066135 and UD ticket 000000343129587.
 
 
 ---------
