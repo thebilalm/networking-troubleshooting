@@ -1,5 +1,19 @@
 
-Revalidated router STTNOIRMEM75R. Serial0/0/0 currently up/up with no additional interface flaps observed since 10/15. Historical interface errors remain significant, including 535,273 input errors, 38,448 CRC errors, 271,299 aborts, and 6,151 interface resets. WFA WTNF1066135 escalated to Level 4 and TDM escalation submitted due to recurring circuit instability and lack of confirmed permanent resolution. Pending transport investigation/update and repair ETA.
+Hi, I’m troubleshooting a GDC-GED wireless connectivity issue at the Georgia DOC Garden City site. Multiple Chromebooks are unable to connect to the SSID.
+
+I found that GDC-GED is mapped to VLAN 303 in Meraki, but VLAN 303 is missing from switch S11 and its trunk links to S12 and S34. Both neighboring switches already have VLAN 303 configured and allowed.
+
+Can you confirm whether I’m authorized to add VLAN 303 to S11 and permit it on the required trunks? I haven’t made any changes yet.
+
+
+ud:
+Contacted LCON Justin Graves regarding ongoing GDC-GED wireless connectivity issue. Customer confirmed approximately 10 Chromebooks unable to connect to GDC-GED SSID; wired connectivity operational.
+
+Investigated Meraki Dashboard and Cisco switching infrastructure. Confirmed GDC-GED SSID mapped to VLAN 303 (Education_Wireless). VLAN 303 is present on S12 and S34 but absent from S11 VLAN database and trunk allowed lists on Gi1/1/1 (toward S12) and Gi3/1/1 (toward S34).
+
+Identified potential VLAN configuration discrepancy affecting wireless connectivity. Requesting service management authorization before making configuration changes. Root cause pending validation of affected AP traffic path.
+
+Customer agreed to callback within approximately 30–60 minutes. No configuration changes performed.
 
 
 ---------
