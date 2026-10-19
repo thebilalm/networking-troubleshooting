@@ -1,5 +1,5 @@
 
-Reviewed PIM neighbor-down alert for 172.23.188.18 on Gi0/1/1/5.2954. Neighbor is no longer present in the PIM table and associated subinterface is no longer present on the router. Parent interface and other subinterfaces remain operational. No current network fault observed. Closing as stale/cleared alert.
+Ron Francis and Hadee asked me to open a Cisco TAC case for the WLC Web Authentication Certificate renewal, so I opened SR 701359201 and included both of them on the email thread. They’ve been coordinating with TAC on the next steps. From the latest update, they’re still working on an approved method to generate the certificate and private key for all eight WLCs. TAC is keeping the case open while they work through that.
 
 
 ---------
