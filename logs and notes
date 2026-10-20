@@ -1,14 +1,6 @@
 
-Circuit Down - STTNOIRDAX06R
+WFA FI066135 reports service restored on 10/20 at 09:12 AM CDT. Router and circuit currently operational with BGP established and no packet loss observed during testing. Due to recurring Serial0/0/0 flaps and chronic circuit instability, keeping UD ticket in Deferred – Pend Recurrence for additional monitoring before closure.
 
-Router STTNOIRDAX06R (172.23.250.57) is unreachable. Ping test failed and remote access is unavailable. This is part of a reported 7-site outage in Dandridge, TN. Suspected common transport issue. Please investigate for a possible area outage and provide ETR/RFO.
-
-Circuit: T2KQFN825830SC
-UD Ticket: 343325373
-
----
-Customer advised that previously listed LCON Mike Baker is no longer employed at the site. Brent Colbert, Plant Manager, responded to the ticket email. Follow-up sent requesting confirmation of current site contact, access hours, site requirements, and whether local power check/power cycle can be performed. Awaiting response before NCR dispatch.
----
 
 
 
