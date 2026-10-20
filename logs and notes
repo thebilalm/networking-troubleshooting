@@ -1,5 +1,14 @@
 
-Reviewed PIM neighbor-down alert for 172.23.205.174 on Gi0/1/1/3.2161. Neighbor is no longer present in the PIM table and associated subinterface is no longer present on the router. Other interfaces and PIM adjacencies remain operational. No current network fault observed. Closing as stale/cleared alert.
+Hi Sherlock,
+
+Thanks for the update.
+
+Previous onsite troubleshooting confirmed that WLC Port 1 is operational, while Port 2 remains down due to a suspected switch-side issue on SWTADC_02.
+
+I’ve included Chris Baker and Abdul Hadee for continued troubleshooting and collection of the requested outputs. They will coordinate the next steps with you.
+
+Thanks,
+Bilal
 
 
 
