@@ -1,11 +1,5 @@
 
-Opened new Cisco TAC SR 701603643 for USADC5520WLC02 (172.28.182.214) regarding APs not joining following WLC replacement.
-
-WLC Port 1 remains operational. Port 2 remains down, with previous NCR troubleshooting indicating a suspected switch-side issue on SWTADC_02 Gi7/15.
-
-Requested TAC assistance to validate the replacement WLC configuration and troubleshoot AP join failures. Chris Baker, Abdul Hadee, and L2 team included in TAC correspondence for follow-up.
-
-Pending Cisco TAC investigation and further LCM/engineering direction for the secondary uplink.
+Reviewed PIM neighbor-down alert for 172.23.205.174 on Gi0/1/1/3.2161. Neighbor is no longer present in the PIM table and associated subinterface is no longer present on the router. Other interfaces and PIM adjacencies remain operational. No current network fault observed. Closing as stale/cleared alert.
 
 
 
