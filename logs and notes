@@ -1,15 +1,11 @@
 
-Cisco 5520 WLC - APs Not Joining After Controller Replacement
+Opened new Cisco TAC SR 701603643 for USADC5520WLC02 (172.28.182.214) regarding APs not joining following WLC replacement.
 
-Cisco 5520 WLC USADC5520WLC02 (172.28.182.214) was replaced following the original controller failure. The replacement WLC is reachable and configured, but APs are not joining the controller.
+WLC Port 1 remains operational. Port 2 remains down, with previous NCR troubleshooting indicating a suspected switch-side issue on SWTADC_02 Gi7/15.
 
-During onsite NCR troubleshooting, WLC Port 1 was confirmed operational. Port 2 remains down. Fiber loopback testing validated the WLC port and fiber path, but the switch-side uplink on SWTADC_02 Gi7/15 remained down despite SFP swaps and testing an alternate port.
+Requested TAC assistance to validate the replacement WLC configuration and troubleshoot AP join failures. Chris Baker, Abdul Hadee, and L2 team included in TAC correspondence for follow-up.
 
-Requesting TAC assistance to validate the replacement WLC configuration, troubleshoot AP join failures, and identify any remaining controller-side issues.
-
-Previous TAC SR: 701333405.
-Internal ticket: 342693853.
-
+Pending Cisco TAC investigation and further LCM/engineering direction for the secondary uplink.
 
 
 
