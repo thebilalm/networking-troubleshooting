@@ -1,10 +1,10 @@
 
-Circuit Down – STTNOIRDAX12R
+Circuit Down - STTNOIRDAX06R
 
-Router STTNOIRDAX12R is unreachable at Jefferson County Probation and Parole, Dandridge, TN. Multiple routers across seven nearby sites are also reporting down. Possible common transport outage. Please investigate, check for any known area outage, and provide ETR/RFO.
+Router STTNOIRDAX06R (172.23.250.57) is unreachable. Ping test failed and remote access is unavailable. This is part of a reported 7-site outage in Dandridge, TN. Suspected common transport issue. Please investigate for a possible area outage and provide ETR/RFO.
 
-Circuit: T2KQFN823301SC
-UD Ticket: 343325372
+Circuit: T2KQFN825830SC
+UD Ticket: 343325373
 
 ---
 Customer advised that previously listed LCON Mike Baker is no longer employed at the site. Brent Colbert, Plant Manager, responded to the ticket email. Follow-up sent requesting confirmation of current site contact, access hours, site requirements, and whether local power check/power cycle can be performed. Awaiting response before NCR dispatch.
