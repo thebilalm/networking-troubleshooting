@@ -1,1 +1,99 @@
 
+
+1.0 OT Network Relivening
+Replace the bracketed text with the project equipment tags, cabinet locations, and model-specific LED details. Add a labeled front-panel photo and reuse it wherever the exact model repeats. Leave the completion column for the person performing the checks.
+
+Step
+Action
+Step Notes
+Complete / Initials
+1
+OT WAN Routers
+[Confirm whether the router check applies.]
+[Insert labeled front-panel photo]
+Normal operation  [LED name, state, and meaning]
+Other indications  [LED name, state, and meaning]
+Model  N540-24Z8Q2C-SYS
+WAN Router 1  [equipment tag]
+WAN Router 2  [equipment tag]
+Cabinet  [location or cabinet tag]
+Inventory comment  “sending not used”
+_____
+2
+OT Core Switches
+Check the front-panel indicators on each listed unit.
+[Insert labeled front-panel photo]
+Normal operation  [LED name, state, and meaning]
+Other indications  [LED name, state, and meaning]
+Model  C9500-48Y4C-A
+Core Switch 1  [equipment tag]
+Core Switch 2  [equipment tag]
+Cabinet  [location or cabinet tag]
+_____
+3
+OT DMZ Switches
+Check the front-panel indicators on each listed unit.
+[Insert labeled front-panel photo]
+Normal operation  [LED name, state, and meaning]
+Other indications  [LED name, state, and meaning]
+Model  C9300-24S-A
+DMZ Switch 1  [equipment tag]
+DMZ Switch 2  [equipment tag]
+Cabinet  [location or cabinet tag]
+_____
+4
+OT MEB Switches
+Check the front-panel indicators on each listed unit.
+[Insert labeled front-panel photo]
+Normal operation  [LED name, state, and meaning]
+Other indications  [LED name, state, and meaning]
+Model  C9300-24S-A
+MEB Switch 1  [equipment tag]
+MEB Switch 2  [equipment tag]
+Cabinet  [location or cabinet tag]
+_____
+5
+OT Hosting Switches
+Check the front-panel indicators on each listed unit.
+[Insert labeled front-panel photo]
+Normal operation  [LED name, state, and meaning]
+Other indications  [LED name, state, and meaning]
+Model  N9K-C93180YC-FX3
+Hosting Switch 1  [equipment tag]
+Hosting Switch 2  [equipment tag]
+Cabinet  [location or cabinet tag]
+_____
+6
+OT OOB Management Switch
+Check the front-panel indicators on the listed unit.
+[Insert labeled front-panel photo]
+Normal operation  [LED name, state, and meaning]
+Other indications  [LED name, state, and meaning]
+Model  C9200L-48T-4G
+OOB Management Switch  [equipment tag]
+Cabinet  [location or cabinet tag]
+_____
+7
+OT OOB Console Server
+Check the front-panel indicators on the listed unit.
+[Insert labeled front-panel photo]
+Normal operation  [LED name, state, and meaning]
+Other indications  [LED name, state, and meaning]
+Model  OM2248-US
+OOB Console Server  [equipment tag]
+Cabinet  [location or cabinet tag]
+_____
+8
+Dragos Switch
+Check the front-panel indicators on the listed unit.
+[Insert labeled front-panel photo]
+Normal operation  [LED name, state, and meaning]
+Other indications  [LED name, state, and meaning]
+Model  C9300-24S-A
+Dragos Switch  [equipment tag]
+Cabinet  [location or cabinet tag]
+_____
+
+
+
+
