@@ -1,0 +1,6 @@
+
+
+ping vrf VRF_CORP ip source Vlan
+ping vrf VRF_CORP ip source Vlan
+show ip arp vrf VRF_CORP ip
+show ip arp vrf VRF_CORP ip
