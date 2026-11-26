@@ -4,3 +4,15 @@ ping vrf VRF_CORP ip source Vlan
 ping vrf VRF_CORP ip source Vlan
 show ip arp vrf VRF_CORP ip
 show ip arp vrf VRF_CORP ip
+
+
+
+Hi SH and Prasanna,
+
+I retested both iDRAC IPs from VLAN 405 on the Trion IT core. 10.81.169.83 (BACKUP03, port 15) responded to all five pings. 10.81.169.82 (BACKUP02, port 14) still timed out on all five.
+
+Please let me know once the CAT6 cable on port 14 has been checked so I can retest.
+
+Thanks,
+Bilal
+
